@@ -6,6 +6,7 @@ interface Props {
 interface HomeAttributes {
   landing_image: string;
 }
+
 const Home: NextPage<Props> = ({ content }) => {
   const { attributes } = content;
   return (
