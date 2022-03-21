@@ -1,3 +1,9 @@
+Based on https://www.jakeprins.com/blog/how-to-implement-netlify-cms-with-next-js
+
+`npm run dev`
+
+`npx netlify-cms-proxy-server`
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
