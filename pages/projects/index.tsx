@@ -15,19 +15,20 @@ interface Props {
 }
 
 const Projects: NextPage<Props> = ({ projectsList }) => {
-  return <>{projectsList.map((p) => p.attributes.title)}</>;
+  //return <>{projectsList.map((p) => p.attributes.title)}</>;
+  return <>{JSON.stringify(projectsList)}</>;
 };
 
 const importProjects = async () => {
   // https://webpack.js.org/guides/dependency-management/#requirecontext
   const markdownFiles = require
-    .context("../content/projects", false, /\.md$/)
+    .context("../../content/projects", false, /\.md$/)
     .keys()
     .map((relativePath) => relativePath.substring(2));
 
   return Promise.all(
     markdownFiles.map(async (path) => {
-      const markdown = await import(`../content/projects/${path}`);
+      const markdown = await import(`../../content/projects/${path}`);
       return { ...markdown, slug: path.substring(0, path.length - 3) };
     })
   );

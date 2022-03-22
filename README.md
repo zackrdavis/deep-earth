@@ -1,4 +1,7 @@
 Based on https://www.jakeprins.com/blog/how-to-implement-netlify-cms-with-next-js
+and
+https://github.com/srydercode/next-netlify-cms/blob/main/pages/blog/index.js
+(for blog posts example)
 
 `npm run dev`
 
