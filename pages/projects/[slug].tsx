@@ -23,13 +23,11 @@ const SingleProject: NextPage<Props> = ({ content, plantsList }) => {
     content.attributes.plants.includes(plant.attributes.title)
   );
 
-  console.log(linkedPlants);
-
   return (
     <>
       {parse(content.html)}
-      {linkedPlants.map((plant) => (
-        <img src={`/${plant.attributes.image}`} />
+      {linkedPlants.map((plant, i) => (
+        <img key={i} src={`/${plant.attributes.image}`} />
       ))}
       <Footer />
     </>

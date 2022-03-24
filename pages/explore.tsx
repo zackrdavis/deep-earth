@@ -58,7 +58,6 @@ interface Props {
 }
 
 const Plants: NextPage<Props> = ({ plantsList }) => {
-  console.log(plantsList);
   return (
     <>
       <PlantColumns>
