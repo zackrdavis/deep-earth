@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { colors } from "./colors";
+import { colors } from "./shared";
 
 const StyledFooter = styled.div`
   border-top: 1px solid ${colors.black};
