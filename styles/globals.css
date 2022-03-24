@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "Prune";
+  src: url("../public/fonts/Greenhouse-Prune.woff2") format("woff2"),
+    url("../public/fonts/Greenhouse-Prune.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Prune";
+  background: #e6e6da;
 }
 
 a {
