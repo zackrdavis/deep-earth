@@ -3,10 +3,6 @@ and
 https://github.com/srydercode/next-netlify-cms/blob/main/pages/blog/index.js
 (for blog posts example)
 
-`npm run dev`
-
-`npx netlify-cms-proxy-server`
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
