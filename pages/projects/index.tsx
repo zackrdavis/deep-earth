@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
+import { Footer } from "../../components/Footer";
 
 type Project = {
   attributes: {
@@ -16,7 +17,12 @@ interface Props {
 
 const Projects: NextPage<Props> = ({ projectsList }) => {
   //return <>{projectsList.map((p) => p.attributes.title)}</>;
-  return <>{JSON.stringify(projectsList)}</>;
+  return (
+    <>
+      {JSON.stringify(projectsList)}
+      <Footer />
+    </>
+  );
 };
 
 const importProjects = async () => {

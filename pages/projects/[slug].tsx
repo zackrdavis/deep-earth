@@ -2,6 +2,7 @@ import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import fs from "fs";
 import path from "path";
 import parse from "html-react-parser";
+import { Footer } from "../../components/Footer";
 
 interface Props {
   content: {
@@ -13,7 +14,12 @@ interface Props {
 }
 
 const SingleProject: NextPage<Props> = ({ content }) => {
-  return <>{parse(content.html)}</>;
+  return (
+    <>
+      {parse(content.html)}
+      <Footer />
+    </>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

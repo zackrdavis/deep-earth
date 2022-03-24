@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
+import { Footer } from "../components/Footer";
 
 interface Props {
   content: { attributes: HomeAttributes };
@@ -12,6 +13,7 @@ const Home: NextPage<Props> = ({ content }) => {
   return (
     <>
       <img src={attributes.landing_image} />
+      <Footer />
     </>
   );
 };

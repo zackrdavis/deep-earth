@@ -1,5 +1,6 @@
 import type { NextPage, GetStaticProps } from "next";
 import parse from "html-react-parser";
+import { Footer } from "../components/Footer";
 
 interface Props {
   content: {
@@ -11,7 +12,12 @@ interface Props {
 }
 
 const Contact: NextPage<Props> = ({ content }) => {
-  return <>{parse(content.html)}</>;
+  return (
+    <>
+      {parse(content.html)}
+      <Footer />
+    </>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
