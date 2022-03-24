@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
+import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
 
 type Project = {
@@ -7,6 +8,7 @@ type Project = {
     date: string;
     thumbnail: string;
     featured_image: string;
+    plants: string[];
   };
   html: string;
 };
@@ -15,11 +17,30 @@ interface Props {
   projectsList: Project[];
 }
 
+const sluggify = (string: string) => {
+  return string.toLowerCase().replaceAll(" ", "-");
+};
+
 const Projects: NextPage<Props> = ({ projectsList }) => {
-  //return <>{projectsList.map((p) => p.attributes.title)}</>;
+  const { query } = useRouter();
+  const plantQuery = query.plant as string;
+
+  // filter projectsList if there's a plant query
+  if (plantQuery) {
+    projectsList = projectsList.filter(
+      (project) =>
+        project.attributes.plants &&
+        project.attributes.plants
+          .map((plant) => sluggify(plant))
+          .includes(plantQuery)
+    );
+  }
+
   return (
     <>
-      {JSON.stringify(projectsList)}
+      {projectsList.map((project, i) => (
+        <div key={i}>{project.attributes.title}</div>
+      ))}
       <Footer />
     </>
   );
