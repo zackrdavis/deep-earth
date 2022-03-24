@@ -9,6 +9,7 @@ const PlantColumns = styled.div`
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 238px 50px 80px 50px;
 `;
 
 const PlantPic = styled.img`

@@ -12,7 +12,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Prune";
+  font-size: 25px;
   background: #e6e6da;
+  color: #4b4b4b;
 }
 
 a {
