@@ -8,40 +8,6 @@ media_folder: public/img
 public_folder: img
 
 collections:
-  - name: "projects"
-    label: "Projects"
-    folder: "content/projects"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "featured_image", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Plants"
-        name: "plants"
-        widget: list
-        summary: "{{fields.plant}}"
-        collapsed: true
-        add_to_top: true
-        field:
-          {
-            label: Plant,
-            name: plant,
-            widget: relation,
-            collection: plants,
-            search_fields: ["name"],
-            display_fields: ["name"],
-            value_field: name,
-          }
-
-  - name: "plants"
-    label: "Plants"
-    folder: "content/plants"
-    create: true
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-
   - name: "pages"
     label: "Pages"
     files:
@@ -63,3 +29,37 @@ collections:
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Featured Image", name: "featured_image", widget: "image" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "featured_image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Plants"
+        name: "plants"
+        widget: list
+        summary: "{{fields.plant}}"
+        collapsed: true
+        add_to_top: true
+        field:
+          {
+            label: Plant,
+            name: plant,
+            widget: relation,
+            collection: plants,
+            search_fields: ["title"],
+            display_fields: ["title"],
+            value_field: title,
+          }
+
+  - name: "plants"
+    label: "Plants"
+    folder: "content/plants"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }

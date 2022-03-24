@@ -1,8 +1,8 @@
 import type { NextPage, GetStaticProps } from "next";
-import Image from "next/image";
 import { useState } from "react";
 import { Footer } from "../components/Footer";
 import styled from "styled-components";
+import Link from "next/link";
 
 const PlantColumns = styled.div`
   display: flex;
@@ -20,13 +20,15 @@ const PlantPic = styled.img`
 
 type Plant = {
   attributes: {
-    name: string;
+    title: string;
     image: string;
   };
+  slug: string;
 };
 
 const HoverPlant = (plant: Plant) => {
-  const { name, image } = plant.attributes;
+  const { title, image } = plant.attributes;
+  const slug = plant.slug;
   const [hover, setHover] = useState(false);
 
   const randLeft = Math.random() * 100;
@@ -44,7 +46,7 @@ const HoverPlant = (plant: Plant) => {
         onMouseLeave={() => setHover(false)}
         style={{ color: hover ? "red" : "" }}
       >
-        {name}
+        <Link href={`/projects/?plant=${slug}`}>{title}</Link>
       </div>
       {hover && <PlantPic style={randPosStyle} src={`/${image}`} />}
     </>
@@ -56,6 +58,7 @@ interface Props {
 }
 
 const Plants: NextPage<Props> = ({ plantsList }) => {
+  console.log(plantsList);
   return (
     <>
       <PlantColumns>
