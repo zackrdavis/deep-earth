@@ -1,24 +1,67 @@
 import type { NextPage, GetStaticProps } from "next";
+import Image from "next/image";
+import { useState } from "react";
 import { Footer } from "../components/Footer";
+import styled from "styled-components";
 
-type Project = {
+const PlantColumns = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
+const PlantPic = styled.img`
+  width: 200px;
+  height: auto;
+  position: fixed;
+`;
+
+type Plant = {
   attributes: {
-    title: string;
-    date: string;
-    thumbnail: string;
-    featured_image: string;
+    name: string;
+    image: string;
   };
-  html: string;
+};
+
+const HoverPlant = (plant: Plant) => {
+  const { name, image } = plant.attributes;
+  const [hover, setHover] = useState(false);
+
+  const randLeft = Math.random() * 100;
+  const randTop = Math.random() * 100;
+  const randPosStyle = {
+    top: `${randTop}%`,
+    left: `${randLeft}%`,
+    transform: `translate(${-randLeft}%, ${-randTop}%)`,
+  };
+
+  return (
+    <>
+      <div
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        style={{ color: hover ? "red" : "" }}
+      >
+        {name}
+      </div>
+      {hover && <PlantPic style={randPosStyle} src={`/${image}`} />}
+    </>
+  );
 };
 
 interface Props {
-  plantsList: Project[];
+  plantsList: Plant[];
 }
 
 const Plants: NextPage<Props> = ({ plantsList }) => {
   return (
     <>
-      {JSON.stringify(plantsList)}
+      <PlantColumns>
+        {plantsList.map((plant, i) => (
+          <HoverPlant key={i} {...plant} />
+        ))}
+      </PlantColumns>
       <Footer />
     </>
   );
