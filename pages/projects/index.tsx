@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
 
@@ -10,6 +11,7 @@ type Project = {
     featured_image: string;
     plants: string[];
   };
+  slug: string;
   html: string;
 };
 
@@ -39,7 +41,9 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
   return (
     <>
       {projectsList.map((project, i) => (
-        <div key={i}>{project.attributes.title}</div>
+        <Link href={`/projects/${project.slug}`} key={i}>
+          {project.attributes.title}
+        </Link>
       ))}
       <Footer />
     </>
