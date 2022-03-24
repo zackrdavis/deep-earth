@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev-backend": "next dev & npx netlify-cms-proxy-server",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
