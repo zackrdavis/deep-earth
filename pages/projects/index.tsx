@@ -1,4 +1,6 @@
 import type { NextPage, GetStaticProps } from "next";
+import styled from "styled-components";
+import Image from "next/image";
 import { sluggify } from "../../components/shared";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -20,6 +22,24 @@ interface Props {
   projectsList: Project[];
 }
 
+const ProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  padding: 270px 50px 0 50px;
+`;
+
+const Project = styled.div`
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+
+  .project-image {
+    width: 100%;
+  }
+`;
+
 const Projects: NextPage<Props> = ({ projectsList }) => {
   const { query } = useRouter();
   const plantQuery = query.plant as string;
@@ -37,11 +57,20 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
 
   return (
     <>
-      {projectsList.map((project, i) => (
-        <Link href={`/projects/${project.slug}`} key={i}>
-          {project.attributes.title}
-        </Link>
-      ))}
+      <ProjectGrid>
+        {projectsList.map((project, i) => (
+          <Link href={`/projects/${project.slug}`} key={i}>
+            <Project>
+              <img
+                className="project-image"
+                src={`/${project.attributes.featured_image}`}
+              />
+
+              {project.attributes.title}
+            </Project>
+          </Link>
+        ))}
+      </ProjectGrid>
       <Footer />
     </>
   );
