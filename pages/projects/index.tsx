@@ -1,10 +1,12 @@
 import type { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
+import useIntersectionObserver from "@react-hook/intersection-observer";
 import Image from "next/image";
 import { sluggify } from "../../components/shared";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
+import { useState, useRef } from "react";
 
 type Project = {
   attributes: {
@@ -34,11 +36,27 @@ const Project = styled.div`
   width: 100%;
   cursor: pointer;
   position: relative;
-
-  .project-image {
-    width: 100%;
-  }
 `;
+
+const BackgroundImage = styled.div`
+  width: 100%;
+  height: 0;
+  padding-top: 64%; // todo: get real ratio
+  position: relative;
+  background-size: cover;
+`;
+
+const ProjectImage = ({ src }: { src: string }) => {
+  const observerRef = useRef<HTMLDivElement>(null);
+  const { isIntersecting } = useIntersectionObserver(observerRef);
+
+  return (
+    <BackgroundImage
+      ref={observerRef}
+      style={{ backgroundImage: isIntersecting ? `url(/${src})` : "" }}
+    />
+  );
+};
 
 const Projects: NextPage<Props> = ({ projectsList }) => {
   const { query } = useRouter();
@@ -58,14 +76,10 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
   return (
     <>
       <ProjectGrid>
-        {projectsList.map((project, i) => (
+        {[...projectsList, ...projectsList].map((project, i) => (
           <Link href={`/projects/${project.slug}`} key={i}>
             <Project>
-              <img
-                className="project-image"
-                src={`/${project.attributes.featured_image}`}
-              />
-
+              <ProjectImage src={project.attributes.featured_image} />
               {project.attributes.title}
             </Project>
           </Link>
