@@ -15,20 +15,35 @@ collections:
         name: "home"
         file: "content/pages/home.md"
         fields:
-          - { label: "Landing Image", name: "landing_image", widget: "image" }
+          - {
+              label: "Landing Image",
+              name: "landing_image",
+              widget: "image",
+              choose_url: false,
+            }
           - label: "Sections"
             name: "sections"
             widget: list
             fields:
               - { label: "Text", name: "text", widget: "markdown" }
-              - { label: "Image", name: "image", widget: "image" }
+              - {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                  choose_url: false,
+                }
 
       - label: "Contact"
         name: "contact"
         file: "content/pages/contact.md"
         fields:
           - { label: "Body", name: "body", widget: "markdown" }
-          - { label: "Featured Image", name: "featured_image", widget: "image" }
+          - {
+              label: "Featured Image",
+              name: "featured_image",
+              widget: "image",
+              choose_url: false,
+            }
 
   - name: "projects"
     label: "Projects"
@@ -37,7 +52,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "featured_image", widget: "image" }
+      - {
+          label: "Featured Image",
+          name: "featured_image",
+          widget: "image",
+          choose_url: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Plants"
         name: "plants"
@@ -62,4 +82,4 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image", name: "image", widget: "image", choose_url: false }
