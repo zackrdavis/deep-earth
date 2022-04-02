@@ -1,12 +1,12 @@
 import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
 import { importPlants, Plant } from "../explore";
-import { sluggify } from "../../components/shared";
 import fs from "fs";
 import path from "path";
 import parse from "html-react-parser";
 import { Footer } from "../../components/Footer";
+import { VerticalRule } from "../../components/VerticalRule";
 
-interface Props {
+interface ProjectProps {
   content: {
     attributes: {
       title: string;
@@ -18,7 +18,7 @@ interface Props {
   plantsList: Plant[];
 }
 
-const SingleProject: NextPage<Props> = ({ content, plantsList }) => {
+const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
   const linkedPlants = plantsList.filter((plant) =>
     content.attributes.plants.includes(plant.attributes.title)
   );
@@ -29,6 +29,7 @@ const SingleProject: NextPage<Props> = ({ content, plantsList }) => {
       {linkedPlants.map((plant, i) => (
         <img key={i} src={`/${plant.attributes.image}`} />
       ))}
+      <VerticalRule />
       <Footer />
     </>
   );

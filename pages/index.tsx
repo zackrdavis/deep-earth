@@ -25,14 +25,12 @@ const StyledLandingImage = styled.img`
   height: 100vh;
   left: 0;
   top: 0%;
-  transition: all 1s;
   position: relative;
   z-index: 1;
 `;
 
 const StyledFooter = styled(Footer)`
   transition: 1s;
-  z-index: 2;
 
   &.unTouched {
     transition: 0s;

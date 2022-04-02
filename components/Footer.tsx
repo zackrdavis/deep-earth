@@ -15,6 +15,7 @@ const StyledFooter = styled.div`
   height: ${dims.footerHeight}px;
   padding: 0 ${dims.xPad}px;
   background: ${colors.tan};
+  z-index: 2;
 `;
 
 const StyledLink = styled.a<{ active: boolean }>`
