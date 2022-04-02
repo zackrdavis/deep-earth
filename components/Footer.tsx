@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styled from "styled-components";
+import styled, { CSSProperties } from "styled-components";
 import { colors } from "./shared";
 
 const StyledFooter = styled.div`
@@ -21,11 +21,11 @@ const StyledLink = styled.a<{ active: boolean }>`
   color: ${({ active }) => (active ? colors.sienna : colors.black)};
 `;
 
-export const Footer = () => {
+export const Footer = ({ className }: { className?: string }) => {
   const { route } = useRouter();
 
   return (
-    <StyledFooter>
+    <StyledFooter className={className}>
       <Link href="/#about" passHref>
         <StyledLink active={route == "/"}>About</StyledLink>
       </Link>

@@ -1,5 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { Footer } from "../components/Footer";
 
@@ -18,19 +18,78 @@ interface HomeProps {
 }
 
 const StyledLandingImage = styled.img`
-  position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   left: 0;
   top: 0%;
-  opacity: 1;
   transition: all 1s;
-  cursor: pointer;
+`;
 
-  &.touched {
-    opacity: 0;
+const StyledFooter = styled(Footer)`
+  transition: all 1s;
+
+  &.unTouched {
+    border-top: none;
+    background: transparent;
+
+    a {
+      color: white !important;
+    }
   }
 `;
+
+const StyledHomeSection = styled.div`
+  padding: 0 100px;
+  margin-top: 100px;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 500px;
+  }
+
+  // project text
+  & > div {
+    width: 50%;
+    position: sticky;
+  }
+
+  // project image
+  & > img {
+    position: absolute;
+    width: calc(50% - 116px);
+    left: calc(50% + 58px);
+    top: 0;
+  }
+`;
+
+const HomeSection = ({ imgUrl, text }: { imgUrl: string; text: string }) => {
+  const textRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  const [textHeight, setTextHeight] = useState(0);
+  const [imgHeight, setImgHeight] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTextHeight(textRef.current?.getBoundingClientRect().height || 0);
+      setImgHeight(imgRef.current?.getBoundingClientRect().height || 0);
+    }, 50);
+  }, []);
+
+  return (
+    <StyledHomeSection style={{ height: imgHeight }}>
+      <div
+        ref={textRef}
+        style={{
+          top: `calc(100vh - ${textHeight + 100}px)`,
+        }}
+      >
+        {text}
+      </div>
+      <img ref={imgRef} src={imgUrl} />
+    </StyledHomeSection>
+  );
+};
 
 const Home: NextPage<HomeProps> = ({ content }) => {
   const { attributes } = content;
@@ -49,16 +108,15 @@ const Home: NextPage<HomeProps> = ({ content }) => {
   return (
     <>
       <StyledLandingImage
-        className={touched ? "touched" : ""}
+        className={!touched ? "unTouched" : ""}
         src={attributes.landing_image}
       />
-      <Footer />
+
       {attributes.sections.map((section) => (
-        <div>
-          {section.text}
-          <img src={section.image} />
-        </div>
+        <HomeSection text={section.text} imgUrl={section.image} />
       ))}
+
+      <StyledFooter className={!touched ? "unTouched" : ""} />
     </>
   );
 };
