@@ -11,10 +11,13 @@ interface ProjectProps {
     attributes: {
       title: string;
       featured_image: string;
+      // slugs of plants for this project
       plants: string[];
+      images: { image: string }[];
     };
     html: string;
   };
+  // all of the plants, to be filtered down
   plantsList: Plant[];
 }
 
