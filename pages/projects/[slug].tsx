@@ -63,6 +63,28 @@ const PlantStack = ({ plants }: { plants: Plant[] }) => {
   );
 };
 
+const ProjectContent = styled.div`
+  width: 50vw;
+  margin-left: 50vw;
+  padding: ${dims.xPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px;
+
+  // project text
+  & > div {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  // project image
+  & > img {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: ${dims.xPad}px;
+    }
+  }
+`;
+
 const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
   const linkedPlants = plantsList.filter((plant) =>
     content.attributes.plants.includes(plant.attributes.title)
@@ -70,7 +92,12 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
   return (
     <>
-      {parse(content.html)}
+      <ProjectContent>
+        <div>{parse(content.html)}</div>
+        {content.attributes.images.map((image) => (
+          <img src={`/${image.image}`} />
+        ))}
+      </ProjectContent>
       <PlantStack plants={linkedPlants} />
       <Logo />
       <VerticalRule />

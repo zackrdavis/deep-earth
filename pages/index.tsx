@@ -53,13 +53,13 @@ const StyledHomeSection = styled.div`
     margin-bottom: 500px;
   }
 
-  // project text
+  // section text
   & > div {
     width: calc(50% - ${dims.xPad}px);
     position: sticky;
   }
 
-  // project image
+  // section image
   & > img {
     position: absolute;
     width: calc(50% - ${dims.xPad * 2}px);

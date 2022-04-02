@@ -46,7 +46,7 @@ const HoverPlant = (plant: Plant) => {
         onMouseLeave={() => setHover(false)}
         style={{ color: hover ? "red" : "" }}
       >
-        <Link href={`/projects/?plant=${slug}`}>{title}</Link>
+        <Link href={`/projects?plant=${slug}`}>{title}</Link>
       </div>
       {hover && <PlantPic style={randPosStyle} src={`/${image}`} />}
     </>
