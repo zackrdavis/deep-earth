@@ -1,10 +1,14 @@
 import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
+import styled from "styled-components";
+import Link from "next/link";
 import { importPlants, Plant } from "../explore";
 import fs from "fs";
 import path from "path";
 import parse from "html-react-parser";
 import { Footer } from "../../components/Footer";
 import { VerticalRule } from "../../components/VerticalRule";
+import { Logo } from "../../components/Logo";
+import { dims } from "../../components/shared";
 
 interface ProjectProps {
   content: {
@@ -21,6 +25,44 @@ interface ProjectProps {
   plantsList: Plant[];
 }
 
+const PlantButton = styled.div`
+  width: 40px;
+  height: 80px;
+  border-top-left-radius: 666px;
+  border-bottom-left-radius: 666px;
+  background-size: cover;
+  background-position: left;
+
+  &:hover {
+    width: 80px;
+    border-radius: 666px;
+  }
+`;
+
+const StyledPlantStack = styled.div`
+  position: fixed;
+  left: calc(50vw - 40px);
+  z-index: 9;
+  top: calc(50vh - ${dims.footerHeight}px);
+  transform: translateY(-50%);
+`;
+
+const PlantStack = ({ plants }: { plants: Plant[] }) => {
+  return (
+    <StyledPlantStack>
+      {plants.map((plant) => (
+        <Link href={`/explore?plant=${plant.slug}`}>
+          <a>
+            <PlantButton
+              style={{ backgroundImage: `url(/${plant.attributes.image})` }}
+            />
+          </a>
+        </Link>
+      ))}
+    </StyledPlantStack>
+  );
+};
+
 const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
   const linkedPlants = plantsList.filter((plant) =>
     content.attributes.plants.includes(plant.attributes.title)
@@ -29,9 +71,8 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
   return (
     <>
       {parse(content.html)}
-      {linkedPlants.map((plant, i) => (
-        <img key={i} src={`/${plant.attributes.image}`} />
-      ))}
+      <PlantStack plants={linkedPlants} />
+      <Logo />
       <VerticalRule />
       <Footer />
     </>
