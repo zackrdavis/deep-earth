@@ -1,11 +1,10 @@
 import type { NextPage, GetStaticProps } from "next";
-import Image from "next/image";
-import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
-import { colors, dims } from "../components/shared";
+import { dims } from "../components/shared";
+import { VerticalRule } from "../components/VerticalRule";
 
 type HomeSection = {
   text: string;
@@ -69,16 +68,6 @@ const StyledHomeSection = styled.div`
     left: calc(50% + ${dims.xPad}px);
     top: 0;
   }
-`;
-
-const VerticalRule = styled.div`
-  position: fixed;
-  z-index: 1;
-  width: 1px;
-  background: ${colors.black};
-  height: 100%;
-  top: 0;
-  left: 50vw;
 `;
 
 const HomeSection = ({ imgUrl, text }: { imgUrl: string; text: string }) => {
