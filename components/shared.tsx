@@ -7,3 +7,8 @@ export const colors = {
 export const sluggify = (string: string) => {
   return string.toLowerCase().replaceAll(" ", "-");
 };
+
+export const dims = {
+  xPad: 50,
+  footerHeight: 80,
+};

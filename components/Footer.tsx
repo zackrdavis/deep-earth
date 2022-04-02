@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styled, { CSSProperties } from "styled-components";
 import { colors } from "./shared";
+import { dims } from "./shared";
 
 const StyledFooter = styled.div`
   border-top: 1px solid ${colors.black};
@@ -11,8 +12,8 @@ const StyledFooter = styled.div`
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 80px;
-  padding: 0 50px;
+  height: ${dims.footerHeight}px;
+  padding: 0 ${dims.xPad}px;
   background: ${colors.tan};
 `;
 
