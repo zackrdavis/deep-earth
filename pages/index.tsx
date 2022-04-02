@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
-import { dims } from "../components/shared";
+import { colors, dims } from "../components/shared";
 
 type HomeSection = {
   text: string;
@@ -58,7 +58,7 @@ const StyledHomeSection = styled.div`
 
   // project text
   & > div {
-    width: 50%;
+    width: calc(50% - ${dims.xPad}px);
     position: sticky;
   }
 
@@ -69,6 +69,16 @@ const StyledHomeSection = styled.div`
     left: calc(50% + ${dims.xPad}px);
     top: 0;
   }
+`;
+
+const VerticalRule = styled.div`
+  position: fixed;
+  z-index: 1;
+  width: 1px;
+  background: ${colors.black};
+  height: 100%;
+  top: 0;
+  left: 50vw;
 `;
 
 const HomeSection = ({ imgUrl, text }: { imgUrl: string; text: string }) => {
@@ -117,6 +127,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
   return (
     <>
+      <VerticalRule />
       <Logo onClick={() => setTimeout(() => setTouched(false))} />
       <StyledLandingImage
         className={!touched ? "unTouched" : ""}
