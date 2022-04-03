@@ -41,7 +41,7 @@ const PlantButton = styled.div`
 
 const StyledPlantStack = styled.div`
   position: fixed;
-  left: calc(50vw - 40px);
+  left: calc(50% - 40px);
   z-index: 9;
   top: calc(50vh - ${dims.footerHeight}px);
   transform: translateY(-50%);
@@ -50,22 +50,35 @@ const StyledPlantStack = styled.div`
 const PlantStack = ({ plants }: { plants: Plant[] }) => {
   return (
     <StyledPlantStack>
-      {plants.map((plant) => (
-        <Link href={`/explore?plant=${plant.slug}`}>
-          <a>
-            <PlantButton
-              style={{ backgroundImage: `url(/${plant.attributes.image})` }}
-            />
-          </a>
-        </Link>
-      ))}
+      {plants &&
+        plants.map((plant) => (
+          <Link href={`/explore?plant=${plant.slug}`}>
+            <a>
+              <PlantButton
+                style={{ backgroundImage: `url(/${plant.attributes.image})` }}
+              />
+            </a>
+          </Link>
+        ))}
     </StyledPlantStack>
   );
 };
 
 const ProjectContent = styled.div`
-  width: 50vw;
-  margin-left: 50vw;
+  display: flex;
+`;
+
+const ProjectText = styled.div`
+  width: 50%;
+  padding: 250px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px;
+
+  p:first-child {
+    margin-top: 0;
+  }
+`;
+
+const ProjectImages = styled.div`
+  width: 50%;
   padding: ${dims.xPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px;
 
   // project text
@@ -93,11 +106,15 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
   return (
     <>
       <ProjectContent>
-        <div>{parse(content.html)}</div>
-        {content.attributes.images.map((image) => (
-          <img src={`/${image.image}`} />
-        ))}
+        <ProjectText>{parse(content.html)}</ProjectText>
+        <ProjectImages>
+          {content.attributes.images &&
+            content.attributes.images.map((image) => (
+              <img src={`/${image.image}`} />
+            ))}
+        </ProjectImages>
       </ProjectContent>
+
       <PlantStack plants={linkedPlants} />
       <Logo />
       <VerticalRule />

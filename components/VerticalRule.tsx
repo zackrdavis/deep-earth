@@ -8,5 +8,5 @@ export const VerticalRule = styled.div`
   background: ${colors.black};
   height: 100%;
   top: 0;
-  left: 50vw;
+  left: 50%;
 `;

@@ -105,7 +105,6 @@ const Home: NextPage<HomeProps> = ({ content }) => {
   useEffect(() => {
     window.addEventListener("click", () => setTouched(true));
     window.addEventListener("mousewheel", () => setTouched(true));
-    console.log(touched);
     return () => {
       window.removeEventListener("click", () => setTouched(true));
       window.removeEventListener("mousewheel", () => setTouched(true));
