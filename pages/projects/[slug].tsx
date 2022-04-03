@@ -84,8 +84,8 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
         <ProjectText>{parse(content.html)}</ProjectText>
         <ProjectImages>
           {content.attributes.images &&
-            content.attributes.images.map((image) => (
-              <img src={`/${image.image}`} />
+            content.attributes.images.map((image, i) => (
+              <img key={i} src={`/${image.image}`} />
             ))}
         </ProjectImages>
       </ProjectContent>
