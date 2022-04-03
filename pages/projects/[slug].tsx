@@ -1,7 +1,5 @@
 import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
-import { useEffect } from "react";
 import styled from "styled-components";
-import Link from "next/link";
 import { importPlants, Plant } from "../explore";
 import fs from "fs";
 import path from "path";
@@ -9,6 +7,7 @@ import parse from "html-react-parser";
 import { Footer } from "../../components/Footer";
 import { VerticalRule } from "../../components/VerticalRule";
 import { Logo } from "../../components/Logo";
+import { PlantStack } from "../../components/PlantStack";
 import { dims, colors } from "../../components/shared";
 
 interface ProjectProps {
@@ -25,87 +24,6 @@ interface ProjectProps {
   // all of the plants, to be filtered down
   plantsList: Plant[];
 }
-
-const PlantButton = styled.div`
-  flex: 0 1 auto;
-  min-height: 0px;
-  position: relative;
-
-  a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: -10px;
-  }
-
-  &:hover {
-    div {
-      z-index: 9;
-      width: 80px;
-      border-radius: 666px;
-    }
-  }
-
-  div {
-    width: 40px;
-    height: 80px;
-    border-top-left-radius: 666px;
-    border-bottom-left-radius: 666px;
-    background-size: cover;
-    background-position: left;
-    position: relative;
-    top: calc(50%);
-    transform: translateY(-50%);
-    margin: 10px 0;
-  }
-`;
-
-const StyledPlantStack = styled.div`
-  position: fixed;
-  top: 0;
-  left: calc(50% - 40px);
-  z-index: 9;
-  display: flex;
-  height: 100%;
-  width: 80px;
-  flex-direction: column;
-  justify-content: center;
-  padding-top: ${dims.xPad + 40}px;
-  padding-bottom: ${dims.footerHeight * 2 + dims.xPad + 40}px;
-`;
-
-const PlantStack = ({ plants }: { plants: Plant[] }) => {
-  const handleScroll = (e: Event) => {
-    console.log(e);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  return (
-    <StyledPlantStack>
-      {plants &&
-        plants.map((plant) => (
-          <PlantButton>
-            <Link href={`/explore?plant=${plant.slug}`}>
-              <a>
-                <div
-                  style={{
-                    backgroundImage: `url(/${plant.attributes.image})`,
-                  }}
-                />
-              </a>
-            </Link>
-          </PlantButton>
-        ))}
-    </StyledPlantStack>
-  );
-};
 
 const ProjectContent = styled.div`
   display: flex;
