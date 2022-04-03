@@ -25,6 +25,28 @@ interface ProjectProps {
   plantsList: Plant[];
 }
 
+const FlexPlant = styled.div`
+  flex: 0 1 auto;
+  min-height: 0px;
+  position: relative;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -10px;
+  }
+
+  &:hover {
+    div {
+      z-index: 9;
+      width: 80px;
+      border-radius: 666px;
+    }
+  }
+`;
+
 const PlantButton = styled.div`
   width: 40px;
   height: 80px;
@@ -32,19 +54,24 @@ const PlantButton = styled.div`
   border-bottom-left-radius: 666px;
   background-size: cover;
   background-position: left;
-
-  &:hover {
-    width: 80px;
-    border-radius: 666px;
-  }
+  position: relative;
+  top: calc(50%);
+  transform: translateY(-50%);
+  margin: 10px 0;
 `;
 
 const StyledPlantStack = styled.div`
   position: fixed;
+  top: 0;
   left: calc(50% - 40px);
   z-index: 9;
-  top: calc(50vh - ${dims.footerHeight}px);
-  transform: translateY(-50%);
+  display: flex;
+  height: 100%;
+  width: 80px;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: ${dims.xPad + 40}px;
+  padding-bottom: ${dims.xPad + dims.footerHeight + 40}px;
 `;
 
 const PlantStack = ({ plants }: { plants: Plant[] }) => {
@@ -52,13 +79,17 @@ const PlantStack = ({ plants }: { plants: Plant[] }) => {
     <StyledPlantStack>
       {plants &&
         plants.map((plant) => (
-          <Link href={`/explore?plant=${plant.slug}`}>
-            <a>
-              <PlantButton
-                style={{ backgroundImage: `url(/${plant.attributes.image})` }}
-              />
-            </a>
-          </Link>
+          <FlexPlant>
+            <Link href={`/explore?plant=${plant.slug}`}>
+              <a>
+                <PlantButton
+                  style={{
+                    backgroundImage: `url(/${plant.attributes.image})`,
+                  }}
+                />
+              </a>
+            </Link>
+          </FlexPlant>
         ))}
     </StyledPlantStack>
   );
