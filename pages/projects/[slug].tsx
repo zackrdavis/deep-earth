@@ -9,7 +9,7 @@ import parse from "html-react-parser";
 import { Footer } from "../../components/Footer";
 import { VerticalRule } from "../../components/VerticalRule";
 import { Logo } from "../../components/Logo";
-import { dims } from "../../components/shared";
+import { dims, colors } from "../../components/shared";
 
 interface ProjectProps {
   content: {
@@ -72,7 +72,7 @@ const StyledPlantStack = styled.div`
   flex-direction: column;
   justify-content: center;
   padding-top: ${dims.xPad + 40}px;
-  padding-bottom: ${dims.xPad + dims.footerHeight + 40}px;
+  padding-bottom: ${dims.footerHeight * 2 + dims.xPad + 40}px;
 `;
 
 const PlantStack = ({ plants }: { plants: Plant[] }) => {
@@ -141,6 +141,20 @@ const ProjectImages = styled.div`
   }
 `;
 
+const ProjectFooter = styled.div`
+  border-top: 1px solid ${colors.black};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: ${dims.footerHeight}px;
+  width: 100%;
+  height: ${dims.footerHeight}px;
+  padding: 0 ${dims.xPad}px;
+  background: ${colors.tan};
+  z-index: 2;
+`;
+
 const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
   const linkedPlants = plantsList.filter((plant) =>
     content.attributes.plants.includes(plant.attributes.title)
@@ -161,6 +175,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
       <PlantStack plants={linkedPlants} />
       <Logo />
       <VerticalRule />
+      <ProjectFooter>{content.attributes.title}</ProjectFooter>
       <Footer />
     </>
   );

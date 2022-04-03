@@ -99,7 +99,6 @@ const HomeSection = ({ imgUrl, text }: { imgUrl: string; text: string }) => {
 
 const Home: NextPage<HomeProps> = ({ content }) => {
   const { attributes } = content;
-
   const [touched, setTouched] = useState(false);
 
   useEffect(() => {
