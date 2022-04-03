@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps, GetStaticPaths } from "next";
+import { useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { importPlants, Plant } from "../explore";
@@ -25,7 +26,7 @@ interface ProjectProps {
   plantsList: Plant[];
 }
 
-const FlexPlant = styled.div`
+const PlantButton = styled.div`
   flex: 0 1 auto;
   min-height: 0px;
   position: relative;
@@ -45,19 +46,19 @@ const FlexPlant = styled.div`
       border-radius: 666px;
     }
   }
-`;
 
-const PlantButton = styled.div`
-  width: 40px;
-  height: 80px;
-  border-top-left-radius: 666px;
-  border-bottom-left-radius: 666px;
-  background-size: cover;
-  background-position: left;
-  position: relative;
-  top: calc(50%);
-  transform: translateY(-50%);
-  margin: 10px 0;
+  div {
+    width: 40px;
+    height: 80px;
+    border-top-left-radius: 666px;
+    border-bottom-left-radius: 666px;
+    background-size: cover;
+    background-position: left;
+    position: relative;
+    top: calc(50%);
+    transform: translateY(-50%);
+    margin: 10px 0;
+  }
 `;
 
 const StyledPlantStack = styled.div`
@@ -75,21 +76,32 @@ const StyledPlantStack = styled.div`
 `;
 
 const PlantStack = ({ plants }: { plants: Plant[] }) => {
+  const handleScroll = (e: Event) => {
+    console.log(e);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <StyledPlantStack>
       {plants &&
         plants.map((plant) => (
-          <FlexPlant>
+          <PlantButton>
             <Link href={`/explore?plant=${plant.slug}`}>
               <a>
-                <PlantButton
+                <div
                   style={{
                     backgroundImage: `url(/${plant.attributes.image})`,
                   }}
                 />
               </a>
             </Link>
-          </FlexPlant>
+          </PlantButton>
         ))}
     </StyledPlantStack>
   );
