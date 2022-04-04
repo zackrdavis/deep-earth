@@ -31,7 +31,7 @@ const ProjectContent = styled.div`
 
 const ProjectText = styled.div`
   width: 50%;
-  padding: calc((100vh - ${dims.footerHeight * 2}px) / 1.5) ${dims.xPad}px
+  padding: calc((100vh - ${dims.footerHeight * 2}px) / 1.2) ${dims.xPad}px
     ${dims.footerHeight + dims.xPad}px;
 
   p:first-child {
@@ -43,14 +43,6 @@ const ProjectImages = styled.div`
   width: 50%;
   padding: ${dims.xPad}px ${dims.xPad}px ${dims.footerHeight * 2 + dims.xPad}px;
 
-  // project text
-  & > div {
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
-
-  // project image
   & > img {
     width: 100%;
 

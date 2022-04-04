@@ -4,19 +4,16 @@ import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import { dims } from "../components/shared";
+import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
-
-type HomeSection = {
-  text: string;
-  image: string;
-};
 
 interface HomeProps {
   content: {
     attributes: {
       landing_image: string;
-      sections: HomeSection[];
+      images: { image: string }[];
     };
+    html: string;
   };
 }
 
@@ -43,59 +40,32 @@ const StyledFooter = styled(Footer)`
   }
 `;
 
-const StyledHomeSection = styled.div`
-  padding: 0 ${dims.xPad}px;
-  margin-top: ${dims.xPad}px;
-  margin-bottom: ${dims.footerHeight + dims.xPad}px;
-  position: relative;
+const ProjectContent = styled.div`
+  display: flex;
+`;
 
-  &:not(:last-child) {
-    margin-bottom: 500px;
-  }
+const ProjectText = styled.div`
+  width: 50%;
+  padding: calc((100vh - ${dims.footerHeight * 2}px) / 1.1) ${dims.xPad}px
+    ${dims.footerHeight + dims.xPad}px;
 
-  // section text
-  & > div {
-    width: calc(50% - ${dims.xPad}px);
-    position: sticky;
-  }
-
-  // section image
-  & > img {
-    position: absolute;
-    width: calc(50% - ${dims.xPad * 2}px);
-    left: calc(50% + ${dims.xPad}px);
-    top: 0;
+  p:first-child {
+    margin-top: 0;
   }
 `;
 
-const HomeSection = ({ imgUrl, text }: { imgUrl: string; text: string }) => {
-  const textRef = useRef<HTMLDivElement>(null);
-  const imgRef = useRef<HTMLImageElement>(null);
+const ProjectImages = styled.div`
+  width: 50%;
+  padding: ${dims.xPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px;
 
-  const [textHeight, setTextHeight] = useState(0);
-  const [imgHeight, setImgHeight] = useState(0);
+  & > img {
+    width: 100%;
 
-  useEffect(() => {
-    setTimeout(() => {
-      setTextHeight(textRef.current?.getBoundingClientRect().height || 0);
-      setImgHeight(imgRef.current?.getBoundingClientRect().height || 0);
-    }, 50);
-  }, []);
-
-  return (
-    <StyledHomeSection style={{ height: imgHeight }}>
-      <div
-        ref={textRef}
-        style={{
-          top: `calc(100vh - ${textHeight + 80 + 50}px)`,
-        }}
-      >
-        {text}
-      </div>
-      <img ref={imgRef} src={imgUrl} />
-    </StyledHomeSection>
-  );
-};
+    &:not(:last-child) {
+      margin-bottom: ${dims.xPad}px;
+    }
+  }
+`;
 
 const Home: NextPage<HomeProps> = ({ content }) => {
   const { attributes } = content;
@@ -113,16 +83,25 @@ const Home: NextPage<HomeProps> = ({ content }) => {
   return (
     <>
       <VerticalRule />
+
       <Logo onClick={() => setTimeout(() => setTouched(false))} />
+
       <StyledLandingImage
         className={!touched ? "unTouched" : ""}
         src={attributes.landing_image}
       />
+
+      <ProjectContent id="about">
+        <ProjectText>{parse(content.html)}</ProjectText>
+        <ProjectImages>
+          {content.attributes.images &&
+            content.attributes.images.map((image, i) => (
+              <img key={i} src={`/${image.image}`} />
+            ))}
+        </ProjectImages>
+      </ProjectContent>
+
       <StyledFooter className={!touched ? "unTouched" : ""} />
-      <div id="about" />
-      {attributes.sections.map((section, i) => (
-        <HomeSection key={i} text={section.text} imgUrl={section.image} />
-      ))}
     </>
   );
 };
