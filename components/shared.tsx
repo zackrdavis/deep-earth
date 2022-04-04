@@ -11,4 +11,5 @@ export const sluggify = (string: string) => {
 export const dims = {
   xPad: 50,
   footerHeight: 80,
+  logoPad: 250,
 };

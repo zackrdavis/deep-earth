@@ -8,6 +8,8 @@ import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
 import { useState, useRef } from "react";
 import logo from "../../public/img/deepearth_logo_stacked.png";
+import { Logo } from "../../components/Logo";
+import { dims } from "../../components/shared";
 
 type Project = {
   attributes: {
@@ -25,19 +27,13 @@ interface Props {
   projectsList: Project[];
 }
 
-const LogoContainer = styled.div`
-  position: fixed;
-  top: 40px;
-  left: 50px;
-  z-index: 1;
-`;
-
 const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  padding: 270px 50px 110px 50px;
+  padding: ${dims.logoPad}px ${dims.xPad}px ${dims.footerHeight + 30}px
+    ${dims.xPad}px;
 `;
 
 const Project = styled.div`
@@ -83,9 +79,7 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
 
   return (
     <>
-      <LogoContainer>
-        <Image src={logo} />
-      </LogoContainer>
+      <Logo />
       <ProjectGrid>
         {[
           ...projectsList,

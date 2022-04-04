@@ -31,7 +31,7 @@ const ProjectContent = styled.div`
 
 const ProjectText = styled.div`
   width: 50%;
-  padding: 250px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px;
+  padding: ${dims.logoPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px;
 
   p:first-child {
     margin-top: 0;
