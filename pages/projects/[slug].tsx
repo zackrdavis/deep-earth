@@ -8,7 +8,7 @@ import { Footer } from "../../components/Footer";
 import { VerticalRule } from "../../components/VerticalRule";
 import { Logo } from "../../components/Logo";
 import { PlantStack } from "../../components/PlantStack";
-import { dims, colors } from "../../components/shared";
+import { dims, colors, ContentWrap } from "../../components/shared";
 
 interface ProjectProps {
   content: {
@@ -31,7 +31,8 @@ const ProjectContent = styled.div`
 
 const ProjectText = styled.div`
   width: 50%;
-  padding: ${dims.logoPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px;
+  padding: calc((100vh - ${dims.footerHeight * 2}px) / 1.5) ${dims.xPad}px
+    ${dims.footerHeight + dims.xPad}px;
 
   p:first-child {
     margin-top: 0;
@@ -40,7 +41,7 @@ const ProjectText = styled.div`
 
 const ProjectImages = styled.div`
   width: 50%;
-  padding: ${dims.xPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px;
+  padding: ${dims.xPad}px ${dims.xPad}px ${dims.footerHeight * 2 + dims.xPad}px;
 
   // project text
   & > div {
@@ -80,6 +81,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
   return (
     <>
+      <Logo />
       <ProjectContent>
         <ProjectText>{parse(content.html)}</ProjectText>
         <ProjectImages>
@@ -89,9 +91,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
             ))}
         </ProjectImages>
       </ProjectContent>
-
       <PlantStack plants={linkedPlants} />
-      <Logo />
       <VerticalRule />
       <ProjectFooter>{content.attributes.title}</ProjectFooter>
       <Footer />
