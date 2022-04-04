@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { ContentWrap, dims } from "../components/shared";
+import { colors, ContentWrap, dims } from "../components/shared";
 import { Logo } from "../components/Logo";
 
 export type Plant = {
@@ -61,7 +61,7 @@ const HoverPlant = (plant: Plant) => {
         ref={scrollToRef}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        style={{ color: hover ? "red" : "" }}
+        style={{ color: hover ? colors.sienna : "" }}
       >
         <Link href={`/projects?plant=${slug}`}>{title}</Link>
       </PlantLink>
