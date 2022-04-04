@@ -1,8 +1,10 @@
 import type { NextPage, GetStaticProps } from "next";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Footer } from "../components/Footer";
 import styled from "styled-components";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 const PlantColumns = styled.div`
   display: flex;
@@ -27,9 +29,19 @@ export type Plant = {
 };
 
 const HoverPlant = (plant: Plant) => {
+  const { query } = useRouter();
+  const plantQuery = query.plant as string;
+  const isQueried = plantQuery === plant.slug;
   const { title, image } = plant.attributes;
   const slug = plant.slug;
-  const [hover, setHover] = useState(false);
+  const scrollToRef = useRef<HTMLDivElement>(null);
+  const [hover, setHover] = useState(isQueried);
+
+  useEffect(() => {
+    if (isQueried) {
+      scrollToRef.current?.scrollIntoView();
+    }
+  }, []);
 
   const randLeft = Math.random() * 100;
   const randTop = Math.random() * 100;
@@ -42,6 +54,7 @@ const HoverPlant = (plant: Plant) => {
   return (
     <>
       <div
+        ref={scrollToRef}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
         style={{ color: hover ? "red" : "" }}
