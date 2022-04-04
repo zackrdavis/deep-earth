@@ -1,4 +1,5 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useSpring, animated } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
 import { dims } from "./shared";
@@ -8,6 +9,7 @@ const PlantButton = styled.div`
   flex: 0 1 auto;
   min-height: 0px;
   position: relative;
+  cursor: pointer;
 
   a {
     display: block;
@@ -35,16 +37,16 @@ const PlantButton = styled.div`
     position: relative;
     top: calc(50%);
     transform: translateY(-50%);
-    margin: 10px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 `;
 
 const StyledPlantStack = styled.div`
-  transition-duration: 100ms;
   position: fixed;
   top: 0;
   left: calc(50% - 40px);
-  z-index: 9;
+  z-index: 2;
   display: flex;
   height: 100%;
   width: 80px;
@@ -56,15 +58,17 @@ const StyledPlantStack = styled.div`
 
 export const PlantStack = ({ plants }: { plants: Plant[] }) => {
   const stackRef = useRef<HTMLDivElement>(null);
-  const startScroll = useRef(0);
-  const scrollDist = useRef(0);
-
   const lastScrollPos = useRef(0);
-  const speedRef = useRef(0);
+
   let isScrolling: NodeJS.Timeout;
 
+  const [styles, api] = useSpring(() => ({
+    top: 0,
+    marginTop: 10,
+    config: { frequency: 0.5, damping: 0.3 },
+  }));
+
   useEffect(() => {
-    handleScrollEnd();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -72,41 +76,28 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
   }, []);
 
   const handleScroll = (e: Event) => {
-    // console.log(
-    //   "acceleration:",
-    //   window.scrollY - lastScrollPos.current - speedRef.current
-    // );
-    speedRef.current = window.scrollY - lastScrollPos.current;
-    lastScrollPos.current = window.scrollY;
-
     // Clear the timeout throughout the scroll
     clearTimeout(isScrolling);
     // Set a timeout to run after scrolling ends
-    isScrolling = setTimeout(handleScrollEnd, 100);
-    // set the distance scrolled since last scrollStop
-    scrollDist.current = window.scrollY - startScroll.current;
+    isScrolling = setTimeout(handleScrollEnd, 50);
 
-    if (stackRef.current) {
-      stackRef.current.style.top = `${
-        (window.scrollY - lastScrollPos.current - speedRef.current) * 5
-      }px`;
-    }
+    // determine the scrolling speed
+    const speed = window.scrollY - lastScrollPos.current;
+    lastScrollPos.current = window.scrollY;
+
+    // stretch the springs according to the speed
+    api.start({
+      top: -speed * 3,
+      marginTop: 10 + Math.abs(speed),
+    });
   };
 
   const handleScrollEnd = () => {
-    // console.log(
-    //   "acceleration:",
-    //   window.scrollY - lastScrollPos.current - speedRef.current
-    // );
-    if (stackRef.current) {
-      stackRef.current.style.top = `${
-        (window.scrollY - lastScrollPos.current - speedRef.current) * 5
-      }px`;
-    }
-    // reset scrollDist
-    scrollDist.current = 0;
-    // set new scroll baseline
-    startScroll.current = window.scrollY;
+    // return to start position
+    api.start({
+      top: 0,
+      marginTop: 10,
+    });
   };
 
   return (
@@ -115,13 +106,15 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
         plants.map((plant, i) => (
           <PlantButton className="plantButton" key={i}>
             <Link href={`/explore?plant=${plant.slug}`}>
-              <a>
-                <div
+              <animated.a style={{ top: styles.top }}>
+                <animated.div
                   style={{
                     backgroundImage: `url(/${plant.attributes.image})`,
+                    marginTop: styles.marginTop,
+                    marginBottom: styles.marginTop,
                   }}
                 />
-              </a>
+              </animated.a>
             </Link>
           </PlantButton>
         ))}
