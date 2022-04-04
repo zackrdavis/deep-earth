@@ -2,7 +2,7 @@ import type { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
 import useIntersectionObserver from "@react-hook/intersection-observer";
 import Image from "next/image";
-import { sluggify } from "../../components/shared";
+import { ContentWrap, sluggify } from "../../components/shared";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
@@ -32,8 +32,6 @@ const ProjectGrid = styled.div`
   grid-template-columns: 3fr 3fr 3fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  padding: ${dims.logoPad}px ${dims.xPad}px ${dims.footerHeight + 30}px
-    ${dims.xPad}px;
 `;
 
 const Project = styled.div`
@@ -80,21 +78,23 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
   return (
     <>
       <Logo />
-      <ProjectGrid>
-        {[
-          ...projectsList,
-          ...projectsList,
-          ...projectsList,
-          ...projectsList,
-        ].map((project, i) => (
-          <Link href={`/projects/${project.slug}`} key={i}>
-            <Project>
-              <ProjectImage src={project.attributes.featured_image} />
-              {project.attributes.title}
-            </Project>
-          </Link>
-        ))}
-      </ProjectGrid>
+      <ContentWrap>
+        <ProjectGrid>
+          {[
+            ...projectsList,
+            ...projectsList,
+            ...projectsList,
+            ...projectsList,
+          ].map((project, i) => (
+            <Link href={`/projects/${project.slug}`} key={i}>
+              <Project>
+                <ProjectImage src={project.attributes.featured_image} />
+                {project.attributes.title}
+              </Project>
+            </Link>
+          ))}
+        </ProjectGrid>
+      </ContentWrap>
       <Footer />
     </>
   );

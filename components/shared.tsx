@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 export const colors = {
   black: "#3A3935",
   tan: "#E6E6DA",
@@ -11,5 +13,14 @@ export const sluggify = (string: string) => {
 export const dims = {
   xPad: 50,
   footerHeight: 80,
-  logoPad: 250,
+  logoPad: 240,
 };
+
+export const ContentWrap = styled.div`
+  padding: ${dims.logoPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px
+    ${dims.xPad}px;
+
+  p:first-child {
+    margin-top: 0;
+  }
+`;

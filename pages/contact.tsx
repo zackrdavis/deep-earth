@@ -1,6 +1,8 @@
 import type { NextPage, GetStaticProps } from "next";
 import parse from "html-react-parser";
 import { Footer } from "../components/Footer";
+import { Logo } from "../components/Logo";
+import { ContentWrap } from "../components/shared";
 
 interface Props {
   content: {
@@ -14,7 +16,8 @@ interface Props {
 const Contact: NextPage<Props> = ({ content }) => {
   return (
     <>
-      {parse(content.html)}
+      <Logo />
+      <ContentWrap>{parse(content.html)}</ContentWrap>
       <Footer />
     </>
   );

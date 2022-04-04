@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { dims } from "../components/shared";
+import { ContentWrap, dims } from "../components/shared";
 import { Logo } from "../components/Logo";
 
 export type Plant = {
@@ -17,8 +17,6 @@ export type Plant = {
 };
 
 const PlantColumns = styled.div`
-  padding: ${dims.logoPad}px ${dims.xPad}px
-    ${dims.footerHeight + dims.xPad - 24}px ${dims.xPad}px;
   column-count: 4;
   column-width: 200px;
   column-gap: ${dims.xPad}px;
@@ -80,48 +78,15 @@ const Plants: NextPage<Props> = ({ plantsList }) => {
   return (
     <>
       <Logo />
-      <PlantColumns>
-        {[
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-          ...plantsList,
-        ].map((plant, i) => (
-          <HoverPlant key={i} {...plant} />
-        ))}
-      </PlantColumns>
+      <ContentWrap
+        style={{ paddingBottom: dims.footerHeight + dims.xPad - 24 }}
+      >
+        <PlantColumns>
+          {plantsList.map((plant, i) => (
+            <HoverPlant key={i} {...plant} />
+          ))}
+        </PlantColumns>
+      </ContentWrap>
       <Footer />
     </>
   );
