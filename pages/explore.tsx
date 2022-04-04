@@ -6,20 +6,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-const PlantColumns = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 238px 50px 80px 50px;
-`;
-
-const PlantPic = styled.img`
-  width: 200px;
-  height: auto;
-  position: fixed;
-`;
-
 export type Plant = {
   attributes: {
     title: string;
@@ -27,6 +13,23 @@ export type Plant = {
   };
   slug: string;
 };
+
+const PlantColumns = styled.div`
+  padding: 238px 50px 80px 50px;
+  column-count: 4;
+  column-width: 200px;
+  column-gap: 50px;
+`;
+
+const PlantLink = styled.div`
+  margin-bottom: 24px;
+`;
+
+const PlantPic = styled.img`
+  height: auto;
+  position: fixed;
+  z-index: 9;
+`;
 
 const HoverPlant = (plant: Plant) => {
   const { query } = useRouter();
@@ -53,14 +56,14 @@ const HoverPlant = (plant: Plant) => {
 
   return (
     <>
-      <div
+      <PlantLink
         ref={scrollToRef}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
         style={{ color: hover ? "red" : "" }}
       >
         <Link href={`/projects?plant=${slug}`}>{title}</Link>
-      </div>
+      </PlantLink>
       {hover && <PlantPic style={randPosStyle} src={`/${image}`} />}
     </>
   );
