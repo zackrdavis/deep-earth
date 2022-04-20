@@ -1,5 +1,5 @@
 ---
-landing_image: img/landing.jpg
+landing_image: img/landing-progressive.jpeg
 images:
   - image: img/img_20200809_170549.jpg
   - image: img/img_20200810_151331.jpg
