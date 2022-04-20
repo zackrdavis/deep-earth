@@ -1,9 +1,10 @@
 ---
 landing_image: img/landing-progressive.jpeg
 images:
-  - image: img/img_20200809_170549.jpg
-  - image: img/img_20200810_151331.jpg
-  - image: img/img_20200810_145618.jpg
+  - image: img/266clinton_8.jpg
+  - image: img/266clinton_6.jpg
+  - image: img/266clinton_2.jpg
+  - image: img/266clinton_10.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit cursus risus at ultrices. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Amet aliquam id diam maecenas ultricies mi eget mauris. Pharetra et ultrices neque ornare. Sed faucibus turpis in eu mi bibendum neque. Condimentum lacinia quis vel eros donec ac. Tellus pellentesque eu tincidunt tortor aliquam. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Egestas erat imperdiet sed euismod nisi. Mattis rhoncus urna neque viverra justo. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Vestibulum lorem sed risus ultricies. Aliquam faucibus purus in massa. Ac turpis egestas maecenas pharetra convallis posuere morbi. Vel pharetra vel turpis nunc.
 
