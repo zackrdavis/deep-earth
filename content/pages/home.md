@@ -1,5 +1,5 @@
 ---
-landing_image: img/screen-shot-2022-03-18-at-9.40.48-pm.png
+landing_image: img/screen-shot-2022-04-19-at-6.40.09-pm.png
 sections:
   - text: Deep Earth is a landscape design studio with locations in Portland, OR and
       New York City. Designing with an eye towards environmental rejuvenation

@@ -17,13 +17,16 @@ interface HomeProps {
   };
 }
 
-const StyledLandingImage = styled.img`
+const StyledLandingImage = styled.div`
   width: 100vw;
   height: 100vh;
   left: 0;
   top: 0%;
   position: relative;
   z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const StyledFooter = styled(Footer)`
@@ -88,7 +91,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <StyledLandingImage
         className={!touched ? "unTouched" : ""}
-        src={attributes.landing_image}
+        style={{ backgroundImage: `url(${attributes.landing_image})` }}
       />
 
       <ProjectContent id="about">
