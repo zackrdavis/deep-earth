@@ -32,22 +32,7 @@ const StyledLandingImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  span {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-  }
 `;
-
-const Splash = styled.img``;
 
 const BigLogo = styled.img`
   width: 590px;
@@ -115,9 +100,8 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <StyledLandingImage
         className={!touched ? "unTouched" : ""}
-        //style={{ backgroundImage: `url(${attributes.landing_image})` }}
+        style={{ backgroundImage: `url(${attributes.landing_image})` }}
       >
-        <LazyLoadImage src={attributes.landing_image} effect="opacity" />
         <BigLogo src="/img/site/deepearth_tan.svg" />
       </StyledLandingImage>
 
