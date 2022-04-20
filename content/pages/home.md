@@ -1,5 +1,5 @@
 ---
-landing_image: img/screen-shot-2022-04-19-at-6.40.09-pm.png
+landing_image: img/landing.jpg
 images:
   - image: img/img_20200809_170549.jpg
   - image: img/img_20200810_151331.jpg

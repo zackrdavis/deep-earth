@@ -1,5 +1,4 @@
 import type { NextPage, GetStaticProps } from "next";
-import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
@@ -25,6 +24,9 @@ const StyledLandingImage = styled.div`
   top: 0%;
   position: relative;
   z-index: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +34,6 @@ const StyledLandingImage = styled.div`
 
 const BigLogo = styled.img`
   width: 590px;
-  z-index: 1;
 `;
 
 const StyledFooter = styled(Footer)`
@@ -95,14 +96,10 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <Logo onClick={() => setTimeout(() => setTouched(false))} />
 
-      <StyledLandingImage className={!touched ? "unTouched" : ""}>
-        <Image
-          layout="intrinsic"
-          width={700}
-          height={675}
-          quality={50}
-          src={`/${attributes.landing_image}`}
-        />
+      <StyledLandingImage
+        className={!touched ? "unTouched" : ""}
+        style={{ backgroundImage: `url(${attributes.landing_image})` }}
+      >
         <BigLogo src="/img/site/deepearth_tan.svg" />
       </StyledLandingImage>
 
