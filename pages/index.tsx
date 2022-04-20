@@ -34,6 +34,13 @@ const StyledLandingImage = styled.div`
   justify-content: center;
 `;
 
+const Splash = styled.img`
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+`;
+
 const BigLogo = styled.img`
   width: 590px;
 `;
@@ -100,8 +107,9 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <StyledLandingImage
         className={!touched ? "unTouched" : ""}
-        style={{ backgroundImage: `url(${attributes.landing_image})` }}
+        //style={{ backgroundImage: `url(${attributes.landing_image})` }}
       >
+        <Splash src={attributes.landing_image} />
         <BigLogo src="/img/site/deepearth_tan.svg" />
       </StyledLandingImage>
 
