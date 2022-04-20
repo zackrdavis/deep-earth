@@ -6,6 +6,7 @@ import { Logo } from "../components/Logo";
 import { dims } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface HomeProps {
   content: {
@@ -108,7 +109,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         <ProjectImages>
           {content.attributes.images &&
             content.attributes.images.map((image, i) => (
-              <img key={i} src={`/${image.image}`} />
+              <LazyLoadImage key={i} src={`/${image.image}`} />
             ))}
         </ProjectImages>
       </ProjectContent>
