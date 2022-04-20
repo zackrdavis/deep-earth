@@ -67,9 +67,11 @@ const ProjectFooter = styled.div`
 `;
 
 const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
-  const linkedPlants = plantsList.filter((plant) =>
-    content.attributes.plants.includes(plant.attributes.title)
-  );
+  const linkedPlants = content.attributes.plants
+    ? plantsList.filter((plant) =>
+        content.attributes.plants.includes(plant.attributes.title)
+      )
+    : [];
 
   return (
     <>

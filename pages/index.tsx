@@ -100,7 +100,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         className={!touched ? "unTouched" : ""}
         style={{ backgroundImage: `url(${attributes.landing_image})` }}
       >
-        <BigLogo src="/img/deepearth_tan.svg" />
+        <BigLogo src="/img/site/deepearth_tan.svg" />
       </StyledLandingImage>
 
       <ProjectContent id="about">

@@ -30,6 +30,8 @@ const PlantPic = styled.img`
   height: auto;
   position: fixed;
   z-index: 9;
+  max-width: 300px;
+  max-height: 300px;
 `;
 
 const HoverPlant = (plant: Plant) => {

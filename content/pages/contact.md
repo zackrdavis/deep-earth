@@ -1,5 +1,5 @@
 ---
-featured_image: img/screen-shot-2022-03-18-at-9.41.27-pm.png
+featured_image: img/img_20200810_151331.jpg
 ---
 
 For all inquiries, please contact us at:

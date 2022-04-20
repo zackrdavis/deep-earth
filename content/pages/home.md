@@ -1,47 +1,16 @@
 ---
 landing_image: img/screen-shot-2022-04-19-at-6.40.09-pm.png
-sections:
-  - text: Deep Earth is a landscape design studio with locations in Portland, OR and
-      New York City. Designing with an eye towards environmental rejuvenation
-      and climate adaptation, Deep Earth collaborates with artists and
-      biologists to create ethical and educational plantscapes.
-    image: img/screen-shot-2022-03-18-at-9.41.27-pm.png
-  - text: >-
-      Our designs begin with plants, weaving together the needs of our clients
-      and the needs of local ecosystems. 
-
-
-      We create spaces for their beauty and to serve as a vital refuge for urban and suburban wildlife. Deep Earth specializes in cultivating habitats; choosing plants that attract pollinators and creating environments for animal and bird life to thrive. 
-
-
-      Our designs are adapted to the changing climate by embracing practices designed for
-    image: img/screen-shot-2022-03-18-at-9.11.40-pm.png
-  - text: >-
-      Deep Earth works closely with our clients to imagine unique ways to
-      maximize their outdoor space. 
-
-
-      Seasonal gardens provide year round interest. Xeric gardens are adapted to dry, water-scarce sites. Eco-lawns reduce maintenance and eliminate the need for chemicals. Permaculture practices such as berms and swales are a favorite of ours for retaining water.
-    image: img/screen-shot-2022-03-18-at-10.05.25-pm.png
 images:
-  - image: img/screen-shot-2022-03-18-at-9.41.27-pm.png
-  - image: img/screen-shot-2022-03-18-at-9.11.40-pm.png
-  - image: img/_dsc1020.jpg
-  - image: img/screen-shot-2022-03-18-at-10.05.25-pm.png
+  - image: img/img_20200809_170549.jpg
+  - image: img/img_20200810_151331.jpg
+  - image: img/img_20200810_145618.jpg
 ---
-Deep Earth is a landscape design studio located in Portland, OR, and New York, NY. Designing with an eye towards environmental rejuvenation and climate adaptation, Deep Earth collaborates with artists and biologists to create ethical and educational plantscapes.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit cursus risus at ultrices. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Amet aliquam id diam maecenas ultricies mi eget mauris. Pharetra et ultrices neque ornare. Sed faucibus turpis in eu mi bibendum neque. Condimentum lacinia quis vel eros donec ac. Tellus pellentesque eu tincidunt tortor aliquam. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Egestas erat imperdiet sed euismod nisi. Mattis rhoncus urna neque viverra justo. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Vestibulum lorem sed risus ultricies. Aliquam faucibus purus in massa. Ac turpis egestas maecenas pharetra convallis posuere morbi. Vel pharetra vel turpis nunc.
 
-Our designs begin with plants, weaving together the needs of our clients and the needs of local ecosystems. 
+Congue mauris rhoncus aenean vel elit. Consectetur purus ut faucibus pulvinar elementum. Sit amet facilisis magna etiam tempor orci eu. In hac habitasse platea dictumst quisque. Quis ipsum suspendisse ultrices gravida dictum fusce ut. Rhoncus mattis rhoncus urna neque. Vel risus commodo viverra maecenas accumsan lacus vel facilisis. Bibendum est ultricies integer quis auctor elit sed. Aliquam id diam maecenas ultricies mi. Mi sit amet mauris commodo quis imperdiet. Pharetra convallis posuere morbi leo urna molestie at. Volutpat maecenas volutpat blandit aliquam etiam erat velit.
 
-We create spaces for their beauty and to serve as a vital refuge for urban and suburban wildlife. Deep Earth specializes in cultivating habitats; choosing plants that attract pollinators and creating environments for animal and bird life to thrive. 
+Semper auctor neque vitae tempus quam pellentesque. Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Morbi non arcu risus quis varius quam quisque. Quisque id diam vel quam elementum pulvinar etiam. Tincidunt lobortis feugiat vivamus at. Hendrerit gravida rutrum quisque non. Aliquam eleifend mi in nulla posuere sollicitudin. Mauris augue neque gravida in fermentum et sollicitudin ac orci. Amet est placerat in egestas erat. Viverra accumsan in nisl nisi scelerisque eu. Risus in hendrerit gravida rutrum quisque non tellus orci. Dictum non consectetur a erat nam at lectus. Nulla aliquet enim tortor at auctor urna nunc id cursus.
 
-Seasonal gardens provide year round interest. Xeric gardens are adapted to dry, water-scarce sites. Eco-lawns reduce maintenance and eliminate the need for chemicals. Permaculture practices such as berms and swales are a favorite of ours for retaining water. 
+Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Tortor consequat id porta nibh venenatis cras. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque. In eu mi bibendum neque egestas congue. Neque volutpat ac tincidunt vitae semper quis lectus nulla at. Nec sagittis aliquam malesuada bibendum arcu vitae. Eu non diam phasellus vestibulum lorem. Sem integer vitae justo eget magna fermentum iaculis eu. Bibendum neque egestas congue quisque egestas. Consequat semper viverra nam libero justo laoreet sit amet cursus.
 
-
-
-
-
-Joshua Pavlacky
-Principal
-
-Joshua Pavlacky is a designer, artist, and curator born in Portland, Oregon. From 2008-2013 he directed Appendix Project Space in Portland, OR, an international artist's residency and online exhibition platform. From 2013-2019 he directed American Medium, an art gallery focused on emerging trends in
+Elit pellentesque habitant morbi tristique senectus et netus. Vel risus commodo viverra maecenas. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Lorem mollis aliquam ut porttitor. Tortor posuere ac ut consequat. Diam quam nulla porttitor massa. Orci sagittis eu volutpat odio facilisis mauris sit amet massa. Facilisis mauris sit amet massa. Massa sapien faucibus et molestie ac feugiat. Sagittis orci a scelerisque purus semper eget duis. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui. Ut placerat orci nulla pellentesque. Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Pulvinar etiam non quam lacus suspendisse faucibus. Morbi quis commodo odio aenean sed adipiscing diam. Eget est lorem ipsum dolor. Nunc pulvinar sapien et ligula. Enim facilisis gravida neque convallis a cras. Ornare arcu dui vivamus arcu. Rutrum tellus pellentesque eu tincidunt.

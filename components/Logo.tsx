@@ -15,7 +15,7 @@ export const Logo = ({ onClick }: { onClick?: () => void }) => {
   return (
     <Link href="/">
       <a>
-        <StyledLogo onClick={onClick} src="/img/deepearth_sienna.svg" />
+        <StyledLogo onClick={onClick} src="/img/site/deepearth_sienna.svg" />
       </a>
     </Link>
   );

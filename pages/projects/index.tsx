@@ -80,12 +80,7 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
       <Logo />
       <ContentWrap>
         <ProjectGrid>
-          {[
-            ...projectsList,
-            ...projectsList,
-            ...projectsList,
-            ...projectsList,
-          ].map((project, i) => (
+          {projectsList.map((project, i) => (
             <Link href={`/projects/${project.slug}`} key={i}>
               <Project>
                 <ProjectImage src={project.attributes.featured_image} />
