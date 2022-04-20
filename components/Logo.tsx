@@ -8,13 +8,14 @@ const StyledLogo = styled.img`
   left: ${dims.xPad}px;
   top: 40px;
   cursor: pointer;
+  width: 300px;
 `;
 
 export const Logo = ({ onClick }: { onClick?: () => void }) => {
   return (
     <Link href="/">
       <a>
-        <StyledLogo onClick={onClick} src="/img/deepearth_logo_stacked.png" />
+        <StyledLogo onClick={onClick} src="/img/deepearth_sienna.svg" />
       </a>
     </Link>
   );

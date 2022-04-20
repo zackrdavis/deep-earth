@@ -27,6 +27,13 @@ const StyledLandingImage = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const BigLogo = styled.img`
+  width: 590px;
 `;
 
 const StyledFooter = styled(Footer)`
@@ -92,7 +99,9 @@ const Home: NextPage<HomeProps> = ({ content }) => {
       <StyledLandingImage
         className={!touched ? "unTouched" : ""}
         style={{ backgroundImage: `url(${attributes.landing_image})` }}
-      />
+      >
+        <BigLogo src="/img/deepearth_tan.svg" />
+      </StyledLandingImage>
 
       <ProjectContent id="about">
         <ProjectText>{parse(content.html)}</ProjectText>
