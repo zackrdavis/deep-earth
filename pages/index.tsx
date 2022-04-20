@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
-import { dims } from "../components/shared";
+import { colors, dims } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -28,7 +28,7 @@ const StyledLandingImage = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
+  background-color: ${colors.tan};
   display: flex;
   align-items: center;
   justify-content: center;
