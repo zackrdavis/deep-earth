@@ -1,2 +1,2 @@
 [[plugins]]
-package = "@netlify/plugin-nextjs@experimental-odb"
+package = "plugin-nextjs@experimental-odb"
