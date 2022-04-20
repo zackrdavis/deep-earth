@@ -109,7 +109,13 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         <ProjectImages>
           {content.attributes.images &&
             content.attributes.images.map((image, i) => (
-              <LazyLoadImage key={i} src={`/${image.image}`} />
+              <LazyLoadImage
+                height={1000}
+                width={500}
+                key={i}
+                src={`/${image.image}`}
+                afterLoad={() => console.log("loded")}
+              />
             ))}
         </ProjectImages>
       </ProjectContent>
