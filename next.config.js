@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  styledComponents: true,
   webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
