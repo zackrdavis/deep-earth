@@ -1,4 +1,4 @@
-import Document from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
@@ -14,6 +14,7 @@ export default class MyDocument extends Document {
         });
 
       const initialProps = await Document.getInitialProps(ctx);
+
       return {
         ...initialProps,
         styles: (
@@ -26,5 +27,20 @@ export default class MyDocument extends Document {
     } finally {
       sheet.seal();
     }
+  }
+
+  render() {
+    return (
+      <Html>
+        <Head>
+          <link rel="preload" href="fonts/Greenhouse-Prune.woff2" as="font" />
+          <link rel="preload" href="fonts/Greenhouse-Prune.woff" as="font" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
