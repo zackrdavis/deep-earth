@@ -99,7 +99,6 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         <Image
           width={200}
           height={200}
-          // layout={"fill"}
           // objectFit={"cover"}
           // objectPosition={"center"}
           src={`/${attributes.landing_image}`}
