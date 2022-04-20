@@ -1,5 +1,5 @@
 ---
-landing_image: img/landing-progressive.jpeg
+landing_image: img/landing_prog.jpg
 images:
   - image: img/266clinton_8.jpg
   - image: img/266clinton_6.jpg
