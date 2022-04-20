@@ -97,9 +97,11 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <StyledLandingImage className={!touched ? "unTouched" : ""}>
         <Image
-          layout={"fill"}
-          objectFit={"cover"}
-          objectPosition={"center"}
+          width={200}
+          height={200}
+          // layout={"fill"}
+          // objectFit={"cover"}
+          // objectPosition={"center"}
           src={`/${attributes.landing_image}`}
         />
         <BigLogo src="/img/site/deepearth_tan.svg" />
