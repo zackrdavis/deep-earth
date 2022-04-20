@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
@@ -102,6 +103,8 @@ const Home: NextPage<HomeProps> = ({ content }) => {
       >
         <BigLogo src="/img/site/deepearth_tan.svg" />
       </StyledLandingImage>
+
+      <Image width={1000} height={500} src={`/${attributes.landing_image}`} />
 
       <ProjectContent id="about">
         <ProjectText>{parse(content.html)}</ProjectText>
