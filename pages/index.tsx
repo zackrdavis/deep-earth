@@ -19,15 +19,12 @@ interface HomeProps {
 }
 
 const StyledLandingImage = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   left: 0;
   top: 0%;
   position: relative;
   z-index: 1;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,6 +32,7 @@ const StyledLandingImage = styled.div`
 
 const BigLogo = styled.img`
   width: 590px;
+  z-index: 1;
 `;
 
 const StyledFooter = styled(Footer)`
@@ -97,14 +95,15 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <Logo onClick={() => setTimeout(() => setTouched(false))} />
 
-      <StyledLandingImage
-        className={!touched ? "unTouched" : ""}
-        style={{ backgroundImage: `url(${attributes.landing_image})` }}
-      >
+      <StyledLandingImage className={!touched ? "unTouched" : ""}>
+        <Image
+          layout={"fill"}
+          objectFit={"cover"}
+          objectPosition={"center"}
+          src={`/${attributes.landing_image}`}
+        />
         <BigLogo src="/img/site/deepearth_tan.svg" />
       </StyledLandingImage>
-
-      <Image width={1000} height={500} src={`/${attributes.landing_image}`} />
 
       <ProjectContent id="about">
         <ProjectText>{parse(content.html)}</ProjectText>
