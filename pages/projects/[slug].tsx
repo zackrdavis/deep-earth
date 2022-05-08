@@ -32,7 +32,7 @@ const ProjectContent = styled.div`
 const ProjectText = styled.div`
   width: 50%;
   padding: calc((100vh - ${dims.footerHeight * 2}px) / 1.2) ${dims.xPad}px
-    ${dims.footerHeight + dims.xPad}px;
+    ${dims.footerHeight * 2 + dims.xPad}px;
 
   p:first-child {
     margin-top: 0;
