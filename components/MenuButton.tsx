@@ -1,13 +1,26 @@
 import styled from "styled-components";
 import { colors } from "./shared";
+import { Logo } from "./Logo";
+
+const FixedBanner = styled.div`
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background: ${colors.tan};
+  border-bottom: 1px solid ${colors.black};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 25px;
+`;
 
 const StyledMenuButton = styled.div`
-  position: fixed;
-  top: 25px;
-  right: 25px;
+  position: relative;
   z-index: 999;
-  width: 48px;
-  height: 48px;
+  width: 8vw;
+  height: 8vw;
   cursor: pointer;
 
   @media screen and (min-width: 641px) {
@@ -42,7 +55,7 @@ const Ex = styled.div`
     top: 50%;
     left: 50%;
     height: 6px;
-    width: 60px;
+    width: 137%;
     background-color: ${colors.sienna};
   }
 
@@ -62,8 +75,18 @@ export const MenuButton = ({
   showMenu: boolean;
 }) => {
   return (
-    <StyledMenuButton onClick={handleClick}>
-      {showMenu ? <Ex /> : <Hamburger />}
-    </StyledMenuButton>
+    <FixedBanner>
+      <Logo
+        style={{
+          display: "block",
+          top: 0,
+          width: "calc(100vw - 150px)",
+          position: "relative",
+        }}
+      />
+      <StyledMenuButton onClick={handleClick}>
+        {showMenu ? <Ex /> : <Hamburger />}
+      </StyledMenuButton>
+    </FixedBanner>
   );
 };

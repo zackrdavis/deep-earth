@@ -56,6 +56,10 @@ const StyledFooter = styled(Footer)`
 
 const ProjectContent = styled.div`
   display: flex;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const ProjectText = styled.div`
@@ -65,6 +69,11 @@ const ProjectText = styled.div`
 
   p:first-child {
     margin-top: 0;
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    padding: ${dims.xPad}px;
   }
 `;
 
@@ -78,6 +87,12 @@ const ProjectImages = styled.div`
     &:not(:last-child) {
       margin-bottom: ${dims.xPad}px;
     }
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    padding-top: ${dims.xPad + 75}px;
+    padding-bottom: 0;
   }
 `;
 

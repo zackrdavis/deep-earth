@@ -54,6 +54,10 @@ const StyledPlantStack = styled.div`
   justify-content: center;
   padding-top: ${dims.xPad + 40}px;
   padding-bottom: ${dims.footerHeight * 2 + dims.xPad + 40}px;
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 `;
 
 export const PlantStack = ({ plants }: { plants: Plant[] }) => {

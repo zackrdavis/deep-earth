@@ -9,4 +9,8 @@ export const VerticalRule = styled.div`
   height: 100%;
   top: 0;
   left: 50%;
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 `;

@@ -27,6 +27,10 @@ interface ProjectProps {
 
 const ProjectContent = styled.div`
   display: flex;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const ProjectText = styled.div`
@@ -36,6 +40,12 @@ const ProjectText = styled.div`
 
   p:first-child {
     margin-top: 0;
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    padding-top: ${dims.xPad}px;
+    padding-bottom: ${dims.xPad + dims.footerHeight}px;
   }
 `;
 
@@ -49,6 +59,12 @@ const ProjectImages = styled.div`
     &:not(:last-child) {
       margin-bottom: ${dims.xPad}px;
     }
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 100%;
+    padding-top: ${dims.xPad + 75}px;
+    padding-bottom: 0;
   }
 `;
 
@@ -64,6 +80,10 @@ const ProjectFooter = styled.div`
   padding: 0 ${dims.xPad}px;
   background: ${colors.tan};
   z-index: 2;
+
+  @media screen and (max-width: 640px) {
+    bottom: 0;
+  }
 `;
 
 const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
