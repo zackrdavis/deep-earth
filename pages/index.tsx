@@ -35,7 +35,9 @@ const StyledLandingImage = styled.div`
 `;
 
 const BigLogo = styled.img`
-  width: 590px;
+  width: 690px;
+  padding: 0 50px;
+  max-width: 100vw;
 `;
 
 const StyledFooter = styled(Footer)`
