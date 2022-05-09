@@ -20,6 +20,10 @@ const PlantColumns = styled.div`
   column-count: 4;
   column-width: 200px;
   column-gap: ${dims.xPad}px;
+
+  @media screen and (max-width: 640px) {
+    column-count: 1;
+  }
 `;
 
 const PlantLink = styled.div`

@@ -23,4 +23,9 @@ export const ContentWrap = styled.div`
   p:first-child {
     margin-top: 0;
   }
+
+  @media screen and (max-width: 640px) {
+    padding-top: ${dims.xPad + 75}px;
+    padding-bottom: ${dims.xPad}px;
+  }
 `;

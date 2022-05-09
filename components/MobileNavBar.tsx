@@ -14,6 +14,10 @@ const FixedBanner = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-right: 25px;
+
+  @media screen and (min-width: 641px) {
+    display: none;
+  }
 `;
 
 const StyledMenuButton = styled.div`
@@ -22,10 +26,6 @@ const StyledMenuButton = styled.div`
   width: 8vw;
   height: 8vw;
   cursor: pointer;
-
-  @media screen and (min-width: 641px) {
-    display: none;
-  }
 `;
 
 const Hamburger = styled.div`
@@ -67,7 +67,7 @@ const Ex = styled.div`
   }
 `;
 
-export const MenuButton = ({
+export const MobileNavBar = ({
   handleClick,
   showMenu,
 }: {

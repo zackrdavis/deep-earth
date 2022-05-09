@@ -1,12 +1,8 @@
 ---
 title: 266 Clinton
 date: 2022-04-20T04:13:53.696Z
-featured_image: img/IMG_20200809_170549.jpg
-images:
-  - image: img/IMG_20200809_170631.jpg
-  - image: img/IMG_20200810_151331.jpg
-  - image: img/IMG_20200810_145618.jpg
-  - image: img/IMG_20200625_114450.jpg
+featured_image: img/266clinton_1.jpg
+images: []
 plants:
   - Euphorbia characias
 ---

@@ -32,6 +32,11 @@ const ProjectGrid = styled.div`
   grid-template-columns: 3fr 3fr 3fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+
+  @media screen and (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const Project = styled.div`

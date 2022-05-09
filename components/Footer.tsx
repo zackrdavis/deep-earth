@@ -4,7 +4,7 @@ import { useState } from "react";
 import styled, { CSSProperties } from "styled-components";
 import { colors } from "./shared";
 import { dims } from "./shared";
-import { MenuButton } from "./MenuButton";
+import { MobileNavBar } from "./MobileNavBar";
 
 const StyledFooter = styled.div`
   border-top: 1px solid ${colors.black};
@@ -45,7 +45,7 @@ export const Footer = ({ className }: { className?: string }) => {
 
   return (
     <>
-      <MenuButton
+      <MobileNavBar
         handleClick={() => setShowMenu(!showMenu)}
         showMenu={showMenu}
       />
