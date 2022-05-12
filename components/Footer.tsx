@@ -10,7 +10,7 @@ const StyledFooter = styled.div`
   border-top: 1px solid ${colors.black};
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  //justify-content: space-between;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -19,12 +19,16 @@ const StyledFooter = styled.div`
   background: ${colors.tan};
   z-index: 2;
 
+  & > a {
+    margin-bottom: 50px;
+  }
+
   @media screen and (max-width: 640px) {
     display: none;
 
     top: 0px;
     height: 100%;
-    padding: 50% ${dims.xPad}px;
+    padding: ${dims.xPad + 75}px ${dims.xPad}px ${dims.xPad}px;
     flex-direction: column;
     align-items: flex-start;
 
