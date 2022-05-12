@@ -19,10 +19,6 @@ const StyledFooter = styled.div`
   background: ${colors.tan};
   z-index: 2;
 
-  & > a {
-    margin-bottom: 50px;
-  }
-
   @media screen and (max-width: 640px) {
     display: none;
     top: 0px;
@@ -31,6 +27,10 @@ const StyledFooter = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: start;
+
+    & > a {
+      margin-bottom: 50px;
+    }
 
     &.mobile-show {
       display: flex;
@@ -57,16 +57,36 @@ export const Footer = ({ className }: { className?: string }) => {
         className={showMenu ? `mobile-show ${className}` : className}
       >
         <Link href="/#about" passHref>
-          <StyledLink active={route == "/"}>About</StyledLink>
+          <StyledLink
+            active={route == "/"}
+            onClick={() => (route == "/" ? setShowMenu(false) : null)}
+          >
+            About
+          </StyledLink>
         </Link>
         <Link href="/contact" passHref>
-          <StyledLink active={route == "/contact"}>Contact</StyledLink>
+          <StyledLink
+            active={route == "/contact"}
+            onClick={() => (route == "/contact" ? setShowMenu(false) : null)}
+          >
+            Contact
+          </StyledLink>
         </Link>
         <Link href="/projects" passHref>
-          <StyledLink active={route == "/projects"}>Projects</StyledLink>
+          <StyledLink
+            active={route == "/projects"}
+            onClick={() => (route == "/projects" ? setShowMenu(false) : null)}
+          >
+            Projects
+          </StyledLink>
         </Link>
         <Link href="/explore" passHref>
-          <StyledLink active={route == "/explore"}>Explore</StyledLink>
+          <StyledLink
+            active={route == "/explore"}
+            onClick={() => (route == "/explore" ? setShowMenu(false) : null)}
+          >
+            Explore
+          </StyledLink>
         </Link>
       </StyledFooter>
     </>
