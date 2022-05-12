@@ -1,15 +1,12 @@
 import type { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
 import useIntersectionObserver from "@react-hook/intersection-observer";
-import Image from "next/image";
 import { ContentWrap, sluggify } from "../../components/shared";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
-import { useState, useRef } from "react";
-import logo from "../../public/img/deepearth_logo_stacked.png";
+import { useRef } from "react";
 import { Logo } from "../../components/Logo";
-import { dims } from "../../components/shared";
 
 type Project = {
   attributes: {
@@ -53,6 +50,10 @@ const BackgroundImage = styled.div`
   background-size: cover;
 `;
 
+const ProjectTitle = styled.div`
+  margin-top: 15px;
+`;
+
 const ProjectImage = ({ src }: { src: string }) => {
   const observerRef = useRef<HTMLDivElement>(null);
   const { isIntersecting } = useIntersectionObserver(observerRef);
@@ -89,7 +90,7 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
             <Link href={`/projects/${project.slug}`} key={i}>
               <Project>
                 <ProjectImage src={project.attributes.featured_image} />
-                {project.attributes.title}
+                <ProjectTitle>{project.attributes.title}</ProjectTitle>
               </Project>
             </Link>
           ))}

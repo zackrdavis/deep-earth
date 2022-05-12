@@ -23,8 +23,8 @@ const FixedBanner = styled.div`
 const StyledMenuButton = styled.div`
   position: relative;
   z-index: 999;
-  width: 8vw;
-  height: 8vw;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 `;
 
@@ -33,12 +33,12 @@ const Hamburger = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  border-top: 6px solid ${colors.sienna};
-  border-bottom: 6px solid ${colors.sienna};
+  border-top: 5px solid ${colors.sienna};
+  border-bottom: 5px solid ${colors.sienna};
 
   &:after {
     content: "";
-    height: 6px;
+    height: 5px;
     width: 100%;
     background-color: ${colors.sienna};
   }
@@ -54,7 +54,7 @@ const Ex = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 6px;
+    height: 5px;
     width: 137%;
     background-color: ${colors.sienna};
   }
@@ -80,7 +80,7 @@ export const MobileNavBar = ({
         style={{
           display: "block",
           top: 0,
-          width: "calc(100vw - 150px)",
+          width: 250,
           position: "relative",
         }}
       />

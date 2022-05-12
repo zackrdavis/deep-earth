@@ -38,6 +38,10 @@ const BigLogo = styled.img`
   width: 690px;
   padding: 0 50px;
   max-width: 100vw;
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 `;
 
 const StyledFooter = styled(Footer)`
