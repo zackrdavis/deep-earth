@@ -3,6 +3,7 @@ title: 266 Clinton
 date: 2022-04-20T04:13:53.696Z
 featured_image: img/266clinton_1.jpg
 images:
+  - image: img/266clinton_12.jpg
   - image: img/266clinton_13.jpg
 plants:
   - Euphorbia characias

@@ -52,6 +52,10 @@ const BackgroundImage = styled.div`
 
 const ProjectTitle = styled.div`
   margin-top: 15px;
+
+  @media screen and (max-width: 640px) {
+    padding-left: 15px;
+  }
 `;
 
 const ProjectImage = ({ src }: { src: string }) => {

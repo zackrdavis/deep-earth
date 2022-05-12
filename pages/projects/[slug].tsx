@@ -63,7 +63,7 @@ const ProjectImages = styled.div`
 
   @media screen and (max-width: 640px) {
     width: 100%;
-    padding-top: ${dims.xPad + 75}px;
+    padding: 75px 0 ${dims.xPad}px;
     padding-bottom: 0;
   }
 `;

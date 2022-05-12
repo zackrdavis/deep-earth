@@ -83,7 +83,7 @@ const ProjectText = styled.div`
 
 const ProjectImages = styled.div`
   width: 50%;
-  padding: ${dims.xPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px;
+  padding: 0 0 ${dims.footerHeight + dims.xPad}px;
 
   & > img {
     width: 100%;
