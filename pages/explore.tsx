@@ -16,6 +16,12 @@ export type Plant = {
   slug: string;
 };
 
+const MobileContentWrap = styled(ContentWrap)`
+  @media screen and (max-width: 640px) {
+    padding: ${dims.xPad + 75}px ${dims.xPad}px;
+  }
+`;
+
 const PlantColumns = styled.div`
   column-count: 4;
   column-width: 200px;
@@ -84,7 +90,7 @@ const Plants: NextPage<Props> = ({ plantsList }) => {
   return (
     <>
       <Logo />
-      <ContentWrap
+      <MobileContentWrap
         style={{ paddingBottom: dims.footerHeight + dims.xPad - 24 }}
       >
         <PlantColumns>
@@ -92,7 +98,7 @@ const Plants: NextPage<Props> = ({ plantsList }) => {
             <HoverPlant key={i} {...plant} />
           ))}
         </PlantColumns>
-      </ContentWrap>
+      </MobileContentWrap>
       <Footer />
     </>
   );
