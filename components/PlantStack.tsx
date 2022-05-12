@@ -19,15 +19,9 @@ const PlantButton = styled.div`
     top: -10px;
   }
 
-  &:hover {
-    div {
-      z-index: 9;
-      width: 80px;
-      border-radius: 666px;
-    }
-  }
-
   div {
+    left: 0;
+    transition: all 0.25s;
     width: 40px;
     height: 80px;
     border-top-left-radius: 666px;
@@ -39,6 +33,22 @@ const PlantButton = styled.div`
     transform: translateY(-50%);
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+
+  &:hover {
+    div {
+      z-index: 9;
+      width: 80px;
+      border-radius: 666px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    transform: scalex(-1);
+
+    &:hover div {
+      left: -40px;
+    }
   }
 `;
 
@@ -56,7 +66,7 @@ const StyledPlantStack = styled.div`
   padding-bottom: ${dims.footerHeight * 2 + dims.xPad + 40}px;
 
   @media screen and (max-width: 640px) {
-    display: none;
+    left: -40px;
   }
 `;
 
