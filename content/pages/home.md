@@ -1,5 +1,5 @@
 ---
-landing_image: img/landing_prog.jpg
+landing_image: img/img_20200709_093113-2-.jpg
 images:
   - image: img/266clinton_8.jpg
   - image: img/266clinton_6.jpg
