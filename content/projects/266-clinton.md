@@ -1,10 +1,15 @@
 ---
 title: 266 Clinton
 date: 2022-04-20T04:13:53.696Z
-featured_image: img/266clinton_1.jpg
+featured_image: img/lawn10.jpg
 images:
-  - image: img/266clinton_12.jpg
-  - image: img/266clinton_13.jpg
+  - image: img/lawn20.jpg
+  - image: img/lawn7.jpg
+  - image: img/lawn10.jpg
+  - image: img/lawn11.jpg
+  - image: img/lawn12.jpg
+  - image: img/lawn6.jpg
+  - image: img/lawn9.jpg
 plants:
   - test2
   - test1
