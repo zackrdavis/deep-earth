@@ -1,4 +1,4 @@
 ---
-title: Acaena Blue Haze
+title: Acaena 'Blue Haze'
 image: img/acaena-blue-haze.png
 ---
