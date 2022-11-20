@@ -1,4 +1,4 @@
 ---
-title: test2
-image: img/266clinton_1.jpg
+title: Allium Karativiense Ivory Queen
+image: img/allium-karativiense-ivory-queen.jpg
 ---
