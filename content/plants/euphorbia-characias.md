@@ -1,4 +1,4 @@
 ---
-title: Euphorbia characias
-image: img/plant_euphorbia_characias.png
+title: Achillea millefolium
+image: img/achillea-millefolium.jpg
 ---
