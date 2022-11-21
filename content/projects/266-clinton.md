@@ -1,7 +1,7 @@
 ---
-title: 266 Clinton
+title: Clinton
 date: 2022-04-20T04:13:53.696Z
-featured_image: img/lawn10.jpg
+featured_image: img/img_20190908_144112.jpg
 images:
   - image: img/lawn20.jpg
   - image: img/lawn7.jpg
