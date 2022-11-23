@@ -7,7 +7,9 @@ images:
   - image: img/img_7773.jpg
   - image: img/img_20200612_093346.jpg
   - image: img/newton6.jpg
+  - image: img/newton14.jpg
   - image: img/img_20200919_095800.jpg
+  - image: img/img_20200612_092910.jpg
   - image: img/img_7920.jpg
 ---
 l﻿orem ipsum
