@@ -5,7 +5,6 @@ featured_image: img/_dsc1023_edited.jpg
 images:
   - image: img/_dsc1023_edited.jpg
   - image: img/img_9195_edited.jpg
-  - image: img/_dsc1019_edited.jpg
   - image: img/_dsc0932_edited.jpg
   - image: img/img_9119_edited.jpg
   - image: img/_dsc0988_edited.jpg
