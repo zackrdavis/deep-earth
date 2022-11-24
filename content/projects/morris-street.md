@@ -11,5 +11,8 @@ images:
   - image: img/_dsc0939_edited.jpg
   - image: img/_dsc0954_edited.jpg
   - image: img/_dsc0925_edited.jpg
+plants:
+  - Arisaema ciliatum v. liubaense
+  - Tetrapanax ‘Steroidal Giant’
 ---
 l﻿orem ipsum
