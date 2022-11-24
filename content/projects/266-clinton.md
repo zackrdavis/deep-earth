@@ -1,7 +1,7 @@
 ---
 title: Clinton
 date: 2022-04-20T04:13:53.696Z
-featured_image: img/img_20190908_144112.jpg
+featured_image: img/img_20190908_144112_edited_cropped.jpg
 images:
   - image: img/img_20190908_144112_edited.jpg
   - image: img/img_20200606_164216_edited.jpg
