@@ -3,13 +3,14 @@ title: Clinton
 date: 2022-04-20T04:13:53.696Z
 featured_image: img/img_20190908_144112.jpg
 images:
-  - image: img/lawn20.jpg
-  - image: img/lawn7.jpg
-  - image: img/lawn10.jpg
-  - image: img/lawn11.jpg
-  - image: img/lawn12.jpg
-  - image: img/lawn6.jpg
-  - image: img/lawn9.jpg
+  - image: img/img_20190908_144112_edited.jpg
+  - image: img/img_20200606_164216_edited.jpg
+  - image: img/img_20190813_143034_edited.jpg
+  - image: img/img_20190914_152959_edited.jpg
+  - image: img/img_20200705_182719_edited.jpg
+  - image: img/img_20190806_182301_edited.jpg
+  - image: img/img_20190806_171948_edited.jpg
+  - image: img/img_20190806_171838_edited.jpg
 plants:
   - test2
   - test1
