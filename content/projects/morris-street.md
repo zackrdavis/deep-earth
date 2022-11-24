@@ -12,6 +12,7 @@ images:
   - image: img/_dsc0954_edited.jpg
   - image: img/_dsc0925_edited.jpg
 plants:
+  - Phyllostachys bambusoides ‘Richard Haubrich’
   - Arisaema ciliatum v. liubaense
   - Tetrapanax ‘Steroidal Giant’
 ---
