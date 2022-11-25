@@ -9,6 +9,7 @@ import { VerticalRule } from "../../components/VerticalRule";
 import { Logo } from "../../components/Logo";
 import { PlantStack } from "../../components/PlantStack";
 import { dims, colors, ContentWrap } from "../../components/shared";
+import Image from "next/image";
 
 interface ProjectProps {
   content: {
@@ -55,6 +56,7 @@ const ProjectImages = styled.div`
 
   & > img {
     width: 100%;
+    height: auto;
 
     &:not(:last-child) {
       margin-bottom: ${dims.xPad}px;
@@ -101,7 +103,13 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
         <ProjectImages>
           {content.attributes.images &&
             content.attributes.images.map((image, i) => (
-              <img key={i} src={`/${image.image}`} />
+              <Image
+                alt=""
+                key={i}
+                src={`/${image.image}`}
+                width={500}
+                height={500}
+              />
             ))}
         </ProjectImages>
       </ProjectContent>
