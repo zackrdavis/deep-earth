@@ -107,13 +107,13 @@ const Plants: NextPage<Props> = ({ plantsList }) => {
 export const importPlants = async () => {
   // https://webpack.js.org/guides/dependency-management/#requirecontext
   const markdownFiles = require
-    .context("/content/plants", false, /\.md$/)
+    .context("/content/plants", false)
     .keys()
     .map((relativePath) => relativePath.substring(2));
 
   return Promise.all(
     markdownFiles.map(async (path) => {
-      const markdown = await import(`/content/plants/${path}`);
+      const markdown = await import(`../content/plants/${path}`);
       return { ...markdown, slug: path.substring(0, path.length - 3) };
     })
   );
