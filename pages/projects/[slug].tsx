@@ -35,13 +35,12 @@ const ProjectContent = styled.div`
 `;
 
 const ProjectText = styled.div`
+  position: sticky;
+  align-self: flex-end;
+  bottom: ${dims.footerHeight * 2 + dims.xPad}px;
   width: 50%;
-  padding: calc((100vh - ${dims.footerHeight * 2}px) / 1.2) ${dims.xPad}px
-    ${dims.footerHeight * 2 + dims.xPad}px;
-
-  p:first-child {
-    margin-top: 0;
-  }
+  padding: 0 ${dims.xPad}px;
+  margin-top: calc((100vh - ${dims.footerHeight * 2}px) / 1.2);
 
   @media screen and (max-width: 640px) {
     width: 100%;
@@ -52,11 +51,12 @@ const ProjectText = styled.div`
 
 const ProjectImages = styled.div`
   width: 50%;
-  padding: ${dims.xPad}px ${dims.xPad}px ${dims.footerHeight * 2 + dims.xPad}px;
+  padding: ${dims.xPad}px 0 ${dims.footerHeight}px;
 
   & > img {
     width: 100%;
     height: auto;
+    display: block;
 
     &:not(:last-child) {
       margin-bottom: ${dims.xPad}px;
@@ -77,7 +77,7 @@ const ProjectFooter = styled.div`
   justify-content: center;
   position: fixed;
   bottom: ${dims.footerHeight}px;
-  width: 100%;
+  width: 50%;
   height: ${dims.footerHeight}px;
   padding: 0 ${dims.xPad}px;
   background: ${colors.tan};
