@@ -4,6 +4,7 @@ date: 2022-04-20T04:13:53.696Z
 featured_image: img/img_20190908_144112_edited_cropped.jpg
 images:
   - image: img/img_20190908_144112_edited.jpg
+    caption: Test caption!
   - image: img/img_20200606_164216_edited.jpg
   - image: img/img_20190813_143034_edited.jpg
   - image: img/img_20190914_152959_edited.jpg
