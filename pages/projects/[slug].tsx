@@ -18,7 +18,7 @@ interface ProjectProps {
       featured_image: string;
       // slugs of plants for this project
       plants: string[];
-      images: { image: string }[];
+      images: { image: string; caption?: string }[];
     };
     html: string;
   };
@@ -89,6 +89,8 @@ const ProjectFooter = styled.div`
 `;
 
 const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
+  const defaultImageCaption = `Photo of plantings at ${content.attributes.title}.`;
+
   const linkedPlants = content.attributes.plants
     ? plantsList.filter((plant) =>
         content.attributes.plants.includes(plant.attributes.title)
@@ -104,7 +106,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
           {content.attributes.images &&
             content.attributes.images.map((image, i) => (
               <Image
-                alt=""
+                alt={image.caption || defaultImageCaption}
                 key={i}
                 src={`/${image.image}`}
                 width={500}
