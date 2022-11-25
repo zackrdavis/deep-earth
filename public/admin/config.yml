@@ -70,6 +70,7 @@ collections:
               widget: "image",
               choose_url: false,
             }
+          - { label: "Caption", name: "caption", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Plants"
         name: "plants"
