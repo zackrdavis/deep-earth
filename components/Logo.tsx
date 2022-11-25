@@ -24,13 +24,11 @@ export const Logo = ({
 }) => {
   return (
     <Link href="/">
-      <a>
-        <StyledLogo
-          style={style}
-          onClick={onClick}
-          src="/img/site/deepearth_sienna.svg"
-        />
-      </a>
+      <StyledLogo
+        style={style}
+        onClick={onClick}
+        src="/img/site/deepearth_sienna.svg"
+      />
     </Link>
   );
 };

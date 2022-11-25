@@ -38,7 +38,7 @@ const StyledFooter = styled.div`
   }
 `;
 
-const StyledLink = styled.a<{ active: boolean }>`
+const StyledLink = styled(Link)<{ active: string }>`
   text-transform: uppercase;
   color: ${({ active }) => (active ? colors.sienna : colors.black)};
 `;
@@ -56,38 +56,34 @@ export const Footer = ({ className }: { className?: string }) => {
       <StyledFooter
         className={showMenu ? `mobile-show ${className}` : className}
       >
-        <Link href="/#about" passHref>
-          <StyledLink
-            active={route == "/"}
-            onClick={() => (route == "/" ? setShowMenu(false) : null)}
-          >
-            About
-          </StyledLink>
-        </Link>
-        <Link href="/contact" passHref>
-          <StyledLink
-            active={route == "/contact"}
-            onClick={() => (route == "/contact" ? setShowMenu(false) : null)}
-          >
-            Contact
-          </StyledLink>
-        </Link>
-        <Link href="/projects" passHref>
-          <StyledLink
-            active={route == "/projects"}
-            onClick={() => (route == "/projects" ? setShowMenu(false) : null)}
-          >
-            Projects
-          </StyledLink>
-        </Link>
-        <Link href="/explore" passHref>
-          <StyledLink
-            active={route == "/explore"}
-            onClick={() => (route == "/explore" ? setShowMenu(false) : null)}
-          >
-            Explore
-          </StyledLink>
-        </Link>
+        <StyledLink
+          active={String(route == "/")}
+          href="/#about"
+          onClick={() => (route == "/" ? setShowMenu(false) : null)}
+        >
+          About
+        </StyledLink>
+        <StyledLink
+          href="/contact"
+          active={String(route == "/contact")}
+          onClick={() => (route == "/contact" ? setShowMenu(false) : null)}
+        >
+          Contact
+        </StyledLink>
+        <StyledLink
+          href="/projects"
+          active={String(route == "/projects")}
+          onClick={() => (route == "/projects" ? setShowMenu(false) : null)}
+        >
+          Projects
+        </StyledLink>
+        <StyledLink
+          href="/explore"
+          active={String(route == "/explore")}
+          onClick={() => (route == "/explore" ? setShowMenu(false) : null)}
+        >
+          Explore
+        </StyledLink>
       </StyledFooter>
     </>
   );
