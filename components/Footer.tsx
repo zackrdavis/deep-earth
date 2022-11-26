@@ -13,8 +13,6 @@ const StyledFooter = styled.div`
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-  /* position: fixed;
-  bottom: 0; */
   width: 100%;
   height: ${dims.footerHeight}px;
   padding: 0 ${dims.xPad}px;

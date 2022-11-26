@@ -89,7 +89,7 @@ interface Props {
 const Plants: NextPage<Props> = ({ plantsList }) => {
   return (
     <>
-      <Logo />
+      <Logo style={{ width: "100%" }} />
       <MobileContentWrap
         style={{ paddingBottom: dims.footerHeight + dims.xPad - 24 }}
       >
@@ -99,6 +99,7 @@ const Plants: NextPage<Props> = ({ plantsList }) => {
           ))}
         </PlantColumns>
       </MobileContentWrap>
+      <Footer />
     </>
   );
 };

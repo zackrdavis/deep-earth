@@ -1,12 +1,16 @@
 import "../styles/globals.css";
+import React from "react";
 import type { AppProps } from "next/app";
-import { Layout } from "../components/Layout";
+import { GlobalStyles } from "../components/GlobalStyles";
+
+const GlobalStylesProxy: any = GlobalStyles;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <>
+      <GlobalStylesProxy />
       <Component {...pageProps} />
-    </Layout>
+    </>
   );
 }
 

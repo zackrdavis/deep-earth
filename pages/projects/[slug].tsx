@@ -69,6 +69,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
   return (
     <>
+      <Logo />
       <ProjectContent>
         <TextStack>
           {parse(content.html)} {parse(content.html)}
@@ -89,6 +90,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
       <PlantStack plants={linkedPlants} />
       <VerticalRule />
       <ProjectFooter>{content.attributes.title}</ProjectFooter>
+      <Footer />
     </>
   );
 };

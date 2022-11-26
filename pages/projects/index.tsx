@@ -87,6 +87,7 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
 
   return (
     <ContentWrap>
+      <Logo style={{ width: "100%" }} />
       <ProjectGrid>
         {projectsList.map((project, i) => (
           <Link href={`/projects/${project.slug}`} key={i}>
@@ -97,6 +98,7 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
           </Link>
         ))}
       </ProjectGrid>
+      <Footer />
     </ContentWrap>
   );
 };

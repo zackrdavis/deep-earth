@@ -4,6 +4,8 @@ import { colors, dims } from "./shared";
 
 const StyledLogo = styled.div`
   position: fixed;
+  top: 0;
+  left: 0;
   background: ${colors.tan};
   z-index: 1;
   padding: 40px ${dims.xPad}px 15px;
@@ -17,7 +19,6 @@ const StyledLogo = styled.div`
 
   img {
     width: 300px;
-    display: block;
   }
 `;
 
@@ -29,13 +30,9 @@ export const Logo = ({
   style?: CSSProperties;
 }) => {
   return (
-    <StyledLogo>
+    <StyledLogo style={style}>
       <Link href="/">
-        <img
-          style={style}
-          onClick={onClick}
-          src="/img/site/deepearth_sienna.svg"
-        />
+        <img onClick={onClick} src="/img/site/deepearth_sienna.svg" />
       </Link>
     </StyledLogo>
   );

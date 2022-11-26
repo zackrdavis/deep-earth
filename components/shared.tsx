@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const colors = {
-  black: "#3A3935",
+  black: "#4b4b4b",
   tan: "#E6E6DA",
   sienna: "#A86654",
 };
@@ -40,7 +40,6 @@ export const ImageStack = styled.div`
   & > img {
     width: 100%;
     height: auto;
-    display: block;
     margin-top: ${dims.xPad}px;
     border-top: 1px solid ${colors.black};
     border-bottom: 1px solid ${colors.black};
@@ -69,8 +68,11 @@ export const TextStack = styled.div`
   padding: 0 ${dims.xPad}px;
   margin-top: calc((100vh - ${dims.footerHeight * 2}px) / 1.2);
 
-  p:first-child {
+  & > p:first-child {
     margin-top: 0;
+  }
+  & > p:last-child {
+    margin-bottom: 0;
   }
 
   @media screen and (max-width: 640px) {

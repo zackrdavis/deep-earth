@@ -67,13 +67,19 @@ const ProjectContent = styled.div`
 `;
 
 const HomeText = styled.div`
-  padding: 0 ${dims.xPad}px;
-  margin-top: ${dims.xPad}px;
+  padding: ${dims.xPad}px;
   margin-bottom: ${dims.footerHeight}px;
   position: sticky;
   bottom: 0;
   align-self: flex-start;
   width: 50%;
+
+  & > p:first-child {
+    margin-top: 0;
+  }
+  & > p:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Home: NextPage<HomeProps> = ({ content }) => {
@@ -93,7 +99,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
     <>
       <VerticalRule />
 
-      {/* <Logo onClick={() => setTimeout(() => setTouched(false))} /> */}
+      <Logo onClick={() => setTimeout(() => setTouched(false))} />
 
       <StyledLandingImage
         className={!touched ? "unTouched" : ""}
@@ -122,7 +128,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         </ImageStack>
       </ProjectContent>
 
-      {/* <StyledFooter className={!touched ? "unTouched" : ""} /> */}
+      <StyledFooter className={!touched ? "unTouched" : ""} />
     </>
   );
 };
