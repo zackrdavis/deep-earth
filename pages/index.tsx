@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
-import { colors, dims, ImageStack } from "../components/shared";
+import { colors, dims, ImageStack, TextStack } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -66,19 +66,14 @@ const ProjectContent = styled.div`
   }
 `;
 
-const ProjectText = styled.div`
+const HomeText = styled.div`
+  padding: 0 ${dims.xPad}px;
+  margin-top: ${dims.xPad}px;
+  margin-bottom: ${dims.footerHeight}px;
+  position: sticky;
+  bottom: 0;
+  align-self: flex-start;
   width: 50%;
-  padding: calc((100vh - ${dims.footerHeight * 2}px) / 1.1) ${dims.xPad}px
-    ${dims.footerHeight + dims.xPad}px;
-
-  p:first-child {
-    margin-top: 0;
-  }
-
-  @media screen and (max-width: 640px) {
-    width: 100%;
-    padding: ${dims.xPad}px;
-  }
 `;
 
 const Home: NextPage<HomeProps> = ({ content }) => {
@@ -98,7 +93,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
     <>
       <VerticalRule />
 
-      <Logo onClick={() => setTimeout(() => setTouched(false))} />
+      {/* <Logo onClick={() => setTimeout(() => setTouched(false))} /> */}
 
       <StyledLandingImage
         className={!touched ? "unTouched" : ""}
@@ -108,7 +103,12 @@ const Home: NextPage<HomeProps> = ({ content }) => {
       </StyledLandingImage>
 
       <ProjectContent id="about">
-        <ProjectText>{parse(content.html)}</ProjectText>
+        <HomeText>
+          {parse(content.html)}
+          {parse(content.html)}
+          {parse(content.html)}
+          {parse(content.html)}
+        </HomeText>
         <ImageStack>
           {content.attributes.images &&
             content.attributes.images.map((image, i) => (
@@ -122,7 +122,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         </ImageStack>
       </ProjectContent>
 
-      <StyledFooter className={!touched ? "unTouched" : ""} />
+      {/* <StyledFooter className={!touched ? "unTouched" : ""} /> */}
     </>
   );
 };

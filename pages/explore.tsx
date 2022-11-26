@@ -99,7 +99,6 @@ const Plants: NextPage<Props> = ({ plantsList }) => {
           ))}
         </PlantColumns>
       </MobileContentWrap>
-      <Footer />
     </>
   );
 };

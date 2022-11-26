@@ -26,7 +26,6 @@ const Contact: NextPage<Props> = ({ content }) => {
     <>
       <Logo />
       <MobileContentWrap>{parse(content.html)}</MobileContentWrap>
-      <Footer />
     </>
   );
 };

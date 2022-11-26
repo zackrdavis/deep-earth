@@ -86,22 +86,18 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
   }
 
   return (
-    <>
-      <Logo />
-      <ContentWrap>
-        <ProjectGrid>
-          {projectsList.map((project, i) => (
-            <Link href={`/projects/${project.slug}`} key={i}>
-              <Project>
-                <ProjectImage src={project.attributes.featured_image} />
-                <ProjectTitle>{project.attributes.title}</ProjectTitle>
-              </Project>
-            </Link>
-          ))}
-        </ProjectGrid>
-      </ContentWrap>
-      <Footer />
-    </>
+    <ContentWrap>
+      <ProjectGrid>
+        {projectsList.map((project, i) => (
+          <Link href={`/projects/${project.slug}`} key={i}>
+            <Project>
+              <ProjectImage src={project.attributes.featured_image} />
+              <ProjectTitle>{project.attributes.title}</ProjectTitle>
+            </Project>
+          </Link>
+        ))}
+      </ProjectGrid>
+    </ContentWrap>
   );
 };
 

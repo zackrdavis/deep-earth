@@ -8,7 +8,13 @@ import { Footer } from "../../components/Footer";
 import { VerticalRule } from "../../components/VerticalRule";
 import { Logo } from "../../components/Logo";
 import { PlantStack } from "../../components/PlantStack";
-import { dims, colors, ContentWrap, ImageStack } from "../../components/shared";
+import {
+  dims,
+  colors,
+  ContentWrap,
+  ImageStack,
+  TextStack,
+} from "../../components/shared";
 import Image from "next/image";
 
 interface ProjectProps {
@@ -31,21 +37,6 @@ const ProjectContent = styled.div`
 
   @media screen and (max-width: 640px) {
     flex-direction: column-reverse;
-  }
-`;
-
-const ProjectText = styled.div`
-  position: sticky;
-  align-self: flex-end;
-  bottom: ${dims.footerHeight * 2 + dims.xPad}px;
-  width: 50%;
-  padding: 0 ${dims.xPad}px;
-  margin-top: calc((100vh - ${dims.footerHeight * 2}px) / 1.2);
-
-  @media screen and (max-width: 640px) {
-    width: 100%;
-    padding-top: ${dims.xPad}px;
-    padding-bottom: ${dims.xPad + dims.footerHeight}px;
   }
 `;
 
@@ -78,9 +69,10 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
   return (
     <>
-      <Logo />
       <ProjectContent>
-        <ProjectText>{parse(content.html)}</ProjectText>
+        <TextStack>
+          {parse(content.html)} {parse(content.html)}
+        </TextStack>
         <ImageStack>
           {content.attributes.images &&
             content.attributes.images.map((image, i) => (
@@ -97,7 +89,6 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
       <PlantStack plants={linkedPlants} />
       <VerticalRule />
       <ProjectFooter>{content.attributes.title}</ProjectFooter>
-      <Footer />
     </>
   );
 };
