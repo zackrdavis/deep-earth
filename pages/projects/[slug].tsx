@@ -8,7 +8,7 @@ import { Footer } from "../../components/Footer";
 import { VerticalRule } from "../../components/VerticalRule";
 import { Logo } from "../../components/Logo";
 import { PlantStack } from "../../components/PlantStack";
-import { dims, colors, ContentWrap } from "../../components/shared";
+import { dims, colors, ContentWrap, ImageStack } from "../../components/shared";
 import Image from "next/image";
 
 interface ProjectProps {
@@ -49,27 +49,6 @@ const ProjectText = styled.div`
   }
 `;
 
-const ProjectImages = styled.div`
-  width: 50%;
-  padding: ${dims.xPad}px 0 ${dims.footerHeight}px;
-
-  & > img {
-    width: 100%;
-    height: auto;
-    display: block;
-
-    &:not(:last-child) {
-      margin-bottom: ${dims.xPad}px;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    width: 100%;
-    padding: 75px 0 ${dims.xPad}px;
-    padding-bottom: 0;
-  }
-`;
-
 const ProjectFooter = styled.div`
   border-top: 1px solid ${colors.black};
   display: flex;
@@ -102,7 +81,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
       <Logo />
       <ProjectContent>
         <ProjectText>{parse(content.html)}</ProjectText>
-        <ProjectImages>
+        <ImageStack>
           {content.attributes.images &&
             content.attributes.images.map((image, i) => (
               <Image
@@ -113,7 +92,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
                 height={500}
               />
             ))}
-        </ProjectImages>
+        </ImageStack>
       </ProjectContent>
       <PlantStack plants={linkedPlants} />
       <VerticalRule />

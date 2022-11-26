@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
-import { colors, dims } from "../components/shared";
+import { colors, dims, ImageStack } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -81,25 +81,6 @@ const ProjectText = styled.div`
   }
 `;
 
-const ProjectImages = styled.div`
-  width: 50%;
-  padding: 0 0 ${dims.footerHeight + dims.xPad}px;
-
-  & > img {
-    width: 100%;
-
-    &:not(:last-child) {
-      margin-bottom: ${dims.xPad}px;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    width: 100%;
-    padding-top: ${dims.xPad}px;
-    padding-bottom: 0;
-  }
-`;
-
 const Home: NextPage<HomeProps> = ({ content }) => {
   const { attributes } = content;
   const [touched, setTouched] = useState(false);
@@ -128,7 +109,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <ProjectContent id="about">
         <ProjectText>{parse(content.html)}</ProjectText>
-        <ProjectImages>
+        <ImageStack>
           {content.attributes.images &&
             content.attributes.images.map((image, i) => (
               <LazyLoadImage
@@ -138,7 +119,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
                 style={{ width: "100%", minHeight: 200 }}
               />
             ))}
-        </ProjectImages>
+        </ImageStack>
       </ProjectContent>
 
       <StyledFooter className={!touched ? "unTouched" : ""} />
