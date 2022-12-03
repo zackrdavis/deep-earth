@@ -13,6 +13,7 @@ images:
   - image: img/img_20200612_092910.jpg
   - image: img/img_7920.jpg
 plants:
+  - Spirea nipponica
   - Lobelia cardinalis
   - Nepeta racemosa
   - Nicotiana sylvestris
