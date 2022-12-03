@@ -15,5 +15,10 @@ images:
   - image: img/img_20190913_174937_edited.jpg
   - image: img/img_20190806_174805_edited.jpg
   - image: img/mvimg_20200828_134729_edited.jpg
+plants:
+  - Strelitzia reginae
+  - Chasmanthium latifolium
+  - Macleaya cordata
+  - Brugmansia aurea
 ---
 l﻿orem ipsum
