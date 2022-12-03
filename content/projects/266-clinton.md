@@ -13,9 +13,13 @@ images:
   - image: img/img_20190806_171948_edited.jpg
   - image: img/img_20190806_171838_edited.jpg
 plants:
-  - test2
-  - test1
-  - Euphorbia characias
+  - Celosia argentea var. Spicata ‘Flamingo Feather’
+  - Euphorbia x martinii 'Ascot Rainbow'
+  - Baptisia-australis
+  - Eupatorium purpureum
+  - Allium ‘Millenium’
+  - Centaurea cyanus ‘Black Gem’
+  - Iris ensata ‘Variegata’
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit cursus risus at ultrices. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Amet aliquam id diam maecenas ultricies mi eget mauris. Pharetra et ultrices neque ornare. Sed faucibus turpis in eu mi bibendum neque. Condimentum lacinia quis vel eros donec ac. Tellus pellentesque eu tincidunt tortor aliquam. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Egestas erat imperdiet sed euismod nisi. Mattis rhoncus urna neque viverra justo. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Vestibulum lorem sed risus ultricies. Aliquam faucibus purus in massa. Ac turpis egestas maecenas pharetra convallis posuere morbi. Vel pharetra vel turpis nunc.
 
