@@ -13,8 +13,7 @@ images:
   - image: img/img_20200612_092910.jpg
   - image: img/img_7920.jpg
 plants:
-  - Brugmansia aurea
-  - Macleaya cordata
+  - Lobelia cardinalis
   - Nepeta racemosa
   - Nicotiana sylvestris
   - Muhlenbergia capillaris
