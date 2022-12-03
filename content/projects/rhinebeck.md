@@ -11,5 +11,7 @@ images:
   - image: img/img_20200913_135758_edited.jpg
   - image: img/img_20200913_142103_edited.jpg
   - image: img/img_20200913_142453_edited.jpg
+plants:
+  - Corydalis sempervirens
 ---
 l﻿orem ipsum
