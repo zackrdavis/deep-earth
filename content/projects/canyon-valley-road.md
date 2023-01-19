@@ -1,15 +1,16 @@
 ---
 title: Canyon Valley Road
 date: 2022-11-21T19:08:20.041Z
-featured_image: img/img_20200612_092851.jpg
+featured_image: img/edited_64528154_1275274795978976_2580489961904518958_n.jpg
 images:
-  - image: img/img_20200612_092851.jpg
+  - image: img/edited_64528154_1275274795978976_2580489961904518958_n.jpg
   - image: img/img_7808.jpg
   - image: img/img_7773.jpg
   - image: img/img_20200612_093346.jpg
   - image: img/newton6.jpg
   - image: img/newton14.jpg
   - image: img/img_20200919_095800.jpg
+  - image: img/img_20200612_092851.jpg
   - image: img/img_20200612_092910.jpg
   - image: img/img_7920.jpg
 plants:
