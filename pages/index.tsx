@@ -114,14 +114,9 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <ProjectContent id="about">
         <TextStack>
-          {/* <HomeText> */}
           <Logo onClick={() => setTimeout(() => setTouched(false))} />
           <AboveTextSpacer />
           {parse(content.html)}
-          {parse(content.html)}
-          {parse(content.html)}
-          {parse(content.html)}
-          {/* </HomeText> */}
         </TextStack>
         <ImageStack>
           {content.attributes.images &&
