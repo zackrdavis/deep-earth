@@ -119,17 +119,20 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
       {plants &&
         plants.map((plant, i) => (
           <PlantButton className="plantButton" key={i}>
-            <Link href={`/explore?plant=${plant.slug}`}>
-              <animated.a style={{ top: styles.top }}>
-                <animated.div
-                  style={{
-                    backgroundImage: `url(/${plant.attributes.image})`,
-                    marginTop: styles.marginTop,
-                    marginBottom: styles.marginTop,
-                  }}
-                />
-              </animated.a>
-            </Link>
+            {/* <Link href={`/explore?plant=${plant.slug}`}> */}
+            <animated.a
+              style={{ top: styles.top }}
+              href={`/explore?plant=${plant.slug}`}
+            >
+              <animated.div
+                style={{
+                  backgroundImage: `url(/${plant.attributes.image})`,
+                  marginTop: styles.marginTop,
+                  marginBottom: styles.marginTop,
+                }}
+              />
+            </animated.a>
+            {/* </Link> */}
           </PlantButton>
         ))}
     </StyledPlantStack>

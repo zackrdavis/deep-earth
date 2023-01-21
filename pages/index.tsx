@@ -3,7 +3,13 @@ import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
-import { colors, dims, ImageStack, TextStack } from "../components/shared";
+import {
+  colors,
+  dims,
+  ImageStack,
+  AboveTextSpacer,
+  TextStack,
+} from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -109,6 +115,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
       <ProjectContent id="about">
         <HomeText>
           <Logo onClick={() => setTimeout(() => setTouched(false))} />
+          <AboveTextSpacer />
           {parse(content.html)}
           {parse(content.html)}
           {parse(content.html)}

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const colors = {
   black: "#4b4b4b",
@@ -66,7 +66,7 @@ export const TextStack = styled.div`
   bottom: ${dims.footerHeight * 2 + dims.xPad}px;
   width: 50%;
   padding: 0 ${dims.xPad}px;
-  margin-top: calc((100vh - ${dims.footerHeight * 2}px) / 1.2);
+  margin-top: ${dims.logoPad}px;
 
   & > p:first-child {
     margin-top: 0;
@@ -79,4 +79,17 @@ export const TextStack = styled.div`
     width: 100%;
     padding: ${dims.xPad}px;
   }
+`;
+
+export const AboveTextSpacer = styled.div<{ isProjectText?: boolean }>`
+  ${({ isProjectText }) => {
+    console.log(isProjectText);
+
+    const subtractedHeight =
+      dims.logoPad + 75 + 20 + dims.footerHeight + (isProjectText ? 60 : 0);
+
+    return css`
+      height: calc((100vh - ${subtractedHeight}px) / 2);
+    `;
+  }}
 `;

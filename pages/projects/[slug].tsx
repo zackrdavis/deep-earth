@@ -14,6 +14,7 @@ import {
   ContentWrap,
   ImageStack,
   TextStack,
+  AboveTextSpacer,
 } from "../../components/shared";
 import Image from "next/image";
 
@@ -72,6 +73,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
       <ProjectContent>
         <TextStack>
           <Logo />
+          <AboveTextSpacer isProjectText />
           {parse(content.html)} {parse(content.html)}
         </TextStack>
         <ImageStack>

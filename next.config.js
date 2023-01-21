@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
+
+  compiler: {
+    styledComponents: true,
+  },
+
   webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
@@ -8,10 +14,6 @@ const nextConfig = {
       // options: { mode: ["react-component"] },
     });
     return config;
-  },
-  compiler: {
-    // ssr and displayName are configured by default
-    styledComponents: true,
   },
 };
 
