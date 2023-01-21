@@ -1,18 +1,17 @@
 import type { NextPage, GetStaticProps } from "next";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
+import { ImageStack } from "../components/ImageStack";
 import {
   colors,
-  dims,
-  ImageStack,
   AboveTextSpacer,
   TextStack,
+  TwoColWrap,
 } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 interface HomeProps {
   content: {
@@ -64,30 +63,6 @@ const StyledFooter = styled(Footer)`
   }
 `;
 
-const ProjectContent = styled.div`
-  display: flex;
-
-  @media screen and (max-width: 640px) {
-    flex-direction: column-reverse;
-  }
-`;
-
-const HomeText = styled.div`
-  padding: ${dims.xPad}px;
-  margin-bottom: ${dims.footerHeight}px;
-  position: sticky;
-  bottom: 0;
-  align-self: flex-start;
-  width: 50%;
-
-  & > p:first-child {
-    margin-top: 0;
-  }
-  & > p:last-child {
-    margin-bottom: 0;
-  }
-`;
-
 const Home: NextPage<HomeProps> = ({ content }) => {
   const { attributes } = content;
   const [touched, setTouched] = useState(false);
@@ -112,24 +87,15 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         <BigLogo src="/img/site/deepearth_tan.svg" />
       </StyledLandingImage>
 
-      <ProjectContent id="about">
+      <TwoColWrap id="about">
         <TextStack>
           <Logo onClick={() => setTimeout(() => setTouched(false))} />
           <AboveTextSpacer />
           {parse(content.html)}
         </TextStack>
-        <ImageStack>
-          {content.attributes.images &&
-            content.attributes.images.map((image, i) => (
-              <LazyLoadImage
-                threshold={0}
-                key={i}
-                src={`/${image.image}`}
-                style={{ width: "100%", minHeight: 200 }}
-              />
-            ))}
-        </ImageStack>
-      </ProjectContent>
+
+        <ImageStack images={content.attributes.images} />
+      </TwoColWrap>
 
       <StyledFooter className={!touched ? "unTouched" : ""} />
     </>

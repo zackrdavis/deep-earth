@@ -8,15 +8,14 @@ import { Footer } from "../../components/Footer";
 import { VerticalRule } from "../../components/VerticalRule";
 import { Logo } from "../../components/Logo";
 import { PlantStack } from "../../components/PlantStack";
+import { ImageStack } from "../../components/ImageStack";
 import {
   dims,
   colors,
-  ContentWrap,
-  ImageStack,
   TextStack,
   AboveTextSpacer,
+  TwoColWrap,
 } from "../../components/shared";
-import Image from "next/image";
 
 interface ProjectProps {
   content: {
@@ -32,14 +31,6 @@ interface ProjectProps {
   // all of the plants, to be filtered down
   plantsList: Plant[];
 }
-
-const ProjectContent = styled.div`
-  display: flex;
-
-  @media screen and (max-width: 640px) {
-    flex-direction: column-reverse;
-  }
-`;
 
 const ProjectFooter = styled.div`
   border-top: 1px solid ${colors.black};
@@ -70,25 +61,15 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
   return (
     <>
-      <ProjectContent>
+      <TwoColWrap>
         <TextStack isProjectText>
           <Logo />
           <AboveTextSpacer isProjectText />
           {parse(content.html)} {parse(content.html)}
         </TextStack>
-        <ImageStack>
-          {content.attributes.images &&
-            content.attributes.images.map((image, i) => (
-              <Image
-                alt={image.caption || defaultImageCaption}
-                key={i}
-                src={`/${image.image}`}
-                width={500}
-                height={500}
-              />
-            ))}
-        </ImageStack>
-      </ProjectContent>
+
+        <ImageStack images={content.attributes.images} />
+      </TwoColWrap>
       <PlantStack plants={linkedPlants} />
       <VerticalRule />
       <ProjectFooter>{content.attributes.title}</ProjectFooter>

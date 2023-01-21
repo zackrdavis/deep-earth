@@ -29,34 +29,11 @@ export const ContentWrap = styled.div`
   }
 `;
 
-export const ImageStack = styled.div`
-  width: 50%;
-  align-self: flex-end;
-  position: sticky;
-  // we can pretty safely say that image stacks will always be taller than the available space
-  // otherwise this will make the image stick to the bottom with growing space above
-  bottom: 0px;
-
-  & > img {
-    width: 100%;
-    height: auto;
-    margin-top: ${dims.xPad}px;
-    border-top: 1px solid ${colors.black};
-    border-bottom: 1px solid ${colors.black};
-
-    &:first-child {
-      margin-top: 0;
-    }
-
-    &:last-child {
-      margin-bottom: ${dims.footerHeight - 1}px;
-    }
-  }
+export const TwoColWrap = styled.div`
+  display: flex;
 
   @media screen and (max-width: 640px) {
-    width: 100%;
-    padding: 75px 0 ${dims.xPad}px;
-    padding-bottom: 0;
+    flex-direction: column-reverse;
   }
 `;
 

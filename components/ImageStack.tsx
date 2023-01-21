@@ -1,18 +1,28 @@
 import styled from "styled-components";
-import { dims } from "./shared";
+import { dims, colors } from "./shared";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export const ImageStack = styled.div`
+export const StyledImageStack = styled.div`
   width: 50%;
-  /* padding: ${dims.xPad}px 0 ${dims.footerHeight}px; */
+  align-self: flex-end;
+  position: sticky;
+  // we can pretty safely say that image stacks will always be taller than the available space
+  // otherwise this will make the image stick to the bottom with growing space above
+  bottom: 0px;
 
   & > img {
     width: 100%;
     height: auto;
-    display: block;
-    margin-bottom: ${dims.xPad}px;
+    margin-top: ${dims.xPad}px;
+    border-top: 1px solid ${colors.black};
+    border-bottom: 1px solid ${colors.black};
 
     &:first-child {
-      margin-top: ${dims.xPad}px;
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: ${dims.footerHeight - 1}px;
     }
   }
 
@@ -22,3 +32,16 @@ export const ImageStack = styled.div`
     padding-bottom: 0;
   }
 `;
+
+export const ImageStack = ({ images }: { images: { image: string }[] }) => (
+  <StyledImageStack>
+    {images?.map((image, i) => (
+      <LazyLoadImage
+        threshold={0}
+        key={i}
+        src={`/${image.image}`}
+        style={{ width: "100%", minHeight: 200 }}
+      />
+    ))}
+  </StyledImageStack>
+);
