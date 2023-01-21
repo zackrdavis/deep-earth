@@ -23,9 +23,9 @@ const Contact: NextPage<Props> = ({ content }) => {
       <VerticalRule />
 
       <TwoColWrap>
-        <TextStack isProjectText>
+        <TextStack>
           <Logo />
-          <AboveTextSpacer isProjectText />
+          <AboveTextSpacer />
           {parse(content.html)}
         </TextStack>
 

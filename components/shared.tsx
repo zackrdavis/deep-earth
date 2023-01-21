@@ -38,13 +38,18 @@ export const TwoColWrap = styled.div`
 `;
 
 export const TextStack = styled.div<{ isProjectText?: boolean }>`
-  position: sticky;
-  align-self: flex-end;
-  bottom: ${({ isProjectText }) =>
-    dims.footerHeight * (isProjectText ? 2 : 1) + dims.xPad}px;
-  width: 50%;
-  padding: 0 ${dims.xPad}px;
-  margin-top: ${dims.logoPad}px;
+  ${({ isProjectText }) => {
+    const realFooterHeight = dims.footerHeight * (isProjectText ? 2 : 1);
+
+    return css`
+      position: sticky;
+      align-self: flex-end;
+      width: 50%;
+      padding: ${dims.xPad}px;
+      min-height: calc(100vh - ${realFooterHeight}px);
+      bottom: ${realFooterHeight}px;
+    `;
+  }}
 
   & > p:first-child {
     margin-top: 0;
