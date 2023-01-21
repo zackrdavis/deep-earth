@@ -2,15 +2,9 @@ import type { NextPage, GetStaticProps } from "next";
 import parse from "html-react-parser";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
-import { ContentWrap } from "../components/shared";
-import { dims } from "../components/shared";
-import styled from "styled-components";
-
-const MobileContentWrap = styled(ContentWrap)`
-  @media screen and (max-width: 640px) {
-    padding: ${dims.xPad + 75}px ${dims.xPad}px;
-  }
-`;
+import { TwoColWrap, TextStack, AboveTextSpacer } from "../components/shared";
+import { ImageStack } from "../components/ImageStack";
+import { VerticalRule } from "../components/VerticalRule";
 
 interface Props {
   content: {
@@ -22,12 +16,22 @@ interface Props {
 }
 
 const Contact: NextPage<Props> = ({ content }) => {
+  const imageUrl = content.attributes.featured_image;
+
   return (
     <>
-      <MobileContentWrap>
-        <Logo />
-        {parse(content.html)}
-      </MobileContentWrap>
+      <VerticalRule />
+
+      <TwoColWrap>
+        <TextStack isProjectText>
+          <Logo />
+          <AboveTextSpacer isProjectText />
+          {parse(content.html)}
+        </TextStack>
+
+        <ImageStack images={[{ image: imageUrl }]} />
+      </TwoColWrap>
+
       <Footer />
     </>
   );
