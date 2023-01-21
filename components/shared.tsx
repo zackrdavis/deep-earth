@@ -60,10 +60,11 @@ export const ImageStack = styled.div`
   }
 `;
 
-export const TextStack = styled.div`
+export const TextStack = styled.div<{ isProjectText?: boolean }>`
   position: sticky;
   align-self: flex-end;
-  bottom: ${dims.footerHeight * 2 + dims.xPad}px;
+  bottom: ${({ isProjectText }) =>
+    dims.footerHeight * (isProjectText ? 2 : 1) + dims.xPad}px;
   width: 50%;
   padding: 0 ${dims.xPad}px;
   margin-top: ${dims.logoPad}px;

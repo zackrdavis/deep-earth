@@ -71,7 +71,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
   return (
     <>
       <ProjectContent>
-        <TextStack>
+        <TextStack isProjectText>
           <Logo />
           <AboveTextSpacer isProjectText />
           {parse(content.html)} {parse(content.html)}
