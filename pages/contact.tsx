@@ -24,8 +24,10 @@ interface Props {
 const Contact: NextPage<Props> = ({ content }) => {
   return (
     <>
-      <Logo style={{ width: "100%" }} />
-      <MobileContentWrap>{parse(content.html)}</MobileContentWrap>
+      <MobileContentWrap>
+        <Logo />
+        {parse(content.html)}
+      </MobileContentWrap>
       <Footer />
     </>
   );

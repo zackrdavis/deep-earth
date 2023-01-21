@@ -99,8 +99,6 @@ const Home: NextPage<HomeProps> = ({ content }) => {
     <>
       <VerticalRule />
 
-      <Logo onClick={() => setTimeout(() => setTouched(false))} />
-
       <StyledLandingImage
         className={!touched ? "unTouched" : ""}
         style={{ backgroundImage: `url(${attributes.landing_image})` }}
@@ -110,6 +108,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <ProjectContent id="about">
         <HomeText>
+          <Logo onClick={() => setTimeout(() => setTouched(false))} />
           {parse(content.html)}
           {parse(content.html)}
           {parse(content.html)}

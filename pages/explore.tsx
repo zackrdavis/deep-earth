@@ -89,10 +89,10 @@ interface Props {
 const Plants: NextPage<Props> = ({ plantsList }) => {
   return (
     <>
-      <Logo style={{ width: "100%" }} />
       <MobileContentWrap
         style={{ paddingBottom: dims.footerHeight + dims.xPad - 24 }}
       >
+        <Logo />
         <PlantColumns>
           {plantsList.map((plant, i) => (
             <HoverPlant key={i} {...plant} />

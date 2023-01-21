@@ -69,9 +69,9 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
   return (
     <>
-      <Logo />
       <ProjectContent>
         <TextStack>
+          <Logo />
           {parse(content.html)} {parse(content.html)}
         </TextStack>
         <ImageStack>

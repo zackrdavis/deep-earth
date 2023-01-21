@@ -3,15 +3,8 @@ import Link from "next/link";
 import { colors, dims } from "./shared";
 
 const StyledLogo = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: ${colors.tan};
-  z-index: 1;
-  padding: 40px ${dims.xPad}px 15px;
+  padding: 0 0 15px;
   cursor: pointer;
-  width: 50%;
-  //border-bottom: 1px solid ${colors.black};
 
   @media screen and (max-width: 640px) {
     display: none;

@@ -13,7 +13,7 @@ export const sluggify = (string: string) => {
 export const dims = {
   xPad: 50,
   footerHeight: 80,
-  logoPad: 240,
+  logoPad: 50,
 };
 
 export const ContentWrap = styled.div`
