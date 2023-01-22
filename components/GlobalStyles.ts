@@ -2,15 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import { colors } from "./shared";
 
 export const GlobalStyles = createGlobalStyle`
-@font-face {
-  font-family: "Prune";
-  src: url("../public/fonts/Greenhouse-Prune.woff2") format("woff2"),
-    url("../public/fonts/Greenhouse-Prune.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 html,
 body {
   padding: 0;

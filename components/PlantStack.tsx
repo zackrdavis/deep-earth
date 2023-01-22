@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
@@ -134,9 +134,13 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     >
       {plants &&
         plants.map((plant, i) => (
-          <>
+          <React.Fragment key={i}>
             <Head>
-              <link rel="preload" href={plant.attributes.image} as="image" />
+              <link
+                rel="preload"
+                href={"/" + plant.attributes.image}
+                as="image"
+              />
             </Head>
             <PlantButton className="plantButton" key={i}>
               <animated.a href={`/explore?plant=${plant.slug}`}>
@@ -147,7 +151,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
                 />
               </animated.a>
             </PlantButton>
-          </>
+          </React.Fragment>
         ))}
     </StyledPlantStack>
   );

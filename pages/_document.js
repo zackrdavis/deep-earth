@@ -32,10 +32,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <link rel="preload" href="fonts/Greenhouse-Prune.woff2" as="font" />
-          <link rel="preload" href="fonts/Greenhouse-Prune.woff" as="font" />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
