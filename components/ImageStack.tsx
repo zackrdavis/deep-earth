@@ -36,11 +36,11 @@ export const StyledImageStack = styled.div`
 export const ImageStack = ({ images }: { images: { image: string }[] }) => (
   <StyledImageStack>
     {images?.map((image, i) => (
-      <LazyLoadImage
-        threshold={0}
+      <img
+        loading="lazy"
         key={i}
         src={`/${image.image}`}
-        style={{ width: "100%", minHeight: 200 }}
+        style={{ width: "100%" }}
       />
     ))}
   </StyledImageStack>

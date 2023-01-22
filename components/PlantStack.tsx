@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
@@ -102,7 +102,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     });
   };
 
-  const handleScroll = (e: Event) => {
+  const handleScroll = () => {
     // Clear the timeout throughout the scroll
     clearTimeout(isScrolling);
     // Set a timeout to run after scrolling ends
@@ -135,7 +135,6 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
       {plants &&
         plants.map((plant, i) => (
           <PlantButton className="plantButton" key={i}>
-            {/* <Link href={`/explore?plant=${plant.slug}`}> */}
             <animated.a href={`/explore?plant=${plant.slug}`}>
               <animated.div
                 style={{
@@ -143,7 +142,6 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
                 }}
               />
             </animated.a>
-            {/* </Link> */}
           </PlantButton>
         ))}
     </StyledPlantStack>
