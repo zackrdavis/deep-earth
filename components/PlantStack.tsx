@@ -6,7 +6,7 @@ import { dims } from "./shared";
 import Link from "next/link";
 
 const PlantButton = styled.div`
-  flex: 0 1 auto;
+  flex: 0 1 80px;
   min-height: 0px;
   position: relative;
   cursor: pointer;
@@ -15,31 +15,28 @@ const PlantButton = styled.div`
     display: block;
     width: 100%;
     height: 100%;
-    position: relative;
-    top: -10px;
-  }
 
-  div {
-    left: 0;
-    transition: all 0.25s;
-    width: 40px;
-    height: 80px;
-    border-top-left-radius: 666px;
-    border-bottom-left-radius: 666px;
-    background-size: cover;
-    background-position: left;
-    position: relative;
-    top: calc(50%);
-    transform: translateY(-50%);
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  &:hover {
+    /* plant image as background */
     div {
-      z-index: 9;
-      width: 80px;
-      border-radius: 666px;
+      transition: all 0.25s;
+      width: 40px;
+      height: 80px;
+      border-top-left-radius: 666px;
+      border-bottom-left-radius: 666px;
+      background-size: cover;
+      background-position: left;
+
+      /* Align image to bottom of links when vertically squished. */
+      /* Otherwise lastPlantButton pops out from behind project name footer. */
+      position: relative;
+      top: 100%;
+      transform: translateY(-100%);
+
+      &:hover {
+        z-index: 999;
+        width: 80px;
+        border-radius: 666px;
+      }
     }
   }
 
@@ -52,18 +49,15 @@ const PlantButton = styled.div`
   }
 `;
 
-const StyledPlantStack = styled.div`
+const StyledPlantStack = styled(animated.div)`
   position: fixed;
-  top: 0;
+  margin-top: calc((100vh - 160px) / 2);
+  transform: translateY(-50%);
   left: calc(50% - 40px);
   z-index: 2;
   display: flex;
-  height: 100%;
-  width: 80px;
   flex-direction: column;
-  justify-content: center;
-  padding-top: ${dims.xPad + 40}px;
-  padding-bottom: ${dims.footerHeight * 2 + dims.xPad + 40}px;
+  justify-content: space-between;
 
   @media screen and (max-width: 640px) {
     left: -40px;
@@ -71,23 +65,42 @@ const StyledPlantStack = styled.div`
 `;
 
 export const PlantStack = ({ plants }: { plants: Plant[] }) => {
-  const stackRef = useRef<HTMLDivElement>(null);
   const lastScrollPos = useRef(0);
+  const relaxedHeight = useRef(plants.length * 80 + (plants.length - 1) * 10);
 
   let isScrolling: NodeJS.Timeout;
 
-  const [styles, api] = useSpring(() => ({
+  const [springStyles, api] = useSpring(() => ({
     top: 0,
-    marginTop: 10,
+    height: relaxedHeight.current,
     config: { frequency: 0.5, damping: 0.3 },
   }));
 
   useEffect(() => {
+    handleResize();
+    lastScrollPos.current = window.scrollY;
+
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleResize = () => {
+    // ideal height for PlantStack
+    const unConstrainedHeight = plants.length * 80 + (plants.length - 1) * 10;
+    // max height allowed by window size
+    const maxHeight = window.innerHeight - dims.footerHeight * 2;
+
+    relaxedHeight.current = Math.min(unConstrainedHeight, maxHeight);
+
+    api.start({
+      top: 0,
+      height: relaxedHeight.current,
+    });
+  };
 
   const handleScroll = (e: Event) => {
     // Clear the timeout throughout the scroll
@@ -97,12 +110,13 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
 
     // determine the scrolling speed
     const speed = window.scrollY - lastScrollPos.current;
+    const clampedSpeed = Math.min(Math.max(speed, -100), 100);
     lastScrollPos.current = window.scrollY;
 
     // stretch the springs according to the speed
     api.start({
-      top: -speed * 3,
-      marginTop: 10 + Math.abs(speed),
+      top: -clampedSpeed * 4,
+      height: relaxedHeight.current + Math.abs(clampedSpeed * 3),
     });
   };
 
@@ -110,25 +124,22 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     // return to start position
     api.start({
       top: 0,
-      marginTop: 10,
+      height: relaxedHeight.current,
     });
   };
 
   return (
-    <StyledPlantStack ref={stackRef}>
+    <StyledPlantStack
+      style={{ height: springStyles.height, top: springStyles.top }}
+    >
       {plants &&
         plants.map((plant, i) => (
           <PlantButton className="plantButton" key={i}>
             {/* <Link href={`/explore?plant=${plant.slug}`}> */}
-            <animated.a
-              style={{ top: styles.top }}
-              href={`/explore?plant=${plant.slug}`}
-            >
+            <animated.a href={`/explore?plant=${plant.slug}`}>
               <animated.div
                 style={{
                   backgroundImage: `url(/${plant.attributes.image})`,
-                  marginTop: styles.marginTop,
-                  marginBottom: styles.marginTop,
                 }}
               />
             </animated.a>
