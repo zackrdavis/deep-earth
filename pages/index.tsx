@@ -94,7 +94,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
           {parse(content.html)}
         </TextStack>
 
-        <ImageStack images={content.attributes.images} />
+        <ImageStack images={content.attributes.images} lazyLoad />
       </TwoColWrap>
 
       <StyledFooter className={!touched ? "unTouched" : ""} />

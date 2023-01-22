@@ -29,7 +29,7 @@ const Contact: NextPage<Props> = ({ content }) => {
           {parse(content.html)}
         </TextStack>
 
-        <ImageStack images={[{ image: imageUrl }]} />
+        <ImageStack images={[{ image: imageUrl }]} lazyLoad />
       </TwoColWrap>
 
       <Footer />

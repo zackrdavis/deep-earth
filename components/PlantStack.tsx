@@ -1,9 +1,9 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
 import { dims } from "./shared";
-import Link from "next/link";
+import Head from "next/head";
 
 const PlantButton = styled.div`
   flex: 0 1 80px;
@@ -134,15 +134,20 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     >
       {plants &&
         plants.map((plant, i) => (
-          <PlantButton className="plantButton" key={i}>
-            <animated.a href={`/explore?plant=${plant.slug}`}>
-              <animated.div
-                style={{
-                  backgroundImage: `url(/${plant.attributes.image})`,
-                }}
-              />
-            </animated.a>
-          </PlantButton>
+          <>
+            <Head>
+              <link rel="preload" href={plant.attributes.image} as="image" />
+            </Head>
+            <PlantButton className="plantButton" key={i}>
+              <animated.a href={`/explore?plant=${plant.slug}`}>
+                <animated.div
+                  style={{
+                    backgroundImage: `url(/${plant.attributes.image})`,
+                  }}
+                />
+              </animated.a>
+            </PlantButton>
+          </>
         ))}
     </StyledPlantStack>
   );

@@ -6,7 +6,7 @@ export const StyledImageStack = styled.div`
   width: 50%;
   align-self: flex-end;
   position: sticky;
-  // we can pretty safely say that image stacks will always be taller than the available space
+  // Image stacks should always be taller than the available space
   // otherwise this will make the image stick to the bottom with growing space above
   bottom: 0px;
 
@@ -33,14 +33,20 @@ export const StyledImageStack = styled.div`
   }
 `;
 
-export const ImageStack = ({ images }: { images: { image: string }[] }) => (
+export const ImageStack = ({
+  images,
+  lazyLoad,
+}: {
+  images: { image: string }[];
+  lazyLoad?: boolean;
+}) => (
   <StyledImageStack>
     {images?.map((image, i) => (
       <img
-        // loading="lazy"
         key={i}
         src={`/${image.image}`}
         style={{ width: "100%" }}
+        loading={lazyLoad ? "lazy" : "eager"}
       />
     ))}
   </StyledImageStack>

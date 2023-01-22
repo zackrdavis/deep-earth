@@ -51,8 +51,6 @@ const ProjectFooter = styled.div`
 `;
 
 const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
-  const defaultImageCaption = `Photo of plantings at ${content.attributes.title}.`;
-
   const linkedPlants = content.attributes.plants
     ? plantsList.filter((plant) =>
         content.attributes.plants.includes(plant.attributes.title)
@@ -63,6 +61,8 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
     <>
       <VerticalRule />
 
+      <PlantStack plants={linkedPlants} />
+
       <TwoColWrap>
         <TextStack isProjectText>
           <Logo />
@@ -72,8 +72,6 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
         <ImageStack images={content.attributes.images} />
       </TwoColWrap>
-
-      <PlantStack plants={linkedPlants} />
 
       <ProjectFooter>{content.attributes.title}</ProjectFooter>
 
