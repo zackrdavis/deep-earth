@@ -37,7 +37,7 @@ export const ImageStack = ({ images }: { images: { image: string }[] }) => (
   <StyledImageStack>
     {images?.map((image, i) => (
       <img
-        loading="lazy"
+        // loading="lazy"
         key={i}
         src={`/${image.image}`}
         style={{ width: "100%" }}
