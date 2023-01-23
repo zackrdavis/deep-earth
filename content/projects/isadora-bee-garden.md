@@ -5,8 +5,7 @@ featured_image: img/isadora_bee_garden_1.jpg
 images:
   - image: img/isadora_bee_garden_1.jpg
 ---
-L﻿ocation: Portland, OR
-
+L﻿ocation: Portland, OR\
 S﻿ize: 500 SF
 
 
