@@ -21,6 +21,9 @@ plants:
   - Iris ensata ‘Variegata’
   - Iris ensata ‘Variegata’
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit cursus risus at ultrices. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Amet aliquam id diam maecenas ultricies mi eget mauris. Pharetra et ultrices neque ornare. Sed faucibus turpis in eu mi bibendum neque. Condimentum lacinia quis vel eros donec ac. Tellus pellentesque eu tincidunt tortor aliquam. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Egestas erat imperdiet sed euismod nisi. Mattis rhoncus urna neque viverra justo. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Vestibulum lorem sed risus ultricies. Aliquam faucibus purus in massa. Ac turpis egestas maecenas pharetra convallis posuere morbi. Vel pharetra vel turpis nunc.
+L﻿ocation: Brooklyn, NY\
+S﻿ize: 2000 SF
 
-Congue mauris rhoncus aenean vel elit. Consectetur purus ut faucibus pulvinar elementum. Sit amet facilisis magna etiam tempor orci eu. In hac habitasse platea dictumst quisque. Quis ipsum suspendisse ultrices gravida dictum fusce ut. Rhoncus mattis rhoncus urna neque. Vel risus commodo viverra maecenas accumsan lacus vel facilisis. Bibendum est ultricies integer quis auctor elit sed. Aliquam id diam maecenas ultricies mi. Mi sit amet mauris commodo quis imperdiet. Pharetra convallis posuere morbi leo urna molestie at. Volutpat maecenas volutpat blandit aliquam etiam erat velit.
+
+
+After 30 years in their Clinton Hill compound, our clients were looking to radically restructure an uninspired courtyard into a space for hosting fundraisers, weddings, and dinner parties. We created a garden lush with texture and pendulous movements – always something to enjoy while waiting for guests to arrive. Busy Brooklynites are transfixed by the contrast from the street, as monarch butterflies drop in for a drink and 8-foot alliums bob in the wind. An abundance of pollinators and flying insects give the space a buzzing energy. Big blooms, just enough lawn, and a bit of formality stoke anticipation for the next gathering.
