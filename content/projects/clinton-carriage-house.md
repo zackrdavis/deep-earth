@@ -21,4 +21,9 @@ plants:
   - Macleaya cordata
   - Brugmansia aurea
 ---
-l﻿orem ipsum
+L﻿ocation: Brooklyn, NY\
+S﻿ize: 600 SF
+
+
+
+An extension of our Clinton Hill courtyard garden, this carriage house serves as the office to the family’s business. Lushly planted, we strove for a robust feeling that could hold itself amongst the outdoor oven and communal dining table. Temperate tropicals create drama, while beds overflowing with macleaya, papyrus and lilies entice employees to lunch outside. The garden changes rapidly throughout the season, from the bulbs and cherry blossoms of spring, to the last blush of roses and fronds of Korean feather grass as fall rolls through. Big forms and small details create abundance in a garden overflowing by season’s end.
