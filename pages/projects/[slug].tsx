@@ -16,6 +16,7 @@ import {
   AboveTextSpacer,
   TwoColWrap,
 } from "../../components/shared";
+import Link from "next/link";
 
 interface ProjectProps {
   content: {
@@ -36,7 +37,7 @@ const ProjectFooter = styled.div`
   border-top: 1px solid ${colors.black};
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: fixed;
   bottom: ${dims.footerHeight}px;
   width: 50%;
@@ -47,6 +48,40 @@ const ProjectFooter = styled.div`
 
   @media screen and (max-width: 640px) {
     bottom: 0;
+  }
+`;
+
+const LeftArrow = styled(Link)`
+  position: relative;
+  width: 70px;
+  height: 20px;
+  margin-right: 10px;
+
+  /* box-shadow: 0 0 0 1px red; */
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: ${colors.black};
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    height: 80%;
+    aspect-ratio: 1;
+    transform: translateY(-50%) rotate(-45deg);
+    /* transform: rotate(-45deg); */
+    /* border: 1px solid ${colors.black}; */
+
+    box-shadow: -1px -1px 0 0 ${colors.black};
   }
 `;
 
@@ -73,7 +108,10 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
         <ImageStack images={content.attributes.images} />
       </TwoColWrap>
 
-      <ProjectFooter>{content.attributes.title}</ProjectFooter>
+      <ProjectFooter>
+        <LeftArrow href="/projects" />
+        {content.attributes.title}
+      </ProjectFooter>
 
       <Footer />
     </>
