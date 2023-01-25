@@ -1,4 +1,4 @@
 ---
-title: Bacopa ‘Megacopa Pink’
+title: Bacopa 'Megacopa Pink’
 image: img/bacopa-megacopa-pink.jpg
 ---
