@@ -39,15 +39,29 @@ const StyledFooter = styled.div`
   }
 `;
 
-const StyledLink = styled(Link)<{ active: string }>`
+const StyledLink = styled(Link)<{ active: boolean }>`
   text-transform: uppercase;
   color: ${({ active }) => (active ? colors.sienna : colors.black)};
+
+  &:hover {
+    color: ${colors.sienna};
+  }
 `;
 
 export const Footer = ({ className }: { className?: string }) => {
   const [showMenu, setShowMenu] = useState(false);
   const { route } = useRouter();
   console.log(route);
+
+  const isAbout = route == "/" || false;
+
+  const isContact = route == "/contact" || false;
+
+  const isProjects = route == "/projects" || false;
+
+  const isExplore = route == "/explore" || false;
+
+  console.log(isAbout, isContact, isProjects, isExplore);
 
   return (
     <>
@@ -59,7 +73,7 @@ export const Footer = ({ className }: { className?: string }) => {
         className={showMenu ? `mobile-show ${className}` : className}
       >
         <StyledLink
-          active={String(route == "/")}
+          active={isAbout}
           href="/#about"
           onClick={() => (route == "/" ? setShowMenu(false) : null)}
         >
@@ -67,21 +81,21 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
         <StyledLink
           href="/contact"
-          active={String(route == "/contact")}
+          active={isContact}
           onClick={() => (route == "/contact" ? setShowMenu(false) : null)}
         >
           Contact
         </StyledLink>
         <StyledLink
           href="/projects"
-          active={String(route == "/projects")}
+          active={isProjects}
           onClick={() => (route == "/projects" ? setShowMenu(false) : null)}
         >
           Projects
         </StyledLink>
         <StyledLink
           href="/explore"
-          active={String(route == "/explore")}
+          active={isExplore}
           onClick={() => (route == "/explore" ? setShowMenu(false) : null)}
         >
           Explore
