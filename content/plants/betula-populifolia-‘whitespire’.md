@@ -1,4 +1,4 @@
 ---
-title: Betula populifolia ‘Whitespire’
+title: Betula populifolia 'Whitespire’
 image: img/betula-populifolia-‘whitespire’.jpg
 ---
