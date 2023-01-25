@@ -4,6 +4,9 @@ date: 2022-11-21T19:08:20.041Z
 featured_image: img/edited_64528154_1275274795978976_2580489961904518958_n.jpg
 images:
   - image: img/edited_64528154_1275274795978976_2580489961904518958_n.jpg
+  - image: img/61625503_172200603795094_4472697257212513950_n-edited.jpg
+  - image: img/img_20190829_082948-edited.jpg
+  - image: img/img_1732-edited.jpg
   - image: img/img_7808.jpg
   - image: img/img_7773.jpg
   - image: img/img_20200612_093346.jpg
