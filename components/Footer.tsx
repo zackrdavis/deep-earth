@@ -47,6 +47,7 @@ const StyledLink = styled(Link)<{ active: string }>`
 export const Footer = ({ className }: { className?: string }) => {
   const [showMenu, setShowMenu] = useState(false);
   const { route } = useRouter();
+  console.log(route);
 
   return (
     <>

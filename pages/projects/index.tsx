@@ -38,17 +38,13 @@ const ProjectGrid = styled.div`
 `;
 
 const Project = styled.div`
-  width: 100%;
   cursor: pointer;
-  position: relative;
 `;
 
-const BackgroundImage = styled.div`
+const BackgroundImage = styled.img`
   width: 100%;
-  height: 0;
-  padding-top: 64%; // todo: get real ratio
-  position: relative;
-  background-size: cover;
+  aspect-ratio: 3/2;
+  object-fit: cover;
   box-shadow: 0 0 0 1px ${colors.black};
 `;
 
@@ -61,15 +57,7 @@ const ProjectTitle = styled.div`
 `;
 
 const ProjectImage = ({ src }: { src: string }) => {
-  const observerRef = useRef<HTMLDivElement>(null);
-  const { isIntersecting } = useIntersectionObserver(observerRef);
-
-  return (
-    <BackgroundImage
-      ref={observerRef}
-      style={{ backgroundImage: isIntersecting ? `url(/${src})` : "" }}
-    />
-  );
+  return <BackgroundImage src={`/${src}`} loading="lazy" />;
 };
 
 const Projects: NextPage<Props> = ({ projectsList }) => {
