@@ -32,6 +32,6 @@ A family’s flight from New York landed them in a mid-century home surrounded b
 \
 First things first, we set about to revive a clearly once-loved garden. Ancient roses met new rose friends, old peonies were framed by muhly grasses, and an expressive wave of willow and spirea created a backbone for a new era in the garden. \
 \
-The view, of course, directed all of our motions. The rolling green hills and flags dotting the golf course below inspired strong bursts of color - graphic, saturated, and able to compete. The expansive sky throws its changing light across the leaves. \
+The view, of course, directed all of our motions. The rolling green hills and flags dotting the golf course below inspired strong bursts of color–graphic, saturated, and able to compete. The expansive sky throws its changing light across the leaves. \
 \
 Wandering around the property, shadier moments are found amongst the limbs of rhododendrons and azalea, under which are tucked a new patio, vibrant ferns, and intricate foliage that might otherwise be overlooked in the garden’s grander views.
