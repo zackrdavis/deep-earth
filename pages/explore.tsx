@@ -73,20 +73,6 @@ const PlantHoverTile = ({
   );
 };
 
-const PlantColumns = styled.div`
-  column-count: 4;
-  column-width: 200px;
-  column-gap: ${dims.xPad}px;
-
-  @media screen and (max-width: 640px) {
-    column-count: 1;
-  }
-`;
-
-const PlantLink = styled.div`
-  margin-bottom: 24px;
-`;
-
 const PlantPic = styled.img`
   position: fixed;
   width: 50%;
@@ -119,10 +105,17 @@ interface Props {
 }
 
 const Plants: NextPage<Props> = ({ plantsList }) => {
-  const [currentPlant, setCurrentPlant] = useState<undefined | Plant>();
-
   const { query } = useRouter();
   const plantQuery = query.plant as string;
+  const queriedPlant = plantsList.find((plant) => plant.slug == plantQuery);
+
+  const [currentPlant, setCurrentPlant] = useState<undefined | Plant>(
+    queriedPlant
+  );
+
+  useEffect(() => {
+    setCurrentPlant(queriedPlant);
+  }, [queriedPlant]);
 
   return (
     <>
