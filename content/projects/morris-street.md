@@ -19,10 +19,9 @@ plants:
   - Tetrapanax ‘Steroidal Giant’
 ---
 L﻿ocation: Portland, OR\
-S﻿ize: 2000 SF
-
-
-
+S﻿ize: 2000 SF\
+\
+\
 A garden made for friends. \
 \
 \
