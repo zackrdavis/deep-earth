@@ -1,4 +1,4 @@
 ---
-title: Iris ensata ‘Variegata’
+title: Iris ensata 'Variegata’
 image: img/iris-ensata-‘variegata’.jpg
 ---
