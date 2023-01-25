@@ -127,7 +127,11 @@ const Plants: NextPage<Props> = ({ plantsList }) => {
           <Logo />
           <PlantsGrid>
             {plantsList.map((plant, i) => (
-              <PlantHoverTile plant={plant} onHoverPlant={setCurrentPlant} />
+              <PlantHoverTile
+                key={i}
+                plant={plant}
+                onHoverPlant={setCurrentPlant}
+              />
             ))}
           </PlantsGrid>
         </TextStack>
