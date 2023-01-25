@@ -1,4 +1,4 @@
 ---
-title: Lewisia cotyledon ‘Little Peach’
+title: Lewisia cotyledon 'Little Peach’
 image: img/lewisia-cotyledon-little-peach.jpg
 ---
