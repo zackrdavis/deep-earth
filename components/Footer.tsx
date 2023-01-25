@@ -61,8 +61,6 @@ export const Footer = ({ className }: { className?: string }) => {
 
   const isExplore = route == "/explore" || false;
 
-  console.log(isAbout, isContact, isProjects, isExplore);
-
   return (
     <>
       <MobileNavBar
