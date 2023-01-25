@@ -17,4 +17,4 @@ images:
 L﻿ocation: Ventura, CA\
 S﻿ize: 800 SF\
 \
-Designed for artist, surfer and board shaper R. Lord, this xeric garden is the perfect place to crash after a day at the beach. A space to unload surfboards with the front door open and the music on. Old barn beams and metal grid panels are open, but cozy—a simple fence solution for a client who still enjoys a neighborly chat. Beachy grasses, breezy shrubs, sunset-colored blooms and desert vibes complete the mood for this adorable southern California casita.
+Designed for artist, surfer and board shaper R. Lord, this xeric garden is the perfect place to crash after a day at the beach. A space to unload surfboards with the front door open and the music on. Old barn beams and metal grid panels are open, but cozy - a simple fence solution for a client who still enjoys a neighborly chat. Beachy grasses, breezy shrubs, sunset-colored blooms and desert vibes complete the mood for this adorable southern California casita.
