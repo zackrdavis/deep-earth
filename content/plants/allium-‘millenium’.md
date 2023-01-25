@@ -1,4 +1,4 @@
 ---
-title: Allium ‘Millenium’
+title: Allium 'Millenium’
 image: img/allium-‘millenium’.jpg
 ---
