@@ -40,7 +40,7 @@ const StyledLandingImage = styled.div`
 `;
 
 const BigLogo = styled.img`
-  width: 690px;
+  width: 800px;
   padding: 0 50px;
   max-width: 100vw;
 

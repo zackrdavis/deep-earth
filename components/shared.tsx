@@ -47,7 +47,10 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
       position: sticky;
       align-self: flex-end;
       width: 50%;
-      padding: ${dims.xPad}px;
+      padding-top: ${dims.xPad}px;
+      padding-bottom: ${dims.xPad}px;
+      padding-left: ${dims.xPad}px;
+      padding-right: ${isProjectText ? dims.xPad + 30 : dims.xPad}px;
       min-height: calc(100vh - ${realFooterHeight}px);
       bottom: ${realFooterHeight}px;
     `;
