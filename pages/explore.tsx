@@ -28,13 +28,13 @@ const PlantsGrid = styled.div`
   grid-gap: var(--margin-med);
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   margin-bottom: ${dims.footerHeight}px;
+  margin-top: ${dims.betweenLogoAndGrid}px;
 `;
 
 const StyledPlantHoverTile = styled(Link)`
   aspect-ratio: 1;
   min-width: 100px;
   min-height: 100px;
-  /* box-shadow: inset 0 0 1px 1px red; */
   cursor: pointer;
   position: relative;
 

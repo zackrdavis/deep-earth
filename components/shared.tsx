@@ -14,6 +14,7 @@ export const dims = {
   xPad: 50,
   footerHeight: 80,
   logoPad: 50,
+  betweenLogoAndGrid: 80,
 };
 
 export const ContentWrap = styled.div`

@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
 import useIntersectionObserver from "@react-hook/intersection-observer";
-import { ContentWrap, sluggify } from "../../components/shared";
+import { ContentWrap, dims, sluggify } from "../../components/shared";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
@@ -29,6 +29,7 @@ const ProjectGrid = styled.div`
   grid-template-columns: 3fr 3fr 3fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  margin-top: ${dims.betweenLogoAndGrid}px;
 
   @media screen and (max-width: 640px) {
     display: flex;
