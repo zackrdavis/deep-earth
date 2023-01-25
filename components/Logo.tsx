@@ -11,7 +11,8 @@ const StyledLogo = styled.div`
   }
 
   img {
-    width: 300px;
+    max-width: 100%;
+    width: 350px;
   }
 `;
 
@@ -25,7 +26,7 @@ export const Logo = ({
   return (
     <StyledLogo style={style}>
       <Link href="/">
-        <img onClick={onClick} src="/img/site/deepearth_sienna.svg" />
+        <img onClick={onClick} src="/img/site/joshua-pavlacky.svg" />
       </Link>
     </StyledLogo>
   );

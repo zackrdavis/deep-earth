@@ -84,7 +84,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         className={!touched ? "unTouched" : ""}
         style={{ backgroundImage: `url(${attributes.landing_image})` }}
       >
-        <BigLogo src="/img/site/deepearth_tan.svg" />
+        <BigLogo src="/img/site/joshua-pavlacky-light.svg" />
       </StyledLandingImage>
 
       <TwoColWrap id="about">
