@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
 import useIntersectionObserver from "@react-hook/intersection-observer";
-import { ContentWrap, dims, sluggify } from "../../components/shared";
+import { colors, ContentWrap, dims, sluggify } from "../../components/shared";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
@@ -49,6 +49,7 @@ const BackgroundImage = styled.div`
   padding-top: 64%; // todo: get real ratio
   position: relative;
   background-size: cover;
+  box-shadow: 0 0 0 1px ${colors.black};
 `;
 
 const ProjectTitle = styled.div`
