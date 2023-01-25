@@ -1,4 +1,4 @@
 ---
-title: "Polemonium x ‘Apricot Delight’ "
+title: "Polemonium x 'Apricot Delight’ "
 image: img/polemonium-apricot-delight.jpg
 ---
