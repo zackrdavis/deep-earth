@@ -1,4 +1,4 @@
 ---
-title: Zingiber ‘White Feather’
+title: Zingiber 'White Feather’
 image: img/zingiber-white-feather.png
 ---
