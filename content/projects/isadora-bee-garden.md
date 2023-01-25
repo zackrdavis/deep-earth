@@ -8,8 +8,8 @@ images:
 L﻿ocation: Portland, OR\
 S﻿ize: 500 SF
 
-Their baby was due any day, and the clients wanted to transform their empty yard into a lush meadow in celebration of life. \
+Nesting in their new home, with a baby on the way, David and Morgan wanted to create a sensory meadow for their daughter to enjoy in her first year of life. Constrained by the timing of germination (for both baby and garden), and only days from the big day, we defined a garden in shape and size that was manageable for new parents. \
 \
-Constrained by the timing of germination (for both baby and garden) we quickly cleared a swath of lawn, and amended the soil to prepare the site. Perennial grasses were planted throughout to provide structure and height, and annual wildflowers were sown abundantly to fill the gaps. \
+A simple path, a bench, and an unfussy border kept things humble.  Cardboard and compost was laid down to smother the existing lawn. Perennial grasses were planted for structure and height, and annual wildflowers were sown abundantly to fill the gaps. From unassuming surroundings, the meadow took shape and began to bud. \
 \
-A garden is always a touchstone of time. Isadora Bee arrived mid-fall. By summertime, the meadow was in full bloom, and the baby pictures filled with flowers. She and the garden continue to grow together.
+A garden is a touchstone of time. Isadora Bee arrived mid-fall. By summer, the meadow was in full bloom and the baby pictures were filled with flowers.
