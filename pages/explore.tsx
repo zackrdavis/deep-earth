@@ -47,6 +47,7 @@ const StyledPlantHoverTile = styled(Link)`
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
+    box-shadow: 0 0 0 1px ${colors.black};
   }
 `;
 

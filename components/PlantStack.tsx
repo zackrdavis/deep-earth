@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useSpring, animated } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
-import { dims } from "./shared";
+import { colors, dims } from "./shared";
 import Head from "next/head";
 
 const PlantButton = styled.div`
@@ -25,6 +25,7 @@ const PlantButton = styled.div`
       border-bottom-left-radius: 666px;
       background-size: cover;
       background-position: left;
+      box-shadow: 0 0 0 1px ${colors.black};
 
       /* Align image to bottom of links when vertically squished. */
       /* Otherwise lastPlantButton pops out from behind project name footer. */
