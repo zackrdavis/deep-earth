@@ -38,4 +38,4 @@ We took an ax to this muddy yard, defined our needs, and built a vision together
 The strong linear patio, softened by groundcovers, provides a needed contrast to the gnarled fruit trees. Concrete pavers frame and zigzag around a bioswale filled with specimen plants. Descending into the garden, decomposed granite paths wind around berms of grasses and ferns, encouraging a slow stroll through changing vignettes. An expansive vegetable bed provides structure to balance this meandering composition. \
 \
 \
-With a wire mesh fence punctuated by architectural cedar posts, the vacant lot next door became an asset. Sprawling green brambles serve as a backdrop for ornamentals growing through the fence — softening the transition between order and chaos.
+With a wire mesh fence punctuated by architectural cedar posts, the vacant lot next door became an asset. Sprawling green brambles serve as a backdrop for ornamentals growing through the fence - softening the transition between order and chaos.
