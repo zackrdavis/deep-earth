@@ -28,6 +28,4 @@ plants:
 L﻿ocation: Brooklyn, NY\
 S﻿ize: 2000 SF
 
-
-
-After 30 years in their Clinton Hill compound, our clients were looking to radically restructure an uninspired courtyard into a space for hosting fundraisers, weddings, and dinner parties. We created a garden lush with texture and pendulous movements – always something to enjoy while waiting for guests to arrive. Busy Brooklynites are transfixed by the contrast from the street, as monarch butterflies drop in for a drink and 8-foot alliums bob in the wind. An abundance of pollinators and flying insects give the space a buzzing energy. Big blooms, just enough lawn, and a bit of formality stoke anticipation for the next gathering.
+After 30 years in their Clinton Hill compound, our clients were looking to radically restructure an uninspired courtyard into a space for hosting fundraisers, weddings, and dinner parties. We created a garden lush with texture and pendulous movements–always something to enjoy while waiting for guests to arrive. Busy Brooklynites are transfixed by the contrast from the street, as monarch butterflies drop in for a drink and 8-foot alliums bob in the wind. An abundance of pollinators and flying insects give the space a buzzing energy. Big blooms, just enough lawn, and a bit of formality stoke anticipation for the next gathering.
