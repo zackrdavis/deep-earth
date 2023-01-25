@@ -43,6 +43,7 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
     const realFooterHeight = dims.footerHeight * (isProjectText ? 2 : 1);
 
     return css`
+      text-align: justify;
       position: sticky;
       align-self: flex-end;
       width: 50%;
