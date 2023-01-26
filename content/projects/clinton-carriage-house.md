@@ -4,6 +4,7 @@ date: 2022-11-24T00:18:04.107Z
 featured_image: img/img_20200705_180322_1_edited.jpg
 images:
   - image: img/img_20200828_134725-edited.jpg
+  - image: img/mvimg_20200828_134729_edited.jpg
   - image: img/img_20200705_180322_1_edited.jpg
   - image: img/img_20200425_170818-edited.jpg
   - image: img/img_20200830_105045_edited.jpg
@@ -16,7 +17,6 @@ images:
   - image: img/00100lrportrait_00100_burst20200601131821983_cover-1-.jpg
   - image: img/img_20191007_135755_edited.jpg
   - image: img/img_20190806_174805_edited.jpg
-  - image: img/mvimg_20200828_134729_edited.jpg
 plants:
   - Strelitzia reginae
   - Chasmanthium latifolium
