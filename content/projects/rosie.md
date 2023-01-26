@@ -9,10 +9,7 @@ images:
   - image: img/fort_greene_9.jpg
   - image: img/fort_greene_8.jpg
   - image: img/fort_greene_7.jpg
-  - image: img/fort_greene_6.jpg
-  - image: img/fort_greene_5.jpg
   - image: img/fort_greene_4.jpg
-  - image: img/fort_greene_3.jpg
   - image: img/fort_greene_2.jpg
 ---
 L﻿ocation: Brooklyn, NY\
