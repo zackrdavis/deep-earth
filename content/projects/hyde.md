@@ -8,11 +8,11 @@ images:
   - image: img/hyde_5.jpg
   - image: img/104529114_1417224551798457_7681693256372831366_n-1-.jpg
   - image: img/104204882_1155179108163347_6626445830705639175_n.jpg
-  - image: img/hyde_9.jpg
   - image: img/img_20200521_130116.jpg
+  - image: img/hyde_9.jpg
   - image: img/hyde_6.jpg
-  - image: img/hyde_3.jpg
   - image: img/hyde_10.jpg
+  - image: img/hyde_3.jpg
   - image: img/hyde_2.jpg
   - image: img/hyde_8.jpg
 ---
