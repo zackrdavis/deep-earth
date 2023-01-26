@@ -1,6 +1,7 @@
 ---
 landing_image: img/landing_prog.jpg
 images:
+  - image: img/misc8.jpg
   - image: img/img_20200916_182727.jpg
 ---
 Deep Earth is a landscape design studio located in Portland, OR and New York, NY. Designing with an eye toward environmental rejuvenation and climate adaptation, Deep Earth collaborates with artists and biologists to create ethical and educational plantscapes. 
