@@ -3,6 +3,7 @@ title: Clinton Carriage House
 date: 2022-11-24T00:18:04.107Z
 featured_image: img/img_20200705_180322_1_edited.jpg
 images:
+  - image: img/img_20200828_134725-edited.jpg
   - image: img/img_20200705_180322_1_edited.jpg
   - image: img/img_20200830_105045_edited.jpg
   - image: img/img_20190912_150102_edited.jpg
