@@ -10,7 +10,6 @@ images:
     caption: ""
   - image: img/img_20200606_164216_edited.jpg
   - image: img/img_20190914_153458-edited.jpg
-  - image: img/img_20190813_143034_edited.jpg
   - image: img/img_20200705_182719_edited.jpg
   - image: img/img_20190806_182301_edited.jpg
   - image: img/img_20190806_171948_edited.jpg
