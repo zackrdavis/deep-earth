@@ -1,5 +1,5 @@
 ---
-landing_image: img/img_20200709_093755_edited.jpg
+landing_image: img/img_20200709_065511.jpg
 images:
   - image: img/misc8.jpg
   - image: img/img_20200916_182727.jpg
