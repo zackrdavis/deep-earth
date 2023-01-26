@@ -1,7 +1,7 @@
 ---
 title: Morris Street
 date: 2022-11-24T01:31:30.034Z
-featured_image: img/img_9121-edited.jpg
+featured_image: img/img_9195_edited.jpg
 images:
   - image: img/_dsc0903-recovered-edited.jpg
   - image: img/_dsc0904-edited.jpg
