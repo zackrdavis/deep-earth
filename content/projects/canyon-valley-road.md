@@ -7,14 +7,14 @@ images:
   - image: img/newton11-edited.jpg
   - image: img/img_7808.jpg
   - image: img/img_20190829_082948-edited.jpg
+  - image: img/66296725_129284751674924_4931476680006378832_n.jpg
   - image: img/img_20200612_093346.jpg
+  - image: img/newton6.jpg
   - image: img/66396034_476781523110504_6198906243410807495_n-edited.jpg
   - image: img/hirzel2.jpg
   - image: img/edited_64528154_1275274795978976_2580489961904518958_n.jpg
   - image: img/61625503_172200603795094_4472697257212513950_n-edited.jpg
   - image: img/img_1732-edited.jpg
-  - image: img/66296725_129284751674924_4931476680006378832_n.jpg
-  - image: img/newton6.jpg
   - image: img/img_20200919_095800.jpg
   - image: img/newton17.jpg
 plants:
