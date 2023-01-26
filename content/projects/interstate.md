@@ -5,8 +5,8 @@ featured_image: img/interstate_3.jpg
 images:
   - image: img/interstate_4.jpg
   - image: img/interstate_6.jpg
-  - image: img/interstate_3.jpg
   - image: img/23347828_366071963852225_8143773518140538880_n.jpg
+  - image: img/interstate_3.jpg
   - image: img/interstate_5.jpg
   - image: img/interstate_7.jpg
   - image: img/interstate_1.jpg
