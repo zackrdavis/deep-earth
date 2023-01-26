@@ -1,7 +1,7 @@
 ---
 title: Interstate
 date: 2023-01-18T18:29:21.570Z
-featured_image: img/interstate_3.jpg
+featured_image: img/interstate_4.jpg
 images:
   - image: img/interstate_4.jpg
   - image: img/interstate_6.jpg
