@@ -1,7 +1,7 @@
 ---
 title: Clinton Courtyard
 date: 2022-04-20T04:13:53.696Z
-featured_image: img/img_20190914_152959_edited.jpg
+featured_image: img/img_20190908_144112_edited_cropped.jpg
 images:
   - image: img/img_20190914_153040-edited.jpg
   - image: img/lawnbefore.jpg
