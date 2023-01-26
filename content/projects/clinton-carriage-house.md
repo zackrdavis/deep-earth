@@ -5,9 +5,9 @@ featured_image: img/img_20200705_180322_1_edited.jpg
 images:
   - image: img/img_20200705_180322_1_edited.jpg
   - image: img/mvimg_20200828_134729_edited.jpg
+  - image: img/img_20200830_105045_edited.jpg
   - image: img/img_20200828_134725-edited.jpg
   - image: img/img_20200425_170818-edited.jpg
-  - image: img/img_20200830_105045_edited.jpg
   - image: img/img_20190912_150102_edited.jpg
   - image: img/img_20200704_162425_edited.jpg
   - image: img/img_20200601_131825_edited.jpg
