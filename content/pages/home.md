@@ -1,5 +1,5 @@
 ---
-landing_image: img/landing_prog.jpg
+landing_image: img/img_20200709_093755_edited.jpg
 images:
   - image: img/misc8.jpg
   - image: img/img_20200916_182727.jpg
