@@ -11,9 +11,7 @@ images:
   - image: img/hyde_9.jpg
   - image: img/hyde_1.jpg
   - image: img/img_20200521_130116.jpg
-  - image: img/hyde_11.jpg
   - image: img/hyde_6.jpg
-  - image: img/104463985_184595426341820_4491225073363434967_n.jpg
   - image: img/hyde_3.jpg
   - image: img/hyde_10.jpg
   - image: img/hyde_2.jpg
