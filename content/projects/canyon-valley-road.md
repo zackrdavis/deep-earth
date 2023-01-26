@@ -16,7 +16,6 @@ images:
   - image: img/66296725_129284751674924_4931476680006378832_n.jpg
   - image: img/newton6.jpg
   - image: img/img_20200919_095800.jpg
-  - image: img/img_20200612_092910.jpg
   - image: img/newton17.jpg
 plants:
   - Spirea nipponica
