@@ -1,7 +1,7 @@
 ---
 title: Ventura
 date: 2023-01-18T20:35:15.419Z
-featured_image: img/ventura_5.jpg
+featured_image: img/ventura_4.jpg
 images:
   - image: img/ventura_4.jpg
   - image: img/ventura_9.jpg
