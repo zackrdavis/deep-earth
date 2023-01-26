@@ -4,7 +4,6 @@ date: 2022-11-24T01:31:30.034Z
 featured_image: img/_dsc1023_edited.jpg
 images:
   - image: img/morris8-edited.jpg
-  - image: img/_dsc1023_edited.jpg
   - image: img/img_9121-edited.jpg
   - image: img/_dsc0904-edited.jpg
   - image: img/pxl_20220601_213753950-edited.jpg
