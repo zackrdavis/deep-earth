@@ -18,6 +18,7 @@ images:
   - image: img/img_20190914_152902_edited.jpg
   - image: img/courtyarddrawing.jpg
 plants:
+  - Coreopsis rosea
   - Penstemon digitalis 'Husker Red'
   - Baptisia australis
   - Celosia argentea var. Spicata ‘Flamingo Feather’
