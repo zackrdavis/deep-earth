@@ -18,6 +18,9 @@ images:
   - image: img/morris-before.jpg
   - image: img/16505d98c2e0845383de105f75059d75-edited.jpg
 plants:
+  - "Podophyllum x 'Spotty Dotty’ "
+  - Lupinus rivularis
+  - "Echium pininana "
   - Sasa veitchii
   - Phyllostachys bambusoides ‘Richard Haubrich’
   - Arisaema ciliatum v. liubaense
