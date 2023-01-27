@@ -49,7 +49,7 @@ export const TwoColWrap = styled.div`
   display: flex;
 
   @media screen and (max-width: 640px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 `;
 
@@ -79,6 +79,7 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
   }
 
   @media screen and (max-width: 640px) {
+    position: relative;
     width: 100%;
     padding: ${dims.xPad}px;
   }
@@ -91,6 +92,10 @@ export const AboveTextSpacer = styled.div<{ isProjectText?: boolean }>`
 
     return css`
       height: calc((100vh - ${subtractedHeight}px) / 2);
+
+      @media screen and (max-width: 640px) {
+        display: none;
+      }
     `;
   }}
 `;

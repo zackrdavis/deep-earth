@@ -30,7 +30,6 @@ const StyledPlantHoverTile = styled.div`
   aspect-ratio: 1;
   min-width: 100px;
   min-height: 100px;
-  cursor: pointer;
   position: relative;
 
   img {
