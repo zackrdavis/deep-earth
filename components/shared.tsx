@@ -11,7 +11,7 @@ export const sluggify = (string: string) => {
 };
 
 export const dims = {
-  xPad: 50,
+  xPad: 80,
   footerHeight: 80,
   logoPad: 50,
   betweenLogoAndGrid: 80,
@@ -50,7 +50,7 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
       padding-top: ${dims.xPad}px;
       padding-bottom: ${dims.xPad}px;
       padding-left: ${dims.xPad}px;
-      padding-right: ${isProjectText ? dims.xPad + 30 : dims.xPad}px;
+      padding-right: ${dims.xPad}px;
       min-height: calc(100vh - ${realFooterHeight}px);
       bottom: ${realFooterHeight}px;
     `;
