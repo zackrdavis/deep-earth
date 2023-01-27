@@ -22,9 +22,9 @@ plants:
   - Lupinus rivularis
   - "Echium pininana "
   - Sasa veitchii
-  - Phyllostachys bambusoides ‘Richard Haubrich’
+  - Phyllostachys bambusoides 'Richard Haubrich’
   - Arisaema ciliatum v. liubaense
-  - Tetrapanax ‘Steroidal Giant’
+  - Tetrapanax 'Steroidal Giant’
 ---
 L﻿ocation: Portland, OR\
 S﻿ize: 2000 SF\
