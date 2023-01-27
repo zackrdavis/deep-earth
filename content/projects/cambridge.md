@@ -13,6 +13,11 @@ images:
   - image: img/cambridge_11.jpg
   - image: img/cambridge_9.jpg
   - image: img/cambridge_1.jpg
+plants:
+  - Verbena bonariensis
+  - Alcea rosea
+  - Chasmanthium latifolium
+  - Artemisia 'Silver Mound'
 ---
 L﻿ocation: Cambridge, MA\
 S﻿ize: 1500 SF
