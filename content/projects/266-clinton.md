@@ -18,13 +18,12 @@ images:
   - image: img/img_20190914_152902_edited.jpg
   - image: img/courtyarddrawing.jpg
 plants:
+  - Penstemon digitalis 'Husker Red'
   - Baptisia australis
   - Celosia argentea var. Spicata ‘Flamingo Feather’
   - Euphorbia x martinii 'Ascot Rainbow'
   - Allium ‘Millenium’
   - Centaurea cyanus ‘Black Gem’
-  - Iris ensata ‘Variegata’
-  - Iris ensata ‘Variegata’
 ---
 L﻿ocation: Brooklyn, NY\
 S﻿ize: 2000 SF
