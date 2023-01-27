@@ -18,8 +18,8 @@ images:
   - image: img/img_20200919_095800.jpg
   - image: img/newton17.jpg
 plants:
-  - Spirea nipponica
-  - Lobelia cardinalis
+  - Spirea nipponica 'Snowmound'
+  - Lobelia cardinalis 'Black Truffle'
   - Nepeta racemosa
   - Muhlenbergia capillaris
 ---
