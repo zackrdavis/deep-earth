@@ -13,6 +13,7 @@ images:
   - image: img/interstate_2.jpg
   - image: img/interstate_8.jpg
 plants:
+  - Trifolium incarnatum
   - Tulipa linifolia
   - Amelanchier x grandiflora
   - Salix discolor
