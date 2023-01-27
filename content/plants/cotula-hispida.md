@@ -1,4 +1,4 @@
 ---
 title: Cotula hispida
-image: img/cotula-hispida.jpg
+image: img/5185_valjones-hughes_1502361140_1080.jpg
 ---
