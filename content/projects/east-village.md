@@ -7,6 +7,10 @@ images:
   - image: img/east_village_2.jpg
   - image: img/east_village_3.jpg
   - image: img/east_village_4.jpg
+plants:
+  - Artemisia 'Silver Mound'
+  - Gaura lindheimeri
+  - "Stachys byzantina "
 ---
 L﻿ocation: New York, NY\
 S﻿ize: 300 SF
