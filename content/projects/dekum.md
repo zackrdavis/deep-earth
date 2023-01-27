@@ -10,6 +10,10 @@ images:
   - image: img/dekum_3.jpg
   - image: img/dekum_4.jpg
   - image: img/dekum_8.jpg
+plants:
+  - Origanum x 'Xera Cascade'
+  - Oenothera biennis
+  - Phormium tenax 'Purpureum'
 ---
 L﻿ocation: Portland, OR\
 S﻿ize: 800 SF
