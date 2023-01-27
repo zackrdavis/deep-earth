@@ -15,6 +15,14 @@ images:
   - image: img/hyde_3.jpg
   - image: img/hyde_2.jpg
   - image: img/hyde_8.jpg
+plants:
+  - Betula populifolia 'Whitespire’
+  - Aconitum carmichaelii
+  - Silene dioica 'Clifford Moor'
+  - Gentiana 'True Blue'
+  - Galium odoratum
+  - Polystichum acrostichoides
+  - Echinacea purpurea 'White Swan'
 ---
 L﻿ocation: Newton, MA\
 S﻿ize: 2000 SF
