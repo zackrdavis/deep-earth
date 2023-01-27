@@ -1,11 +1,9 @@
 import type { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
-import useIntersectionObserver from "@react-hook/intersection-observer";
 import { colors, ContentWrap, dims, sluggify } from "../../components/shared";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
-import { useRef } from "react";
 import { Logo } from "../../components/Logo";
 
 export type Project = {
@@ -64,22 +62,15 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
   const { query } = useRouter();
   const plantQuery = query.plant as string;
 
-  console.log(plantQuery);
-
   // filter projectsList if there's a plant query
   if (plantQuery) {
-    projectsList = projectsList.filter((project) => {
-      if (project.attributes.plants) {
-        console.log(project.attributes.plants.map((plant) => sluggify(plant)));
-      }
-
-      return (
+    projectsList = projectsList.filter(
+      (project) =>
         project.attributes.plants &&
         project.attributes.plants
           .map((plant) => sluggify(plant))
           .includes(plantQuery)
-      );
-    });
+    );
   }
 
   return (

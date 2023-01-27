@@ -1,17 +1,11 @@
 import type { NextPage, GetStaticProps } from "next";
-import { useState, useRef, MouseEventHandler } from "react";
+import { useState } from "react";
 import { Footer } from "../components/Footer";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import {
-  colors,
-  ContentWrap,
-  dims,
-  TwoColWrap,
-  TextStack,
-} from "../components/shared";
+import { colors, dims, TwoColWrap, TextStack } from "../components/shared";
 import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
@@ -117,8 +111,6 @@ const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
     if (!project.attributes?.plants) return false;
     usedPlants = usedPlants.concat(project.attributes?.plants);
   });
-
-  console.log(usedPlants);
 
   const { query } = useRouter();
   const plantQuery = query.plant as string;
