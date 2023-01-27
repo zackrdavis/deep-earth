@@ -16,7 +16,12 @@ images:
   - image: img/isadora_bee_garden_8.jpg
   - image: img/isadora_bee_garden_6.jpg
 plants:
+  - Silene armeria
+  - Lobularia maritima
+  - Matricaria chamomilla
   - Calamagrostis x acutiflora 'Karl Foerster'
+  - Centaurea cyanus
+  - Papaver rhoeas
 ---
 L﻿ocation: Portland, OR\
 S﻿ize: 500 SF
