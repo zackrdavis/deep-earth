@@ -21,7 +21,6 @@ plants:
   - Spirea nipponica
   - Lobelia cardinalis
   - Nepeta racemosa
-  - Nicotiana sylvestris
   - Muhlenbergia capillaris
 ---
 Location: Newton, MA\
