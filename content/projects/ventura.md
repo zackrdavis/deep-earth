@@ -12,6 +12,10 @@ images:
   - image: img/ventura_6.jpg
   - image: img/ventura_10.jpg
   - image: img/ventura_8.jpg
+plants:
+  - Grevillea 'Superb'
+  - Aloidendron barberae
+  - Hesperaloe parviflora
 ---
 L﻿ocation: Ventura, CA\
 S﻿ize: 800 SF\
