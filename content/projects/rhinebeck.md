@@ -13,6 +13,9 @@ images:
   - image: img/copy-of-img_20200525_184719.jpg
   - image: img/img_20200528_172238.jpg
 plants:
+  - Carex pensylvanica
+  - Thelypteris noveboracensis
+  - Styrax japonicus
   - Corydalis sempervirens
 ---
 L﻿ocation: Rhinebeck, NY\
