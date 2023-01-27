@@ -1,5 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
-import { useState, useRef } from "react";
+import { useState, useRef, MouseEventHandler } from "react";
 import { Footer } from "../components/Footer";
 import styled from "styled-components";
 import Link from "next/link";
@@ -14,6 +14,7 @@ import {
 } from "../components/shared";
 import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
+import { importProjects, Project } from "./projects";
 
 export type Plant = {
   attributes: {
@@ -31,7 +32,7 @@ const PlantsGrid = styled.div`
   margin-top: ${dims.betweenLogoAndGrid}px;
 `;
 
-const StyledPlantHoverTile = styled(Link)`
+const StyledPlantHoverTile = styled.div`
   aspect-ratio: 1;
   min-width: 100px;
   min-height: 100px;
@@ -54,9 +55,11 @@ const StyledPlantHoverTile = styled(Link)`
 const PlantHoverTile = ({
   plant,
   onHoverPlant,
+  hasProjects,
 }: {
   plant: Plant;
   onHoverPlant: (plant?: Plant) => void;
+  hasProjects: boolean;
 }) => {
   const {
     attributes: { title, image },
@@ -65,6 +68,7 @@ const PlantHoverTile = ({
 
   return (
     <StyledPlantHoverTile
+      as={hasProjects ? Link : "div"}
       href={`/projects?plant=${slug}`}
       onMouseEnter={() => onHoverPlant(plant)}
     >
@@ -102,9 +106,20 @@ const PlantFooter = styled.div`
 
 interface Props {
   plantsList: Plant[];
+  projectsList: Project[];
 }
 
-const Plants: NextPage<Props> = ({ plantsList }) => {
+const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
+  // make list of plants which are attached to projects
+  let usedPlants: string[] = [];
+  projectsList.forEach((project) => {
+    // skip project if no plants
+    if (!project.attributes?.plants) return false;
+    usedPlants = usedPlants.concat(project.attributes?.plants);
+  });
+
+  console.log(usedPlants);
+
   const { query } = useRouter();
   const plantQuery = query.plant as string;
   const queriedPlant = plantsList.find((plant) => plant.slug == plantQuery);
@@ -127,6 +142,7 @@ const Plants: NextPage<Props> = ({ plantsList }) => {
           <PlantsGrid>
             {plantsList.map((plant, i) => (
               <PlantHoverTile
+                hasProjects={usedPlants.includes(plant.attributes.title)}
                 key={i}
                 plant={plant}
                 onHoverPlant={setCurrentPlant}
@@ -177,8 +193,9 @@ export const importPlants = async () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const plantsList = await importPlants();
+  const projectsList = await importProjects();
 
-  return { props: { plantsList } };
+  return { props: { plantsList, projectsList } };
 };
 
 export default Plants;

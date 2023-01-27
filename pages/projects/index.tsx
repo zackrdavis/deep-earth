@@ -8,7 +8,7 @@ import { Footer } from "../../components/Footer";
 import { useRef } from "react";
 import { Logo } from "../../components/Logo";
 
-type Project = {
+export type Project = {
   attributes: {
     title: string;
     date: string;
@@ -64,6 +64,8 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
   const { query } = useRouter();
   const plantQuery = query.plant as string;
 
+  console.log(projectsList);
+
   // filter projectsList if there's a plant query
   if (plantQuery) {
     projectsList = projectsList.filter(
@@ -93,7 +95,7 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
   );
 };
 
-const importProjects = async () => {
+export const importProjects = async () => {
   // https://webpack.js.org/guides/dependency-management/#requirecontext
   const markdownFiles = require
     .context("/content/projects", true)
