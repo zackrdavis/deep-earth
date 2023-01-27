@@ -21,10 +21,10 @@ plants:
   - Coreopsis rosea
   - Penstemon digitalis 'Husker Red'
   - Baptisia australis
-  - Celosia argentea var. Spicata ‘Flamingo Feather’
+  - Celosia argentea var. Spicata 'Flamingo Feather’
   - Euphorbia x martinii 'Ascot Rainbow'
-  - Allium ‘Millenium’
-  - Centaurea cyanus ‘Black Gem’
+  - Allium 'Millenium’
+  - Centaurea cyanus 'Black Gem’
 ---
 L﻿ocation: Brooklyn, NY\
 S﻿ize: 2000 SF
