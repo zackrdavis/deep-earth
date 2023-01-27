@@ -64,17 +64,22 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
   const { query } = useRouter();
   const plantQuery = query.plant as string;
 
-  console.log(projectsList);
+  console.log(plantQuery);
 
   // filter projectsList if there's a plant query
   if (plantQuery) {
-    projectsList = projectsList.filter(
-      (project) =>
+    projectsList = projectsList.filter((project) => {
+      if (project.attributes.plants) {
+        console.log(project.attributes.plants.map((plant) => sluggify(plant)));
+      }
+
+      return (
         project.attributes.plants &&
         project.attributes.plants
           .map((plant) => sluggify(plant))
           .includes(plantQuery)
-    );
+      );
+    });
   }
 
   return (
