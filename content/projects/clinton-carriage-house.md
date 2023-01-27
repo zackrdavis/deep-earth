@@ -17,6 +17,9 @@ images:
   - image: img/img_20191007_135755_edited.jpg
   - image: img/img_20190806_174805_edited.jpg
 plants:
+  - Hibiscus moscheutos
+  - Nicotiana sylvestris
+  - Cyperus papyrus
   - Strelitzia reginae
   - Chasmanthium latifolium
   - Macleaya cordata
