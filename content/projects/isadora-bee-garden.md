@@ -15,6 +15,8 @@ images:
   - image: img/isadora_bee_garden_4.jpg
   - image: img/isadora_bee_garden_8.jpg
   - image: img/isadora_bee_garden_6.jpg
+plants:
+  - Calamagrostis x acutiflora 'Karl Foerster'
 ---
 L﻿ocation: Portland, OR\
 S﻿ize: 500 SF
