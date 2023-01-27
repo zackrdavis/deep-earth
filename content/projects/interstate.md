@@ -12,6 +12,10 @@ images:
   - image: img/interstate_1.jpg
   - image: img/interstate_2.jpg
   - image: img/interstate_8.jpg
+plants:
+  - Tulipa linifolia
+  - Amelanchier x grandiflora
+  - Salix discolor
 ---
 L﻿ocation: Brooklyn, NY\
 S﻿ize: 800 SF
