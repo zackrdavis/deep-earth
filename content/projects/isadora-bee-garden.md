@@ -1,5 +1,5 @@
 ---
-title: Isadora Bee Garden
+title: Isadora Bee's Garden
 date: 2023-01-20T23:40:36.963Z
 featured_image: img/isadora_bee_garden_1.jpg
 images:
