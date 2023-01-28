@@ -2,6 +2,7 @@
 landing_image: img/img_20200709_065902_edited-darker.jpg
 images:
   - image: img/misc8.jpg
+  - image: img/ventura_11.jpg
   - image: img/img_20200916_182727-edited.jpg
   - image: img/img_20190914_153040-edited.jpg
 ---
