@@ -9,6 +9,7 @@ images:
   - image: img/fort_greene_8.jpg
   - image: img/fort_greene_1.jpg
   - image: img/fort_greene_9.jpg
+  - image: img/fort_greene_12.jpg
   - image: img/fort_greene_7.jpg
   - image: img/fort_greene_2.jpg
 plants:
