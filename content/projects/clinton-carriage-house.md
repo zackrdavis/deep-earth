@@ -8,9 +8,9 @@ images:
   - image: img/img_20200830_105045_edited.jpg
   - image: img/img_20200425_170818-edited.jpg
   - image: img/img_20190912_150102_edited.jpg
-  - image: img/courtyard22-edited.jpg
   - image: img/img_20200601_131825_edited.jpg
   - image: img/img_20200926_121020-1-_edited.jpg
+  - image: img/courtyard22-edited.jpg
   - image: img/img_20200830_154622_edited.jpg
   - image: img/img_20200505_164439_edited.jpg
   - image: img/00100lrportrait_00100_burst20200601131821983_cover-1-.jpg
