@@ -6,8 +6,8 @@ images:
   - image: img/cambridge10.jpg
   - image: img/cambridge_7.jpg
   - image: img/cambridge_8.jpg
-  - image: img/cambridge_4.jpg
   - image: img/img_20200824_191011-2-edited.jpg
+  - image: img/cambridge_4.jpg
   - image: img/cambridge_3.jpg
   - image: img/cambridge_6.jpg
   - image: img/cambridge_2.jpg
