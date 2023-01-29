@@ -1,8 +1,16 @@
 import type { NextPage, GetStaticProps } from "next";
+import styled from "styled-components";
 import parse from "html-react-parser";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
-import { TwoColWrap, TextStack, AboveTextSpacer } from "../components/shared";
+import {
+  TwoColWrap,
+  TextStack,
+  AboveTextSpacer,
+  MobileLogo,
+  MobileFeaturedImg,
+  colors,
+} from "../components/shared";
 import { ImageStack } from "../components/ImageStack";
 import { VerticalRule } from "../components/VerticalRule";
 
@@ -15,11 +23,29 @@ interface Props {
   };
 }
 
+const ContactFeaturedImg = styled.div`
+  width: 50%;
+  position: sticky;
+
+  & > img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid ${colors.black};
+  }
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+`;
+
 const Contact: NextPage<Props> = ({ content }) => {
   const imageUrl = content.attributes.featured_image;
 
   return (
     <>
+      <MobileLogo />
+      <MobileFeaturedImg src={imageUrl} />
+
       <VerticalRule />
 
       <TwoColWrap>
@@ -29,7 +55,9 @@ const Contact: NextPage<Props> = ({ content }) => {
           {parse(content.html)}
         </TextStack>
 
-        <ImageStack images={[{ image: imageUrl }]} lazyLoad />
+        <ContactFeaturedImg>
+          <img src={imageUrl} />
+        </ContactFeaturedImg>
       </TwoColWrap>
 
       <Footer />

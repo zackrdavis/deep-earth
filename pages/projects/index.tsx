@@ -31,20 +31,24 @@ interface Props {
 const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  gap: 30px;
   margin-top: ${dims.betweenLogoAndGrid}px;
 
   @media screen and (max-width: 640px) {
     display: flex;
     flex-direction: column;
     margin-top: 0;
-    margin-bottom: ${dims.footerHeight + 30}px;
+    margin-bottom: ${dims.footerHeight}px;
+    gap: 0;
   }
 `;
 
 const Project = styled.div`
   cursor: pointer;
+
+  &:hover {
+    color: ${colors.sienna};
+  }
 `;
 
 const BackgroundImage = styled.img`
@@ -58,7 +62,12 @@ const ProjectTitle = styled.div`
   margin-top: 15px;
 
   @media screen and (max-width: 640px) {
-    padding-left: 15px;
+    margin-top: 0;
+    padding: 0 var(--xPad);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: ${dims.footerHeight}px;
   }
 `;
 
