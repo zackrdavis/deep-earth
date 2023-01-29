@@ -4,7 +4,7 @@ date: 2023-01-19T00:19:30.815Z
 featured_image: img/cambridge_3.jpg
 images:
   - image: img/cambridge10.jpg
-  - image: img/cambridge_7.jpg
+  - image: img/img_20200521_182047.jpg
   - image: img/cambridge_8.jpg
   - image: img/img_20200824_191011-2-edited.jpg
   - image: img/cambridge_4.jpg
