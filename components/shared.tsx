@@ -71,9 +71,12 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
     `;
   }}
 
-  & > p:first-child {
+  // no margin above first <p>
+  & > p:first-child, & > :not(p) ~ p {
     margin-top: 0;
   }
+
+  // no margin below last <p>
   & > p:last-child {
     margin-bottom: 0;
   }
@@ -82,6 +85,7 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
     position: relative;
     width: 100%;
     padding: ${dims.xPad}px;
+    bottom: auto;
   }
 `;
 

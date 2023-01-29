@@ -25,12 +25,12 @@ const Ex = styled.div`
   }
 `;
 
-const FixedBanner = styled.div`
+const StyledMenuButton = styled.div`
   position: fixed;
   z-index: 3;
   bottom: 0;
   width: 100%;
-  height: 75px;
+  height: ${dims.footerHeight}px;
   background: ${colors.tan};
   border-top: 1px solid ${colors.black};
   display: flex;
@@ -58,8 +58,8 @@ export const MobileNavBar = ({
   showMenu: boolean;
 }) => {
   return (
-    <FixedBanner onClick={handleClick}>
+    <StyledMenuButton onClick={handleClick}>
       {showMenu ? <Ex /> : "Menu"}
-    </FixedBanner>
+    </StyledMenuButton>
   );
 };

@@ -22,15 +22,19 @@ const StyledFooter = styled.div`
 
   @media screen and (max-width: 640px) {
     display: none;
-    top: 0px;
-    height: 100%;
-    padding: ${dims.xPad + 75}px ${dims.xPad}px ${dims.xPad}px;
+    top: ${dims.xPad}px;
+    height: calc(100% - ${dims.xPad * 2 - 1}px);
+    padding: 0;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: start;
 
     & > a {
-      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      width: 100%;
+      border-bottom: 1px solid ${colors.black};
     }
 
     &.mobile-show {
@@ -46,12 +50,14 @@ const StyledLink = styled(Link)<{ active: boolean }>`
   &:hover {
     color: ${colors.sienna};
   }
+
+  @media screen and (max-width: 640px) {
+  }
 `;
 
 export const Footer = ({ className }: { className?: string }) => {
   const [showMenu, setShowMenu] = useState(false);
   const { route } = useRouter();
-  console.log(route);
 
   const isAbout = route == "/" || false;
 
