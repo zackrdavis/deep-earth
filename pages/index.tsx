@@ -9,6 +9,7 @@ import {
   AboveTextSpacer,
   TextStack,
   TwoColWrap,
+  dims,
 } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
@@ -23,7 +24,7 @@ interface HomeProps {
   };
 }
 
-const StyledLandingImage = styled.div`
+const SplashContainer = styled.div`
   width: 100%;
   height: 100vh;
   left: 0;
@@ -37,16 +38,28 @@ const StyledLandingImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 640px) {
+    height: auto;
+  }
+`;
+
+const StyledLandingImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @media screen and (max-width: 640px) {
+    height: auto;
+  }
 `;
 
 const BigLogo = styled.img`
   width: 800px;
-  padding: 0 50px;
+  padding: 0 ${dims.xPad}px;
   max-width: 100vw;
-
-  @media screen and (max-width: 640px) {
-    display: none;
-  }
+  position: absolute;
+  z-index: 1;
 `;
 
 const StyledFooter = styled(Footer)`
@@ -80,12 +93,10 @@ const Home: NextPage<HomeProps> = ({ content }) => {
     <>
       <VerticalRule />
 
-      <StyledLandingImage
-        className={!touched ? "unTouched" : ""}
-        style={{ backgroundImage: `url(${attributes.landing_image})` }}
-      >
+      <SplashContainer>
+        <StyledLandingImage src={attributes.landing_image} />
         <BigLogo src="/img/site/joshua-pavlacky-light.svg" />
-      </StyledLandingImage>
+      </SplashContainer>
 
       <TwoColWrap id="about">
         <TextStack>

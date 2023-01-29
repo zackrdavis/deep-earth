@@ -10,6 +10,10 @@ const StyledLogo = styled.div`
     max-width: 100%;
     width: 350px;
   }
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 `;
 
 export const Logo = ({
