@@ -22,8 +22,8 @@ const StyledFooter = styled.div`
 
   @media screen and (max-width: 640px) {
     display: none;
-    top: ${dims.xPad}px;
-    height: calc(100% - ${dims.xPad * 2 - 1}px);
+    top: 0;
+    height: calc(100% - ${dims.xPad - 1}px);
     padding: 0;
     flex-direction: column;
     justify-content: start;

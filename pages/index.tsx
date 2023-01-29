@@ -57,7 +57,7 @@ const StyledLandingImage = styled.img`
 
 const BigLogo = styled.img`
   width: 800px;
-  padding: 0 ${dims.xPad}px;
+  padding: 0 var(--xPad);
   max-width: 100vw;
   position: absolute;
   z-index: 1;

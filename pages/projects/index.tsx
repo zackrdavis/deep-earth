@@ -1,6 +1,12 @@
 import type { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
-import { colors, ContentWrap, dims, sluggify } from "../../components/shared";
+import {
+  colors,
+  ContentWrap,
+  dims,
+  MobileLogo,
+  sluggify,
+} from "../../components/shared";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
@@ -32,6 +38,8 @@ const ProjectGrid = styled.div`
   @media screen and (max-width: 640px) {
     display: flex;
     flex-direction: column;
+    margin-top: 0;
+    margin-bottom: ${dims.footerHeight + 30}px;
   }
 `;
 
@@ -74,20 +82,23 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
   }
 
   return (
-    <ContentWrap>
-      <Logo />
-      <ProjectGrid>
-        {projectsList.map((project, i) => (
-          <Link href={`/projects/${project.slug}`} key={i}>
-            <Project>
-              <ProjectImage src={project.attributes.featured_image} />
-              <ProjectTitle>{project.attributes.title}</ProjectTitle>
-            </Project>
-          </Link>
-        ))}
-      </ProjectGrid>
-      <Footer />
-    </ContentWrap>
+    <>
+      <MobileLogo />
+      <ContentWrap>
+        <Logo />
+        <ProjectGrid>
+          {projectsList.map((project, i) => (
+            <Link href={`/projects/${project.slug}`} key={i}>
+              <Project>
+                <ProjectImage src={project.attributes.featured_image} />
+                <ProjectTitle>{project.attributes.title}</ProjectTitle>
+              </Project>
+            </Link>
+          ))}
+        </ProjectGrid>
+        <Footer />
+      </ContentWrap>
+    </>
   );
 };
 

@@ -2,6 +2,18 @@ import { createGlobalStyle } from "styled-components";
 import { colors } from "./shared";
 
 export const GlobalStyles = createGlobalStyle`
+
+  :root {
+    --xPad: 80px;
+  }
+
+  @media (max-width: 640px) {
+    :root {
+     --xPad: 40px;
+    }
+  }
+
+
 html,
 body {
   padding: 0;

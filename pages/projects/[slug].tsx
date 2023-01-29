@@ -15,9 +15,10 @@ import {
   TextStack,
   AboveTextSpacer,
   TwoColWrap,
+  MobileLogo,
+  MobileFeaturedImg,
 } from "../../components/shared";
 import Link from "next/link";
-import { MobileHeader } from "../../components/MobileHeader";
 
 interface ProjectProps {
   content: {
@@ -95,7 +96,11 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
   return (
     <>
-      <MobileHeader featuredImage={content.attributes.featured_image} />
+      <MobileLogo />
+      <MobileFeaturedImg
+        src={"/" + content.attributes.featured_image}
+        loading="lazy"
+      />
 
       <VerticalRule />
 

@@ -1,9 +1,17 @@
+import Link from "next/link";
 import styled, { css } from "styled-components";
 
 export const colors = {
   black: "#4b4b4b",
   tan: "#E6E6DA",
   sienna: "#A86654",
+};
+
+export const dims = {
+  xPad: 80,
+  footerHeight: 80,
+  logoPad: 50,
+  betweenLogoAndGrid: 80,
 };
 
 export const sluggify = (string: string) => {
@@ -25,13 +33,6 @@ export const sluggify = (string: string) => {
     .replace(/-+$/, ""); // Trim - from end of text
 };
 
-export const dims = {
-  xPad: 80,
-  footerHeight: 80,
-  logoPad: 50,
-  betweenLogoAndGrid: 80,
-};
-
 export const ContentWrap = styled.div`
   padding: ${dims.logoPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px
     ${dims.xPad}px;
@@ -41,7 +42,7 @@ export const ContentWrap = styled.div`
   }
 
   @media screen and (max-width: 640px) {
-    padding: 75px 0 ${dims.xPad}px;
+    padding: 0;
   }
 `;
 
@@ -62,10 +63,7 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
       position: sticky;
       align-self: flex-end;
       width: 50%;
-      padding-top: ${dims.xPad}px;
-      padding-bottom: ${dims.xPad}px;
-      padding-left: ${dims.xPad}px;
-      padding-right: ${dims.xPad}px;
+      padding: var(--xPad);
       min-height: calc(100vh - ${realFooterHeight}px);
       bottom: ${realFooterHeight}px;
     `;
@@ -84,8 +82,8 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
   @media screen and (max-width: 640px) {
     position: relative;
     width: 100%;
-    padding: ${dims.xPad}px;
     bottom: auto;
+    min-height: auto;
   }
 `;
 
@@ -102,4 +100,34 @@ export const AboveTextSpacer = styled.div<{ isProjectText?: boolean }>`
       }
     `;
   }}
+`;
+
+const StyledMobileLogo = styled(Link)`
+  img {
+    padding: 10% var(--xPad);
+  }
+
+  @media screen and (min-width: 641px) {
+    display: none;
+  }
+`;
+
+export const MobileLogo = () => {
+  return (
+    <StyledMobileLogo href={"/"}>
+      <img src="/img/site/joshua-pavlacky.svg" />
+    </StyledMobileLogo>
+  );
+};
+
+export const MobileFeaturedImg = styled.img`
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 0 1px #4b4b4b;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+
+  @media screen and (min-width: 641px) {
+    display: none;
+  }
 `;
