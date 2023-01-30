@@ -67,7 +67,6 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
 
   const [springStyles, api] = useSpring(() => ({
     top: 0,
-    inverseTop: 0,
     height: relaxedHeight.current,
     config: { frequency: 0.5, damping: 0.3 },
   }));
@@ -96,12 +95,14 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
 
     api.start({
       top: 0,
-      inverseTop: 0,
       height: relaxedHeight.current,
     });
   };
 
   const handleScroll = () => {
+    // block all if mobile
+    if (isMobile) return false;
+
     // Clear the timeout throughout the scroll
     clearTimeout(isScrolling);
     // Set a timeout to run after scrolling ends
@@ -115,7 +116,6 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     // stretch the springs according to the speed
     api.start({
       top: -clampedSpeed * 4,
-      inverseTop: clampedSpeed * 4,
       height: relaxedHeight.current + Math.abs(clampedSpeed * 3),
     });
   };
@@ -124,7 +124,6 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     // return to start position
     api.start({
       top: 0,
-      inverseTop: 0,
       height: relaxedHeight.current,
     });
   };
@@ -159,11 +158,11 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     <StyledPlantStackMobile>
       {plants &&
         plants.map((plant, i) => (
-          <animated.div key={i} style={{ top: springStyles.inverseTop }}>
+          <div key={i}>
             <Link href={`/explore?plant=${plant.slug}`}>
               <img src={"/" + plant.attributes.image} loading="lazy" />
             </Link>
-          </animated.div>
+          </div>
         ))}
     </StyledPlantStackMobile>
   );
@@ -173,7 +172,7 @@ const StyledPlantStackMobile = styled.div`
   bottom: 180px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
   padding: 0 var(--xPad) var(--xPad);
   z-index: 1;
 
