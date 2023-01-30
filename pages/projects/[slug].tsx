@@ -25,6 +25,7 @@ interface ProjectProps {
     attributes: {
       title: string;
       featured_image: string;
+      caption?: string;
       // slugs of plants for this project
       plants: string[];
       images: { image: string; caption?: string }[];
@@ -99,6 +100,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
     <>
       <MobileLogo />
       <MobileFeaturedImg
+        alt={content.attributes.images[0].caption}
         src={"/" + content.attributes.images[0].image + "?nf_resize=fit&w=1200"}
         loading="lazy"
       />

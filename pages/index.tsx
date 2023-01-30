@@ -17,7 +17,7 @@ interface HomeProps {
   content: {
     attributes: {
       landing_image: string;
-      caption: string;
+      caption?: string;
       images: { image: string; caption?: string }[];
     };
     html: string;

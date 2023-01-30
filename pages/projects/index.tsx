@@ -18,6 +18,7 @@ export type Project = {
     date: string;
     thumbnail: string;
     featured_image: string;
+    caption?: string;
     plants: string[];
   };
   slug: string;
@@ -51,7 +52,7 @@ const Project = styled.div`
   }
 `;
 
-const BackgroundImage = styled.img`
+const ProjectImage = styled.img`
   width: 100%;
   aspect-ratio: 3/2;
   object-fit: cover;
@@ -74,10 +75,6 @@ const ProjectTitle = styled.div`
     text-align: center;
   }
 `;
-
-const ProjectImage = ({ src }: { src: string }) => {
-  return <BackgroundImage src={src} loading="lazy" />;
-};
 
 const Projects: NextPage<Props> = ({ projectsList }) => {
   const { query } = useRouter();
@@ -104,6 +101,7 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
             <Link href={`/projects/${project.slug}`} key={i}>
               <Project>
                 <ProjectImage
+                  alt={project.attributes.caption}
                   src={
                     "/" +
                     project.attributes.featured_image +

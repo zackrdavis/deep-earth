@@ -18,15 +18,14 @@ const PlantButton = styled.div`
     height: 100%;
 
     /* plant image as background */
-    div {
+    img {
       transition: all 0.25s;
       width: 40px;
       height: 80px;
       border-top-left-radius: 666px;
       border-bottom-left-radius: 666px;
-      background-size: cover;
-      background-position: left;
       box-shadow: 0 0 0 1px ${colors.black};
+      object-fit: cover;
 
       /* Align image to bottom of links when vertically squished. */
       /* Otherwise lastPlantButton pops out from behind project name footer. */
@@ -135,21 +134,15 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
       {plants &&
         plants.map((plant, i) => (
           <React.Fragment key={i}>
-            <Head>
-              <link
-                rel="preload"
-                href={"/" + plant.attributes.image}
-                as="image"
-              />
-            </Head>
             <PlantButton className="plantButton" key={i}>
-              <animated.a href={`/explore?plant=${plant.slug}`}>
-                <animated.div
-                  style={{
-                    backgroundImage: `url(/${plant.attributes.image}?nf_resize=fit&w=180&h=180)`,
-                  }}
+              <a href={`/explore?plant=${plant.slug}`}>
+                <img
+                  alt={plant.attributes.title}
+                  src={
+                    "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"
+                  }
                 />
-              </animated.a>
+              </a>
             </PlantButton>
           </React.Fragment>
         ))}
@@ -161,6 +154,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
           <div key={i}>
             <Link href={`/explore?plant=${plant.slug}`}>
               <img
+                alt={plant.attributes.title}
                 src={
                   "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"
                 }
