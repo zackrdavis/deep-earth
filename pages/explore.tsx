@@ -146,7 +146,6 @@ interface Props {
 
 const PlantsGridWrap = styled.div`
   position: sticky;
-  /* align-self: flex-end; */
   width: 50%;
   padding: var(--xPad);
 
@@ -210,18 +209,6 @@ const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
       </TwoColWrap>
 
       <Footer />
-
-      {/* <MobileContentWrap
-        style={{ paddingBottom: dims.footerHeight + dims.xPad - 24 }}
-      >
-        <Logo />
-        <PlantColumns>
-          {plantsList.map((plant, i) => (
-            // <HoverPlant key={i} {...plant} />
-          ))}
-        </PlantColumns>
-      </MobileContentWrap>
-      <Footer /> */}
     </>
   );
 };
