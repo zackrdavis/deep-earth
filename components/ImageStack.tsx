@@ -51,7 +51,7 @@ export const ImageStack = ({
   lazyLoad,
   isProject,
 }: {
-  images: { image: string }[];
+  images: { image: string; caption?: string }[];
   lazyLoad?: boolean;
   isProject?: boolean;
 }) => (
@@ -59,6 +59,7 @@ export const ImageStack = ({
     {images?.map((image, i) => (
       <img
         key={i}
+        alt={image.caption}
         src={`/${image.image}?nf_resize=fit&w=1200`}
         loading={lazyLoad ? "lazy" : "eager"}
       />

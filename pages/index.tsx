@@ -17,7 +17,8 @@ interface HomeProps {
   content: {
     attributes: {
       landing_image: string;
-      images: { image: string }[];
+      caption: string;
+      images: { image: string; caption?: string }[];
     };
     html: string;
   };
@@ -71,6 +72,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <SplashContainer>
         <StyledLandingImage
+          alt={attributes.caption}
           src={attributes.landing_image + "?nf_resize=fit&w=2000"}
         />
         <BigLogo src="/site_images/joshua-pavlacky-light.svg" />
