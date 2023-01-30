@@ -103,7 +103,10 @@ export const AboveTextSpacer = styled.div<{ isProjectText?: boolean }>`
 `;
 
 const StyledMobileLogo = styled(Link)`
+  width: 100%;
+
   img {
+    width: 100%;
     padding: 10% var(--xPad);
   }
 
