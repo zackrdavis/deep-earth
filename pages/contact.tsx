@@ -10,6 +10,7 @@ import {
   MobileLogo,
   MobileFeaturedImg,
   colors,
+  dims,
 } from "../components/shared";
 import { ImageStack } from "../components/ImageStack";
 import { VerticalRule } from "../components/VerticalRule";
@@ -49,7 +50,7 @@ const Contact: NextPage<Props> = ({ content }) => {
       <VerticalRule />
 
       <TwoColWrap>
-        <TextStack>
+        <TextStack style={{ marginBottom: dims.footerHeight }}>
           <Logo />
           <AboveTextSpacer />
           {parse(content.html)}

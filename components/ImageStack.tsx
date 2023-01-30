@@ -29,6 +29,14 @@ export const StyledImageStack = styled.div`
   @media screen and (max-width: 640px) {
     width: auto;
     position: relative;
+
+    img:first-child {
+      display: none;
+    }
+
+    img:nth-child(2) {
+      margin-top: 0;
+    }
   }
 `;
 
