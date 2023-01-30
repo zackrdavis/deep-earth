@@ -21,6 +21,12 @@ collections:
               widget: "image",
               choose_url: false,
             }
+          - {
+              label: "Caption",
+              name: "caption",
+              widget: "string",
+              required: true,
+            }
           - { label: "Body", name: "body", widget: "markdown" }
           - label: "Images"
             name: "images"
@@ -33,6 +39,12 @@ collections:
                   widget: "image",
                   choose_url: false,
                 }
+              - {
+                  label: "Caption",
+                  name: "caption",
+                  widget: "string",
+                  required: true,
+                }
 
       - label: "Contact"
         name: "contact"
@@ -44,6 +56,12 @@ collections:
               name: "featured_image",
               widget: "image",
               choose_url: false,
+            }
+            - {
+              label: "Caption",
+              name: "caption",
+              widget: "string",
+              required: true,
             }
 
   - name: "projects"
@@ -58,6 +76,12 @@ collections:
           name: "featured_image",
           widget: "image",
           choose_url: false,
+        }
+      - {
+          label: "Caption",
+          name: "caption",
+          widget: "string",
+          required: true,
         }
       - label: "Images"
         name: "images"
@@ -74,7 +98,7 @@ collections:
               label: "Caption",
               name: "caption",
               widget: "string",
-              required: false,
+              required: true,
             }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Plants"
