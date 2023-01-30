@@ -196,7 +196,9 @@ const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
 
         {currentPlant && (
           <>
-            <PlantPic src={currentPlant?.attributes.image} />
+            <PlantPic
+              src={currentPlant?.attributes.image + "?nf_resize=fit&w=1200"}
+            />
             <PlantFooter>{currentPlant?.attributes.title}</PlantFooter>
           </>
         )}

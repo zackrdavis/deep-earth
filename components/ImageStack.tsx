@@ -59,8 +59,7 @@ export const ImageStack = ({
     {images?.map((image, i) => (
       <img
         key={i}
-        src={`/${image.image}`}
-        style={{ width: "100%" }}
+        src={`/${image.image}?nf_resize=fit&w=1200`}
         loading={lazyLoad ? "lazy" : "eager"}
       />
     ))}

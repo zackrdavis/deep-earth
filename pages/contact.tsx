@@ -45,7 +45,7 @@ const Contact: NextPage<Props> = ({ content }) => {
   return (
     <>
       <MobileLogo />
-      <MobileFeaturedImg src={imageUrl} />
+      <MobileFeaturedImg src={imageUrl + "?nf_resize=fit&w=1200"} />
 
       <VerticalRule />
 
