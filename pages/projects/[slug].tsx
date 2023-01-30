@@ -99,7 +99,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
     <>
       <MobileLogo />
       <MobileFeaturedImg
-        src={"/" + content.attributes.images[0].image}
+        src={"/" + content.attributes.images[0].image + "?nf_resize=fit&w=1200"}
         loading="lazy"
       />
 

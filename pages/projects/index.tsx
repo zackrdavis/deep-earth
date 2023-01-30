@@ -76,7 +76,7 @@ const ProjectTitle = styled.div`
 `;
 
 const ProjectImage = ({ src }: { src: string }) => {
-  return <BackgroundImage src={`/${src}?nf_resize=fit&w=800`} loading="lazy" />;
+  return <BackgroundImage src={src} loading="lazy" />;
 };
 
 const Projects: NextPage<Props> = ({ projectsList }) => {
@@ -103,7 +103,13 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
           {projectsList.map((project, i) => (
             <Link href={`/projects/${project.slug}`} key={i}>
               <Project>
-                <ProjectImage src={project.attributes.featured_image} />
+                <ProjectImage
+                  src={
+                    "/" +
+                    project.attributes.featured_image +
+                    "?nf_resize=fit&w=800"
+                  }
+                />
                 <ProjectTitle>{project.attributes.title}</ProjectTitle>
               </Project>
             </Link>

@@ -57,7 +57,7 @@ const Contact: NextPage<Props> = ({ content }) => {
         </TextStack>
 
         <ContactFeaturedImg>
-          <img src={imageUrl} />
+          <img src={imageUrl + "?nf_resize=fit&w=1200"} />
         </ContactFeaturedImg>
       </TwoColWrap>
 
