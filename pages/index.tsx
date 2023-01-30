@@ -1,5 +1,4 @@
 import type { NextPage, GetStaticProps } from "next";
-import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
@@ -26,7 +25,7 @@ interface HomeProps {
 
 const SplashContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - ${dims.footerHeight}px);
   left: 0;
   top: 0%;
   position: relative;
@@ -63,32 +62,8 @@ const BigLogo = styled.img`
   z-index: 1;
 `;
 
-const StyledFooter = styled(Footer)`
-  transition: 1s;
-
-  &.unTouched {
-    transition: 0s;
-    border-top: none;
-    background: transparent;
-
-    a {
-      color: white !important;
-    }
-  }
-`;
-
 const Home: NextPage<HomeProps> = ({ content }) => {
   const { attributes } = content;
-  const [touched, setTouched] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("click", () => setTouched(true));
-    window.addEventListener("scroll", () => setTouched(true));
-    return () => {
-      window.removeEventListener("click", () => setTouched(true));
-      window.removeEventListener("scroll", () => setTouched(true));
-    };
-  }, [touched]);
 
   return (
     <>
@@ -103,7 +78,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <TwoColWrap id="about">
         <TextStack>
-          <Logo onClick={() => setTimeout(() => setTouched(false))} />
+          <Logo />
           <AboveTextSpacer />
           {parse(content.html)}
         </TextStack>
@@ -111,7 +86,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         <ImageStack images={content.attributes.images} lazyLoad />
       </TwoColWrap>
 
-      <StyledFooter className={!touched ? "unTouched" : ""} />
+      <Footer />
     </>
   );
 };
