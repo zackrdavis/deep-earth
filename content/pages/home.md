@@ -1,5 +1,8 @@
 ---
 landing_image: img/img_20200709_065902_edited-darker.jpg
+caption: A rocky clearing in foggy woods, with a flagstone path built out of
+  large rectangular flagstones. Moss and plants grow around the base of piled
+  rocks.
 images:
   - image: img/misc8.jpg
   - image: img/ventura_11.jpg
