@@ -5,7 +5,13 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { colors, dims, TwoColWrap, TextStack } from "../components/shared";
+import {
+  colors,
+  dims,
+  TwoColWrap,
+  TextStack,
+  MobileLogo,
+} from "../components/shared";
 import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
@@ -20,10 +26,14 @@ export type Plant = {
 
 const PlantsGrid = styled.div`
   display: grid;
-  grid-gap: var(--margin-med);
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   margin-bottom: ${dims.footerHeight}px;
   margin-top: ${dims.betweenLogoAndGrid}px;
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 100%;
+    margin-top: 0;
+  }
 `;
 
 const StyledPlantHoverTile = styled.div`
@@ -32,7 +42,7 @@ const StyledPlantHoverTile = styled.div`
   min-height: 100px;
   position: relative;
 
-  img {
+  & > img {
     width: 90%;
     height: 90%;
     border-radius: 666px;
@@ -42,6 +52,33 @@ const StyledPlantHoverTile = styled.div`
     transform: translate(-50%, -50%);
     object-fit: cover;
     box-shadow: 0 0 0 1px ${colors.black};
+  }
+
+  /* title for mobile only */
+  & > div {
+    display: none;
+  }
+
+  @media screen and (max-width: 640px) {
+    aspect-ratio: initial;
+
+    img {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      border-radius: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    div {
+      text-align: center;
+      padding: 15px var(--xPad) 0;
+      display: flex;
+      justify-content: center;
+      height: ${dims.footerHeight}px;
+    }
   }
 `;
 
@@ -66,6 +103,7 @@ const PlantHoverTile = ({
       onMouseEnter={() => onHoverPlant(plant)}
     >
       <img src={image} loading="lazy" />
+      <div>{title}</div>
     </StyledPlantHoverTile>
   );
 };
@@ -77,6 +115,10 @@ const PlantPic = styled.img`
   top: 0;
   right: 0;
   object-fit: cover;
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 `;
 
 const PlantFooter = styled.div`
@@ -101,6 +143,21 @@ interface Props {
   plantsList: Plant[];
   projectsList: Project[];
 }
+
+const PlantsGridWrap = styled.div`
+  position: sticky;
+  /* align-self: flex-end; */
+  width: 50%;
+  padding: var(--xPad);
+
+  @media screen and (max-width: 640px) {
+    position: relative;
+    width: 100%;
+    bottom: auto;
+    min-height: auto;
+    padding: 0;
+  }
+`;
 
 const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
   // make list of plants which are attached to projects
@@ -128,7 +185,9 @@ const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
       <VerticalRule />
 
       <TwoColWrap>
-        <TextStack>
+        <MobileLogo />
+
+        <PlantsGridWrap>
           <Logo />
           <PlantsGrid>
             {plantsList.map((plant, i) => (
@@ -140,7 +199,7 @@ const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
               />
             ))}
           </PlantsGrid>
-        </TextStack>
+        </PlantsGridWrap>
 
         {currentPlant && (
           <>
@@ -190,41 +249,3 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default Plants;
-
-// const HoverPlant = (plant: Plant) => {
-//   const { query } = useRouter();
-//   const plantQuery = query.plant as string;
-//   const isQueried = plantQuery === plant.slug;
-//   const { title, image } = plant.attributes;
-//   const slug = plant.slug;
-//   const scrollToRef = useRef<HTMLDivElement>(null);
-//   const [hover, setHover] = useState(isQueried);
-
-//   useEffect(() => {
-//     if (isQueried) {
-//       scrollToRef.current?.scrollIntoView();
-//     }
-//   }, []);
-
-//   const randLeft = Math.random() * 100;
-//   const randTop = Math.random() * 100;
-//   const randPosStyle = {
-//     top: `${randTop}%`,
-//     left: `${randLeft}%`,
-//     transform: `translate(${-randLeft}%, ${-randTop}%)`,
-//   };
-
-//   return (
-//     <>
-//       <PlantLink
-//         ref={scrollToRef}
-//         onMouseEnter={() => setHover(true)}
-//         onMouseLeave={() => setHover(false)}
-//         style={{ color: hover ? colors.sienna : "" }}
-//       >
-//         <Link href={`/projects?plant=${slug}`}>{title}</Link>
-//       </PlantLink>
-//       {hover && <PlantPic style={randPosStyle} src={`/${image}`} />}
-//     </>
-//   );
-// };

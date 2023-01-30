@@ -34,7 +34,7 @@ export const sluggify = (string: string) => {
 };
 
 export const ContentWrap = styled.div`
-  padding: ${dims.logoPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px
+  padding: ${dims.xPad}px ${dims.xPad}px ${dims.footerHeight + dims.xPad}px
     ${dims.xPad}px;
 
   p:first-child {

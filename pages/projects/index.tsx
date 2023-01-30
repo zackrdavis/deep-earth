@@ -63,11 +63,11 @@ const ProjectTitle = styled.div`
 
   @media screen and (max-width: 640px) {
     margin-top: 0;
-    padding: 0 var(--xPad);
+    padding: 15px var(--xPad) 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     height: ${dims.footerHeight}px;
+    text-align: center;
   }
 `;
 
