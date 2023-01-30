@@ -5,6 +5,9 @@ featured_image: img/img_20190908_144112_edited_cropped.jpg
 caption: Large tufts of grass and shrubs in front of a red brick wall.
 images:
   - image: img/img_20190914_153040-edited.jpg
+    caption: Large flagstones surround a courtyard edged with large tufts of grass
+      and flowering shrubs. There are trees in planters, a white couch, and a
+      pink painting hung on a red brick wall.
   - image: img/lawnbefore.jpg
   - image: img/img_20190908_144112_edited.jpg
     caption: ""
