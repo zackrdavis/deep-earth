@@ -96,7 +96,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <SplashContainer>
         <StyledLandingImage src={attributes.landing_image} />
-        <BigLogo src="/img/site/joshua-pavlacky-light.svg" />
+        <BigLogo src="/site_images/joshua-pavlacky-light.svg" />
       </SplashContainer>
 
       <TwoColWrap id="about">
