@@ -81,13 +81,7 @@ export const Footer = ({ className }: { className?: string }) => {
         >
           About
         </StyledLink>
-        <StyledLink
-          href="/contact"
-          className={isContact ? "active" : ""}
-          onClick={() => (route == "/contact" ? setShowMenu(false) : null)}
-        >
-          Contact
-        </StyledLink>
+
         <StyledLink
           href="/projects"
           className={isProjects ? "active" : ""}
@@ -95,12 +89,21 @@ export const Footer = ({ className }: { className?: string }) => {
         >
           Projects
         </StyledLink>
+
         <StyledLink
           href="/explore"
           className={isExplore ? "active" : ""}
           onClick={() => (route == "/explore" ? setShowMenu(false) : null)}
         >
           Explore
+        </StyledLink>
+
+        <StyledLink
+          href="/contact"
+          className={isContact ? "active" : ""}
+          onClick={() => (route == "/contact" ? setShowMenu(false) : null)}
+        >
+          Contact
         </StyledLink>
       </StyledFooter>
     </>
