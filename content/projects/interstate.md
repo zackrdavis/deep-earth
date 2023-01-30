@@ -24,9 +24,7 @@ plants:
 L﻿ocation: Brooklyn, NY\
 S﻿ize: 800 SF
 
-
-
-Interstate Projects (2011-2021) was an art gallery in Brooklyn that hosted exhibitions, events, and residencies. Openings gave way to crowds, and visitors to the gallery naturally overflowed into the gated courtyard in the front. An oddly secluded spot amidst industrial Williamsburg, it served as a place to chat and retreat from the bright gallery lighting. \
+Interstate Projects (2011-2021) was an art gallery in Brooklyn that hosted exhibitions, events, and residencies. Openings gave way to crowds, and visitors to the gallery naturally overflowed into the gated courtyard in the front. An oddly secluded spot in the middle of industrial Williamsburg, it served as a place to chat and retreat from the bright gallery lighting.\
 \
 The oppressive backdrop of concrete needed a counterpoint, so we brought in 20 yards of logs and wood chips to build a foundation for plantings. Cedar planks and poured concrete pillars  provide seating, while retaining the mass of organic matter on three sides. The open fourth side of the bed spills its contents onto the ground. Wind-blown seeds take root among selected plants, preventing erosion and helping to break down the organic matter within. \
 \
