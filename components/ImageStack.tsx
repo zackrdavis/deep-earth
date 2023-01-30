@@ -33,6 +33,8 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
     ${({ isProject }) =>
       isProject
         ? css`
+            margin-bottom: ${dims.footerHeight}px;
+
             img:first-child {
               display: none;
             }

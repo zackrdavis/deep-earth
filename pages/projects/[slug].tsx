@@ -44,12 +44,13 @@ const ProjectFooter = styled.div`
   bottom: ${dims.footerHeight}px;
   width: 50%;
   height: ${dims.footerHeight}px;
-  padding: 0 ${dims.xPad}px;
+  padding: 0 var(--xPad);
   background: ${colors.tan};
   z-index: 2;
 
   @media screen and (max-width: 640px) {
-    bottom: 0;
+    bottom: ${dims.footerHeight}px;
+    width: 100%;
   }
 `;
 
