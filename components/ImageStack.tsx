@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import { dims, colors } from "./shared";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const StyledImageStack = styled.div<{ isProject?: boolean }>`
   width: 50%;

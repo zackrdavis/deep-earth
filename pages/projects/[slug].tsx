@@ -114,7 +114,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
         <PlantStack plants={linkedPlants} />
 
-        <ImageStack isProject images={content.attributes.images} />
+        <ImageStack isProject images={content.attributes.images} lazyLoad />
       </TwoColWrap>
 
       <ProjectFooter>
