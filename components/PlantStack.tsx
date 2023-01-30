@@ -156,6 +156,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
       {plants &&
         plants.map((plant, i) => (
           <animated.div
+            key={i}
             style={{ top: -springStyles.top * ((1 / plants.length) * i) }}
           >
             <Link href={`/explore?plant=${plant.slug}`}>
