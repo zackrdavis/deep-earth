@@ -11,12 +11,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-hook/intersection-observer": "^3.1.1",
     "html-react-parser": "^1.4.9",
     "next": "13.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-lazy-load-image-component": "^1.5.4",
     "react-spring": "^9.4.4",
     "styled-components": "^5.3.6"
   },
@@ -26,7 +24,6 @@
     "@netlify/plugin-nextjs": "4.29.1",
     "@types/node": "17.0.21",
     "@types/react": "18.0.25",
-    "@types/react-lazy-load-image-component": "^1.5.2",
     "@types/styled-components": "^5.1.26",
     "@types/webpack-env": "^1.16.3",
     "eslint": "8.11.0",
