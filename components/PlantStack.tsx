@@ -146,7 +146,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
               <animated.a href={`/explore?plant=${plant.slug}`}>
                 <animated.div
                   style={{
-                    backgroundImage: `url(/${plant.attributes.image})`,
+                    backgroundImage: `url(/${plant.attributes.image}?nf_resize=fit&w=180&h=180)`,
                   }}
                 />
               </animated.a>
@@ -160,7 +160,12 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
         plants.map((plant, i) => (
           <div key={i}>
             <Link href={`/explore?plant=${plant.slug}`}>
-              <img src={"/" + plant.attributes.image} loading="lazy" />
+              <img
+                src={
+                  "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"
+                }
+                loading="lazy"
+              />
             </Link>
           </div>
         ))}

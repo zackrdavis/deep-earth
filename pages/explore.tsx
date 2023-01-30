@@ -5,13 +5,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import {
-  colors,
-  dims,
-  TwoColWrap,
-  TextStack,
-  MobileLogo,
-} from "../components/shared";
+import { colors, dims, TwoColWrap, MobileLogo } from "../components/shared";
 import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
@@ -26,7 +20,7 @@ export type Plant = {
 
 const PlantsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   margin-bottom: ${dims.footerHeight}px;
   margin-top: ${dims.betweenLogoAndGrid}px;
 
@@ -38,8 +32,8 @@ const PlantsGrid = styled.div`
 
 const StyledPlantHoverTile = styled.div`
   aspect-ratio: 1;
-  min-width: 100px;
-  min-height: 100px;
+  min-width: 80px;
+  min-height: 80px;
   position: relative;
 
   & > img {
@@ -102,7 +96,7 @@ const PlantHoverTile = ({
       href={`/projects?plant=${slug}`}
       onMouseEnter={() => onHoverPlant(plant)}
     >
-      <img src={image} loading="lazy" />
+      <img src={image + "?nf_resize=fit&w=180&h=180"} loading="lazy" />
       <div>{title}</div>
     </StyledPlantHoverTile>
   );

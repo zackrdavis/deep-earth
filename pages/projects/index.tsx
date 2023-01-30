@@ -76,7 +76,7 @@ const ProjectTitle = styled.div`
 `;
 
 const ProjectImage = ({ src }: { src: string }) => {
-  return <BackgroundImage src={`/${src}`} loading="lazy" />;
+  return <BackgroundImage src={`/${src}?nf_resize=fit&w=800`} loading="lazy" />;
 };
 
 const Projects: NextPage<Props> = ({ projectsList }) => {
