@@ -57,7 +57,7 @@ collections:
               widget: "image",
               choose_url: false,
             }
-            - {
+          - {
               label: "Caption",
               name: "caption",
               widget: "string",
@@ -77,12 +77,7 @@ collections:
           widget: "image",
           choose_url: false,
         }
-      - {
-          label: "Caption",
-          name: "caption",
-          widget: "string",
-          required: true,
-        }
+      - { label: "Caption", name: "caption", widget: "string", required: true }
       - label: "Images"
         name: "images"
         widget: list
