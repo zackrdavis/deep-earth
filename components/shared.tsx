@@ -124,7 +124,6 @@ export const MobileFeaturedImg = styled.img`
   width: 100%;
   height: auto;
   box-shadow: 0 0 0 1px #4b4b4b;
-  aspect-ratio: 3/2;
   object-fit: cover;
 
   @media screen and (min-width: 641px) {
