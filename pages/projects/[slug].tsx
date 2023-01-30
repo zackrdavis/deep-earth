@@ -113,7 +113,7 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
           {parse(content.html)}
         </TextStack>
 
-        <ImageStack images={content.attributes.images} />
+        <ImageStack isProject images={content.attributes.images} />
       </TwoColWrap>
 
       <ProjectFooter>

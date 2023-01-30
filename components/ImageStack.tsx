@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { dims, colors } from "./shared";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-export const StyledImageStack = styled.div`
+export const StyledImageStack = styled.div<{ isProject?: boolean }>`
   width: 50%;
   align-self: flex-end;
   position: sticky;
@@ -30,24 +30,31 @@ export const StyledImageStack = styled.div`
     width: auto;
     position: relative;
 
-    img:first-child {
-      display: none;
-    }
+    ${({ isProject }) =>
+      isProject
+        ? css`
+            img:first-child {
+              display: none;
+            }
 
-    img:nth-child(2) {
-      margin-top: 0;
-    }
+            img:nth-child(2) {
+              margin-top: 0;
+            }
+          `
+        : ""}
   }
 `;
 
 export const ImageStack = ({
   images,
   lazyLoad,
+  isProject,
 }: {
   images: { image: string }[];
   lazyLoad?: boolean;
+  isProject?: boolean;
 }) => (
-  <StyledImageStack>
+  <StyledImageStack isProject={isProject}>
     {images?.map((image, i) => (
       <img
         key={i}
