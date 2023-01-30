@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { useSpring, animated } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
@@ -40,14 +41,6 @@ const PlantButton = styled.div`
       }
     }
   }
-
-  @media screen and (max-width: 640px) {
-    transform: scalex(-1);
-
-    &:hover div {
-      left: -40px;
-    }
-  }
 `;
 
 const StyledPlantStack = styled(animated.div)`
@@ -61,13 +54,14 @@ const StyledPlantStack = styled(animated.div)`
   justify-content: space-between;
 
   @media screen and (max-width: 640px) {
-    left: -40px;
+    display: none;
   }
 `;
 
 export const PlantStack = ({ plants }: { plants: Plant[] }) => {
   const lastScrollPos = useRef(0);
   const relaxedHeight = useRef(plants.length * 80 + (plants.length - 1) * 10);
+  const [isMobile, setIsMobile] = useState(false);
 
   let isScrolling: NodeJS.Timeout;
 
@@ -90,6 +84,8 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
   }, []);
 
   const handleResize = () => {
+    setIsMobile(window.innerWidth < 641);
+
     // ideal height for PlantStack
     const unConstrainedHeight = plants.length * 80 + (plants.length - 1) * 10;
     // max height allowed by window size
@@ -129,7 +125,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     });
   };
 
-  return (
+  return !isMobile ? (
     <StyledPlantStack
       style={{ height: springStyles.height, top: springStyles.top }}
     >
@@ -155,5 +151,51 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
           </React.Fragment>
         ))}
     </StyledPlantStack>
+  ) : (
+    <StyledPlantStackMobile>
+      {plants &&
+        plants.map((plant, i) => (
+          <animated.div
+            style={{ top: -springStyles.top * ((1 / plants.length) * i) }}
+          >
+            <Link href={`/explore?plant=${plant.slug}`}>
+              <animated.img src={"/" + plant.attributes.image} loading="lazy" />
+            </Link>
+          </animated.div>
+        ))}
+    </StyledPlantStackMobile>
   );
 };
+
+const StyledPlantStackMobile = styled.div`
+  bottom: 180px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  padding: 0 var(--xPad) var(--xPad);
+  z-index: 1;
+
+  div {
+    aspect-ratio: 1;
+    position: relative;
+  }
+
+  a {
+  }
+
+  img {
+    width: 90%;
+    height: 90%;
+    border-radius: 666px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    box-shadow: 0 0 0 1px ${colors.black};
+  }
+
+  @media screen and (min-width: 641px) {
+    display: none;
+  }
+`;
