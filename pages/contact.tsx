@@ -19,6 +19,7 @@ interface Props {
   content: {
     attributes: {
       featured_image: string;
+      caption?: string;
     };
     html: string;
   };
@@ -57,7 +58,10 @@ const Contact: NextPage<Props> = ({ content }) => {
         </TextStack>
 
         <ContactFeaturedImg>
-          <img src={imageUrl + "?nf_resize=fit&w=1200"} />
+          <img
+            alt={content.attributes.caption}
+            src={content.attributes.featured_image + "?nf_resize=fit&w=1200"}
+          />
         </ContactFeaturedImg>
       </TwoColWrap>
 

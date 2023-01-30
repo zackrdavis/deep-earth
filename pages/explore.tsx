@@ -96,7 +96,11 @@ const PlantHoverTile = ({
       href={`/projects?plant=${slug}`}
       onMouseEnter={() => onHoverPlant(plant)}
     >
-      <img src={image + "?nf_resize=fit&w=180&h=180"} loading="lazy" />
+      <img
+        alt={title}
+        src={image + "?nf_resize=fit&w=180&h=180"}
+        loading="lazy"
+      />
       <div>{title}</div>
     </StyledPlantHoverTile>
   );
