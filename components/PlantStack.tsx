@@ -67,6 +67,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
 
   const [springStyles, api] = useSpring(() => ({
     top: 0,
+    inverseTop: 0,
     height: relaxedHeight.current,
     config: { frequency: 0.5, damping: 0.3 },
   }));
@@ -95,6 +96,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
 
     api.start({
       top: 0,
+      inverseTop: 0,
       height: relaxedHeight.current,
     });
   };
@@ -113,6 +115,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     // stretch the springs according to the speed
     api.start({
       top: -clampedSpeed * 4,
+      inverseTop: clampedSpeed * 4,
       height: relaxedHeight.current + Math.abs(clampedSpeed * 3),
     });
   };
@@ -121,6 +124,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     // return to start position
     api.start({
       top: 0,
+      inverseTop: 0,
       height: relaxedHeight.current,
     });
   };
@@ -155,12 +159,9 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     <StyledPlantStackMobile>
       {plants &&
         plants.map((plant, i) => (
-          <animated.div
-            key={i}
-            style={{ top: -springStyles.top * ((1 / plants.length) * i) }}
-          >
+          <animated.div key={i} style={{ top: springStyles.inverseTop }}>
             <Link href={`/explore?plant=${plant.slug}`}>
-              <animated.img src={"/" + plant.attributes.image} loading="lazy" />
+              <img src={"/" + plant.attributes.image} loading="lazy" />
             </Link>
           </animated.div>
         ))}
@@ -179,9 +180,6 @@ const StyledPlantStackMobile = styled.div`
   div {
     aspect-ratio: 1;
     position: relative;
-  }
-
-  a {
   }
 
   img {
