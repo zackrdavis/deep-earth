@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import styled, { CSSProperties } from "styled-components";
+import styled from "styled-components";
 import { colors } from "./shared";
 import { dims } from "./shared";
 import { MobileNavBar } from "./MobileNavBar";
@@ -43,15 +43,13 @@ const StyledFooter = styled.div`
   }
 `;
 
-const StyledLink = styled(Link)<{ active: boolean }>`
+const StyledLink = styled(Link)`
   text-transform: uppercase;
-  color: ${({ active }) => (active ? colors.sienna : colors.black)};
+  color: ${colors.black};
 
+  &.active,
   &:hover {
     color: ${colors.sienna};
-  }
-
-  @media screen and (max-width: 640px) {
   }
 `;
 
@@ -77,7 +75,7 @@ export const Footer = ({ className }: { className?: string }) => {
         className={showMenu ? `mobile-show ${className}` : className}
       >
         <StyledLink
-          active={isAbout}
+          className={isAbout ? "active" : ""}
           href="/#about"
           onClick={() => (route == "/" ? setShowMenu(false) : null)}
         >
@@ -85,21 +83,21 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
         <StyledLink
           href="/contact"
-          active={isContact}
+          className={isContact ? "active" : ""}
           onClick={() => (route == "/contact" ? setShowMenu(false) : null)}
         >
           Contact
         </StyledLink>
         <StyledLink
           href="/projects"
-          active={isProjects}
+          className={isProjects ? "active" : ""}
           onClick={() => (route == "/projects" ? setShowMenu(false) : null)}
         >
           Projects
         </StyledLink>
         <StyledLink
           href="/explore"
-          active={isExplore}
+          className={isExplore ? "active" : ""}
           onClick={() => (route == "/explore" ? setShowMenu(false) : null)}
         >
           Explore
