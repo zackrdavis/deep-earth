@@ -1,5 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Footer } from "../components/Footer";
 import styled from "styled-components";
 import Link from "next/link";
@@ -80,18 +80,29 @@ const PlantHoverTile = ({
   plant,
   onHoverPlant,
   hasProjects,
+  isQueried,
 }: {
   plant: Plant;
   onHoverPlant: (plant?: Plant) => void;
   hasProjects: boolean;
+  isQueried?: boolean;
 }) => {
   const {
     attributes: { title, image },
     slug,
   } = plant;
 
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isQueried) {
+      ref.current?.scrollIntoView();
+    }
+  }, [isQueried]);
+
   return (
     <StyledPlantHoverTile
+      ref={ref}
       as={hasProjects ? Link : "div"}
       href={`/projects?plant=${slug}`}
       onMouseEnter={() => onHoverPlant(plant)}
@@ -189,6 +200,7 @@ const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
           <PlantsGrid>
             {plantsList.map((plant, i) => (
               <PlantHoverTile
+                isQueried={plant.slug == queriedPlant?.slug}
                 hasProjects={usedPlants.includes(plant.attributes.title)}
                 key={i}
                 plant={plant}
