@@ -9,8 +9,8 @@ images:
   - image: img/img_20200916_182727-edited.jpg
   - image: img/img_20190914_153040-edited.jpg
 ---
-Deep Earth is a landscape design studio located in Portland, OR and New York, NY. Designing with an eye toward environmental rejuvenation and climate adaptation, Deep Earth collaborates with artists and biologists to create ethical and educational plantscapes. 
-
-Our designs begin with plants, as we weave together the needs of our clients and the needs of local ecosystems. Deep Earth creates spaces for beauty that also serve as vital refuge for urban and suburban wildlife. We specialize in cultivating habitats, choosing plants that attract pollinators and creating environments for birds and wildlife to thrive. Our designs are adapted to the changing climate as we embrace practices designed for resilience. We aim to educate and inspire others to do the same.
-
-Deep Earth works closely with clients to imagine unique ways to maximize their outdoor space. Seasonal gardens provide year round interest. Xeric gardens are adapted to dry, water-scarce sites. Eco-lawns reduce maintenance and eliminate the need for chemicals. Permaculture practices such as berms and swales are a favorite of ours for retaining water. Our designs combine contemporary aesthetics and ecological stewardship to create functional and inspiring habitats.
+Drawing on generations of family horticultural knowledge and his background as an artist and curator, Joshua Pavlacky creates planted environments that balance beauty with ecological function. Measured in acreage or square feet, Joshua’s gardens are spaces for people to explore, create, and connect.\
+\
+Joshua works closely with his clients to discover their functional needs and desires for an outdoor space. His designs begin with plants, which structure the site and create mood. Plants are selected based on the needs and capacities of local ecosystems, their formal progression through changing seasons, and sheer sensory richness. Hardscaping follows, establishing a comfortable interface between plantscapes and daily use.\
+\
+Continuously evolving, Joshua’s landscapes are never truly finished. They welcome change and intervention, becoming habitats that are both wild and intimate.
