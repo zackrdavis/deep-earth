@@ -5,7 +5,7 @@ caption: A rocky clearing in foggy woods, with a flagstone path built out of
   rocks.
 images:
   - image: img/misc8.jpg
-  - image: img/ventura_11.jpg
+  - image: img/ventura_11_brighter.jpg
   - image: img/img_20200916_182727-edited.jpg
   - image: img/img_20190914_153040-edited.jpg
 ---
