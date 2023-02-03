@@ -1,7 +1,8 @@
 ---
 title: Isadora Bee's Garden
 date: 2023-01-20T23:40:36.963Z
-featured_image: img/isadora_bee_garden_6.jpg
+featured_image: img/isadora_bee_garden_1.jpg
+caption: A baby runs her hand across a sprig of flowers.
 images:
   - image: img/isadora_bee_garden_16.jpg
   - image: img/isadora_bee_garden_14.jpg
