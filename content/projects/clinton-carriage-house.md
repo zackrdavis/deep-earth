@@ -2,6 +2,8 @@
 title: Clinton Carriage House
 date: 2022-11-24T00:18:04.107Z
 featured_image: img/img_20200705_180322_1_edited.jpg
+caption: A large communal table sits in the middle of a densely planted
+  courtyard, in front of the carriage house that features many arched windows.
 images:
   - image: img/img_20200705_180322_1_edited.jpg
   - image: img/mvimg_20200828_134729_edited.jpg
@@ -28,6 +30,4 @@ plants:
 L﻿ocation: Brooklyn, NY\
 S﻿ize: 600 SF
 
-
-
-An extension of our Clinton Hill courtyard garden, this carriage house serves as the office to the family’s business. Lushly planted, we strove for a robust feeling that could hold itself amongst the outdoor oven and communal dining table. Temperate tropicals create drama, while beds overflowing with macleaya, papyrus and lilies entice employees to lunch outside. The garden changes rapidly throughout the season, from the bulbs and cherry blossoms of spring, to the last blush of roses and fronds of Korean feather grass as fall rolls through. Big forms and small details create abundance in a garden overflowing by season’s end.
+An extension of our Clinton Hill courtyard garden, this carriage house serves as the office to the family’s business. Lushly planted, we strove for a robust feeling that could hold itself amongst the outdoor oven and communal dining table. Temperate tropicals create drama, while beds bursting with macleaya, papyrus and lilies entice employees to lunch outside. The garden changes rapidly throughout the season, from the bulbs and cherry blossoms of spring, to the last blush of roses and fronds of Korean feather grass as fall rolls through. Big forms and small details create abundance in a garden overflowing by season’s end.
