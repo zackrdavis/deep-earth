@@ -1,5 +1,5 @@
 ---
-featured_image: img/33622652-2130833163802871-69842973737489.webp
+featured_image: img/portrait.jpg
 caption: A wheelbarrow full of tropical plants in a grassy field where Josh is
   working, wearing a wide-brimmed hat.
 ---
