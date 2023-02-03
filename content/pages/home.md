@@ -1,5 +1,5 @@
 ---
-landing_image: img/img_20200709_065902_edited-darker.jpg
+landing_image: img/no-fog-cropped-splash.jpg
 caption: A rocky clearing in foggy woods, with a flagstone path built out of
   large rectangular flagstones. Moss and plants grow around the base of piled
   rocks.
