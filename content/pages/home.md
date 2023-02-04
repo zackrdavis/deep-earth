@@ -17,6 +17,6 @@ Joshua is fascinated by the ways that non-human life permeates built environment
 \
 \
 \
-EMAIL: i﻿nfo@joshuapavlacky.com\
-FOLLOW: @﻿jpavlacky \
-CALL: 9﻿71-204-8921
+i﻿nfo@joshuapavlacky.com\
+9﻿71-204-8921\
+@﻿jpavlacky
