@@ -137,6 +137,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
             <PlantButton className="plantButton" key={i}>
               <a href={`/explore?plant=${plant.slug}`}>
                 <img
+                  style={{ background: colors.green }}
                   alt={plant.attributes.title}
                   src={
                     "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"
@@ -154,6 +155,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
           <div key={i}>
             <Link href={`/explore?plant=${plant.slug}`}>
               <img
+                style={{ background: colors.green }}
                 alt={plant.attributes.title}
                 src={
                   "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"

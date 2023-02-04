@@ -108,6 +108,7 @@ const PlantHoverTile = ({
       onMouseEnter={() => onHoverPlant(plant)}
     >
       <img
+        style={{ background: colors.green }}
         alt={title}
         src={image + "?nf_resize=fit&w=180&h=180"}
         loading="lazy"

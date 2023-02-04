@@ -59,6 +59,7 @@ const Contact: NextPage<Props> = ({ content }) => {
 
         <ContactFeaturedImg>
           <img
+            style={{ background: colors.green }}
             alt={content.attributes.caption}
             src={content.attributes.featured_image + "?nf_resize=fit&w=1200"}
           />

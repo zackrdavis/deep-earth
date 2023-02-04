@@ -58,6 +58,7 @@ export const ImageStack = ({
   <StyledImageStack isProject={isProject}>
     {images?.map((image, i) => (
       <img
+        style={{ background: colors.green }}
         key={i}
         alt={image.caption}
         src={`/${image.image}?nf_resize=fit&w=1200`}
