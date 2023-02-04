@@ -25,7 +25,7 @@ interface Props {
   };
 }
 
-const ContactFeaturedImg = styled.div`
+const InfoFeaturedImg = styled.div`
   width: 50%;
   position: sticky;
 
@@ -40,7 +40,7 @@ const ContactFeaturedImg = styled.div`
   }
 `;
 
-const Contact: NextPage<Props> = ({ content }) => {
+const Info: NextPage<Props> = ({ content }) => {
   const imageUrl = content.attributes.featured_image;
 
   return (
@@ -57,13 +57,13 @@ const Contact: NextPage<Props> = ({ content }) => {
           {parse(content.html)}
         </TextStack>
 
-        <ContactFeaturedImg>
+        <InfoFeaturedImg>
           <img
             style={{ background: colors.green }}
             alt={content.attributes.caption}
             src={content.attributes.featured_image + "?nf_resize=fit&w=1200"}
           />
-        </ContactFeaturedImg>
+        </InfoFeaturedImg>
       </TwoColWrap>
 
       <Footer />
@@ -76,4 +76,4 @@ export const getStaticProps: GetStaticProps = async () => {
   return { props: { content: content.default } };
 };
 
-export default Contact;
+export default Info;

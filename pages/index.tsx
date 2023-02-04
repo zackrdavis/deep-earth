@@ -78,7 +78,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
         <BigLogo src="/site_images/joshua-pavlacky-light.svg" />
       </SplashContainer>
 
-      <TwoColWrap id="about">
+      <TwoColWrap id="home">
         <TextStack>
           <Logo />
           <AboveTextSpacer />
