@@ -26,13 +26,15 @@ interface Props {
 }
 
 const InfoFeaturedImg = styled.div`
-  width: 50%;
+  top: 0;
   position: sticky;
+  width: 50%;
+  height: 100vh;
 
   & > img {
     width: 100%;
-    height: auto;
-    border-bottom: 1px solid ${colors.black};
+    height: calc(100% - ${dims.footerHeight}px);
+    object-fit: cover;
   }
 
   @media (max-width: 640px) {
