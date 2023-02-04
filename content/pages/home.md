@@ -9,8 +9,8 @@ images:
   - image: img/img_20200916_182727-edited.jpg
   - image: img/img_20190914_153040-edited.jpg
 ---
-Drawing on generations of family horticultural knowledge and his background as an artist and curator, Joshua Pavlacky creates planted environments that balance beauty with ecological function. Measured in acreage or square feet, Joshua’s gardens are spaces for people to explore, create, and connect.\
+Joshua Pavlacky is a landscape designer, artist, and curator based in Portland Oregon. Drawing on generations of family horticultural knowledge and a refined sense of composition and materials, Joshua creates planted environments that balance beauty with ecological function. \
 \
-Joshua works closely with his clients to discover their functional needs and desires for an outdoor space. His designs begin with plants, which structure the site and create mood. Plants are selected based on the needs and capacities of local ecosystems, their formal progression through changing seasons, and sheer sensory richness. Hardscaping follows, establishing a comfortable interface between plantscapes and daily use.\
+His designs begin with plants to structure the site and define a vision. Plants are selected based on the capacity of local ecosystems, their progression through changing seasons, and their sensory richness. Hardscaping follows, establishing a comfortable interface between plantings and functional space. Growing into themselves, his gardens become habitats that are both wild and intimate.\
 \
-Continuously evolving, Joshua’s landscapes are never truly finished. They welcome change and intervention, becoming habitats that are both wild and intimate.
+Joshua is fascinated by the ways that non-human life permeates built environments. Collaboration with this irrepressible force is at the core of his work.
