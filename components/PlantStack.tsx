@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, useSprings } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
 import { colors, dims, HiddenSpan } from "./shared";
@@ -69,6 +69,12 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     config: { frequency: 0.5, damping: 0.3 },
   }));
 
+  const [multiSpringStyles, multiApi] = useSprings(plants.length, (i) => ({
+    top: 0,
+    delay: i,
+    config: { frequency: 0.5, damping: 0.3 },
+  }));
+
   useEffect(() => {
     handleResize();
     lastScrollPos.current = window.scrollY;
@@ -87,13 +93,17 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     // ideal height for PlantStack
     const unConstrainedHeight = plants.length * 80 + (plants.length - 1) * 10;
     // max height allowed by window size
-    const maxHeight = window.innerHeight - dims.footerHeight * 2;
+    const maxHeight = window.innerHeight - 40 - dims.footerHeight * 2;
 
     relaxedHeight.current = Math.min(unConstrainedHeight, maxHeight);
 
     api.start({
       top: 0,
       height: relaxedHeight.current,
+    });
+
+    multiApi.start({
+      top: 0,
     });
   };
 
@@ -116,6 +126,10 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
       top: -clampedSpeed * 4,
       height: relaxedHeight.current + Math.abs(clampedSpeed * 3),
     });
+
+    multiApi.start({
+      top: -clampedSpeed * 4,
+    });
   };
 
   const handleScrollEnd = () => {
@@ -123,6 +137,10 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     api.start({
       top: 0,
       height: relaxedHeight.current,
+    });
+
+    multiApi.start({
+      top: 0,
     });
   };
 
@@ -151,26 +169,28 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
   ) : (
     <StyledPlantStackMobile>
       {plants &&
-        plants.map((plant, i) => (
-          <animated.div
-            key={i}
-            style={{
-              top: springStyles.top,
-              transitionDelay: i * 0.25 + "s",
-            }}
-          >
-            <Link href={`/explore?plant=${plant.slug}`}>
-              <img
-                style={{ background: colors.green }}
-                alt={plant.attributes.title}
-                src={
-                  "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"
-                }
-                loading="lazy"
-              />
-            </Link>
-          </animated.div>
-        ))}
+        multiSpringStyles.map((springStyle, i) => {
+          const plant = plants[i];
+          return (
+            <animated.div
+              key={i}
+              style={{
+                top: springStyle.top,
+              }}
+            >
+              <Link href={`/explore?plant=${plant.slug}`}>
+                <img
+                  style={{ background: colors.green }}
+                  alt={plant.attributes.title}
+                  src={
+                    "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"
+                  }
+                  loading="lazy"
+                />
+              </Link>
+            </animated.div>
+          );
+        })}
     </StyledPlantStackMobile>
   );
 };
