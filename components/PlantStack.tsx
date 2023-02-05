@@ -43,7 +43,7 @@ const PlantButton = styled.div`
 
 const StyledPlantStack = styled(animated.div)`
   position: fixed;
-  margin-top: calc((100vh - 160px - 80) / 2);
+  margin-top: calc((100vh - 160px - 80px) / 2);
   transform: translateY(-50%);
   left: calc(50% - 40px);
   z-index: 2;
