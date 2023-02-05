@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useSpring, animated } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
-import { colors, dims } from "./shared";
+import { colors, dims, HiddenSpan } from "./shared";
 import Head from "next/head";
 
 const PlantButton = styled.div`
@@ -136,6 +136,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
           <React.Fragment key={i}>
             <PlantButton className="plantButton" key={i}>
               <a href={`/explore?plant=${plant.slug}`}>
+                <HiddenSpan>{plant.attributes.title}</HiddenSpan>
                 <img
                   style={{ background: colors.green }}
                   alt={plant.attributes.title}

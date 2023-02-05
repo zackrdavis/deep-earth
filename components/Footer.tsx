@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import styled from "styled-components";
-import { colors } from "./shared";
+import { colors, HiddenSpan } from "./shared";
 import { dims } from "./shared";
 import { MobileNavBar } from "./MobileNavBar";
 
@@ -123,23 +123,23 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
         <MobileContactInfo>
           <Link href="tel:971-204-8921">
-            <span className="visually-hidden">Phone</span>
+            <HiddenSpan>Phone</HiddenSpan>
             <img src="/site_images/phone.svg" />
           </Link>
           <Link href="mailto:jpavlacky@gmail.com">
-            <span className="visually-hidden">Email</span>
+            <HiddenSpan>Email</HiddenSpan>
             <img src="/site_images/mail.svg" />
           </Link>
           <Link href="https://g.page/r/CdFkqIYiubztEBM/">
-            <span className="visually-hidden">Google Business</span>
+            <HiddenSpan>Google Business</HiddenSpan>
             <img src="/site_images/pin.svg" />
           </Link>
           <Link href="https://www.instagram.com/jpavlacky/">
-            <span className="visually-hidden">Instagram</span>
+            <HiddenSpan>Instagram</HiddenSpan>
             <img src="/site_images/instagram.svg" />
           </Link>
           <Link href="https://www.facebook.com/josh.michael.pavlacky/">
-            <span className="visually-hidden">Facebook</span>
+            <HiddenSpan>Facebook</HiddenSpan>
             <img src="/site_images/facebook.svg" />
           </Link>
         </MobileContactInfo>

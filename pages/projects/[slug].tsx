@@ -17,6 +17,7 @@ import {
   TwoColWrap,
   MobileLogo,
   MobileFeaturedImg,
+  HiddenSpan,
 } from "../../components/shared";
 import Link from "next/link";
 
@@ -60,8 +61,6 @@ const LeftArrow = styled(Link)`
   width: 70px;
   height: 20px;
   margin-right: 10px;
-
-  /* box-shadow: 0 0 0 1px red; */
 
   &:before {
     content: "";
@@ -120,7 +119,9 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
       </TwoColWrap>
 
       <ProjectFooter>
-        <LeftArrow href="/projects" />
+        <LeftArrow href="/projects">
+          <HiddenSpan>Return to Projects</HiddenSpan>
+        </LeftArrow>
         {content.attributes.title}
       </ProjectFooter>
 

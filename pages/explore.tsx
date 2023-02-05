@@ -5,7 +5,13 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { colors, dims, TwoColWrap, MobileLogo } from "../components/shared";
+import {
+  colors,
+  dims,
+  TwoColWrap,
+  MobileLogo,
+  HiddenSpan,
+} from "../components/shared";
 import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
@@ -107,6 +113,7 @@ const PlantHoverTile = ({
       href={`/projects?plant=${slug}`}
       onMouseEnter={() => onHoverPlant(plant)}
     >
+      <HiddenSpan>{title}</HiddenSpan>
       <img
         style={{ background: colors.green }}
         alt={title}
