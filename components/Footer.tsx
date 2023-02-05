@@ -59,7 +59,8 @@ const MobileContactInfo = styled.div`
   justify-content: center;
   align-items: center;
   color: ${colors.black};
-  font-size: 18px;
+  gap: 5px;
+  /* font-size: 18px; */
 
   & > div {
     display: flex;
