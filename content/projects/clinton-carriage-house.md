@@ -19,6 +19,8 @@ images:
   - image: img/img_20191007_135755_edited.jpg
   - image: img/img_20190806_174805_edited.jpg
 plants:
+  - Tulipa batalinii 'Bright Gem'
+  - Penstemon digitalis
   - Digitalis lutea
   - Nicotiana sylvestris
   - Cyperus papyrus
