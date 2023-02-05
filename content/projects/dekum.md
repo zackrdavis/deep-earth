@@ -9,7 +9,7 @@ images:
   - image: img/pxl_20210317_214117341.jpg
   - image: img/dekum_2.jpg
   - image: img/dekum_5.jpg
-  - image: img/dekum_3.jpg
+  - image: img/img_1606.jpg
   - image: img/dekum_4.jpg
   - image: img/dekum_8.jpg
 plants:
