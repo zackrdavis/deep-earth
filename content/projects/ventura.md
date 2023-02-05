@@ -16,6 +16,7 @@ images:
   - image: img/ventura_10.jpg
   - image: img/ventura_8.jpg
 plants:
+  - "Feijoa sellowiana "
   - Grevillea 'Superb'
   - Aloidendron barberae
   - Hesperaloe parviflora
