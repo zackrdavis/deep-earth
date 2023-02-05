@@ -123,7 +123,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     // stretch the springs according to the speed
     api.start({
       top: -clampedSpeed * 4,
-      height: relaxedHeight.current + Math.abs(clampedSpeed * 3),
+      height: relaxedHeight.current + Math.abs(clampedSpeed * 4),
     });
 
     multiApi.start({
