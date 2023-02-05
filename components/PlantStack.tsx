@@ -43,7 +43,7 @@ const PlantButton = styled.div`
 
 const StyledPlantStack = styled(animated.div)`
   position: fixed;
-  margin-top: calc((100vh - 160px) / 2);
+  margin-top: calc((100vh - 160px - 80) / 2);
   transform: translateY(-50%);
   left: calc(50% - 40px);
   z-index: 2;
@@ -92,7 +92,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     // ideal height for PlantStack
     const unConstrainedHeight = plants.length * 80 + (plants.length - 1) * 10;
     // max height allowed by window size
-    const maxHeight = window.innerHeight - 40 - dims.footerHeight * 2;
+    const maxHeight = window.innerHeight - dims.footerHeight * 2 - 80;
 
     relaxedHeight.current = Math.min(unConstrainedHeight, maxHeight);
 
