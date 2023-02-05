@@ -1,7 +1,9 @@
 ---
 title: Cambridge
 date: 2023-01-19T00:19:30.815Z
-featured_image: img/cambridge_3.jpg
+featured_image: img/cambridge_1.jpg
+caption: Modern dark patio chairs and a bright yellow side table furnish a
+  paving-stone patio. An outdoor dining table and grassy lawn are seen behind.
 images:
   - image: img/cambridge10.jpg
   - image: img/img_20200521_182047.jpg
