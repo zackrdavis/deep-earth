@@ -1,7 +1,7 @@
 ---
 title: Rhinebeck Rock Garden
 date: 2022-09-01T18:16:08.079Z
-featured_image: img/img_20200709_093829.jpg
+featured_image: img/img_20200708_141251.jpg
 caption: Three blue Adirondack chairs sit in the middle of a carefully designed
   forested landscape.
 images:
