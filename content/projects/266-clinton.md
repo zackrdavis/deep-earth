@@ -14,9 +14,7 @@ images:
   - image: img/img_20190908_144112_edited.jpg
     caption: ""
   - image: img/img_20200606_164216_edited.jpg
-  - image: img/img_20190806_171838_edited.jpg
   - image: img/img_20200705_182719_edited.jpg
-  - image: img/img_20190914_152959_edited.jpg
   - image: img/66274859_436392663881761_3796343921158368472_n-edited.jpg
   - image: img/img_20190806_171948_edited.jpg
   - image: img/img_20190914_152902_edited.jpg
