@@ -1,7 +1,9 @@
 ---
 title: Hyde
-date: 2023-01-18T19:46:40.061Z
+date: 2022-06-01T18:46:40.061Z
 featured_image: img/hyde_4.jpg
+caption: "Tall white echinacea flowers stand in the foreground of large
+  evergreen trees and a spiral staircase. "
 images:
   - image: img/hyde_4.jpg
   - image: img/hyde_7.jpg
