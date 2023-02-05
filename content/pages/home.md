@@ -15,6 +15,6 @@ His designs begin with plants to structure the site and define a vision. Plants 
 \
 Joshua is fascinated by the ways that non-human life permeates built environments. Collaboration with this irrepressible force is at the core of his work.
 
-### info@joshuapavlacky.com
-### 971-204-8921
-### @jpavlacky
+info@joshuapavlacky.com
+971-204-8921
+@jpavlacky
