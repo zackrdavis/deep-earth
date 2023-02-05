@@ -20,6 +20,7 @@ images:
   - image: img/morris-before.jpg
   - image: img/16505d98c2e0845383de105f75059d75-edited.jpg
 plants:
+  - "Blechnum spicant "
   - Gaura lindheimeri
   - Calamagrostis x acutiflora 'Karl Foerster'
   - Lupinus rivularis
