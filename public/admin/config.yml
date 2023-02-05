@@ -22,8 +22,14 @@ collections:
               choose_url: false,
             }
           - {
-              label: "Caption",
+              label: "Landing Caption",
               name: "caption",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Meta tag description",
+              name: "meta",
               widget: "string",
               required: true,
             }
@@ -58,8 +64,14 @@ collections:
               choose_url: false,
             }
           - {
-              label: "Caption",
+              label: "Featured Image Caption",
               name: "caption",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Meta tag description",
+              name: "meta",
               widget: "string",
               required: true,
             }
@@ -78,6 +90,7 @@ collections:
           choose_url: false,
         }
       - { label: "Caption", name: "caption", widget: "string", required: true }
+      - { label: "Body", name: "body", widget: "markdown" }
       - label: "Images"
         name: "images"
         widget: list
@@ -95,7 +108,6 @@ collections:
               widget: "string",
               required: false,
             }
-      - { label: "Body", name: "body", widget: "markdown" }
       - label: "Plants"
         name: "plants"
         widget: list
