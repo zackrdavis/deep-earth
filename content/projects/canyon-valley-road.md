@@ -1,7 +1,9 @@
 ---
 title: Canyon Valley Road
-date: 2022-11-21T19:08:20.041Z
+date: 2022-08-01T18:08:20.041Z
 featured_image: img/edited_64528154_1275274795978976_2580489961904518958_n.jpg
+caption: Concrete steps nestled into greenery lead up to a landscaped garden
+  under open skies at early sunset.
 images:
   - image: img/img_20200612_092851.jpg
   - image: img/newton11-edited.jpg
