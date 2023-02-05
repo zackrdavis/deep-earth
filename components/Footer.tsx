@@ -68,14 +68,18 @@ const MobileContactInfo = styled.div`
     align-items: center;
   }
 
+  img {
+    height: 24px;
+  }
+
   @media screen and (max-width: 640px) {
     flex-grow: 1;
     gap: 20px;
     font-size: inherit;
-  }
 
-  img {
-    height: 24px;
+    img {
+      height: 30px;
+    }
   }
 `;
 
