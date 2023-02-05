@@ -10,6 +10,8 @@ images:
   - image: img/east_village_3.jpg
   - image: img/east_village_4.jpg
 plants:
+  - Perovskia 'Little Spire'
+  - Cornus sericea 'Flaviramea'
   - Artemisia 'Silver Mound'
   - Gaura lindheimeri
   - "Stachys byzantina "
