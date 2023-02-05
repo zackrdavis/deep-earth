@@ -5,18 +5,16 @@ featured_image: img/img_9195_edited.jpg
 caption: A pathway of concrete pavers leads into a densely planted garden
   surrounded by large tropical plants.
 images:
+  - image: img/img_9195_edited.jpg
   - image: img/_dsc0903-recovered-edited.jpg
+  - image: img/_dsc0925_edited.jpg
   - image: img/_dsc0904-edited.jpg
+  - image: img/morris8-edited.jpg
   - image: img/img_9121-edited.jpg
   - image: img/pxl_20220601_213753950-edited.jpg
-  - image: img/morrisc_edited.jpg
-  - image: img/morris8-edited.jpg
   - image: img/morris9-edited.jpg
-  - image: img/img_9195_edited.jpg
-  - image: img/img_9119_edited.jpg
   - image: img/_dsc0939_edited.jpg
-  - image: img/_dsc0925_edited.jpg
-  - image: img/_dsc0954_edited.jpg
+  - image: img/img_9119_edited.jpg
   - image: img/morris-before.jpg
   - image: img/16505d98c2e0845383de105f75059d75-edited.jpg
 plants:
