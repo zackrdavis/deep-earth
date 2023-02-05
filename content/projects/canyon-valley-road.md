@@ -5,7 +5,7 @@ featured_image: img/edited_64528154_1275274795978976_2580489961904518958_n.jpg
 caption: Concrete steps nestled into greenery lead up to a landscaped garden
   under open skies at early sunset.
 images:
-  - image: img/img_20200612_092851.jpg
+  - image: img/edited_64528154_1275274795978976_2580489961904518958_n.jpg
   - image: img/newton11-edited.jpg
   - image: img/img_7808.jpg
   - image: img/img_20190829_082948-edited.jpg
