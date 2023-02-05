@@ -53,6 +53,22 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const MobileContactInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: ${colors.black};
+
+  @media screen and (max-width: 640px) {
+    flex-grow: 1;
+  }
+
+  img {
+    height: 30px;
+  }
+`;
+
 export const Footer = ({ className }: { className?: string }) => {
   const [showMenu, setShowMenu] = useState(false);
   const { route } = useRouter();
@@ -105,6 +121,28 @@ export const Footer = ({ className }: { className?: string }) => {
         >
           Info
         </StyledLink>
+        <MobileContactInfo>
+          <Link href="tel:971-204-8921">
+            <span className="visually-hidden">Phone</span>
+            <img src="/site_images/phone.svg" />
+          </Link>
+          <Link href="mailto:jpavlacky@gmail.com">
+            <span className="visually-hidden">Email</span>
+            <img src="/site_images/mail.svg" />
+          </Link>
+          <Link href="https://g.page/r/CdFkqIYiubztEBM/">
+            <span className="visually-hidden">Google Business</span>
+            <img src="/site_images/pin.svg" />
+          </Link>
+          <Link href="https://www.instagram.com/jpavlacky/">
+            <span className="visually-hidden">Instagram</span>
+            <img src="/site_images/instagram.svg" />
+          </Link>
+          <Link href="https://www.facebook.com/josh.michael.pavlacky/">
+            <span className="visually-hidden">Facebook</span>
+            <img src="/site_images/facebook.svg" />
+          </Link>
+        </MobileContactInfo>
       </StyledFooter>
     </>
   );
