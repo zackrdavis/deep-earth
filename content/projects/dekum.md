@@ -6,7 +6,7 @@ caption: An architectural wooden sauna sits in a lushly planted backyard,
   featuring a stone patio and tropical plants.
 images:
   - image: img/dekum_1.jpg
-  - image: img/dekum_6.jpg
+  - image: img/pxl_20210317_214117341.jpg
   - image: img/dekum_2.jpg
   - image: img/dekum_5.jpg
   - image: img/dekum_3.jpg
