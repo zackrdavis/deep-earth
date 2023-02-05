@@ -71,7 +71,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
 
   const [multiSpringStyles, multiApi] = useTrail(plants.length, (i) => ({
     top: 0,
-    config: { frequency: 0.5, damping: 0.9 },
+    config: { frequency: 0.5, damping: 0.9, delay: 0 },
   }));
 
   useEffect(() => {
@@ -127,7 +127,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     });
 
     multiApi.start({
-      top: -clampedSpeed * 4,
+      top: clampedSpeed * 4,
     });
   };
 

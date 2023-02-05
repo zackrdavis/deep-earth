@@ -55,10 +55,15 @@ const StyledLink = styled(Link)`
 
 const MobileContactInfo = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
   color: ${colors.black};
+
+  & > div {
+    display: flex;
+  }
 
   @media screen and (max-width: 640px) {
     flex-grow: 1;
@@ -122,26 +127,22 @@ export const Footer = ({ className }: { className?: string }) => {
           Info
         </StyledLink>
         <MobileContactInfo>
-          <Link href="tel:971-204-8921">
-            <HiddenSpan>Phone</HiddenSpan>
-            <img src="/site_images/phone.svg" />
-          </Link>
-          <Link href="mailto:info@joshuapavlacky.com">
-            <HiddenSpan>Email</HiddenSpan>
-            <img src="/site_images/mail.svg" />
-          </Link>
-          <Link href="https://g.page/r/CdFkqIYiubztEBM/">
-            <HiddenSpan>Google Business</HiddenSpan>
-            <img src="/site_images/pin.svg" />
-          </Link>
-          <Link href="https://www.instagram.com/jpavlacky/">
-            <HiddenSpan>Instagram</HiddenSpan>
-            <img src="/site_images/instagram.svg" />
-          </Link>
-          <Link href="https://www.facebook.com/josh.michael.pavlacky/">
-            <HiddenSpan>Facebook</HiddenSpan>
-            <img src="/site_images/facebook.svg" />
-          </Link>
+          <div>info@joshuapavlacky.com</div>
+          <div>
+            971-204-8921{" "}
+            <Link href="https://g.page/r/CdFkqIYiubztEBM/">
+              <HiddenSpan>Google Business</HiddenSpan>
+              <img src="/site_images/pin.svg" />
+            </Link>
+            <Link href="https://www.instagram.com/jpavlacky/">
+              <HiddenSpan>Instagram</HiddenSpan>
+              <img src="/site_images/instagram.svg" />
+            </Link>
+            <Link href="https://www.facebook.com/josh.michael.pavlacky/">
+              <HiddenSpan>Facebook</HiddenSpan>
+              <img src="/site_images/facebook.svg" />
+            </Link>
+          </div>
         </MobileContactInfo>
       </StyledFooter>
     </>
