@@ -1,7 +1,9 @@
 ---
 title: Dekum
-date: 2023-01-18T19:08:51.148Z
+date: 2022-04-01T18:08:51.148Z
 featured_image: img/dekum_2_cropped.jpg
+caption: An architectural wooden sauna sits in a lushly planted backyard,
+  featuring a stone patio and tropical plants.
 images:
   - image: img/dekum_1.jpg
   - image: img/dekum_6.jpg
