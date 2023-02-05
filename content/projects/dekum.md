@@ -14,6 +14,8 @@ images:
   - image: img/img_1606.jpg
   - image: img/dekum_4.jpg
 plants:
+  - Gladiolus dalenii 'Bolivian Peach’
+  - Calamagrostis x acutiflora 'Karl Foerster'
   - Origanum x 'Xera Cascade'
   - Oenothera biennis
   - Phormium tenax 'Purpureum'
