@@ -3,6 +3,8 @@ landing_image: img/no-fog-cropped-splash.jpg
 caption: A rocky clearing in foggy woods, with a flagstone path built out of
   large rectangular flagstones. Moss and plants grow around the base of piled
   rocks.
+meta: Joshua Pavlacky is a landscape designer based in Portland, Oregon. His
+  work balances beauty with ecological function.
 images:
   - image: img/misc8.jpg
   - image: img/ventura_11_brighter.jpg
