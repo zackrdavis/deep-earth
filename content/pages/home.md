@@ -14,7 +14,3 @@ Joshua Pavlacky is a landscape designer, artist, and curator based in Portland O
 His designs begin with plants to structure the site and define a vision. Plants are selected based on the capacity of local ecosystems, their progression through changing seasons, and their sensory richness. Hardscaping follows, establishing a comfortable interface between plantings and functional space. Growing into themselves, his gardens become habitats that are both wild and intimate.\
 \
 Joshua is fascinated by the ways that non-human life permeates built environments. Collaboration with this irrepressible force is at the core of his work.
-
-info@joshuapavlacky.com
-971-204-8921
-@jpavlacky
