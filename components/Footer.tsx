@@ -58,19 +58,24 @@ const MobileContactInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   color: ${colors.black};
+  font-size: 18px;
 
   & > div {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
 
   @media screen and (max-width: 640px) {
     flex-grow: 1;
+    gap: 20px;
+    font-size: inherit;
   }
 
   img {
-    height: 30px;
+    height: 24px;
   }
 `;
 

@@ -71,7 +71,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
 
   const [multiSpringStyles, multiApi] = useTrail(plants.length, (i) => ({
     top: 0,
-    config: { frequency: 0.5, damping: 0.9, delay: 0 },
+    config: { frequency: 0.2, damping: 0.8, delay: 0 },
   }));
 
   useEffect(() => {
