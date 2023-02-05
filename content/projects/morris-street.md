@@ -1,7 +1,9 @@
 ---
 title: Morris Street
-date: 2022-11-24T01:31:30.034Z
+date: 2022-11-02T00:31:30.034Z
 featured_image: img/img_9195_edited.jpg
+caption: A pathway of concrete pavers leads into a densely planted garden
+  surrounded by large tropical plants.
 images:
   - image: img/_dsc0903-recovered-edited.jpg
   - image: img/_dsc0904-edited.jpg
