@@ -18,6 +18,7 @@ images:
   - image: img/hyde_2.jpg
   - image: img/hyde_8.jpg
 plants:
+  - Nepeta racemosa
   - Betula populifolia 'Whitespire’
   - Aconitum carmichaelii
   - Silene dioica 'Clifford Moor'
