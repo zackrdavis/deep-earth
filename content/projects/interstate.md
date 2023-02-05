@@ -7,16 +7,16 @@ caption: "A massive, impromptu and wild garden bed sits in a concrete courtyard
 images:
   - image: img/interstate_4.jpg
   - image: img/interstate_6.jpg
-  - image: img/23347828_366071963852225_8143773518140538880_n.jpg
   - image: img/interstate_3.jpg
+  - image: img/img_20200505_114028-edited.jpg
   - image: img/interstate_5.jpg
   - image: img/img_20200505_113831-edited.jpg
-  - image: img/interstate_7.jpg
   - image: img/interstate_1.jpg
+  - image: img/interstate_7.jpg
   - image: img/img_20200505_113828-edited.jpg
-  - image: img/img_20200505_114028-edited.jpg
   - image: img/interstate_2.jpg
   - image: img/interstate_8.jpg
+  - image: img/23347828_366071963852225_8143773518140538880_n.jpg
 plants:
   - Trifolium incarnatum
   - Tulipa linifolia
