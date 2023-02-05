@@ -16,6 +16,7 @@ images:
   - image: img/ventura_10.jpg
   - image: img/ventura_8.jpg
 plants:
+  - Tulbaghia natalensis
   - "Feijoa sellowiana "
   - Grevillea 'Superb'
   - Aloidendron barberae
