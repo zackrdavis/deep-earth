@@ -16,10 +16,11 @@ images:
   - image: img/ventura_10.jpg
   - image: img/ventura_8.jpg
 plants:
+  - Eremophila calorhabdos
   - Tulbaghia natalensis
   - "Feijoa sellowiana "
-  - Grevillea 'Superb'
   - Aloidendron barberae
+  - Hesperaloe parviflora
   - Hesperaloe parviflora
 ---
 L﻿ocation: Ventura, CA\
