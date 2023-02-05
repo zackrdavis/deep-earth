@@ -1,6 +1,6 @@
 ---
 title: Clinton Courtyard
-date: 2022-04-20T04:13:53.696Z
+date: 2021-06-29T04:13:53.696Z
 featured_image: img/img_20190908_144112_edited_cropped.jpg
 caption: Large tufts of grass and shrubs in front of a red brick wall.
 images:
