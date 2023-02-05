@@ -20,6 +20,7 @@ images:
   - image: img/morris-before.jpg
   - image: img/16505d98c2e0845383de105f75059d75-edited.jpg
 plants:
+  - Libertia 'Amazing Grace’
   - "Blechnum spicant "
   - Gaura lindheimeri
   - Calamagrostis x acutiflora 'Karl Foerster'
