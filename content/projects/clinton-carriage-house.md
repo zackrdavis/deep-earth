@@ -19,7 +19,7 @@ images:
   - image: img/img_20191007_135755_edited.jpg
   - image: img/img_20190806_174805_edited.jpg
 plants:
-  - Hibiscus moscheutos
+  - Digitalis lutea
   - Nicotiana sylvestris
   - Cyperus papyrus
   - Strelitzia reginae
