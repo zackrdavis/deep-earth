@@ -77,8 +77,6 @@ const ProjectTitle = styled.div`
 `;
 
 const Projects: NextPage<Props> = ({ projectsList }) => {
-  console.log(projectsList.map((p) => p.attributes.date));
-
   const { query } = useRouter();
   const plantQuery = query.plant as string;
 
@@ -139,7 +137,13 @@ export const importProjects = async () => {
 export const getStaticProps: GetStaticProps = async () => {
   const projectsList = await importProjects();
 
-  return { props: { projectsList: projectsList.sort() } };
+  return {
+    props: {
+      projectsList: projectsList.sort((b, a) =>
+        a.attributes.date.localeCompare(b.attributes.date)
+      ),
+    },
+  };
 };
 
 export default Projects;
