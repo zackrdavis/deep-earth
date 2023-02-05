@@ -77,6 +77,8 @@ const ProjectTitle = styled.div`
 `;
 
 const Projects: NextPage<Props> = ({ projectsList }) => {
+  console.log(projectsList);
+
   const { query } = useRouter();
   const plantQuery = query.plant as string;
 
@@ -137,7 +139,11 @@ export const importProjects = async () => {
 export const getStaticProps: GetStaticProps = async () => {
   const projectsList = await importProjects();
 
-  return { props: { projectsList } };
+  const sortedProjects = [...projectsList].sort((a, b) =>
+    a.attributes.date > b.attributes.date ? 1 : -1
+  );
+
+  return { props: { projectsList: sortedProjects } };
 };
 
 export default Projects;
