@@ -1,7 +1,9 @@
 ---
 title: Fort Greene
-date: 2023-01-18T22:11:34.843Z
+date: 2022-02-01T22:11:34.843Z
 featured_image: img/fort_greene_1.jpg
+caption: A closeup of greenery and flowers planted in pots and directly into the
+  ground, emerging from pea gravel.
 images:
   - image: img/fort_greene_11.jpg
   - image: img/fort_greene_4.jpg
