@@ -1,4 +1,4 @@
 ---
 title: Kniphofia
-image: img/kniphofia.jpg
+image: img/kniphofia_pale.jpg
 ---
