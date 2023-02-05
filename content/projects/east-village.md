@@ -1,7 +1,9 @@
 ---
 title: East Village Penthouse
-date: 2023-01-18T19:27:57.761Z
+date: 2022-10-01T18:27:57.761Z
 featured_image: img/east_village_1.jpg
+caption: A custom built-in cedar bench topped with cushions and pillows sits
+  overlooks the New York City skyline.
 images:
   - image: img/east_village_1.jpg
   - image: img/east_village_2.jpg
