@@ -5,16 +5,16 @@ featured_image: img/ventura_4.jpg
 caption: "A small white beach bungalow, with minimalist xeric landscaping in
   front, is framed against a backdrop of blue skies. "
 images:
+  - image: img/ventura_8.jpg
   - image: img/ventura_4.jpg
-  - image: img/ventura_9.jpg
-  - image: img/ventura_3.jpg
   - image: img/ventura_11.jpg
+  - image: img/ventura_9.jpg
+  - image: img/ventura_6.jpg
   - image: img/ventura_7.jpg
+  - image: img/ventura_3.jpg
   - image: img/ventura_1.jpg
   - image: img/ventura_5.jpg
-  - image: img/ventura_6.jpg
   - image: img/ventura_10.jpg
-  - image: img/ventura_8.jpg
 plants:
   - Eremophila calorhabdos
   - Tulbaghia natalensis
