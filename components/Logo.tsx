@@ -5,6 +5,7 @@ import { colors, dims } from "./shared";
 const StyledLogo = styled.div`
   padding: 0 0 15px;
   cursor: pointer;
+  margin-bottom: ${dims.xPad}px;
 
   img {
     max-width: 100%;

@@ -3,13 +3,7 @@ import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import { ImageStack } from "../components/ImageStack";
-import {
-  colors,
-  AboveTextSpacer,
-  TextStack,
-  TwoColWrap,
-  dims,
-} from "../components/shared";
+import { colors, TextStack, TwoColWrap, dims } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
 
@@ -81,7 +75,6 @@ const Home: NextPage<HomeProps> = ({ content }) => {
       <TwoColWrap id="home">
         <TextStack>
           <Logo />
-          <AboveTextSpacer />
           {parse(content.html)}
         </TextStack>
 

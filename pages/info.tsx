@@ -6,7 +6,6 @@ import { Logo } from "../components/Logo";
 import {
   TwoColWrap,
   TextStack,
-  AboveTextSpacer,
   MobileLogo,
   MobileFeaturedImg,
   colors,
@@ -55,7 +54,6 @@ const Info: NextPage<Props> = ({ content }) => {
       <TwoColWrap>
         <TextStack style={{ marginBottom: dims.footerHeight }}>
           <Logo />
-          <AboveTextSpacer />
           {parse(content.html)}
         </TextStack>
 

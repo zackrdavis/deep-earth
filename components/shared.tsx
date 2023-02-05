@@ -88,21 +88,6 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
   }
 `;
 
-export const AboveTextSpacer = styled.div<{ isProjectText?: boolean }>`
-  ${({ isProjectText }) => {
-    const subtractedHeight =
-      dims.logoPad + 75 + 20 + dims.footerHeight + (isProjectText ? 60 : 0);
-
-    return css`
-      height: calc((100vh - ${subtractedHeight}px) / 2);
-
-      @media screen and (max-width: 640px) {
-        display: none;
-      }
-    `;
-  }}
-`;
-
 const StyledMobileLogo = styled(Link)`
   width: 100%;
 

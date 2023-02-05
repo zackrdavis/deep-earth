@@ -126,7 +126,7 @@ export const Footer = ({ className }: { className?: string }) => {
             <HiddenSpan>Phone</HiddenSpan>
             <img src="/site_images/phone.svg" />
           </Link>
-          <Link href="mailto:jpavlacky@gmail.com">
+          <Link href="mailto:info@joshuapavlacky.com">
             <HiddenSpan>Email</HiddenSpan>
             <img src="/site_images/mail.svg" />
           </Link>

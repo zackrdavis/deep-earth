@@ -13,7 +13,6 @@ import {
   dims,
   colors,
   TextStack,
-  AboveTextSpacer,
   TwoColWrap,
   MobileLogo,
   MobileFeaturedImg,
@@ -109,7 +108,6 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
       <TwoColWrap>
         <TextStack isProjectText>
           <Logo />
-          <AboveTextSpacer isProjectText />
           {parse(content.html)}
         </TextStack>
 
