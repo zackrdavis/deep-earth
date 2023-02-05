@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { useSpring, animated, useSprings } from "react-spring";
+import { useSpring, animated, useSprings, useTrail } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
 import { colors, dims, HiddenSpan } from "./shared";
@@ -69,9 +69,8 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     config: { frequency: 0.5, damping: 0.3 },
   }));
 
-  const [multiSpringStyles, multiApi] = useSprings(plants.length, (i) => ({
+  const [multiSpringStyles, multiApi] = useTrail(plants.length, (i) => ({
     top: 0,
-    delay: i,
     config: { frequency: 0.5, damping: 0.3 },
   }));
 
