@@ -1,7 +1,9 @@
 ---
 title: Ventura
-date: 2023-01-18T20:35:15.419Z
+date: 2023-02-01T20:35:15.419Z
 featured_image: img/ventura_4.jpg
+caption: "A small white beach bungalow, with minimalist xeric landscaping in
+  front, is framed against a backdrop of blue skies. "
 images:
   - image: img/ventura_4.jpg
   - image: img/ventura_9.jpg
