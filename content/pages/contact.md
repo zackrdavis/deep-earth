@@ -7,4 +7,4 @@ Gifted a plot in his mother’s garden at the age of 10, Joshua has followed his
 
 Having studied Fine Art at Wesleyan University, Joshua concurrently pursued his interest in art and curation. He co-founded American Medium, an art gallery that ran from 2013-2019 in New York City, and focused on emerging trends in contemporary art. As a curator, Joshua has produced social spaces and exhibitions for organizations such as Bloomberg at the Venice Biennale, Rough Trade Records, Rhizome at the New Museum, Kunstverein für die Rheinlande und Westfalen, the South African National Arts Festival and more. His exhibitions and productions have been featured in publications such as The New York Times, Artforum, Pin-Up Magazine, Art in America, and Art21.
 
-Joshua is currently working with Landscape East & West, one of the Portland region’s largest landscape contractors, and is creating designs for clients across the country.
+Joshua is currently working with Landscape East West, one of the Portland region’s largest landscape contractors, and is creating designs for clients across the country.
