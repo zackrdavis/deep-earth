@@ -17,6 +17,7 @@ images:
   - image: img/isadora_bee_garden_8.jpg
   - image: img/isadora_bee_garden_6.jpg
 plants:
+  - Catananche caerulea
   - Silene armeria
   - Lobularia maritima
   - Matricaria chamomilla
