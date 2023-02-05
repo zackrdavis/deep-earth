@@ -4,7 +4,6 @@ import { useSpring, animated } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
 import { colors, dims, HiddenSpan } from "./shared";
-import Head from "next/head";
 
 const PlantButton = styled.div`
   flex: 0 1 80px;
@@ -153,7 +152,13 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     <StyledPlantStackMobile>
       {plants &&
         plants.map((plant, i) => (
-          <div key={i}>
+          <animated.div
+            key={i}
+            style={{
+              top: springStyles.top,
+              transitionDelay: i * 0.25 + "s",
+            }}
+          >
             <Link href={`/explore?plant=${plant.slug}`}>
               <img
                 style={{ background: colors.green }}
@@ -164,7 +169,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
                 loading="lazy"
               />
             </Link>
-          </div>
+          </animated.div>
         ))}
     </StyledPlantStackMobile>
   );
