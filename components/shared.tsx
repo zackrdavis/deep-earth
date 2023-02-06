@@ -5,7 +5,7 @@ export const colors = {
   black: "#4b4b4b",
   tan: "#E6E6DA",
   sienna: "#A86654",
-  green: "#408000",
+  green: "#698165",
 };
 
 export const dims = {
