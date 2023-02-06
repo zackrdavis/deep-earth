@@ -1,4 +1,4 @@
 ---
-title: "Podophyllum peltatum "
+title: Podophyllum peltatum (Mayapple)
 image: img/podophyllum-peltatum.jpg
 ---
