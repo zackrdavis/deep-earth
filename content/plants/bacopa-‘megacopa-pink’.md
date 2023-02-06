@@ -1,4 +1,4 @@
 ---
-title: Bacopa 'Megacopa Pink’
+title: Bacopa 'Megacopa Pink’ (Waterhyssop)
 image: img/bacopa-megacopa-pink.jpg
 ---
