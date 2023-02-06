@@ -17,10 +17,10 @@ images:
   - image: img/cambridge_6.jpg
   - image: img/img_20200521_182047.jpg
 plants:
-  - Verbena bonariensis
-  - Alcea rosea
-  - Chasmanthium latifolium
-  - Artemisia 'Silver Mound'
+  - Verbena bonariensis (Purpletop Vervain)
+  - Alcea rosea (Hollyhock)
+  - Chasmanthium latifolium (Northern Sea Oats)
+  - Artemisia 'Silver Mound' (Wormwood)
 ---
 L﻿ocation: Cambridge, MA\
 S﻿ize: 1500 SF
