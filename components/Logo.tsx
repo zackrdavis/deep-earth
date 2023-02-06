@@ -3,9 +3,8 @@ import Link from "next/link";
 import { colors, dims } from "./shared";
 
 const StyledLogo = styled.div`
-  padding: 0 0 15px;
+  padding: 0 0 100px;
   cursor: pointer;
-  margin-bottom: ${dims.xPad}px;
 
   img {
     max-width: 100%;

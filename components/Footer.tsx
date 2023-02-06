@@ -122,6 +122,14 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
 
         <StyledLink
+          href="/info"
+          className={isInfo ? "active" : ""}
+          onClick={() => (route == "/info" ? setShowMenu(false) : null)}
+        >
+          Info
+        </StyledLink>
+
+        <StyledLink
           href="/explore"
           className={isExplore ? "active" : ""}
           onClick={() => (route == "/explore" ? setShowMenu(false) : null)}
@@ -129,13 +137,6 @@ export const Footer = ({ className }: { className?: string }) => {
           Explore
         </StyledLink>
 
-        <StyledLink
-          href="/info"
-          className={isInfo ? "active" : ""}
-          onClick={() => (route == "/info" ? setShowMenu(false) : null)}
-        >
-          Info
-        </StyledLink>
         <MobileContactInfo>
           <div>info@joshuapavlacky.com</div>
           <div>
