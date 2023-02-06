@@ -19,15 +19,15 @@ images:
   - image: img/img_20190806_174805_edited.jpg
   - image: img/mvimg_20200828_134729_edited.jpg
 plants:
-  - Tulipa batalinii 'Bright Gem'
-  - Penstemon digitalis
-  - Digitalis lutea
-  - Nicotiana sylvestris
-  - Cyperus papyrus
-  - Strelitzia reginae
-  - Chasmanthium latifolium
-  - Macleaya cordata
-  - Brugmansia aurea
+  - Tulipa batalinii 'Bright Gem' (Botanical Tulip)
+  - Penstemon digitalis (Foxglove Beardtongue)
+  - Digitalis lutea (Straw Foxglove)
+  - Nicotiana sylvestris (Flowering Tobacco)
+  - Cyperus papyrus (Paper Reed)
+  - Strelitzia reginae (Bird of Paradise)
+  - Chasmanthium latifolium (Northern Sea Oats)
+  - Macleaya cordata (Plume Poppy)
+  - Brugmansia aurea (Golden Angel's Trumpet)
 ---
 L﻿ocation: Brooklyn, NY\
 S﻿ize: 600 SF
