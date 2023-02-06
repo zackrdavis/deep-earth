@@ -1,4 +1,4 @@
 ---
-title: Cyperus papyrus
+title: Cyperus papyrus (Paper Reed)
 image: img/cyperus-papyrus.jpg
 ---
