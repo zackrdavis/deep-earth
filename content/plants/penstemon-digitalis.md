@@ -1,4 +1,4 @@
 ---
-title: Penstemon digitalis
+title: Penstemon digitalis (Foxglove Beardtongue)
 image: img/penstemon-digitalis.png
 ---
