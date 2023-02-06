@@ -15,13 +15,11 @@ images:
   - image: img/copy-of-img_20200525_184719.jpg
   - image: img/img_20200528_172238.jpg
 plants:
-  - Campanula poscharskyana
-  - "Carex tumulicola "
-  - Thelypteris noveboracensis
-  - Styrax japonicus
-  - Corydalis sempervirens
-  - Corydalis sempervirens
-  - Corydalis sempervirens
+  - Campanula poscharskyana (Serbian Bellflower)
+  - Carex tumulicola (Foothill Sedge)
+  - Thelypteris noveboracensis (New York Fern)
+  - Styrax japonicus (Japanese Snowbell)
+  - Corydalis sempervirens (Rock Harlequin)
 ---
 L﻿ocation: Rhinebeck, NY\
 S﻿ize: 5000 SF\
