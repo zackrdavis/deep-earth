@@ -14,12 +14,11 @@ images:
   - image: img/dekum_1.jpg
   - image: img/pxl_20210317_214117341.jpg
 plants:
-  - Punica granatum 'Grenada'
-  - Gladiolus dalenii 'Bolivian Peach’
-  - Calamagrostis x acutiflora 'Karl Foerster'
-  - Oenothera biennis
-  - Phormium tenax 'Purpureum'
-  - Phormium tenax 'Purpureum'
+  - Punica granatum 'Grenada (Pomegranate)
+  - Gladiolus dalenii 'Bolivian Peach’ (Dragon's-Head Lily)
+  - Calamagrostis x acutiflora 'Karl Foerster' (Feather Reed Grass)
+  - Oenothera biennis (Common Evening Primrose)
+  - Phormium tenax 'Purpureum' (New Zealand Flax)
 ---
 L﻿ocation: Portland, OR\
 S﻿ize: 800 SF
