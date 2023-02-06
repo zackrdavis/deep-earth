@@ -18,10 +18,10 @@ images:
   - image: img/interstate_8.jpg
   - image: img/23347828_366071963852225_8143773518140538880_n.jpg
 plants:
-  - Trifolium incarnatum
-  - Tulipa linifolia
-  - Amelanchier x grandiflora
-  - Salix discolor
+  - Trifolium incarnatum (Crimson Clover)
+  - Tulipa linifolia (Flax-Leaved Tulip)
+  - Amelanchier x grandiflora (Serviceberry)
+  - Salix discolor (Pussy Willow)
 ---
 L﻿ocation: Brooklyn, NY\
 S﻿ize: 800 SF
