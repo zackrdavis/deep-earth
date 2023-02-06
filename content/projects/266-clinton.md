@@ -17,7 +17,7 @@ images:
   - image: img/img_20200705_182719_edited.jpg
   - image: img/66274859_436392663881761_3796343921158368472_n-edited.jpg
   - image: img/img_20190806_171948_edited.jpg
-  - image: img/img_20190914_152902_edited.jpg
+  - image: img/img_20190914_152902.jpg
   - image: img/courtyarddrawing.jpg
 plants:
   - Iris ensata 'Variegata’
