@@ -16,12 +16,11 @@ images:
   - image: img/ventura_5.jpg
   - image: img/ventura_10.jpg
 plants:
-  - Eremophila calorhabdos
-  - Tulbaghia natalensis
-  - "Feijoa sellowiana "
-  - Aloidendron barberae
-  - Hesperaloe parviflora
-  - Hesperaloe parviflora
+  - Eremophila calorhabdos (Spiked Eremophila)
+  - Tulbaghia natalensis (Sweet Wild Garlic)
+  - Feijoa sellowiana (Pineapple Guava)
+  - Aloidendron barberae (Tree Aloe)
+  - Hesperaloe parviflora (Coral Yucca)
 ---
 L﻿ocation: Ventura, CA\
 S﻿ize: 800 SF\
