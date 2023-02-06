@@ -9,7 +9,7 @@ images:
       and flowering shrubs. There are trees in planters, a white couch, and a
       pink painting hung on a red brick wall.
   - image: img/img_20190914_153458-edited.jpg
-  - image: img/img_20190813_142857-edite.jpg
+  - image: img/copy-of-lawn9.jpg
   - image: img/lawnbefore.jpg
   - image: img/img_20190908_144112_edited.jpg
     caption: ""
