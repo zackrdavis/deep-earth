@@ -6,6 +6,7 @@ import { ImageStack } from "../components/ImageStack";
 import { colors, TextStack, TwoColWrap, dims } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
+import Head from "next/head";
 
 interface HomeProps {
   content: {
@@ -13,6 +14,7 @@ interface HomeProps {
       landing_image: string;
       caption?: string;
       images: { image: string; caption?: string }[];
+      meta?: string;
     };
     html: string;
   };
@@ -62,6 +64,11 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
   return (
     <>
+      <Head>
+        <title>Joshua Pavlacky Landscape Design</title>
+        <meta name="description" content={attributes.meta} />
+      </Head>
+
       <VerticalRule />
 
       <SplashContainer>
