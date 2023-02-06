@@ -1,6 +1,5 @@
 import styled, { CSSProperties } from "styled-components";
 import Link from "next/link";
-import { colors, dims } from "./shared";
 
 const StyledLogo = styled.div`
   padding: 0 0 100px;

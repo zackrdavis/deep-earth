@@ -69,8 +69,8 @@ const StyledPlantHoverTile = styled.div`
       left: 0;
       transform: none;
       border-radius: 0;
-      width: 100%;
-      height: auto;
+      width: 100vw;
+      height: 100vw;
     }
 
     div {
@@ -118,7 +118,9 @@ const PlantHoverTile = ({
       <img
         style={{ background: colors.green }}
         alt={title}
-        src={image + "?nf_resize=fit&w=180&h=180"}
+        srcSet={`${image}?nf_resize=fit&w=640&h=640 640w, ${image}?nf_resize=fit&w=180&h=180 180w`}
+        sizes="(min-width: 641px) 180px, 640px"
+        src={image + "?nf_resize=fit&w=640&h=640"}
         loading="lazy"
       />
       <div>{title}</div>
