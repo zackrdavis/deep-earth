@@ -15,11 +15,11 @@ images:
   - image: img/fort_greene_4.jpg
   - image: img/fort_greene_2.jpg
 plants:
-  - Rudbeckia hirta
-  - Gaura lindheimeri
-  - Iris ensata 'Variegata’
-  - Rudbeckia fulgida 'Little Goldstar'
-  - Kniphofia
+  - Rudbeckia hirta (Black-Eyed Susan)
+  - Gaura lindheimeri (White Gaura)
+  - Iris ensata 'Variegata’ (Variegated Japanese Water Iris)
+  - Rudbeckia fulgida 'Little Goldstar' (Black-Eyed Susan)
+  - Kniphofia (Torch Lilies)
 ---
 Location: Brooklyn, NY\
 Size: 3000 SF
