@@ -1,4 +1,4 @@
 ---
-title: Nepeta racemosa
+title: Nepeta racemosa (Catmint)
 image: img/nepeta-racemosa.jpg
 ---
