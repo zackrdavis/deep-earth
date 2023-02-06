@@ -10,11 +10,11 @@ images:
   - image: img/east_village_2.jpg
   - image: img/east_village_4.jpg
 plants:
-  - Perovskia 'Little Spire'
-  - Cornus sericea 'Flaviramea'
-  - Artemisia 'Silver Mound'
-  - Gaura lindheimeri
-  - "Stachys byzantina "
+  - Perovskia 'Little Spire' (Russian Sage)
+  - Cornus sericea 'Flaviramea' (Golden-Twig Dogwood)
+  - Artemisia 'Silver Mound' (Wormwood)
+  - Gaura lindheimeri (White Gaura)
+  - Stachys byzantina (Lamb's Ears)
 ---
 L﻿ocation: New York, NY\
 S﻿ize: 300 SF
