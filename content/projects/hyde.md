@@ -18,14 +18,14 @@ images:
   - image: img/hyde_10.jpg
   - image: img/hyde_8.jpg
 plants:
-  - Nepeta racemosa
-  - Betula populifolia 'Whitespire’
-  - Aconitum carmichaelii
-  - Silene dioica 'Clifford Moor'
-  - Gentiana 'True Blue'
-  - Galium odoratum
-  - Polystichum acrostichoides
-  - Echinacea purpurea 'White Swan'
+  - Nepeta racemosa (Catmint)
+  - Betula populifolia 'Whitespire’ (Gray Birch)
+  - Aconitum carmichaelii (Chinese Aconite)
+  - Silene dioica 'Clifford Moor' (Red Campion)
+  - Gentiana 'True Blue' (Bottle Gentian)
+  - Galium odoratum (Woodruff)
+  - Polystichum acrostichoides (Christmas Fern)
+  - Echinacea purpurea 'White Swan' (Coneflower)
 ---
 L﻿ocation: Newton, MA\
 S﻿ize: 2000 SF
