@@ -9,9 +9,9 @@ images:
   - image: img/cambridge_1.jpg
   - image: img/img_20200824_191011-2-edited.jpg
   - image: img/img_20200521_182047.jpg
-  - image: img/cambridge_8.jpg
+  - image: img/109724521_804510153286870_8221783848989477704_n.jpg
   - image: img/cambridge_9.jpg
-  - image: img/cambridge10.jpg
+  - image: img/cambridge10-1-.jpg
   - image: img/cambridge_11.jpg
   - image: img/cambridge_4.jpg
   - image: img/cambridge_3.jpg
