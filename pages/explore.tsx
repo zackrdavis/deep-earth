@@ -67,11 +67,9 @@ const StyledPlantHoverTile = styled.div`
 const PlantHoverTile = ({
   plant,
   onClickPlant,
-  isQueried,
 }: {
   plant: Plant;
   onClickPlant: (plant?: Plant) => void;
-  isQueried?: boolean;
 }) => {
   const {
     attributes: { title, image },
@@ -84,9 +82,7 @@ const PlantHoverTile = ({
       <img
         style={{ background: colors.green }}
         alt={title}
-        srcSet={`${image}?nf_resize=fit&w=640&h=640 640w, ${image}?nf_resize=fit&w=180&h=180 180w`}
-        sizes="(max-width: 640px) 640px,(min-width: 641px) 180px"
-        src={image + "?nf_resize=fit&w=640&h=640"}
+        src={image + "?nf_resize=fit&w=100&h=100"}
         loading="lazy"
       />
       <div>{title}</div>
@@ -98,6 +94,7 @@ const PlantPic = styled.img`
   object-fit: cover;
   flex: 1 1 auto;
   min-height: 0;
+  background-color: ${colors.green};
 `;
 
 interface Props {
@@ -134,7 +131,7 @@ const ActivePlantWrap = styled.div`
   justify-content: flex-end;
 
   div {
-    padding: 0 ${dims.xPad}px;
+    padding: 10px var(--xPad);
     border-top: 1px solid ${colors.black};
     min-height: ${dims.footerHeight}px;
     display: flex;
@@ -204,6 +201,10 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
         {currentPlant && (
           <ActivePlantWrap>
             <PlantPic
+              style={{
+                backgroundImage:
+                  currentPlant?.attributes.image + "?nf_resize=fit&w=200",
+              }}
               alt={currentPlant?.attributes.title}
               src={currentPlant?.attributes.image + "?nf_resize=fit&w=1200"}
             />
@@ -217,7 +218,6 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
           <PlantsGrid>
             {plantsList.map((plant, i) => (
               <PlantHoverTile
-                isQueried={plant.slug == queriedPlant?.slug}
                 key={i}
                 plant={plant}
                 onClickPlant={setCurrentPlant}
