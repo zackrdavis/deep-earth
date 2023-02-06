@@ -7,10 +7,10 @@ caption: A large communal table sits in the middle of a densely planted
 images:
   - image: img/img_20200705_180322_1_edited.jpg
   - image: img/img_20200830_105045_edited.jpg
+  - image: img/img_20200830_154622_edited.jpg
   - image: img/courtyard22-edited.jpg
   - image: img/img_20200926_121020-1-_edited.jpg
   - image: img/img_20190912_150102_edited.jpg
-  - image: img/img_20200830_154622_edited.jpg
   - image: img/img_20200425_170818-edited.jpg
   - image: img/img_20200601_131825_edited.jpg
   - image: img/img_20191007_135755_edited.jpg
