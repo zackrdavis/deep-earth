@@ -23,13 +23,16 @@ export type Plant = {
     image: string;
   };
   slug: string;
+  projects?: {
+    slug: string;
+    title: string;
+  }[];
 };
 
 const PlantsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   margin-bottom: ${dims.footerHeight}px;
-  margin-top: ${dims.betweenLogoAndGrid}px;
 
   @media screen and (max-width: 640px) {
     grid-template-columns: 100%;
@@ -42,6 +45,7 @@ const StyledPlantHoverTile = styled.div`
   min-width: 80px;
   min-height: 80px;
   position: relative;
+  cursor: pointer;
 
   & > img {
     width: 90%;
@@ -85,13 +89,11 @@ const StyledPlantHoverTile = styled.div`
 
 const PlantHoverTile = ({
   plant,
-  onHoverPlant,
-  hasProjects,
+  onClickPlant,
   isQueried,
 }: {
   plant: Plant;
-  onHoverPlant: (plant?: Plant) => void;
-  hasProjects: boolean;
+  onClickPlant: (plant?: Plant) => void;
   isQueried?: boolean;
 }) => {
   const {
@@ -108,18 +110,13 @@ const PlantHoverTile = ({
   }, [isQueried]);
 
   return (
-    <StyledPlantHoverTile
-      ref={ref}
-      as={hasProjects ? Link : "div"}
-      href={`/projects?plant=${slug}`}
-      onMouseEnter={() => onHoverPlant(plant)}
-    >
+    <StyledPlantHoverTile ref={ref} onClick={() => onClickPlant(plant)}>
       <HiddenSpan>{title}</HiddenSpan>
       <img
         style={{ background: colors.green }}
         alt={title}
         srcSet={`${image}?nf_resize=fit&w=640&h=640 640w, ${image}?nf_resize=fit&w=180&h=180 180w`}
-        sizes="(min-width: 641px) 180px, 640px"
+        sizes="(max-width: 640px) 640px,(min-width: 641px) 180px"
         src={image + "?nf_resize=fit&w=640&h=640"}
         loading="lazy"
       />
@@ -129,33 +126,12 @@ const PlantHoverTile = ({
 };
 
 const PlantPic = styled.img`
-  position: fixed;
-  width: 50%;
-  height: calc(100% - ${dims.footerHeight * 2}px);
-  top: 0;
-  right: 0;
   object-fit: cover;
+  flex: 1 1 auto;
+  min-height: 0;
 
   @media screen and (max-width: 640px) {
     display: none;
-  }
-`;
-
-const PlantFooter = styled.div`
-  border-top: 1px solid ${colors.black};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  right: 0;
-  bottom: ${dims.footerHeight}px;
-  width: 50%;
-  height: ${dims.footerHeight}px;
-  padding: 0 ${dims.xPad}px;
-  background: ${colors.tan};
-
-  @media screen and (max-width: 640px) {
-    bottom: 0;
   }
 `;
 
@@ -183,15 +159,29 @@ const PlantsGridWrap = styled.div`
   }
 `;
 
-const Plants: NextPage<Props> = ({ plantsList, projectsList, content }) => {
-  // make list of plants which are attached to projects
-  let usedPlants: string[] = [];
-  projectsList.forEach((project) => {
-    // skip project if no plants
-    if (!project.attributes?.plants) return false;
-    usedPlants = usedPlants.concat(project.attributes?.plants);
-  });
+const ActivePlantWrap = styled.div`
+  position: fixed;
+  width: 50%;
+  left: 50vw;
+  height: calc(100vh - ${dims.footerHeight}px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
+  div {
+    padding: 0 ${dims.xPad}px;
+    border-top: 1px solid ${colors.black};
+    min-height: ${dims.footerHeight}px;
+    display: flex;
+    align-items: center;
+
+    a {
+      color: ${colors.sienna};
+    }
+  }
+`;
+
+const Plants: NextPage<Props> = ({ plantsList, content }) => {
   const { query } = useRouter();
   const plantQuery = query.plant as string;
   const queriedPlant = plantsList.find((plant) => plant.slug == plantQuery);
@@ -203,6 +193,19 @@ const Plants: NextPage<Props> = ({ plantsList, projectsList, content }) => {
   useEffect(() => {
     setCurrentPlant(queriedPlant);
   }, [queriedPlant]);
+
+  const featuredProjectLinks = currentPlant?.projects?.map((p, i) => (
+    <>
+      &nbsp;<Link href={"/projects/" + p.slug}>{p.title}</Link>
+      {i + 1 == currentPlant?.projects?.length ? "." : ","}
+    </>
+  ));
+
+  const currentProject = currentPlant?.projects?.length ? (
+    <div>
+      <span>Featured in {featuredProjectLinks}</span>
+    </div>
+  ) : null;
 
   return (
     <>
@@ -222,23 +225,23 @@ const Plants: NextPage<Props> = ({ plantsList, projectsList, content }) => {
             {plantsList.map((plant, i) => (
               <PlantHoverTile
                 isQueried={plant.slug == queriedPlant?.slug}
-                hasProjects={usedPlants.includes(plant.attributes.title)}
                 key={i}
                 plant={plant}
-                onHoverPlant={setCurrentPlant}
+                onClickPlant={setCurrentPlant}
               />
             ))}
           </PlantsGrid>
         </PlantsGridWrap>
 
         {currentPlant && (
-          <>
+          <ActivePlantWrap>
             <PlantPic
               alt={currentPlant?.attributes.title}
               src={currentPlant?.attributes.image + "?nf_resize=fit&w=1200"}
             />
-            <PlantFooter>{currentPlant?.attributes.title}</PlantFooter>
-          </>
+            <div>{currentPlant?.attributes.title}</div>
+            {currentProject}
+          </ActivePlantWrap>
         )}
       </TwoColWrap>
 
@@ -267,11 +270,23 @@ export const getStaticProps: GetStaticProps = async () => {
   const projectsList = await importProjects();
   const content = await import(`../content/pages/${"explore"}.md`);
 
+  // associate projects with plants that use them
+  const plantsWithProjects = plantsList.map((plant) => {
+    const usedInProjects = projectsList
+      .map((project) => ({
+        slug: project.slug,
+        title: project.attributes.title,
+        plants: project.attributes?.plants,
+      }))
+      .filter((pp) => pp.plants.includes(plant.attributes.title));
+
+    return { ...plant, projects: usedInProjects };
+  });
+
   return {
     props: {
       content: content.default,
-      plantsList,
-      projectsList,
+      plantsList: plantsWithProjects,
     },
   };
 };
