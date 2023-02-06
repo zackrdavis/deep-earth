@@ -263,9 +263,15 @@ export const importPlants = async () => {
 export const getStaticProps: GetStaticProps = async () => {
   const plantsList = await importPlants();
   const projectsList = await importProjects();
-  const content = await import(`../content/pages/${"explore"}.md`);
+  // const content = await import(`../content/pages/${"explore"}.md`);
 
-  return { props: { content: content.default, plantsList, projectsList } };
+  return {
+    props: {
+      content: { attributes: { meta: "" } }, //content.default,
+      plantsList,
+      projectsList,
+    },
+  };
 };
 
 export default Plants;
