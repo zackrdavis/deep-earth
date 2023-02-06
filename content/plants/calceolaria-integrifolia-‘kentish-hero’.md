@@ -1,4 +1,4 @@
 ---
-title: "Calceolaria integrifolia 'Kentish Hero’ "
+title: Calceolaria integrifolia 'Kentish Hero’ (Bush Slipperwort)
 image: img/calceolaria-integrifolia-kentish-hero.jpg
 ---
