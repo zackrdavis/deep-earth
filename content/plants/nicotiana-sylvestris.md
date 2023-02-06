@@ -1,4 +1,4 @@
 ---
-title: Nicotiana sylvestris
+title: Nicotiana sylvestris (Flowering Tobacco)
 image: img/nicotiana-sylvestris.jpg
 ---
