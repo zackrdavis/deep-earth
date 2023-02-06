@@ -147,11 +147,11 @@ export const importProjects = async () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const projectsList = await importProjects();
-  // const content = await import(`../content/pages/${"projects"}.md`);
+  const content = await import(`../content/pages/${"projects"}.md`);
 
   return {
     props: {
-      content: { attributes: { meta: "" } }, //content.default,
+      content: content.default,
       projectsList: projectsList.sort((b, a) =>
         a.attributes.date.localeCompare(b.attributes.date)
       ),
