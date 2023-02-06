@@ -35,8 +35,7 @@ const PlantsGrid = styled.div`
   margin-bottom: ${dims.footerHeight}px;
 
   @media screen and (max-width: 640px) {
-    grid-template-columns: 100%;
-    margin-top: 0;
+    padding: var(--xPad);
   }
 `;
 
@@ -63,28 +62,6 @@ const StyledPlantHoverTile = styled.div`
   & > div {
     display: none;
   }
-
-  @media screen and (max-width: 640px) {
-    aspect-ratio: initial;
-
-    img {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: none;
-      border-radius: 0;
-      width: 100vw;
-      height: 100vw;
-    }
-
-    div {
-      text-align: center;
-      padding: 15px var(--xPad) 0;
-      display: flex;
-      justify-content: center;
-      height: ${dims.footerHeight}px;
-    }
-  }
 `;
 
 const PlantHoverTile = ({
@@ -101,16 +78,8 @@ const PlantHoverTile = ({
     slug,
   } = plant;
 
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (isQueried) {
-      ref.current?.scrollIntoView();
-    }
-  }, [isQueried]);
-
   return (
-    <StyledPlantHoverTile ref={ref} onClick={() => onClickPlant(plant)}>
+    <StyledPlantHoverTile onClick={() => onClickPlant(plant)}>
       <HiddenSpan>{title}</HiddenSpan>
       <img
         style={{ background: colors.green }}
@@ -129,10 +98,6 @@ const PlantPic = styled.img`
   object-fit: cover;
   flex: 1 1 auto;
   min-height: 0;
-
-  @media screen and (max-width: 640px) {
-    display: none;
-  }
 `;
 
 interface Props {
@@ -179,6 +144,19 @@ const ActivePlantWrap = styled.div`
       color: ${colors.sienna};
     }
   }
+
+  @media screen and (max-width: 640px) {
+    height: 50%;
+    position: relative;
+    width: 100vw;
+    left: auto;
+    border-bottom: 1px solid ${colors.black};
+
+    img {
+      width: 100vw;
+      max-height: calc(100vh - ${dims.footerHeight * 3}px);
+    }
+  }
 `;
 
 const Plants: NextPage<Props> = ({ plantsList, content }) => {
@@ -194,6 +172,12 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
     setCurrentPlant(queriedPlant);
   }, [queriedPlant]);
 
+  useEffect(() => {
+    if (window.innerWidth <= 640) {
+      window.scrollTo(0, 0);
+    }
+  }, [currentPlant]);
+
   const featuredProjectLinks = currentPlant?.projects?.map((p, i) => (
     <>
       &nbsp;<Link href={"/projects/" + p.slug}>{p.title}</Link>
@@ -203,7 +187,7 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
 
   const currentProject = currentPlant?.projects?.length ? (
     <div>
-      <span>Featured in {featuredProjectLinks}</span>
+      <span>Featured in{featuredProjectLinks}</span>
     </div>
   ) : null;
 
@@ -217,7 +201,16 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
       <VerticalRule />
 
       <TwoColWrap>
-        <MobileLogo />
+        {currentPlant && (
+          <ActivePlantWrap>
+            <PlantPic
+              alt={currentPlant?.attributes.title}
+              src={currentPlant?.attributes.image + "?nf_resize=fit&w=1200"}
+            />
+            <div>{currentPlant?.attributes.title}</div>
+            {currentProject}
+          </ActivePlantWrap>
+        )}
 
         <PlantsGridWrap>
           <Logo />
@@ -232,17 +225,6 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
             ))}
           </PlantsGrid>
         </PlantsGridWrap>
-
-        {currentPlant && (
-          <ActivePlantWrap>
-            <PlantPic
-              alt={currentPlant?.attributes.title}
-              src={currentPlant?.attributes.image + "?nf_resize=fit&w=1200"}
-            />
-            <div>{currentPlant?.attributes.title}</div>
-            {currentProject}
-          </ActivePlantWrap>
-        )}
       </TwoColWrap>
 
       <Footer />
