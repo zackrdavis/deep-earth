@@ -18,22 +18,22 @@ images:
   - image: img/morris-before.jpg
   - image: img/16505d98c2e0845383de105f75059d75-edited.jpg
 plants:
-  - Wachendorfia thyrsiflora
-  - Sisyrinchium 'Quaint and Queer’
-  - Sagina subulata 'Irish’
-  - "Podophyllum x 'Spotty Dotty’ "
-  - Plectranthus longituba
-  - Phlomis purpurea 'White Form’
+  - Wachendorfia thyrsiflora (Marsh Butterfly Lily)
+  - Sisyrinchium 'Quaint and Queer’ (Blue-Eyed Grass)
+  - Sagina subulata 'Irish’ (Irish Moss)
+  - Podophyllum x 'Spotty Dotty’ (Mayapple)
+  - Plectranthus longituba (Trumpet Spurflower)
+  - Phlomis purpurea 'White Form’ (Jerusalem Sage)
   - Libertia 'Amazing Grace’
-  - "Blechnum spicant "
-  - Gaura lindheimeri
-  - Calamagrostis x acutiflora 'Karl Foerster'
-  - Lupinus rivularis
-  - "Echium pininana "
-  - Sasa veitchii
+  - Blechnum spicant (Deer Fern)
+  - Gaura lindheimeri (White Gaura)
+  - Calamagrostis x acutiflora 'Karl Foerster' (Feather Reed Grass)
+  - Lupinus rivularis (Riverbank Lupine)
+  - Echium pininana (Tower of Jewels)
+  - Sasa veitchii (Kuma Bamboo Grass)
   - Phyllostachys bambusoides 'Richard Haubrich’
-  - Arisaema ciliatum v. liubaense
-  - Tetrapanax 'Steroidal Giant’
+  - Arisaema ciliatum v. liubaense (Himalayan Cobra Lily)
+  - Tetrapanax 'Steroidal Giant’ (Giant Rice Paper Plant)
 ---
 L﻿ocation: Portland, OR\
 S﻿ize: 2000 SF\
