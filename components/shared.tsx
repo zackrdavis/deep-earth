@@ -104,7 +104,7 @@ const StyledMobileLogo = styled(Link)`
 export const MobileLogo = () => {
   return (
     <StyledMobileLogo href={"/"}>
-      <img src="/site_images/joshua-pavlacky.svg" />
+      <img src="/site_images/joshua-pavlacky.svg" alt="Joshua Pavlacky Logo" />
     </StyledMobileLogo>
   );
 };

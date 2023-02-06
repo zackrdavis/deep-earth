@@ -142,15 +142,15 @@ export const Footer = ({ className }: { className?: string }) => {
             971-204-8921{" "}
             <Link href="https://g.page/r/CdFkqIYiubztEBM/">
               <HiddenSpan>Google Business</HiddenSpan>
-              <img src="/site_images/pin.svg" />
+              <img src="/site_images/pin.svg" alt="Google business icon" />
             </Link>
             <Link href="https://www.instagram.com/jpavlacky/">
               <HiddenSpan>Instagram</HiddenSpan>
-              <img src="/site_images/instagram.svg" />
+              <img src="/site_images/instagram.svg" alt="Instagram icon" />
             </Link>
             <Link href="https://www.facebook.com/josh.michael.pavlacky/">
               <HiddenSpan>Facebook</HiddenSpan>
-              <img src="/site_images/facebook.svg" />
+              <img src="/site_images/facebook.svg" alt="Facebook icon" />
             </Link>
           </div>
         </MobileContactInfo>

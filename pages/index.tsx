@@ -76,7 +76,10 @@ const Home: NextPage<HomeProps> = ({ content }) => {
           alt={attributes.caption}
           src={attributes.landing_image + "?nf_resize=fit&w=2000"}
         />
-        <BigLogo src="/site_images/joshua-pavlacky-light.svg" />
+        <BigLogo
+          src="/site_images/joshua-pavlacky-light.svg"
+          alt="Joshua Pavlacky Logo"
+        />
       </SplashContainer>
 
       <TwoColWrap id="home">

@@ -27,7 +27,11 @@ export const Logo = ({
   return (
     <StyledLogo style={style}>
       <Link href="/">
-        <img onClick={onClick} src="/site_images/joshua-pavlacky.svg" />
+        <img
+          onClick={onClick}
+          src="/site_images/joshua-pavlacky.svg"
+          alt="Joshua Pavlacky Logo"
+        />
       </Link>
     </StyledLogo>
   );
