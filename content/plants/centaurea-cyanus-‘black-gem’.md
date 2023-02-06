@@ -1,4 +1,4 @@
 ---
-title: Centaurea cyanus 'Black Gem’
+title: Centaurea cyanus 'Black Gem’ (Cornflower)
 image: img/centaurea-cyanus-‘black-gem’.jpg
 ---
