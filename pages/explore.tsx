@@ -15,6 +15,7 @@ import {
 import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
+import Head from "next/head";
 
 export type Plant = {
   attributes: {
@@ -159,6 +160,11 @@ const PlantFooter = styled.div`
 interface Props {
   plantsList: Plant[];
   projectsList: Project[];
+  content: {
+    attributes: {
+      meta?: string;
+    };
+  };
 }
 
 const PlantsGridWrap = styled.div`
@@ -175,7 +181,7 @@ const PlantsGridWrap = styled.div`
   }
 `;
 
-const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
+const Plants: NextPage<Props> = ({ plantsList, projectsList, content }) => {
   // make list of plants which are attached to projects
   let usedPlants: string[] = [];
   projectsList.forEach((project) => {
@@ -198,6 +204,11 @@ const Plants: NextPage<Props> = ({ plantsList, projectsList }) => {
 
   return (
     <>
+      <Head>
+        <title>Joshua Pavlacky Landscape Design</title>
+        <meta name="description" content={content.attributes.meta || ""} />
+      </Head>
+
       <VerticalRule />
 
       <TwoColWrap>
@@ -252,8 +263,9 @@ export const importPlants = async () => {
 export const getStaticProps: GetStaticProps = async () => {
   const plantsList = await importPlants();
   const projectsList = await importProjects();
+  const content = await import(`../content/pages/${"explore"}.md`);
 
-  return { props: { plantsList, projectsList } };
+  return { props: { content: content.default, plantsList, projectsList } };
 };
 
 export default Plants;

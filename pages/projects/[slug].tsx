@@ -19,6 +19,7 @@ import {
   HiddenSpan,
 } from "../../components/shared";
 import Link from "next/link";
+import Head from "next/head";
 
 interface ProjectProps {
   content: {
@@ -96,6 +97,10 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
   return (
     <>
+      <Head>
+        <title>Joshua Pavlacky Landscape Design</title>
+      </Head>
+
       <MobileLogo />
       <MobileFeaturedImg
         alt={content.attributes.images[0].caption}

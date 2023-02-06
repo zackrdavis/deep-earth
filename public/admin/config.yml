@@ -75,6 +75,26 @@ collections:
               widget: "string",
               required: true,
             }
+      - label: "Projects"
+        name: "projects"
+        file: "content/pages/projects.md"
+        fields:
+          - {
+              label: "Meta tag description",
+              name: "meta",
+              widget: "string",
+              required: true,
+            }
+      - label: "Explore"
+        name: "explore"
+        file: "content/pages/explore.md"
+        fields:
+          - {
+              label: "Meta tag description",
+              name: "meta",
+              widget: "string",
+              required: true,
+            }
 
   - name: "projects"
     label: "Projects"

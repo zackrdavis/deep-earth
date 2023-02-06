@@ -66,7 +66,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
     <>
       <Head>
         <title>Joshua Pavlacky Landscape Design</title>
-        <meta name="description" content={attributes.meta} />
+        <meta name="description" content={attributes.meta || ""} />
       </Head>
 
       <VerticalRule />

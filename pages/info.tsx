@@ -13,12 +13,14 @@ import {
 } from "../components/shared";
 import { ImageStack } from "../components/ImageStack";
 import { VerticalRule } from "../components/VerticalRule";
+import Head from "next/head";
 
 interface Props {
   content: {
     attributes: {
       featured_image: string;
       caption?: string;
+      meta?: string;
     };
     html: string;
   };
@@ -46,6 +48,11 @@ const Info: NextPage<Props> = ({ content }) => {
 
   return (
     <>
+      <Head>
+        <title>Joshua Pavlacky Landscape Design</title>
+        <meta name="description" content={content.attributes.meta || ""} />
+      </Head>
+
       <MobileLogo />
       <MobileFeaturedImg src={imageUrl + "?nf_resize=fit&w=1200"} />
 

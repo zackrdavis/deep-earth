@@ -11,6 +11,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
 import { Logo } from "../../components/Logo";
+import Head from "next/head";
 
 export type Project = {
   attributes: {
@@ -27,6 +28,11 @@ export type Project = {
 
 interface Props {
   projectsList: Project[];
+  content: {
+    attributes: {
+      meta?: string;
+    };
+  };
 }
 
 const ProjectGrid = styled.div`
@@ -76,7 +82,7 @@ const ProjectTitle = styled.div`
   }
 `;
 
-const Projects: NextPage<Props> = ({ projectsList }) => {
+const Projects: NextPage<Props> = ({ projectsList, content }) => {
   const { query } = useRouter();
   const plantQuery = query.plant as string;
 
@@ -93,6 +99,11 @@ const Projects: NextPage<Props> = ({ projectsList }) => {
 
   return (
     <>
+      <Head>
+        <title>Joshua Pavlacky Landscape Design</title>
+        <meta name="description" content={content.attributes.meta || ""} />
+      </Head>
+
       <MobileLogo />
       <ContentWrap>
         <Logo />
@@ -136,9 +147,11 @@ export const importProjects = async () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const projectsList = await importProjects();
+  const content = await import(`../content/pages/${"projects"}.md`);
 
   return {
     props: {
+      content: content.default,
       projectsList: projectsList.sort((b, a) =>
         a.attributes.date.localeCompare(b.attributes.date)
       ),
