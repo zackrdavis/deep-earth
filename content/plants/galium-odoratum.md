@@ -1,4 +1,4 @@
 ---
-title: Galium odoratum
+title: Galium odoratum (Woodruff)
 image: img/galium-odoratum.png
 ---
