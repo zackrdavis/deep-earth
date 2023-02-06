@@ -57,6 +57,7 @@ const BigLogo = styled.img`
   max-width: 100vw;
   position: absolute;
   z-index: 1;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
 `;
 
 const Home: NextPage<HomeProps> = ({ content }) => {
