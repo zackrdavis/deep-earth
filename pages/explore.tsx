@@ -202,8 +202,7 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
           <ActivePlantWrap>
             <PlantPic
               style={{
-                backgroundImage:
-                  currentPlant?.attributes.image + "?nf_resize=fit&w=200",
+                backgroundImage: `url(${currentPlant?.attributes.image}?nf_resize=fit&w=100&h=100)`,
               }}
               alt={currentPlant?.attributes.title}
               src={currentPlant?.attributes.image + "?nf_resize=fit&w=1200"}
