@@ -1,4 +1,4 @@
 ---
-title: Punica granatum 'Grenada'
+title: Punica granatum 'Grenada (Pomegranate)
 image: img/punica-grenada.png
 ---
