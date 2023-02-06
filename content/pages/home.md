@@ -7,9 +7,9 @@ meta: Joshua Pavlacky is a landscape designer based in Portland, Oregon. His
   work balances beauty with ecological function.
 images:
   - image: img/misc8.jpg
-  - image: img/ventura_11_brighter.jpg
-  - image: img/img_20200916_182727-edited.jpg
   - image: img/img_20190914_153040-edited.jpg
+  - image: img/ventura_6.jpg
+  - image: img/img_20200916_182727-edited.jpg
 ---
 Joshua Pavlacky is a landscape designer, artist, and curator based in Portland Oregon. Drawing on generations of family horticultural knowledge and a refined sense of composition and materials, Joshua creates planted environments that balance beauty with ecological function. \
 \
