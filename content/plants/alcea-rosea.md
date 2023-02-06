@@ -1,4 +1,4 @@
 ---
-title: Alcea rosea
+title: Alcea rosea (Hollyhock)
 image: img/alcea-rosea.png
 ---
