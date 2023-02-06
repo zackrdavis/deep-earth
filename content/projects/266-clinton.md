@@ -20,18 +20,18 @@ images:
   - image: img/img_20190914_152902.jpg
   - image: img/courtyarddrawing.jpg
 plants:
-  - Iris ensata 'Variegata’
+  - Iris ensata 'Variegata’ (Variegated Japanese Water Iris)
   - Hibiscus 'Cranberry Crush'
-  - Eupatorium purpureum
-  - Amelanchier x grandiflora
-  - Actaea racemosa 'Atropurpurea'
-  - Coreopsis rosea
-  - Penstemon digitalis 'Husker Red'
-  - Baptisia australis
-  - Celosia argentea var. Spicata 'Flamingo Feather’
-  - Euphorbia x martinii 'Ascot Rainbow'
+  - Eupatorium purpureum (Joe Pye Weed)
+  - Amelanchier x grandiflora (Serviceberry)
+  - Actaea racemosa 'Atropurpurea' (Black Cohosh)
+  - Coreopsis rosea 'American Dream' (Pink Tickseed)
+  - Penstemon digitalis 'Husker Red' (Foxglove Beardtongue)
+  - Baptisia australis (Blue False Indigo)
+  - Celosia argentea var. Spicata 'Flamingo Feather’ (Silver Cock's Comb)
+  - Euphorbia x martinii 'Ascot Rainbow' (Martin's Spurge)
   - Allium 'Millenium’
-  - Centaurea cyanus 'Black Gem’
+  - Centaurea cyanus 'Black Gem’ (Cornflower)
 ---
 L﻿ocation: Brooklyn, NY\
 S﻿ize: 2000 SF
