@@ -18,10 +18,10 @@ images:
   - image: img/hirzel2.jpg
   - image: img/61625503_172200603795094_4472697257212513950_n-edited.jpg
 plants:
-  - Spirea nipponica 'Snowmound'
-  - Lobelia cardinalis 'Black Truffle'
-  - Nepeta racemosa
-  - Muhlenbergia capillaris
+  - Spirea nipponica 'Snowmound' (Japanese Snowmound Spirea)
+  - Lobelia cardinalis 'Black Truffle' (Cardinal Flower)
+  - Nepeta racemosa (Catmint)
+  - Muhlenbergia capillaris (Muhly Grass)
 ---
 Location: Newton, MA\
 S﻿ize: 3000 SF\
