@@ -15,13 +15,13 @@ images:
   - image: img/isadora_bee_garden_8.jpg
   - image: img/isadora_bee_garden_6.jpg
 plants:
-  - Catananche caerulea
-  - Silene armeria
-  - Lobularia maritima
-  - Matricaria chamomilla
-  - Calamagrostis x acutiflora 'Karl Foerster'
-  - Centaurea cyanus
-  - Papaver rhoeas
+  - Catananche caerulea (Cupid's Dart)
+  - Silene armeria (Sweet William Catchfly)
+  - Lobularia maritima (Sweet Alyssum)
+  - Matricaria chamomilla (German Chamomile)
+  - Calamagrostis x acutiflora 'Karl Foerster' (Feather Reed Grass)
+  - Centaurea cyanus (Cornflower)
+  - Papaver rhoeas (Common Poppy)
 ---
 L﻿ocation: Portland, OR\
 S﻿ize: 500 SF
