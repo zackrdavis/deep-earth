@@ -39,7 +39,6 @@ const ProjectGrid = styled.div`
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
   gap: 30px;
-  margin-top: ${dims.betweenLogoAndGrid}px;
 
   @media screen and (max-width: 640px) {
     display: flex;
@@ -63,10 +62,6 @@ const ProjectImage = styled.img`
   aspect-ratio: 3/2;
   object-fit: cover;
   box-shadow: 0 0 0 1px ${colors.black};
-
-  @media screen and (max-width: 640px) {
-    aspect-ratio: initial;
-  }
 `;
 
 const ProjectTitle = styled.div`
