@@ -5,17 +5,17 @@ featured_image: img/cambridge_1.jpg
 caption: Modern dark patio chairs and a bright yellow side table furnish a
   paving-stone patio. An outdoor dining table and grassy lawn are seen behind.
 images:
-  - image: img/cambridge_2.jpg
   - image: img/cambridge_1.jpg
+  - image: img/cambridge_2.jpg
   - image: img/img_20200824_191011-2-edited.jpg
-  - image: img/img_20200521_182047.jpg
+  - image: img/cambridge_11.jpg
   - image: img/109724521_804510153286870_8221783848989477704_n.jpg
   - image: img/cambridge_9.jpg
   - image: img/cambridge10-1-.jpg
-  - image: img/cambridge_11.jpg
   - image: img/cambridge_4.jpg
   - image: img/cambridge_3.jpg
   - image: img/cambridge_6.jpg
+  - image: img/img_20200521_182047.jpg
 plants:
   - Verbena bonariensis
   - Alcea rosea
