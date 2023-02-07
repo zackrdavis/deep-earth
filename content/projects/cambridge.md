@@ -17,6 +17,9 @@ images:
   - image: img/cambridge_6.jpg
   - image: img/img_20200521_182047.jpg
 plants:
+  - Leucanthemum x superbum (Shasta Daisy)
+  - Frangula alnus 'Fine Line' (Fine Line Buckthorn)
+  - Achillea millefolium (Yarrow)
   - Verbena bonariensis (Purpletop Vervain)
   - Alcea rosea (Hollyhock)
   - Chasmanthium latifolium (Northern Sea Oats)
