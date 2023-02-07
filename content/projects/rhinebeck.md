@@ -16,9 +16,9 @@ images:
   - image: img/img_20200528_172238.jpg
 plants:
   - Campanula poscharskyana (Serbian Bellflower)
-  - Carex tumulicola (Foothill Sedge)
   - Thelypteris noveboracensis (New York Fern)
   - Styrax japonicus (Japanese Snowbell)
+  - Carex tumulicola (Foothill Sedge)
   - Corydalis sempervirens (Rock Harlequin)
 ---
 L﻿ocation: Rhinebeck, NY\
