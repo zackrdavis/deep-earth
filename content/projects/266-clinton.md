@@ -20,6 +20,7 @@ images:
   - image: img/img_20190914_152902.jpg
   - image: img/courtyarddrawing.jpg
 plants:
+  - Nectaroscordum siculum bulgaricum (Sicilian Honey Garlic)
   - Iris ensata 'Variegata’ (Variegated Japanese Water Iris)
   - Hibiscus 'Cranberry Crush'
   - Eupatorium purpureum (Joe Pye Weed)
