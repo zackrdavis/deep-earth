@@ -84,15 +84,6 @@ const PlantHoverTile = ({
   );
 };
 
-const PlantPic = styled.img`
-  object-fit: cover;
-  flex: 1 1 auto;
-  min-height: 0;
-  background-color: ${colors.green};
-  filter: none;
-  transition: 0.25s filter linear;
-`;
-
 interface Props {
   plantsList: Plant[];
   projectsList: Project[];
@@ -126,12 +117,7 @@ const ActivePlantWrap = styled.div`
   flex-direction: column;
   justify-content: flex-end;
 
-  // the image wrapper
-  div:first-child {
-    overflow: hidden;
-  }
-
-  div:not(:first-child) {
+  div:not(.plantPic) {
     padding: 10px var(--xPad);
     border-top: 1px solid ${colors.black};
     min-height: ${dims.footerHeight}px;
@@ -158,6 +144,20 @@ const ActivePlantWrap = styled.div`
   }
 `;
 
+const StyledActivePlantPic = styled.div`
+  object-fit: cover;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+
+  img {
+    background-color: ${colors.green};
+    filter: none;
+    transition: 0.25s filter linear;
+    height: 100%;
+  }
+`;
+
 const ActivePlantPic = ({ imgUrl, alt }: { imgUrl: string; alt: string }) => {
   const loadedFullSize = useRef(false);
   const [src, setSrc] = useState(imgUrl + "?nf_resize=fit&w=100");
@@ -176,12 +176,14 @@ const ActivePlantPic = ({ imgUrl, alt }: { imgUrl: string; alt: string }) => {
   };
 
   return (
-    <PlantPic
-      alt={alt}
-      src={src}
-      onLoad={handleLoadSrc}
-      style={blur ? { filter: "blur(5px)" } : {}}
-    />
+    <StyledActivePlantPic className="plantPic">
+      <img
+        alt={alt}
+        src={src}
+        onLoad={handleLoadSrc}
+        style={blur ? { filter: "blur(5px)" } : {}}
+      />
+    </StyledActivePlantPic>
   );
 };
 
@@ -229,13 +231,11 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
       <TwoColWrap>
         {currentPlant && (
           <ActivePlantWrap>
-            <div>
-              <ActivePlantPic
-                key={currentPlant.attributes.image}
-                imgUrl={currentPlant.attributes.image}
-                alt={currentPlant?.attributes.title}
-              />
-            </div>
+            <ActivePlantPic
+              key={currentPlant.attributes.image}
+              imgUrl={currentPlant.attributes.image}
+              alt={currentPlant?.attributes.title}
+            />
 
             <div>{currentPlant?.attributes.title}</div>
             {currentProject}
