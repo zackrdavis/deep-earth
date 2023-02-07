@@ -20,14 +20,8 @@ images:
 plants:
   - Wachendorfia thyrsiflora (Marsh Butterfly Lily)
   - Sisyrinchium 'Quaint and Queer’ (Blue-Eyed Grass)
-  - Sagina subulata 'Irish’ (Irish Moss)
   - Podophyllum x 'Spotty Dotty’ (Mayapple)
   - Plectranthus longituba (Trumpet Spurflower)
-  - Phlomis purpurea 'White Form’ (Jerusalem Sage)
-  - Libertia 'Amazing Grace’
-  - Blechnum spicant (Deer Fern)
-  - Gaura lindheimeri (White Gaura)
-  - Calamagrostis x acutiflora 'Karl Foerster' (Feather Reed Grass)
   - Lupinus rivularis (Riverbank Lupine)
   - Echium pininana (Tower of Jewels)
   - Sasa veitchii (Kuma Bamboo Grass)
