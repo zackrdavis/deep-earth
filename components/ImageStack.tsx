@@ -15,6 +15,8 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
     margin-top: ${dims.xPad}px;
     border-top: 1px solid ${colors.black};
     border-bottom: 1px solid ${colors.black};
+    background-color: ${colors.green};
+    object-fit: cover;
 
     &:first-child {
       margin-top: 0;
@@ -28,6 +30,11 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
   @media screen and (max-width: 640px) {
     width: auto;
     position: relative;
+
+    & > img {
+      width: 100vw;
+      height: 66vw;
+    }
 
     ${({ isProject }) =>
       isProject
@@ -58,7 +65,6 @@ export const ImageStack = ({
   <StyledImageStack isProject={projectTitle !== undefined}>
     {images?.map((image, i) => (
       <img
-        style={{ background: colors.green }}
         key={i}
         alt={
           image.caption ||

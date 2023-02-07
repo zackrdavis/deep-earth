@@ -62,6 +62,7 @@ const ProjectImage = styled.img`
   aspect-ratio: 3/2;
   object-fit: cover;
   box-shadow: 0 0 0 1px ${colors.black};
+  background-color: ${colors.green};
 `;
 
 const ProjectTitle = styled.div`
