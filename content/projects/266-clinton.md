@@ -23,8 +23,6 @@ plants:
   - Nectaroscordum siculum bulgaricum (Sicilian Honey Garlic)
   - Iris ensata 'Variegata’ (Variegated Japanese Water Iris)
   - Hibiscus 'Cranberry Crush'
-  - Eupatorium purpureum (Joe Pye Weed)
-  - Amelanchier x grandiflora (Serviceberry)
   - Actaea racemosa 'Atropurpurea' (Black Cohosh)
   - Coreopsis rosea 'American Dream' (Pink Tickseed)
   - Penstemon digitalis 'Husker Red' (Foxglove Beardtongue)
