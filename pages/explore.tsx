@@ -124,6 +124,8 @@ const ActivePlantWrap = styled.div`
     display: flex;
     align-items: center;
     position: relative;
+    text-align: center;
+    justify-content: center;
 
     a {
       color: ${colors.sienna};
