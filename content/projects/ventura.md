@@ -16,11 +16,12 @@ images:
   - image: img/ventura_5.jpg
   - image: img/ventura_10.jpg
 plants:
+  - Grevillea 'Superb'
   - Eremophila calorhabdos (Spiked Eremophila)
-  - Tulbaghia natalensis (Sweet Wild Garlic)
   - Feijoa sellowiana (Pineapple Guava)
   - Aloidendron barberae (Tree Aloe)
   - Hesperaloe parviflora (Coral Yucca)
+  - Tulbaghia natalensis (Sweet Wild Garlic)
 ---
 L﻿ocation: Ventura, CA\
 S﻿ize: 800 SF\
