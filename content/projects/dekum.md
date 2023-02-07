@@ -14,10 +14,11 @@ images:
   - image: img/dekum_1.jpg
   - image: img/pxl_20210317_214117341.jpg
 plants:
+  - Origanum x 'Xera Cascade' (Hopflower Oregano)
   - Punica granatum 'Grenada (Pomegranate)
   - Gladiolus dalenii 'Bolivian Peach’ (Dragon's-Head Lily)
-  - Calamagrostis x acutiflora 'Karl Foerster' (Feather Reed Grass)
   - Oenothera biennis (Common Evening Primrose)
+  - Calamagrostis x acutiflora 'Karl Foerster' (Feather Reed Grass)
   - Phormium tenax 'Purpureum' (New Zealand Flax)
 ---
 L﻿ocation: Portland, OR\
