@@ -154,19 +154,14 @@ const ActivePlantPic = ({ imgUrl, alt }: { imgUrl: string; alt: string }) => {
   const loadedFullSize = useRef(false);
   const [src, setSrc] = useState(imgUrl + "?nf_resize=fit&w=100");
 
-  useEffect(() => {
-    loadedFullSize.current = false;
-  }, [imgUrl]);
-
   const handleLoadSrc = () => {
     if (loadedFullSize.current) return false;
 
     setSrc(imgUrl + "?nf_resize=fit&w=1200");
-
     loadedFullSize.current = true;
   };
 
-  return <PlantPic key={imgUrl} alt={alt} src={src} onLoad={handleLoadSrc} />;
+  return <PlantPic alt={alt} src={src} onLoad={handleLoadSrc} />;
 };
 
 const Plants: NextPage<Props> = ({ plantsList, content }) => {
@@ -189,10 +184,10 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
   }, [currentPlant]);
 
   const featuredProjectLinks = currentPlant?.projects?.map((p, i) => (
-    <>
+    <span key={i}>
       &nbsp;<Link href={"/projects/" + p.slug}>{p.title}</Link>
       {i + 1 == currentPlant?.projects?.length ? "." : ","}
-    </>
+    </span>
   ));
 
   const currentProject = currentPlant?.projects?.length ? (
@@ -214,6 +209,7 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
         {currentPlant && (
           <ActivePlantWrap>
             <ActivePlantPic
+              key={currentPlant.attributes.image}
               imgUrl={currentPlant.attributes.image}
               alt={currentPlant?.attributes.title}
             />
