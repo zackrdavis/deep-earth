@@ -18,6 +18,7 @@ images:
   - image: img/interstate_8.jpg
   - image: img/23347828_366071963852225_8143773518140538880_n.jpg
 plants:
+  - Phlox subulata 'Purple Beauty' (Creeping Phlox)
   - Trifolium incarnatum (Crimson Clover)
   - Tulipa linifolia (Flax-Leaved Tulip)
   - Amelanchier x grandiflora (Serviceberry)
