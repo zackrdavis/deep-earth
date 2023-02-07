@@ -15,7 +15,8 @@ As a curator, Joshua has produced social spaces and exhibitions for organization
 
 Joshua is currently working with Landscape East + West, one of the Portland region’s largest landscape contractors, and is creating designs for clients across the country.\
 \
-C﻿ONTACT
+\
+C﻿ONTACT:
 
 info@joshuapavlacky.com\
 971-204-8921
