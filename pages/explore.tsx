@@ -13,19 +13,23 @@ import Head from "next/head";
 
 const shake = keyframes`
   10%, 90% {
-    transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-1px, 4px, 0) scale(1.1, 0.9);
   }
   
   20%, 80% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, -2px, 0) scale(1, 1);
   }
 
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
+  30%,  70% {
+    transform: translate3d(-4px, 1px, 0) scale(1, 1.1);
+  }
+
+  50% {
+    transform: translate3d(-2px, 2px, 0) scale(1.1, 1);
   }
 
   40%, 60% {
-    transform: translate3d(4px, 0, 0);
+    transform: translate3d(4px, -1px, 0) scale(1.1, 1.1);
   }
 `;
 
@@ -57,11 +61,11 @@ const StyledPlantHoverTile = styled.div`
   min-height: 80px;
   position: relative;
   cursor: pointer;
-  /* transition: transform 1s; */
+  transition: transform 0.25s;
 
   &:hover {
-    /* transform: scale(1.2); */
-    animation: ${shake};
+    transition: transform 0.25s;
+    animation: ${shake} 2s ease-out infinite;
   }
 
   & > img {
