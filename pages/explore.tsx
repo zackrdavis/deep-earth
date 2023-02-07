@@ -1,5 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Footer } from "../components/Footer";
 import styled from "styled-components";
 import Link from "next/link";
@@ -76,7 +76,7 @@ const PlantHoverTile = ({
       <img
         style={{ background: colors.green }}
         alt={title}
-        src={image + "?nf_resize=fit&w=100&h=100"}
+        src={image + "?nf_resize=fit&w=100"}
         loading="lazy"
       />
       <div>{title}</div>
@@ -150,6 +150,25 @@ const ActivePlantWrap = styled.div`
   }
 `;
 
+const ActivePlantPic = ({ imgUrl, alt }: { imgUrl: string; alt: string }) => {
+  const loadedFullSize = useRef(false);
+  const [src, setSrc] = useState(imgUrl + "?nf_resize=fit&w=100");
+
+  useEffect(() => {
+    loadedFullSize.current = false;
+  }, [imgUrl]);
+
+  const handleLoadSrc = () => {
+    if (loadedFullSize.current) return false;
+
+    setSrc(imgUrl + "?nf_resize=fit&w=1200");
+
+    loadedFullSize.current = true;
+  };
+
+  return <PlantPic key={imgUrl} alt={alt} src={src} onLoad={handleLoadSrc} />;
+};
+
 const Plants: NextPage<Props> = ({ plantsList, content }) => {
   const { query } = useRouter();
   const plantQuery = query.plant as string;
@@ -194,12 +213,9 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
       <TwoColWrap>
         {currentPlant && (
           <ActivePlantWrap>
-            <PlantPic
-              style={{
-                backgroundImage: `url(${currentPlant?.attributes.image}?nf_resize=fit&w=100&h=100)`,
-              }}
+            <ActivePlantPic
+              imgUrl={currentPlant.attributes.image}
               alt={currentPlant?.attributes.title}
-              src={currentPlant?.attributes.image + "?nf_resize=fit&w=1200"}
             />
             <div>{currentPlant?.attributes.title}</div>
             {currentProject}
