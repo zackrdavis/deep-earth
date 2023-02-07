@@ -1,7 +1,7 @@
 import type { NextPage, GetStaticProps } from "next";
 import { useRef, useState } from "react";
 import { Footer } from "../components/Footer";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -10,6 +10,24 @@ import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
 import Head from "next/head";
+
+const shake = keyframes`
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+`;
 
 export type Plant = {
   attributes: {
@@ -39,6 +57,12 @@ const StyledPlantHoverTile = styled.div`
   min-height: 80px;
   position: relative;
   cursor: pointer;
+  /* transition: transform 1s; */
+
+  &:hover {
+    /* transform: scale(1.2); */
+    animation: ${shake};
+  }
 
   & > img {
     width: 90%;
