@@ -16,6 +16,7 @@ images:
   - image: img/ventura_5.jpg
   - image: img/ventura_10.jpg
 plants:
+  - Aloe maculata (Soap Aloe)
   - Grevillea 'Superb'
   - Eremophila calorhabdos (Spiked Eremophila)
   - Feijoa sellowiana (Pineapple Guava)
