@@ -15,6 +15,7 @@ images:
   - image: img/copy-of-img_20200525_184719.jpg
   - image: img/img_20200528_172238.jpg
 plants:
+  - Carex pensylvanica (Pennsylvania Sedge)
   - Campanula poscharskyana (Serbian Bellflower)
   - Thelypteris noveboracensis (New York Fern)
   - Styrax japonicus (Japanese Snowbell)
