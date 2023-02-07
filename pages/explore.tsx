@@ -126,7 +126,12 @@ const ActivePlantWrap = styled.div`
   flex-direction: column;
   justify-content: flex-end;
 
-  div {
+  // the image wrapper
+  div:first-child {
+    overflow: hidden;
+  }
+
+  div:not(:first-child) {
     padding: 10px var(--xPad);
     border-top: 1px solid ${colors.black};
     min-height: ${dims.footerHeight}px;
@@ -175,14 +180,7 @@ const ActivePlantPic = ({ imgUrl, alt }: { imgUrl: string; alt: string }) => {
       alt={alt}
       src={src}
       onLoad={handleLoadSrc}
-      style={
-        blur
-          ? {
-              // non-edge-breaking blur from https://codepen.io/tigt/post/fixing-the-white-glow-in-the-css-blur-filter
-              filter: `url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1'%3E%3CfeGaussianBlur stdDeviation='5' result='b'/%3E%3CfeMorphology operator='dilate' radius='5'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E%3C/svg%3E#a)`,
-            }
-          : {}
-      }
+      style={blur ? { filter: "blur(5px)" } : {}}
     />
   );
 };
@@ -231,11 +229,14 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
       <TwoColWrap>
         {currentPlant && (
           <ActivePlantWrap>
-            <ActivePlantPic
-              key={currentPlant.attributes.image}
-              imgUrl={currentPlant.attributes.image}
-              alt={currentPlant?.attributes.title}
-            />
+            <div>
+              <ActivePlantPic
+                key={currentPlant.attributes.image}
+                imgUrl={currentPlant.attributes.image}
+                alt={currentPlant?.attributes.title}
+              />
+            </div>
+
             <div>{currentPlant?.attributes.title}</div>
             {currentProject}
           </ActivePlantWrap>
