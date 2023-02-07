@@ -127,7 +127,7 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
     });
 
     multiApi.start({
-      top: clampedSpeed * 4,
+      top: clampedSpeed * 2,
     });
   };
 
