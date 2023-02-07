@@ -36,7 +36,7 @@ export const BlurUpImg = ({
     if (!loadedFullSize.current) {
       // if we just loaded the lo-rez image, switch to hi-rez
       // and flip the switch so we don't do it again
-      setActualSrc(actualSrc + lgQuery);
+      setActualSrc(src + lgQuery);
       loadedFullSize.current = true;
     } else {
       // if we've loaded the hi-rez image, remove the blur
