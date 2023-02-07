@@ -18,6 +18,7 @@ images:
   - image: img/morris-before.jpg
   - image: img/16505d98c2e0845383de105f75059d75-edited.jpg
 plants:
+  - Asarum caudatum (Western Wild Ginger)
   - Wachendorfia thyrsiflora (Marsh Butterfly Lily)
   - Podophyllum x 'Spotty Dotty’ (Mayapple)
   - Lupinus rivularis (Riverbank Lupine)
