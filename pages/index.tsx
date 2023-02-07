@@ -45,9 +45,10 @@ const StyledLandingImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-color: ${colors.green};
 
   @media screen and (max-width: 640px) {
-    height: auto;
+    height: 66vw;
   }
 `;
 

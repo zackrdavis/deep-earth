@@ -1,17 +1,11 @@
 import type { NextPage, GetStaticProps } from "next";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Footer } from "../components/Footer";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import {
-  colors,
-  dims,
-  TwoColWrap,
-  MobileLogo,
-  HiddenSpan,
-} from "../components/shared";
+import { colors, dims, TwoColWrap, HiddenSpan } from "../components/shared";
 import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
