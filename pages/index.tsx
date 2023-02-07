@@ -7,6 +7,7 @@ import { colors, TextStack, TwoColWrap, dims } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
 import Head from "next/head";
+import { BlurUpImg } from "../components/BlurUpImg";
 
 interface HomeProps {
   content: {
@@ -41,7 +42,7 @@ const SplashContainer = styled.div`
   }
 `;
 
-const StyledLandingImage = styled.img`
+const StyledLandingImage = styled(BlurUpImg)`
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -75,8 +76,12 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <SplashContainer>
         <StyledLandingImage
-          alt={attributes.caption}
-          src={attributes.landing_image + "?nf_resize=fit&w=2000"}
+          alt={
+            attributes.caption || "A rock garden in the woods with a slate path"
+          }
+          src={attributes.landing_image}
+          lgQuery="?nf_resize=fit&w=2000"
+          smQuery="?nf_resize=fit&w=300"
         />
         <BigLogo
           src="/site_images/joshua-pavlacky-light.svg"

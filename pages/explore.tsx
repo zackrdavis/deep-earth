@@ -145,7 +145,6 @@ const ActivePlantWrap = styled.div`
 `;
 
 const StyledActivePlantPic = styled.div`
-  object-fit: cover;
   flex: 1 1 auto;
   min-height: 0;
   overflow: hidden;
@@ -153,8 +152,10 @@ const StyledActivePlantPic = styled.div`
   img {
     background-color: ${colors.green};
     filter: none;
-    transition: 0.25s filter linear;
+    transition: 0.1s filter linear;
     height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 `;
 
