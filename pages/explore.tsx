@@ -89,6 +89,8 @@ const PlantPic = styled.img`
   flex: 1 1 auto;
   min-height: 0;
   background-color: ${colors.green};
+  filter: none;
+  transition: 0.25s filter linear;
 `;
 
 interface Props {
@@ -130,6 +132,7 @@ const ActivePlantWrap = styled.div`
     min-height: ${dims.footerHeight}px;
     display: flex;
     align-items: center;
+    position: relative;
 
     a {
       color: ${colors.sienna};
@@ -153,15 +156,35 @@ const ActivePlantWrap = styled.div`
 const ActivePlantPic = ({ imgUrl, alt }: { imgUrl: string; alt: string }) => {
   const loadedFullSize = useRef(false);
   const [src, setSrc] = useState(imgUrl + "?nf_resize=fit&w=100");
+  const [blur, setBlur] = useState(true);
 
   const handleLoadSrc = () => {
-    if (loadedFullSize.current) return false;
-
-    setSrc(imgUrl + "?nf_resize=fit&w=1200");
-    loadedFullSize.current = true;
+    if (!loadedFullSize.current) {
+      // if we just loaded the lo-rez image, switch to hi-rez
+      // and flip the switch so we don't do it again
+      setSrc(imgUrl + "?nf_resize=fit&w=1200");
+      loadedFullSize.current = true;
+    } else {
+      // if we've loaded the hi-rez image, remove the blur
+      setBlur(false);
+    }
   };
 
-  return <PlantPic alt={alt} src={src} onLoad={handleLoadSrc} />;
+  return (
+    <PlantPic
+      alt={alt}
+      src={src}
+      onLoad={handleLoadSrc}
+      style={
+        blur
+          ? {
+              // non-edge-breaking blur from https://codepen.io/tigt/post/fixing-the-white-glow-in-the-css-blur-filter
+              filter: `url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1'%3E%3CfeGaussianBlur stdDeviation='5' result='b'/%3E%3CfeMorphology operator='dilate' radius='5'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E%3C/svg%3E#a)`,
+            }
+          : {}
+      }
+    />
+  );
 };
 
 const Plants: NextPage<Props> = ({ plantsList, content }) => {
