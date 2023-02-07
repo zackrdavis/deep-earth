@@ -20,7 +20,6 @@ images:
 plants:
   - Wachendorfia thyrsiflora (Marsh Butterfly Lily)
   - Podophyllum x 'Spotty Dotty’ (Mayapple)
-  - Plectranthus longituba (Trumpet Spurflower)
   - Lupinus rivularis (Riverbank Lupine)
   - Echium pininana (Tower of Jewels)
   - Sasa veitchii (Kuma Bamboo Grass)
