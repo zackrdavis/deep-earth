@@ -125,7 +125,7 @@ export const MobileFeaturedImg = styled.img`
   box-shadow: 0 0 0 1px #4b4b4b;
   object-fit: cover;
   background-color: ${colors.green};
-  height: 66vw;
+  height: 75vw;
 
   @media screen and (min-width: 641px) {
     display: none;

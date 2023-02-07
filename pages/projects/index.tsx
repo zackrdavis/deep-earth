@@ -59,7 +59,7 @@ const Project = styled.div`
 
 const ProjectImage = styled.img`
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 4/3;
   object-fit: cover;
   box-shadow: 0 0 0 1px ${colors.black};
   background-color: ${colors.green};
