@@ -19,7 +19,6 @@ images:
   - image: img/16505d98c2e0845383de105f75059d75-edited.jpg
 plants:
   - Wachendorfia thyrsiflora (Marsh Butterfly Lily)
-  - Sisyrinchium 'Quaint and Queer’ (Blue-Eyed Grass)
   - Podophyllum x 'Spotty Dotty’ (Mayapple)
   - Plectranthus longituba (Trumpet Spurflower)
   - Lupinus rivularis (Riverbank Lupine)
