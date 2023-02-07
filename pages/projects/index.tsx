@@ -107,7 +107,11 @@ const Projects: NextPage<Props> = ({ projectsList, content }) => {
             <Link href={`/projects/${project.slug}`} key={i}>
               <Project>
                 <ProjectImage
-                  alt={project.attributes.caption}
+                  alt={
+                    project.attributes.caption ||
+                    // fallback to project title as alt text
+                    `Documentation of ${project.attributes.title} project`
+                  }
                   src={
                     "/" +
                     project.attributes.featured_image +

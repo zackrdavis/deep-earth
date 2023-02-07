@@ -49,18 +49,22 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
 export const ImageStack = ({
   images,
   lazyLoad,
-  isProject,
+  projectTitle,
 }: {
   images: { image: string; caption?: string }[];
   lazyLoad?: boolean;
-  isProject?: boolean;
+  projectTitle?: string;
 }) => (
-  <StyledImageStack isProject={isProject}>
+  <StyledImageStack isProject={projectTitle !== undefined}>
     {images?.map((image, i) => (
       <img
         style={{ background: colors.green }}
         key={i}
-        alt={image.caption}
+        alt={
+          image.caption ||
+          // fallback to project title as alt text
+          `Documentation of ${projectTitle} project`
+        }
         src={`/${image.image}?nf_resize=fit&w=1200`}
         loading={lazyLoad ? "lazy" : "eager"}
       />

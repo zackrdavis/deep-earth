@@ -103,7 +103,11 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
       <MobileLogo />
       <MobileFeaturedImg
-        alt={content.attributes.images[0].caption}
+        alt={
+          content.attributes.images[0].caption ||
+          // fallback to project title
+          `Documentation of ${content.attributes.title} project`
+        }
         src={"/" + content.attributes.images[0].image + "?nf_resize=fit&w=1200"}
         loading="lazy"
       />
@@ -118,7 +122,11 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
 
         <PlantStack plants={linkedPlants} />
 
-        <ImageStack isProject images={content.attributes.images} lazyLoad />
+        <ImageStack
+          projectTitle={content.attributes.title}
+          images={content.attributes.images}
+          lazyLoad
+        />
       </TwoColWrap>
 
       <ProjectFooter>
