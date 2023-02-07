@@ -18,6 +18,7 @@ images:
   - image: img/hirzel2.jpg
   - image: img/61625503_172200603795094_4472697257212513950_n-edited.jpg
 plants:
+  - Asclepias syriaca (Common Milkweed)
   - Spirea nipponica 'Snowmound' (Japanese Snowmound Spirea)
   - Lobelia cardinalis 'Black Truffle' (Cardinal Flower)
   - Nepeta racemosa (Catmint)
