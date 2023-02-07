@@ -55,32 +55,16 @@ const StyledLink = styled(Link)`
 
 const MobileContactInfo = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: ${colors.black};
-  gap: 5px;
-  /* font-size: 18px; */
-
-  & > div {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-  }
+  gap: 15px;
 
   img {
-    height: 24px;
+    height: 30px;
   }
 
   @media screen and (max-width: 640px) {
     flex-grow: 1;
-    gap: 20px;
     font-size: inherit;
-
-    img {
-      height: 30px;
-    }
   }
 `;
 
@@ -138,22 +122,18 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
 
         <MobileContactInfo>
-          <div>info@joshuapavlacky.com</div>
-          <div>
-            971-204-8921{" "}
-            <Link href="https://g.page/r/CdFkqIYiubztEBM/">
-              <HiddenSpan>Google Business</HiddenSpan>
-              <img src="/site_images/pin.svg" alt="Google business icon" />
-            </Link>
-            <Link href="https://www.instagram.com/jpavlacky/">
-              <HiddenSpan>Instagram</HiddenSpan>
-              <img src="/site_images/instagram.svg" alt="Instagram icon" />
-            </Link>
-            <Link href="https://www.facebook.com/josh.michael.pavlacky/">
-              <HiddenSpan>Facebook</HiddenSpan>
-              <img src="/site_images/facebook.svg" alt="Facebook icon" />
-            </Link>
-          </div>
+          <Link href="https://www.instagram.com/jpavlacky/">
+            <HiddenSpan>Instagram</HiddenSpan>
+            <img src="/site_images/instagram.svg" alt="Instagram icon" />
+          </Link>
+          <Link href="https://g.page/r/CdFkqIYiubztEBM/">
+            <HiddenSpan>Google Business</HiddenSpan>
+            <img src="/site_images/google.svg" alt="Google icon" />
+          </Link>
+          <Link href="https://www.facebook.com/josh.michael.pavlacky/">
+            <HiddenSpan>Facebook</HiddenSpan>
+            <img src="/site_images/facebook.svg" alt="Facebook icon" />
+          </Link>
         </MobileContactInfo>
       </StyledFooter>
     </>
