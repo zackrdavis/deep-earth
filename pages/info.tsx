@@ -8,12 +8,12 @@ import {
   TextStack,
   MobileLogo,
   MobileFeaturedImg,
-  colors,
   dims,
 } from "../components/shared";
 import { ImageStack } from "../components/ImageStack";
 import { VerticalRule } from "../components/VerticalRule";
 import Head from "next/head";
+import { BlurUpImg } from "../components/BlurUpImg";
 
 interface Props {
   content: {
@@ -26,17 +26,11 @@ interface Props {
   };
 }
 
-const InfoFeaturedImg = styled.div`
+const InfoFeaturedImg = styled(BlurUpImg)`
   top: 0;
   position: sticky;
   width: 50%;
-  height: 100vh;
-
-  & > img {
-    width: 100%;
-    height: calc(100% - ${dims.footerHeight}px);
-    object-fit: cover;
-  }
+  height: calc(100vh - ${dims.footerHeight}px);
 
   @media (max-width: 640px) {
     display: none;
@@ -54,7 +48,12 @@ const Info: NextPage<Props> = ({ content }) => {
       </Head>
 
       <MobileLogo />
-      <MobileFeaturedImg src={imageUrl + "?nf_resize=fit&w=1200"} />
+      <MobileFeaturedImg
+        alt={content.attributes.caption || "Joshua at work"}
+        src={imageUrl}
+        lgQuery={"?nf_resize=fit&w=1200"}
+        smQuery={"?nf_resize=fit&w=200"}
+      />
 
       <VerticalRule />
 
@@ -64,13 +63,12 @@ const Info: NextPage<Props> = ({ content }) => {
           {parse(content.html)}
         </TextStack>
 
-        <InfoFeaturedImg>
-          <img
-            style={{ background: colors.green }}
-            alt={content.attributes.caption}
-            src={content.attributes.featured_image + "?nf_resize=fit&w=1200"}
-          />
-        </InfoFeaturedImg>
+        <InfoFeaturedImg
+          alt={content.attributes.caption || "Joshua at work"}
+          src={content.attributes.featured_image}
+          smQuery={"?nf_resize=fit&w=100"}
+          lgQuery={"?nf_resize=fit&w=1200"}
+        />
       </TwoColWrap>
 
       <Footer />

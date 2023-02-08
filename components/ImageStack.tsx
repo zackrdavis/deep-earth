@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { dims, colors } from "./shared";
+import { dims } from "./shared";
 
 export const StyledImageStack = styled.div<{ isProject?: boolean }>`
   width: 50%;
@@ -13,9 +13,9 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
     width: 100%;
     height: auto;
     margin-top: ${dims.xPad}px;
-    border-top: 1px solid ${colors.black};
-    border-bottom: 1px solid ${colors.black};
-    background-color: ${colors.green};
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+    background-color: var(--green);
     object-fit: cover;
 
     &:first-child {

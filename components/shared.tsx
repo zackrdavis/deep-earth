@@ -1,12 +1,6 @@
 import Link from "next/link";
 import styled, { css } from "styled-components";
-
-export const colors = {
-  black: "#4b4b4b",
-  tan: "#E6E6DA",
-  sienna: "#A86654",
-  green: "#698165",
-};
+import { BlurUpImg } from "./BlurUpImg";
 
 export const dims = {
   xPad: 80,
@@ -119,12 +113,12 @@ export const HiddenSpan = styled.span`
   white-space: nowrap;
 `;
 
-export const MobileFeaturedImg = styled.img`
+export const MobileFeaturedImg = styled(BlurUpImg)`
   width: 100%;
   height: auto;
-  box-shadow: 0 0 0 1px #4b4b4b;
+  box-shadow: 0 0 0 1px var(--black);
   object-fit: cover;
-  background-color: ${colors.green};
+  background-color: var(--green);
   height: 75vw;
 
   @media screen and (min-width: 641px) {

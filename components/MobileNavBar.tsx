@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, dims } from "./shared";
+import { dims } from "./shared";
 
 const Ex = styled.div`
   height: 20px;
@@ -14,7 +14,7 @@ const Ex = styled.div`
     left: 50%;
     height: 2px;
     width: 137%;
-    background-color: ${colors.sienna};
+    background-color: var(--sienna);
   }
 
   &:before {
@@ -31,8 +31,8 @@ const StyledMenuButton = styled.div`
   bottom: 0;
   width: 100%;
   height: ${dims.footerHeight}px;
-  background: ${colors.tan};
-  border-top: 1px solid ${colors.black};
+  background: var(--tan);
+  border-top: 1px solid var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@ const StyledMenuButton = styled.div`
   text-transform: uppercase;
 
   &:hover {
-    color: ${colors.sienna};
+    color: var(--sienna);
   }
 
   @media screen and (min-width: 641px) {

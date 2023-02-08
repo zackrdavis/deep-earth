@@ -5,7 +5,7 @@ import styled, { keyframes } from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { colors, dims, TwoColWrap, HiddenSpan } from "../components/shared";
+import { dims, TwoColWrap, HiddenSpan } from "../components/shared";
 import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
@@ -65,7 +65,8 @@ const StyledPlantHoverTile = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    box-shadow: 0 0 0 1px ${colors.black};
+    box-shadow: 0 0 0 1px var(--black);
+    background-color: var(--green);
   }
 
   /* title for mobile only */
@@ -89,12 +90,7 @@ const PlantHoverTile = ({
   return (
     <StyledPlantHoverTile onClick={() => onClickPlant(plant)}>
       <HiddenSpan>{title}</HiddenSpan>
-      <img
-        style={{ background: colors.green }}
-        alt={title}
-        src={image + "?nf_resize=fit&w=100"}
-        loading="lazy"
-      />
+      <img alt={title} src={image + "?nf_resize=fit&w=100"} loading="lazy" />
       <div>{title}</div>
     </StyledPlantHoverTile>
   );
@@ -135,7 +131,7 @@ const ActivePlantWrap = styled.div`
 
   div:not(.plantPic) {
     padding: 10px var(--xPad);
-    border-top: 1px solid ${colors.black};
+    border-top: 1px solid var(--black);
     min-height: ${dims.footerHeight}px;
     display: flex;
     align-items: center;
@@ -144,7 +140,7 @@ const ActivePlantWrap = styled.div`
     justify-content: center;
 
     a {
-      color: ${colors.sienna};
+      color: var(--sienna);
     }
   }
 
@@ -153,7 +149,7 @@ const ActivePlantWrap = styled.div`
     position: relative;
     width: 100vw;
     left: auto;
-    border-bottom: 1px solid ${colors.black};
+    border-bottom: 1px solid var(--black);
 
     img {
       width: 100vw;
@@ -168,7 +164,7 @@ const StyledActivePlantPic = styled.div`
   overflow: hidden;
 
   img {
-    background-color: ${colors.green};
+    background-color: var(--green);
     filter: none;
     transition: 0.1s filter linear;
     height: 100%;

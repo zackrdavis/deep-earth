@@ -1,10 +1,17 @@
 import { createGlobalStyle } from "styled-components";
-import { colors } from "./shared";
 
 export const GlobalStyles = createGlobalStyle`
 
   :root {
     --xPad: 80px;
+    --footerHeight: 80px;
+    --logoPad: 50px;
+    --betweenLogoAndGrid: 80px;
+
+    --black: #4b4b4b;
+    --tan: #E6E6DA;
+    --sienna: #A86654;
+    --green: #698165;
   }
 
   @media (max-width: 640px) {
@@ -20,8 +27,8 @@ body {
   margin: 0;
   font-family: "Prune";
   font-size: 20px;
-  background: ${colors.tan};
-  color: ${colors.black};
+  background: var(--tan);
+  color: var(--black);
 }
 
 a {

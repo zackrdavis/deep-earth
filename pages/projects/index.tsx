@@ -1,7 +1,6 @@
 import type { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
 import {
-  colors,
   ContentWrap,
   dims,
   MobileLogo,
@@ -12,6 +11,7 @@ import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
 import { Logo } from "../../components/Logo";
 import Head from "next/head";
+import { BlurUpImg } from "../../components/BlurUpImg";
 
 export type Project = {
   attributes: {
@@ -53,16 +53,16 @@ const Project = styled.div`
   cursor: pointer;
 
   &:hover {
-    color: ${colors.sienna};
+    color: var(--sienna);
   }
 `;
 
-const ProjectImage = styled.img`
+const ProjectImage = styled(BlurUpImg)`
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
-  box-shadow: 0 0 0 1px ${colors.black};
-  background-color: ${colors.green};
+  box-shadow: 0 0 0 1px var(--black);
+  background-color: var(--green);
 `;
 
 const ProjectTitle = styled.div`
@@ -113,11 +113,9 @@ const Projects: NextPage<Props> = ({ projectsList, content }) => {
                     // fallback to project title as alt text
                     `Documentation of ${project.attributes.title} project`
                   }
-                  src={
-                    "/" +
-                    project.attributes.featured_image +
-                    "?nf_resize=fit&w=800"
-                  }
+                  src={`/${project.attributes.featured_image}`}
+                  smQuery={"?nf_resize=fit&w=80"}
+                  lgQuery={"?nf_resize=fit&w=800"}
                 />
                 <ProjectTitle>{project.attributes.title}</ProjectTitle>
               </Project>

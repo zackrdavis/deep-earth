@@ -11,7 +11,6 @@ import { PlantStack } from "../../components/PlantStack";
 import { ImageStack } from "../../components/ImageStack";
 import {
   dims,
-  colors,
   TextStack,
   TwoColWrap,
   MobileLogo,
@@ -38,7 +37,7 @@ interface ProjectProps {
 }
 
 const ProjectFooter = styled.div`
-  border-top: 1px solid ${colors.black};
+  border-top: 1px solid var(--black);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,7 +46,7 @@ const ProjectFooter = styled.div`
   width: 50%;
   height: ${dims.footerHeight}px;
   padding: 0 var(--xPad);
-  background: ${colors.tan};
+  background: var(--tan);
   z-index: 2;
 
   @media screen and (max-width: 640px) {
@@ -70,7 +69,7 @@ const LeftArrow = styled(Link)`
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    background-color: ${colors.black};
+    background-color: var(--black);
   }
 
   &:after {
@@ -82,9 +81,9 @@ const LeftArrow = styled(Link)`
     aspect-ratio: 1;
     transform: translateY(-50%) rotate(-45deg);
     /* transform: rotate(-45deg); */
-    /* border: 1px solid ${colors.black}; */
+    /* border: 1px solid var(--black); */
 
-    box-shadow: -1px -1px 0 0 ${colors.black};
+    box-shadow: -1px -1px 0 0 var(--black);
   }
 `;
 
@@ -102,14 +101,16 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
       </Head>
 
       <MobileLogo />
+
       <MobileFeaturedImg
         alt={
           content.attributes.images[0].caption ||
           // fallback to project title
           `Documentation of ${content.attributes.title} project`
         }
-        src={"/" + content.attributes.images[0].image + "?nf_resize=fit&w=1200"}
-        loading="lazy"
+        src={`/${content.attributes.images[0].image}`}
+        lgQuery={"?nf_resize=fit&w=1200"}
+        smQuery={"?nf_resize=fit&w=200"}
       />
 
       <VerticalRule />

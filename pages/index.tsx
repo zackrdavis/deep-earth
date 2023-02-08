@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Footer } from "../components/Footer";
 import { Logo } from "../components/Logo";
 import { ImageStack } from "../components/ImageStack";
-import { colors, TextStack, TwoColWrap, dims } from "../components/shared";
+import { TextStack, TwoColWrap, dims } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
 import Head from "next/head";
@@ -31,11 +31,11 @@ const SplashContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: ${colors.tan};
+  background-color: var(--tan);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 0 0 ${colors.black};
+  box-shadow: 0 1px 0 0 var(--black);
 
   @media screen and (max-width: 640px) {
     height: auto;
@@ -46,7 +46,7 @@ const StyledLandingImage = styled(BlurUpImg)`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: ${colors.green};
+  background-color: var(--green);
 
   @media screen and (max-width: 640px) {
     height: 66vw;

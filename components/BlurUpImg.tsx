@@ -1,16 +1,22 @@
 import { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import { colors } from "./shared";
+import styled, { css, CSSProperties } from "styled-components";
 
-const BlurWrap = styled.div`
+const BlurWrap = styled.div<{ blur?: boolean }>`
   overflow: hidden;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-color: ${colors.green};
+    background-color: var(--green);
     filter: none;
     transition: 0.1s filter linear;
+
+    ${({ blur }) =>
+      blur &&
+      css`
+        filter: blur(5px);
+      `}
   }
 `;
 
@@ -20,11 +26,15 @@ export const BlurUpImg = ({
   smQuery,
   lgQuery,
   className,
+  style,
+  lazy,
 }: {
   src: string;
   alt: string;
   smQuery: string;
   lgQuery: string;
+  lazy?: boolean;
+  style?: CSSProperties;
   className?: string;
 }) => {
   const loadedFullSize = useRef(false);
@@ -33,8 +43,6 @@ export const BlurUpImg = ({
   const imgRef = useRef<HTMLImageElement>(null);
 
   const handleLoadSrc = () => {
-    console.log("load");
-
     if (!loadedFullSize.current) {
       // if we just loaded the lo-rez image, switch to hi-rez
       // and flip the switch so we don't do it again
@@ -42,7 +50,7 @@ export const BlurUpImg = ({
       loadedFullSize.current = true;
     } else {
       // if we've loaded the hi-rez image, remove the blur
-      // setBlur(false);
+      setBlur(false);
     }
   };
 
@@ -53,13 +61,13 @@ export const BlurUpImg = ({
   }, []);
 
   return (
-    <BlurWrap className={className}>
+    <BlurWrap className={className} blur={blur} style={style}>
       <img
         ref={imgRef}
         alt={alt}
         src={actualSrc}
         onLoad={handleLoadSrc}
-        style={blur ? { filter: "blur(5px)" } : {}}
+        loading={lazy ? "lazy" : "eager"}
       />
     </BlurWrap>
   );

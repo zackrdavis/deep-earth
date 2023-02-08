@@ -2,12 +2,12 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import styled from "styled-components";
-import { colors, HiddenSpan } from "./shared";
+import { HiddenSpan } from "./shared";
 import { dims } from "./shared";
 import { MobileNavBar } from "./MobileNavBar";
 
 const StyledFooter = styled.div`
-  border-top: 1px solid ${colors.black};
+  border-top: 1px solid var(--black);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,7 +17,7 @@ const StyledFooter = styled.div`
   width: 100%;
   height: ${dims.footerHeight}px;
   padding: 0 ${dims.xPad}px;
-  background: ${colors.tan};
+  background: var(--tan);
   z-index: 2;
 
   @media screen and (max-width: 640px) {
@@ -34,7 +34,7 @@ const StyledFooter = styled.div`
       align-items: center;
       flex-grow: 1;
       width: 100%;
-      border-bottom: 1px solid ${colors.black};
+      border-bottom: 1px solid var(--black);
     }
 
     &.mobile-show {
@@ -45,11 +45,11 @@ const StyledFooter = styled.div`
 
 const StyledLink = styled(Link)`
   text-transform: uppercase;
-  color: ${colors.black};
+  color: var(--black);
 
   &.active,
   &:hover {
-    color: ${colors.sienna};
+    color: var(--sienna);
   }
 `;
 
@@ -98,6 +98,7 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
 
         <StyledLink
+          prefetch
           href="/projects"
           className={isProjects ? "active" : ""}
           onClick={() => (route == "/projects" ? setShowMenu(false) : null)}
@@ -106,6 +107,7 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
 
         <StyledLink
+          prefetch
           href="/info"
           className={isInfo ? "active" : ""}
           onClick={() => (route == "/info" ? setShowMenu(false) : null)}
@@ -114,6 +116,7 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
 
         <StyledLink
+          prefetch
           href="/explore"
           className={isExplore ? "active" : ""}
           onClick={() => (route == "/explore" ? setShowMenu(false) : null)}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useSpring, animated, useSprings, useTrail } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
-import { colors, dims, HiddenSpan } from "./shared";
+import { dims, HiddenSpan } from "./shared";
 
 const PlantButton = styled.div`
   flex: 0 1 80px;
@@ -23,7 +23,7 @@ const PlantButton = styled.div`
       height: 80px;
       border-top-left-radius: 666px;
       border-bottom-left-radius: 666px;
-      box-shadow: 0 0 0 1px ${colors.black};
+      box-shadow: 0 0 0 1px var(--black);
       object-fit: cover;
 
       /* Align image to bottom of links when vertically squished. */
@@ -50,6 +50,10 @@ const StyledPlantStack = styled(animated.div)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  img {
+    background-color: var(--green);
+  }
 
   @media screen and (max-width: 640px) {
     display: none;
@@ -154,7 +158,6 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
               <a href={`/explore?plant=${plant.slug}`}>
                 <HiddenSpan>{plant.attributes.title}</HiddenSpan>
                 <img
-                  style={{ background: colors.green }}
                   alt={plant.attributes.title}
                   src={
                     "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"
@@ -179,7 +182,6 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
             >
               <Link href={`/explore?plant=${plant.slug}`}>
                 <img
-                  style={{ background: colors.green }}
                   alt={plant.attributes.title}
                   src={
                     "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"
@@ -216,7 +218,8 @@ const StyledPlantStackMobile = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     object-fit: cover;
-    box-shadow: 0 0 0 1px ${colors.black};
+    box-shadow: 0 0 0 1px var(--black);
+    background-color: var(--green);
   }
 
   @media screen and (min-width: 641px) {
