@@ -1,7 +1,6 @@
 ---
 featured_image: img/portrait_cropped.jpg
-caption: A wheelbarrow full of tropical plants in a grassy field where Josh is
-  working, wearing a wide-brimmed hat.
+caption: Josh standing outdoors in the sun holding a pet duck.
 meta: Joshua Pavlacky is a landscape designer based in Portland, Oregon. His
   work balances beauty with ecological function.
 ---
