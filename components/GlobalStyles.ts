@@ -31,6 +31,8 @@ a {
 
 img {
   display: block;
+  // hide alt-text while image loads
+  color: transparent;
 }
 
 * {
