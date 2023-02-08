@@ -81,7 +81,6 @@ const Home: NextPage<HomeProps> = ({ content }) => {
           }
           src={attributes.landing_image}
           lgQuery="?nf_resize=fit&w=2000"
-          smQuery="?nf_resize=fit&w=300"
         />
         <BigLogo
           src="/site_images/joshua-pavlacky-light.svg"

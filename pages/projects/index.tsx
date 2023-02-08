@@ -114,7 +114,6 @@ const Projects: NextPage<Props> = ({ projectsList, content }) => {
                     `Documentation of ${project.attributes.title} project`
                   }
                   src={`/${project.attributes.featured_image}`}
-                  smQuery={"?nf_resize=fit&w=80"}
                   lgQuery={"?nf_resize=fit&w=800"}
                 />
                 <ProjectTitle>{project.attributes.title}</ProjectTitle>

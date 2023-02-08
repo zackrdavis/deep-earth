@@ -52,7 +52,6 @@ const Info: NextPage<Props> = ({ content }) => {
         alt={content.attributes.caption || "Joshua at work"}
         src={imageUrl}
         lgQuery={"?nf_resize=fit&w=1200"}
-        smQuery={"?nf_resize=fit&w=200"}
       />
 
       <VerticalRule />
@@ -66,7 +65,6 @@ const Info: NextPage<Props> = ({ content }) => {
         <InfoFeaturedImg
           alt={content.attributes.caption || "Joshua at work"}
           src={content.attributes.featured_image}
-          smQuery={"?nf_resize=fit&w=100"}
           lgQuery={"?nf_resize=fit&w=1200"}
         />
       </TwoColWrap>

@@ -110,7 +110,6 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
         }
         src={`/${content.attributes.images[0].image}`}
         lgQuery={"?nf_resize=fit&w=1200"}
-        smQuery={"?nf_resize=fit&w=200"}
       />
 
       <VerticalRule />

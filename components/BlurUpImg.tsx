@@ -23,7 +23,7 @@ const BlurWrap = styled.div<{ blur?: boolean }>`
 export const BlurUpImg = ({
   src,
   alt,
-  smQuery,
+  smQuery = "?nf_resize=fit&w=100",
   lgQuery,
   className,
   style,
@@ -31,7 +31,7 @@ export const BlurUpImg = ({
 }: {
   src: string;
   alt: string;
-  smQuery: string;
+  smQuery?: string;
   lgQuery: string;
   lazy?: boolean;
   style?: CSSProperties;

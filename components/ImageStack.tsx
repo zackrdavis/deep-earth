@@ -71,7 +71,6 @@ export const ImageStack = ({
           `Documentation of ${projectTitle} project`
         }
         src={`/${image.image}`}
-        smQuery={"?nf_resize=fit&w=200"}
         lgQuery={"?nf_resize=fit&w=1200"}
         lazy={lazyLoad}
       />
