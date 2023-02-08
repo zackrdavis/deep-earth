@@ -19,4 +19,7 @@ Joshua is currently working with Landscape East + West, one of the Portland regi
 C﻿ONTACT:
 
 info@joshuapavlacky.com\
-971-204-8921
+971-204-8921\
+\
+\
+W﻿ebsite by [Rebecca Friedman](rebecca-friedman.com) and [Zack Davis](zackrdavis.github.io).
