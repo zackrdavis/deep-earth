@@ -98,7 +98,6 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
 
         <StyledLink
-          prefetch
           href="/projects"
           className={isProjects ? "active" : ""}
           onClick={() => (route == "/projects" ? setShowMenu(false) : null)}
@@ -107,7 +106,6 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
 
         <StyledLink
-          prefetch
           href="/info"
           className={isInfo ? "active" : ""}
           onClick={() => (route == "/info" ? setShowMenu(false) : null)}
@@ -116,7 +114,6 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
 
         <StyledLink
-          prefetch
           href="/explore"
           className={isExplore ? "active" : ""}
           onClick={() => (route == "/explore" ? setShowMenu(false) : null)}

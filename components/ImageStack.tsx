@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { BlurUpImg } from "./BlurUpImg";
 import { dims } from "./shared";
 
 export const StyledImageStack = styled.div<{ isProject?: boolean }>`
@@ -9,14 +10,12 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
   // otherwise this will make the image stick to the bottom with growing space above
   bottom: 0px;
 
-  & > img {
+  & > div {
     width: 100%;
     height: auto;
     margin-top: ${dims.xPad}px;
     border-top: 1px solid var(--black);
     border-bottom: 1px solid var(--black);
-    background-color: var(--green);
-    object-fit: cover;
 
     &:first-child {
       margin-top: 0;
@@ -31,7 +30,7 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
     width: auto;
     position: relative;
 
-    & > img {
+    & > div {
       width: 100vw;
       height: 75vw;
     }
@@ -41,11 +40,11 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
         ? css`
             margin-bottom: ${dims.footerHeight}px;
 
-            img:first-child {
+            & > div:first-child {
               display: none;
             }
 
-            img:nth-child(2) {
+            & > div:nth-child(2) {
               margin-top: 0;
             }
           `
@@ -64,15 +63,17 @@ export const ImageStack = ({
 }) => (
   <StyledImageStack isProject={projectTitle !== undefined}>
     {images?.map((image, i) => (
-      <img
+      <BlurUpImg
         key={i}
         alt={
           image.caption ||
           // fallback to project title as alt text
           `Documentation of ${projectTitle} project`
         }
-        src={`/${image.image}?nf_resize=fit&w=1200`}
-        loading={lazyLoad ? "lazy" : "eager"}
+        src={`/${image.image}`}
+        smQuery={"?nf_resize=fit&w=200"}
+        lgQuery={"?nf_resize=fit&w=1200"}
+        lazy={lazyLoad}
       />
     ))}
   </StyledImageStack>
