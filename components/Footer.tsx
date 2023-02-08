@@ -56,10 +56,10 @@ const StyledLink = styled(Link)`
 const MobileContactInfo = styled.div`
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 
   img {
-    height: 30px;
+    height: 25px;
   }
 
   @media screen and (max-width: 640px) {
