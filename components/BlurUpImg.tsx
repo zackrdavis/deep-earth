@@ -3,9 +3,11 @@ import styled from "styled-components";
 import { colors } from "./shared";
 
 const BlurWrap = styled.div`
+  overflow: hidden;
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     background-color: ${colors.green};
     filter: none;
     transition: 0.1s filter linear;
@@ -40,7 +42,7 @@ export const BlurUpImg = ({
       loadedFullSize.current = true;
     } else {
       // if we've loaded the hi-rez image, remove the blur
-      setBlur(false);
+      // setBlur(false);
     }
   };
 
