@@ -22,4 +22,4 @@ info@joshuapavlacky.com\
 971-204-8921\
 \
 \
-W﻿ebsite by [Rebecca Friedman](rebecca-friedman.com) and [Zack Davis](zackrdavis.github.io).
+W﻿ebsite by [Rebecca Friedman](http://rebecca-friedman.com/) and [Zack Davis](https://zackrdavis.github.io/).
