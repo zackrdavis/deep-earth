@@ -10,6 +10,7 @@ info@joshuapavlacky.com\
 971-204-8921\
 \
 \
+B﻿IO:\
 Gifted a plot in his mother’s garden at the age of 10, Joshua has followed his love of gardening for almost 30 years. As a teenager, his first job was with a local nursery, his next as a landscaper, and then as a residential contractor. \
 \
 Following these experiences, he moved to New York City and was hired as landscape technician for Zone6 Design, where he tended gardens for notable clients such as the IMG and Ford Model Agencies. Moving into the design-build field, he joined the team of Brook Landscape and honed his understanding of hardscaping and installation practices. Joshua was then hired to assist in the production of public artworks for Friends of the Highline. Working in one of the greatest gardens in New York, he was inspired to pursue his own design practice.
