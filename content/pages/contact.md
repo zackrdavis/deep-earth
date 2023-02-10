@@ -10,7 +10,7 @@ C﻿ONTACT:\
 [971-204-8921](tel:+19712048921)\
 \
 \
-B﻿IO:\
+ABOUT:\
 \
 Gifted a plot in his mother’s garden at the age of 10, Joshua has followed his love of gardening for almost 30 years. As a teenager, his first job was with a local nursery, his next as a landscaper, and then as a residential contractor. \
 \
