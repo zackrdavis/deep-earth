@@ -4,7 +4,7 @@ caption: Josh standing outdoors in the sun holding a pet duck.
 meta: Joshua Pavlacky is a landscape designer based in Portland, Oregon. His
   work balances beauty with ecological function.
 ---
-GET IN TOUCH:\
+CONTACT:\
 \
 [info@joshuapavlacky.com](mailto:info@joshuapavlacky.com)\
 [971-204-8921](tel:+19712048921)\
