@@ -1,9 +1,9 @@
 ---
 title: Ventura
 date: 2023-02-01T20:35:15.419Z
-featured_image: img/ventura_4.jpg
-caption: "A small white beach bungalow, with minimalist xeric landscaping in
-  front, is framed against a backdrop of blue skies. "
+featured_image: img/ventura-thumbnail.jpg
+caption: A modern wooden bench is centered in a xeric garden in front of a beach
+  bungalow.
 images:
   - image: img/ventura_8.jpg
   - image: img/ventura_4.jpg
