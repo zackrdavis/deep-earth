@@ -9,6 +9,7 @@ images:
   - image: img/dekum4-1-.jpg
   - image: img/dekum_8.jpg
   - image: img/dekum_5.jpg
+  - image: img/dekum2-1-.jpg
   - image: img/img_1606.jpg
   - image: img/dekum_4.jpg
   - image: img/dekum_1.jpg
