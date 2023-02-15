@@ -1,7 +1,7 @@
 ---
 title: Interstate
 date: 2022-03-01T18:29:21.570Z
-featured_image: img/interstate_4.jpg
+featured_image: img/interstate-thumbnail-1-.jpg
 caption: "A massive, impromptu and wild garden bed sits in a concrete courtyard
   in front of brick buildings in Brooklyn. "
 images:
