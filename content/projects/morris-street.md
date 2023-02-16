@@ -16,7 +16,7 @@ images:
   - image: img/_dsc0939_edited.jpg
   - image: img/img_9119_edited.jpg
   - image: img/morris-before.jpg
-  - image: img/16505d98c2e0845383de105f75059d75-edited.jpg
+  - image: img/morrisdrawing.jpg
 plants:
   - Asarum caudatum (Western Wild Ginger)
   - Wachendorfia thyrsiflora (Marsh Butterfly Lily)
