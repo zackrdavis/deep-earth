@@ -7,7 +7,7 @@ caption: A closeup of greenery and flowers planted in pots and directly into the
 images:
   - image: img/fort_greene_10.jpg
   - image: img/fort_greene_8.jpg
-  - image: img/fort_greene_12.jpg
+  - image: img/img_20200810_150751.jpg
   - image: img/fort_greene_9.jpg
   - image: img/fort_greene_1.jpg
   - image: img/fort_greene_11.jpg
