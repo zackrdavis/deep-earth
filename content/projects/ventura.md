@@ -7,7 +7,6 @@ caption: A modern wooden bench is centered in a xeric garden in front of a beach
 images:
   - image: img/ventura_8.jpg
   - image: img/ventura_4.jpg
-  - image: img/ventura_11.jpg
   - image: img/ventura_9.jpg
   - image: img/ventura_6.jpg
   - image: img/ventura_7.jpg
