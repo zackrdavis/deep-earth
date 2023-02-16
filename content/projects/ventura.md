@@ -14,6 +14,7 @@ images:
   - image: img/ventura_3.jpg
   - image: img/ventura_1.jpg
   - image: img/ventura_5.jpg
+  - image: img/ventura_11_brighter.jpg
   - image: img/ventura_10.jpg
 plants:
   - Aloe maculata (Soap Aloe)
