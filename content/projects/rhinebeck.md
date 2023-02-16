@@ -8,8 +8,7 @@ images:
   - image: img/img_20200708_141251.jpg
   - image: img/img_20200313_132905.jpg
   - image: img/img_20200709_065648_edited.jpg
-  - image: img/img_20200709_065905_edited.jpg
-  - image: img/copy-of-img_20200708_163957-edited.jpg
+  - image: img/img_20200709_065724.jpg
   - image: img/img_20200709_065816_edited.jpg
   - image: img/copy-of-img_20200709_065135-edited.jpg
   - image: img/copy-of-img_20200525_184719.jpg
