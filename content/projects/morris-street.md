@@ -8,11 +8,11 @@ images:
   - image: img/img_9195_edited.jpg
   - image: img/_dsc0903-recovered-edited.jpg
   - image: img/_dsc0925_edited.jpg
+  - image: img/morrisbefore.jpg
   - image: img/_dsc0904-edited.jpg
   - image: img/morris8-edited.jpg
   - image: img/img_9121-edited.jpg
   - image: img/pxl_20220601_213753950-edited.jpg
-  - image: img/morris9-edited.jpg
   - image: img/_dsc0939_edited.jpg
   - image: img/img_9119_edited.jpg
   - image: img/morris-before.jpg
