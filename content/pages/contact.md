@@ -21,9 +21,7 @@ Having studied Fine Art at Wesleyan University, Joshua concurrently pursued his 
 \
 As a curator, Joshua has produced social spaces and exhibitions for organizations such as Bloomberg at the Venice Biennale, Rough Trade Records, Rhizome at the New Museum, Kunstverein fur die Rheinlande und Westfalen, the South African National Arts Festival and more. His exhibitions and productions have been featured in publications such as The New York Times, Artforum, Pin-Up Magazine, Art in America, and Art21.
 
-
-
 \
 \
 \
-*W﻿ebsite by [Rebecca Friedman](http://rebecca-friedman.com/) and [Zack Davis](https://zackrdavis.github.io/).*
+W﻿ebsite by [Rebecca Friedman](http://rebecca-friedman.com/) and [Zack Davis](https://zackrdavis.github.io/).
