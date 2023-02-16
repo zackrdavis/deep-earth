@@ -30,5 +30,4 @@ As a curator, Joshua has produced social spaces and exhibitions for organization
 
 \
 \
-\
 W﻿ebsite by [Rebecca Friedman](http://rebecca-friedman.com/) and [Zack Davis](https://zackrdavis.github.io/).
