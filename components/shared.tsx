@@ -84,7 +84,6 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
     width: 100%;
     bottom: auto;
     min-height: auto;
-    text-align: left;
   }
 `;
 

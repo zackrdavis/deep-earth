@@ -29,6 +29,10 @@ body {
   font-size: 20px;
   background: var(--tan);
   color: var(--black);
+
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
 }
 
 a {
