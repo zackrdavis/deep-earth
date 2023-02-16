@@ -6,13 +6,12 @@ caption: Concrete steps nestled into greenery lead up to a landscaped garden
   under open skies at early sunset.
 images:
   - image: img/newton11-edited.jpg
+  - image: img/newton17.jpg
   - image: img/newton16.jpg
   - image: img/newton10-1-.jpg
-  - image: img/newton17.jpg
   - image: img/img_7808.jpg
   - image: img/img_20190829_082948-edited.jpg
   - image: img/newton1.jpg
-  - image: img/newton3.jpg
   - image: img/66296725_129284751674924_4931476680006378832_n.jpg
   - image: img/img_20200919_095800.jpg
   - image: img/canyonvalley16.jpg
