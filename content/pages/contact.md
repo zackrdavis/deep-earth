@@ -11,6 +11,11 @@ CONTACT:\
 [@﻿jpavlacky](https://www.instagram.com/jpavlacky/)\
 \
 \
+SERVICES:
+
+J﻿oshua provides hands-on consultations and design services to clients in the greater Portland area. He also offers landscape design packages, ready for implementation by local contractors, to clients across the country.\
+\
+\
 ABOUT:\
 \
 Gifted a plot in his mother’s garden at the age of 10, Joshua has followed his love of gardening for almost 30 years. As a teenager, his first job was with a local nursery, his next as a landscaper, and then as a residential contractor. \
