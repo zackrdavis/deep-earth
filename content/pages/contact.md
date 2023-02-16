@@ -15,7 +15,7 @@ SERVICES:\
 \
 J﻿oshua provides hands-on consultations and design services in the greater Portland area.
 
-He also offers landscape design packages, ready for implementation by local contractors, to clients across the country.\
+He also offers landscape design packages, ready for implementation by local contractors, to clients across the country. test\
 \
 \
 ABOUT:\
