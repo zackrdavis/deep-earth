@@ -5,7 +5,7 @@ featured_image: img/carriagnethumbnail.jpg
 caption: A large communal table sits in the middle of a densely planted
   courtyard, in front of the carriage house that features many arched windows.
 images:
-  - image: img/img_20200705_180322_1_edited.jpg
+  - image: img/carriagehouse-1-.jpg
   - image: img/img_20200830_105045_edited.jpg
   - image: img/img_20200830_154622_edited.jpg
   - image: img/courtyard22-edited.jpg
