@@ -30,11 +30,6 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
     width: auto;
     position: relative;
 
-    & > div {
-      width: 100vw;
-      height: 75vw;
-    }
-
     ${({ isProject }) =>
       isProject
         ? css`

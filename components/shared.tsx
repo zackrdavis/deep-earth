@@ -64,8 +64,13 @@ export const TextStack = styled.div<{ isProjectText?: boolean }>`
     `;
   }}
 
+  a {
+    color: var(--sienna);
+  }
+
   // no margin above first <p>
-  & > p:first-child, & > :not(p) ~ p {
+  & > p:first-child,
+  & > :not(p) ~ p {
     margin-top: 0;
   }
 

@@ -41,9 +41,7 @@ const StyledMenuButton = styled.div`
 
   text-transform: uppercase;
 
-  &:hover {
-    color: var(--sienna);
-  }
+  color: var(--sienna);
 
   @media screen and (min-width: 641px) {
     display: none;

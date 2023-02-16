@@ -35,6 +35,7 @@ const StyledFooter = styled.div`
       flex-grow: 1;
       width: 100%;
       border-bottom: 1px solid var(--black);
+      color: var(--sienna);
     }
 
     &.mobile-show {
