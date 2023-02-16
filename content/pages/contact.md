@@ -10,7 +10,9 @@ CONTACT:\
 [971-204-8921](tel:+19712048921)\
 [@﻿jpavlacky](https://www.instagram.com/jpavlacky/)\
 \
-J﻿oshua provides on-the-ground consultations and design services in the greater Portland area.
+SERVICES:\
+\
+J﻿oshua provides hands-on consultations and design services in the greater Portland area.
 
 He also offers landscape design packages, ready for implementation by local contractors, to clients across the country.\
 \
