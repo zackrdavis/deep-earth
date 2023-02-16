@@ -6,14 +6,14 @@ caption: A baby runs her hand across a sprig of flowers.
 images:
   - image: img/isadora_bee_garden_16.jpg
   - image: img/isadora_bee_garden_4.jpg
-  - image: img/isadora_bee_garden_5.jpg
   - image: img/isadora_bee_garden_14.jpg
   - image: img/isadora_bee_garden_15.jpg
-  - image: img/isadora_bee_garden_7.jpg
-  - image: img/isadora_bee_garden_10.jpg
+  - image: img/isadora10.jpg
   - image: img/isadora_bee_garden_11.jpg
-  - image: img/isadora_bee_garden_8.jpg
   - image: img/isadora_bee_garden_6.jpg
+  - image: img/mo1.jpg
+  - image: img/isadora_bee_garden_10.jpg
+  - image: img/isadora_bee_garden_8.jpg
 plants:
   - Catananche caerulea (Cupid's Dart)
   - Silene armeria (Sweet William Catchfly)
