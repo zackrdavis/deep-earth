@@ -1,6 +1,6 @@
 ---
 title: Clinton Carriage House
-date: 2022-09-05T23:18:04.107Z
+date: 2022-10-01T23:18:04.107Z
 featured_image: img/carriagnethumbnail.jpg
 caption: A large communal table sits in the middle of a densely planted
   courtyard, in front of the carriage house that features many arched windows.
