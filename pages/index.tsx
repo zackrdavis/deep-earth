@@ -6,8 +6,8 @@ import { ImageStack } from "../components/ImageStack";
 import { TextStack, TwoColWrap, dims } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
-import Head from "next/head";
 import { BlurUpImg } from "../components/BlurUpImg";
+import { HeadTags } from "../components/HeadTags";
 
 interface HomeProps {
   content: {
@@ -67,10 +67,13 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
   return (
     <>
-      <Head>
-        <title>Joshua Pavlacky Landscape Design</title>
-        <meta name="description" content={attributes.meta || ""} />
-      </Head>
+      <HeadTags
+        desc={attributes.meta}
+        image={attributes.landing_image}
+        imageAlt={
+          attributes.caption || "A rock garden in the woods with a slate path"
+        }
+      />
 
       <VerticalRule />
 

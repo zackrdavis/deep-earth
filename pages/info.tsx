@@ -10,9 +10,8 @@ import {
   MobileFeaturedImg,
   dims,
 } from "../components/shared";
-import { ImageStack } from "../components/ImageStack";
 import { VerticalRule } from "../components/VerticalRule";
-import Head from "next/head";
+import { HeadTags } from "../components/HeadTags";
 import { BlurUpImg } from "../components/BlurUpImg";
 
 interface Props {
@@ -42,10 +41,12 @@ const Info: NextPage<Props> = ({ content }) => {
 
   return (
     <>
-      <Head>
-        <title>Joshua Pavlacky Landscape Design</title>
-        <meta name="description" content={content.attributes.meta || ""} />
-      </Head>
+      <HeadTags
+        title="Info"
+        desc={content.attributes.meta}
+        image={imageUrl}
+        imageAlt={content.attributes.caption || "Joshua at work"}
+      />
 
       <MobileLogo />
       <MobileFeaturedImg

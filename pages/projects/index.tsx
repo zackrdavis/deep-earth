@@ -10,8 +10,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
 import { Logo } from "../../components/Logo";
-import Head from "next/head";
 import { BlurUpImg } from "../../components/BlurUpImg";
+import { HeadTags } from "../../components/HeadTags";
 
 export type Project = {
   attributes: {
@@ -95,10 +95,12 @@ const Projects: NextPage<Props> = ({ projectsList, content }) => {
 
   return (
     <>
-      <Head>
-        <title>Joshua Pavlacky Landscape Design</title>
-        <meta name="description" content={content.attributes.meta || ""} />
-      </Head>
+      <HeadTags
+        title="Projects"
+        desc={content.attributes.meta}
+        image={projectsList[0].attributes.featured_image}
+        imageAlt={projectsList[0].attributes.caption}
+      />
 
       <MobileLogo />
       <ContentWrap>

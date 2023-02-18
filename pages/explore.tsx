@@ -9,7 +9,7 @@ import { dims, TwoColWrap, HiddenSpan } from "../components/shared";
 import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
-import Head from "next/head";
+import { HeadTags } from "../components/HeadTags";
 
 const shake = keyframes`
   10% {
@@ -236,10 +236,12 @@ const Plants: NextPage<Props> = ({ plantsList, content }) => {
 
   return (
     <>
-      <Head>
-        <title>Joshua Pavlacky Landscape Design</title>
-        <meta name="description" content={content.attributes.meta || ""} />
-      </Head>
+      <HeadTags
+        title="Explore"
+        desc={content.attributes.meta}
+        image={plantsList[0].attributes.image}
+        imageAlt={plantsList[0].attributes.title}
+      />
 
       <VerticalRule />
 
