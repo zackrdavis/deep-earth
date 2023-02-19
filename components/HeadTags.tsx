@@ -46,7 +46,7 @@ export const HeadTags = ({
       <meta property="og:site_name" content={siteTitle} />
       <meta property="og:type" content="business" />
       <meta name="twitter:card" content="summary_large_image" />
-      {/* <meta property="fb:app_id" content="your_app_id" /> */}
+      <meta property="fb:app_id" content="491545679861436" />
       {/* <meta name="twitter:site" content="@twitterhandle" /> */}
     </Head>
   );
