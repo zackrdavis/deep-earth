@@ -11,6 +11,7 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
   bottom: 0px;
 
   & > div {
+    position: relative;
     width: 100%;
     height: auto;
     margin-top: ${dims.xPad}px;
@@ -49,11 +50,9 @@ export const StyledImageStack = styled.div<{ isProject?: boolean }>`
 
 export const ImageStack = ({
   images,
-  lazyLoad,
   projectTitle,
 }: {
   images: { image: string; caption?: string }[];
-  lazyLoad?: boolean;
   projectTitle?: string;
 }) => (
   <StyledImageStack isProject={projectTitle !== undefined}>
@@ -66,8 +65,6 @@ export const ImageStack = ({
           `Documentation of ${projectTitle} project`
         }
         src={`/${image.image}`}
-        lgQuery={"?nf_resize=fit&w=1200"}
-        lazy={lazyLoad}
       />
     ))}
   </StyledImageStack>

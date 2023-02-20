@@ -110,13 +110,13 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
       <MobileLogo />
 
       <MobileFeaturedImg
+        fill
         alt={
           content.attributes.images[0].caption ||
           // fallback to project title
           `Documentation of ${content.attributes.title} project`
         }
         src={`/${content.attributes.images[0].image}`}
-        lgQuery={"?nf_resize=fit&w=1200"}
       />
 
       <VerticalRule />
@@ -132,7 +132,6 @@ const SingleProject: NextPage<ProjectProps> = ({ content, plantsList }) => {
         <ImageStack
           projectTitle={content.attributes.title}
           images={content.attributes.images}
-          lazyLoad
         />
       </TwoColWrap>
 

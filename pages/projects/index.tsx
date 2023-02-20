@@ -10,8 +10,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer } from "../../components/Footer";
 import { Logo } from "../../components/Logo";
-import { BlurUpImg } from "../../components/BlurUpImg";
 import { HeadTags } from "../../components/HeadTags";
+import Image from "next/image";
 
 export type Project = {
   attributes: {
@@ -57,7 +57,8 @@ const Project = styled.div`
   }
 `;
 
-const ProjectImage = styled(BlurUpImg)`
+const ProjectImageWrap = styled.div`
+  position: relative;
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
@@ -109,16 +110,17 @@ const Projects: NextPage<Props> = ({ projectsList, content }) => {
           {projectsList.map((project, i) => (
             <Link href={`/projects/${project.slug}`} key={i}>
               <Project>
-                <ProjectImage
-                  alt={
-                    project.attributes.caption ||
-                    // fallback to project title as alt text
-                    `Documentation of ${project.attributes.title} project`
-                  }
-                  src={`/${project.attributes.featured_image}`}
-                  lgQuery={"?nf_resize=fit&w=800"}
-                  lazy
-                />
+                <ProjectImageWrap>
+                  <Image
+                    fill
+                    src={`/${project.attributes.featured_image}`}
+                    alt={
+                      project.attributes.caption ||
+                      // fallback to project title as alt text
+                      `Documentation of ${project.attributes.title} project`
+                    }
+                  />
+                </ProjectImageWrap>
                 <ProjectTitle>{project.attributes.title}</ProjectTitle>
               </Project>
             </Link>

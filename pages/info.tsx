@@ -12,7 +12,7 @@ import {
 } from "../components/shared";
 import { VerticalRule } from "../components/VerticalRule";
 import { HeadTags } from "../components/HeadTags";
-import { BlurUpImg } from "../components/BlurUpImg";
+import Image from "next/image";
 
 interface Props {
   content: {
@@ -25,7 +25,7 @@ interface Props {
   };
 }
 
-const InfoFeaturedImg = styled(BlurUpImg)`
+const InfoFeaturedImgWrap = styled.div`
   top: 0;
   position: sticky;
   width: 50%;
@@ -50,9 +50,9 @@ const Info: NextPage<Props> = ({ content }) => {
 
       <MobileLogo />
       <MobileFeaturedImg
+        fill
         alt={content.attributes.caption || "Joshua at work"}
-        src={imageUrl}
-        lgQuery={"?nf_resize=fit&w=1200"}
+        src={"/" + imageUrl}
       />
 
       <VerticalRule />
@@ -63,11 +63,14 @@ const Info: NextPage<Props> = ({ content }) => {
           {parse(content.html)}
         </TextStack>
 
-        <InfoFeaturedImg
-          alt={content.attributes.caption || "Joshua at work"}
-          src={content.attributes.featured_image}
-          lgQuery={"?nf_resize=fit&w=1200"}
-        />
+        <InfoFeaturedImgWrap>
+          <Image
+            fill
+            alt={content.attributes.caption || "Joshua at work"}
+            src={"/" + content.attributes.featured_image}
+            style={{ objectFit: "cover" }}
+          />
+        </InfoFeaturedImgWrap>
       </TwoColWrap>
 
       <Footer />

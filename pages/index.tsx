@@ -6,8 +6,8 @@ import { ImageStack } from "../components/ImageStack";
 import { TextStack, TwoColWrap, dims } from "../components/shared";
 import parse from "html-react-parser";
 import { VerticalRule } from "../components/VerticalRule";
-import { BlurUpImg } from "../components/BlurUpImg";
 import { HeadTags } from "../components/HeadTags";
+import Image from "next/image";
 
 interface HomeProps {
   content: {
@@ -38,18 +38,18 @@ const SplashContainer = styled.div`
   box-shadow: 0 1px 0 0 var(--black);
 
   @media screen and (max-width: 640px) {
-    height: auto;
+    height: 66vw !important;
   }
 `;
 
-const StyledLandingImage = styled(BlurUpImg)`
+const StyledLandingImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
   background-color: var(--green);
 
   @media screen and (max-width: 640px) {
-    height: 66vw;
+    height: 66vw !important;
   }
 `;
 
@@ -79,11 +79,12 @@ const Home: NextPage<HomeProps> = ({ content }) => {
 
       <SplashContainer>
         <StyledLandingImage
+          priority
+          fill
           alt={
             attributes.caption || "A rock garden in the woods with a slate path"
           }
-          src={attributes.landing_image}
-          lgQuery="?nf_resize=fit&w=2000"
+          src={"/" + attributes.landing_image}
         />
         <BigLogo
           src="/site_images/joshua-pavlacky-light.svg"
@@ -97,7 +98,7 @@ const Home: NextPage<HomeProps> = ({ content }) => {
           {parse(content.html)}
         </TextStack>
 
-        <ImageStack images={content.attributes.images} lazyLoad />
+        <ImageStack images={content.attributes.images} />
       </TwoColWrap>
 
       <Footer />

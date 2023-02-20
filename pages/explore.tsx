@@ -10,6 +10,7 @@ import { VerticalRule } from "../components/VerticalRule";
 import { Logo } from "../components/Logo";
 import { importProjects, Project } from "./projects";
 import { HeadTags } from "../components/HeadTags";
+import Image from "next/image";
 
 const shake = keyframes`
   10% {
@@ -90,7 +91,12 @@ const PlantHoverTile = ({
   return (
     <StyledPlantHoverTile onClick={() => onClickPlant(plant)}>
       <HiddenSpan>{title}</HiddenSpan>
-      <img alt={title} src={image + "?nf_resize=fit&w=100"} loading="lazy" />
+      <Image
+        width="80"
+        height="80"
+        alt={title}
+        src={"/" + image + "?nf_resize=fit&w=100"}
+      />
       <div>{title}</div>
     </StyledPlantHoverTile>
   );

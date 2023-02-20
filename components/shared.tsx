@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styled, { css } from "styled-components";
 import { BlurUpImg } from "./BlurUpImg";
@@ -118,13 +119,13 @@ export const HiddenSpan = styled.span`
   white-space: nowrap;
 `;
 
-export const MobileFeaturedImg = styled(BlurUpImg)`
+export const MobileFeaturedImg = styled(Image)`
+  position: relative !important;
   width: 100%;
-  height: auto;
   box-shadow: 0 0 0 1px var(--black);
   object-fit: cover;
   background-color: var(--green);
-  height: 75vw;
+  height: 75vw !important;
 
   @media screen and (min-width: 641px) {
     display: none;

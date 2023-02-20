@@ -4,6 +4,7 @@ import { useSpring, animated, useSprings, useTrail } from "react-spring";
 import { Plant } from "../pages/explore";
 import styled from "styled-components";
 import { dims, HiddenSpan } from "./shared";
+import Image from "next/image";
 
 const PlantButton = styled.div`
   flex: 0 1 80px;
@@ -157,7 +158,9 @@ export const PlantStack = ({ plants }: { plants: Plant[] }) => {
             <PlantButton className="plantButton" key={i}>
               <a href={`/explore?plant=${plant.slug}`}>
                 <HiddenSpan>{plant.attributes.title}</HiddenSpan>
-                <img
+                <Image
+                  width="80"
+                  height="80"
                   alt={plant.attributes.title}
                   src={
                     "/" + plant.attributes.image + "?nf_resize=fit&w=180&h=180"
