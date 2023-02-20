@@ -32,7 +32,7 @@ const StyledFooter = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-grow: 1;
+      flex-grow: 2;
       width: 100%;
       border-bottom: 1px solid var(--black);
       color: var(--sienna);
@@ -57,15 +57,16 @@ const StyledLink = styled(Link)`
 const MobileContactInfo = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 
   img {
-    height: 25px;
+    height: 24px;
   }
 
   @media screen and (max-width: 640px) {
+    justify-content: center;
     flex-grow: 1;
-    font-size: inherit;
+    gap: 15px;
   }
 `;
 
@@ -123,17 +124,33 @@ export const Footer = ({ className }: { className?: string }) => {
         </StyledLink>
 
         <MobileContactInfo>
+          <Link href="tel:971-204-8921">
+            <HiddenSpan>Phone: +1 (971) 204-8921</HiddenSpan>
+            <img src="/site_images/phone.svg" alt="Phone icon" />
+          </Link>
+          <Link href="mailto:info@joshuapavlacky.com">
+            <HiddenSpan>Email: info@joshuapavlacky.com</HiddenSpan>
+            <img src="/site_images/mail.svg" alt="Email icon" />
+          </Link>
+          <Link href="https://www.facebook.com/josh.michael.pavlacky/">
+            <HiddenSpan>Facebook</HiddenSpan>
+            <img src="/site_images/facebook.svg" alt="Facebook icon" />
+          </Link>
           <Link href="https://www.instagram.com/jpavlacky/">
             <HiddenSpan>Instagram</HiddenSpan>
             <img src="/site_images/instagram.svg" alt="Instagram icon" />
+          </Link>
+          <Link href="https://biz.yelp.com/biz_info/1qhGSTYC_mzbkhilBvsolw">
+            <HiddenSpan>Pinterest</HiddenSpan>
+            <img src="/site_images/pinterest.svg" alt="Pinterest icon" />
           </Link>
           <Link href="https://g.page/r/CdFkqIYiubztEBM/">
             <HiddenSpan>Google Business</HiddenSpan>
             <img src="/site_images/google.svg" alt="Google icon" />
           </Link>
-          <Link href="https://www.facebook.com/josh.michael.pavlacky/">
-            <HiddenSpan>Facebook</HiddenSpan>
-            <img src="/site_images/facebook.svg" alt="Facebook icon" />
+          <Link href="https://biz.yelp.com/biz_info/1qhGSTYC_mzbkhilBvsolw">
+            <HiddenSpan>Yelp</HiddenSpan>
+            <img src="/site_images/yelp.svg" alt="Yelp icon" />
           </Link>
         </MobileContactInfo>
       </StyledFooter>
