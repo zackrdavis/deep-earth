@@ -123,7 +123,7 @@ const PlantsGridWrap = styled.div`
 const ActivePlantWrap = styled.div`
   position: fixed;
   width: 50%;
-  left: 50vw;
+  left: 50%;
   height: calc(100vh - ${dims.footerHeight}px);
   display: flex;
   flex-direction: column;
