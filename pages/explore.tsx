@@ -43,7 +43,7 @@ const PlantsGrid = styled.div`
   }
 `;
 
-const StyledPlantHoverTile = styled.div`
+const StyledPlantHoverTile = styled.button`
   aspect-ratio: 1;
   min-width: 80px;
   min-height: 80px;
@@ -88,7 +88,11 @@ const PlantHoverTile = ({
   } = plant;
 
   return (
-    <StyledPlantHoverTile onClick={() => onClickPlant(plant)}>
+    <StyledPlantHoverTile
+      role={"button"}
+      tabIndex={0}
+      onClick={() => onClickPlant(plant)}
+    >
       <HiddenSpan>{title}</HiddenSpan>
       <img alt={title} src={image + "?nf_resize=fit&w=100"} loading="lazy" />
       <div>{title}</div>
