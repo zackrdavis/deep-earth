@@ -50,6 +50,8 @@ const StyledPlantHoverTile = styled.button`
   position: relative;
   cursor: pointer;
   transition: transform 0.25s;
+  background: none;
+  border: none;
 
   &:hover {
     transition: transform 0.25s;
