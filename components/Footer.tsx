@@ -128,29 +128,17 @@ export const Footer = ({ className }: { className?: string }) => {
             <HiddenSpan>Phone: +1 (971) 204-8921</HiddenSpan>
             <img src="/site_images/phone.svg" alt="Phone icon" />
           </Link>
-          <Link href="mailto:info@joshuapavlacky.com">
-            <HiddenSpan>Email: info@joshuapavlacky.com</HiddenSpan>
+          <Link href="mailto:jpavlacky@gmail.com">
+            <HiddenSpan>Email: jpavlacky@gmail.com</HiddenSpan>
             <img src="/site_images/mail.svg" alt="Email icon" />
-          </Link>
-          <Link href="https://www.facebook.com/josh.michael.pavlacky/">
-            <HiddenSpan>Facebook</HiddenSpan>
-            <img src="/site_images/facebook.svg" alt="Facebook icon" />
           </Link>
           <Link href="https://www.instagram.com/jpavlacky/">
             <HiddenSpan>Instagram</HiddenSpan>
             <img src="/site_images/instagram.svg" alt="Instagram icon" />
           </Link>
-          <Link href="https://biz.yelp.com/biz_info/1qhGSTYC_mzbkhilBvsolw">
-            <HiddenSpan>Pinterest</HiddenSpan>
-            <img src="/site_images/pinterest.svg" alt="Pinterest icon" />
-          </Link>
           <Link href="https://g.page/r/CdFkqIYiubztEBM/">
             <HiddenSpan>Google Business</HiddenSpan>
             <img src="/site_images/google.svg" alt="Google icon" />
-          </Link>
-          <Link href="https://biz.yelp.com/biz_info/1qhGSTYC_mzbkhilBvsolw">
-            <HiddenSpan>Yelp</HiddenSpan>
-            <img src="/site_images/yelp.svg" alt="Yelp icon" />
           </Link>
         </MobileContactInfo>
       </StyledFooter>
