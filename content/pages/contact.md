@@ -6,7 +6,7 @@ meta: Joshua Pavlacky is a landscape designer based in Portland, Oregon. His
 ---
 CONTACT:\
 \
-[info@joshuapavlacky.com](mailto:info@joshuapavlacky.com)\
+[info@joshuapavlacky.com](mailto:info@joshuapavlacky.com)[j﻿pavlacky@gmail.com](mailto:jpavlacky@gmail.com)\
 [971-204-8921](tel:+19712048921)\
 [@﻿jpavlacky](https://www.instagram.com/jpavlacky/)\
 \
