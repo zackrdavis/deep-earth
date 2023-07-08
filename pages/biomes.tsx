@@ -1,6 +1,5 @@
 import type { NextPage, GetStaticProps } from "next";
 import styled from "styled-components";
-import { useRouter } from "next/router";
 import { sluggify } from "../components/shared";
 
 const BiomeImage = styled.img`
@@ -19,15 +18,12 @@ interface Props {
 }
 
 const Biomes: NextPage<Props> = ({ biomesList }) => {
-  const { query } = useRouter();
-  console.log(biomesList);
-
   return (
     <>
       {biomesList.map((biome, i) => (
         <div key={i} id={`${sluggify(biome.attributes.title)}`}>
           {biome.attributes.images.map(({ image }, j) => (
-            <BiomeImage key={j} src={image} />
+            <BiomeImage key={j} src={`${image}?nf_resize=fit&w=300`} />
           ))}
         </div>
       ))}
