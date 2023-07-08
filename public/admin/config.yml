@@ -152,3 +152,16 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image", choose_url: false }
+
+  - name: "biome"
+    label: "Biome"
+    folder: "content/biome"
+    create: true
+    widget: list
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Images"
+        name: "images"
+        widget: list
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
